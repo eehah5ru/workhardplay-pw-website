@@ -128,7 +128,8 @@ article.archive-page.whp-2017 {
 article.archive-project.whp-2017 {
   @extend .row;
 
-  p {
+  p,
+  ul {
     @extend .small-12;
     @extend .large-6;
     @extend .large-offset-3;
@@ -136,12 +137,31 @@ article.archive-project.whp-2017 {
 
     margin-top: 1rem;
 
+    img.full-width {
+      width: 100%;
+    }
+  }
+
+  p {
     &:first-of-type {
       margin-top: 2rem;
     }
+  }
 
-    img.full-width {
-      width: 100%;
+  ul {
+    list-style: none;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+
+    li {
+      margin-bottom: 0.5rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
 }
