@@ -128,6 +128,11 @@ article.archive-page.whp-2017 {
 article.archive-project.whp-2017 {
   @extend .row;
 
+  span.comment-author {
+    margin-top: 0.3rem;
+    display: inline-block;
+  }
+
   p,
   ul {
     @extend .small-12;
