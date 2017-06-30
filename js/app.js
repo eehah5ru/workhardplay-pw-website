@@ -223,8 +223,14 @@
     var h = $(self).parent().parent().find("p.long-descr:hidden");
     var v = $(self).parent().parent().find("p.long-descr:visible");
 
+    var hp = $(self).parent().parent().find("p.long-descr-pics:hidden");
+    var vp = $(self).parent().parent().find("p.long-descr-pics:visible");
+
     h.show();
+    hp.show();
+
     v.hide();
+    vp.hide();
   };
 
   //

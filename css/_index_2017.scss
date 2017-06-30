@@ -26,7 +26,7 @@ section.whp-2017.index-page.description {
   @extend .row;
   @extend .expanded;
 
-  background-image: url("/images/2017/discrassvet/discrassvet-cover.jpg");
+  // background-image: url("/images/2017/discrassvet/discrassvet-cover.jpg");
 
   span {
     background-color: white;
@@ -89,6 +89,7 @@ section.whp-2017.index-page.description {
     // @extend .small-12;
     // @extend .columns;
     @extend .row;
+    @extend .expanded;
 
 
     p.time,
@@ -129,15 +130,26 @@ section.whp-2017.index-page.description {
       }
     }
 
+    p.long-descr,
+    p.long-descr-pics {
+      display: none;
+      margin-top: -0.5rem;
+    }
+
     p.long-descr {
       @extend .small-12;
       @extend .large-6;
       @extend .large-offset-3;
       @extend .columns;
+    }
+
+    p.long-descr-pics {
+      @extend .small-12;
+      // @extend .large-offset-3;
+      @extend .large-3;
+      @extend .columns;
       @extend .end;
 
-      display: none;
-      margin-top: -0.5rem;
     }
   }
 
