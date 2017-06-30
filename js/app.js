@@ -212,6 +212,21 @@
       showMenu();
     }
   };
+
+
+  //
+  //
+  // visibility of long descr in 2017 schedule
+  //
+  //
+  var toggleLongDescrVisibility = function(self) {
+    var h = $(self).parent().parent().find("p.long-descr:hidden");
+    var v = $(self).parent().parent().find("p.long-descr:visible");
+
+    h.show();
+    v.hide();
+  };
+
   //
   //
   // init
@@ -224,6 +239,10 @@
       toggleMenu();
     });
 
+    $("p.descr span").click(function(e) {
+      // alert("aaa");
+      toggleLongDescrVisibility(e.target);
+    });
   });
 
 

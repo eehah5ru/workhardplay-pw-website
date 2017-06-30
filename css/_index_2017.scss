@@ -24,12 +24,17 @@ header.index-page.whp-2017 {
 
 section.whp-2017.index-page.description {
   @extend .row;
+  @extend .expanded;
 
-  p {
+  // background-image: url("/images/2017/discrassvet/discrassvet-cover.jpg");
+
+
+  > p {
     @extend .small-12;
     @extend .large-6;
     @extend .large-offset-3;
-    @extend .end;
+    @extend .columns;
+    // @extend .end;
 
     a {
       text-transform: none;
@@ -45,4 +50,96 @@ section.whp-2017.index-page.description {
       color: lighten(grey, 47%);
     }
   }
+
+  p.first-description-p {
+    margin-top: 2rem;
+  }
+
+  p.day {
+    @extend .small-12;
+    @extend .large-6;
+    @extend .large-offset-3;
+    @extend .columns;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+
+    span {
+      background-color: white;
+    }
+  }
+
+
+  .project-col {
+    @extend .small-12;
+    @extend .columns;
+    position: relative;
+
+    .hline {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+  }
+
+  .project {
+    // @extend .small-12;
+    // @extend .columns;
+    @extend .row;
+
+
+    p.time,
+    p.place {
+      @extend .small-12;
+      @extend .large-2;
+      @extend .large-offset-1;
+      @extend .columns;
+
+      text-align: left;
+
+      @include breakpoint(large) {
+        text-align: right;
+      }
+    }
+
+    p.place {
+      margin-top: 1rem;
+    }
+
+    p.descr {
+      @extend .small-12;
+      @extend .large-6;
+      @extend .columns;
+      @extend .end;
+
+      span {
+        color: red;
+        border-bottom: 1px dashed blue;
+        cursor: pointer;
+      }
+
+      &.no-long {
+        span {
+          color: red;
+          border-bottom: none;
+        }
+      }
+    }
+
+    p.long-descr {
+      @extend .small-12;
+      @extend .large-6;
+      @extend .large-offset-3;
+      @extend .columns;
+      @extend .end;
+
+      display: none;
+      margin-top: -0.5rem;
+    }
+  }
+
+  // p.place {
+  //   @extend .end;
+  // }
+
 }
