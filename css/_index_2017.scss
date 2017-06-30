@@ -26,8 +26,11 @@ section.whp-2017.index-page.description {
   @extend .row;
   @extend .expanded;
 
-  // background-image: url("/images/2017/discrassvet/discrassvet-cover.jpg");
+  background-image: url("/images/2017/discrassvet/discrassvet-cover.jpg");
 
+  span {
+    background-color: white;
+  }
 
   > p {
     @extend .small-12;
