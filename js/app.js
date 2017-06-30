@@ -226,7 +226,8 @@
     h.show();
     v.hide();
 
-    var classToAdd = $(self).parent().parent().data("project") + "-cover";
+    var project = $(self).parent().parent().data("project");
+    var classToAdd = project + "-cover";
     var classToRemove = $(".project-cover").data("classToRemove");
 
     if (classToAdd != classToRemove) {
@@ -242,6 +243,9 @@
       $(".hline").removeClass("with-project-cover");
       $("p.day").removeClass("with-project-cover");
     }
+    // return false;
+
+    $("#" + project)[0].click();
 
     // alert($(self).parent().parent().data("project"));
   };
