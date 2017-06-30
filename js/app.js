@@ -221,16 +221,29 @@
   //
   var toggleLongDescrVisibility = function(self) {
     var h = $(self).parent().parent().find("p.long-descr:hidden");
-    var v = $(self).parent().parent().find("p.long-descr:visible");
-
-    var hp = $(self).parent().parent().find("p.long-descr-pics:hidden");
-    var vp = $(self).parent().parent().find("p.long-descr-pics:visible");
+    var v = $("p.long-descr:visible");
 
     h.show();
-    hp.show();
-
     v.hide();
-    vp.hide();
+
+    var classToAdd = $(self).parent().parent().data("project") + "-cover";
+    var classToRemove = $(".project-cover").data("classToRemove");
+
+    if (classToAdd != classToRemove) {
+      $(".project-cover").removeClass(classToRemove);
+      $(".project-cover").addClass(classToAdd);
+      $(".project-cover").data("classToRemove", classToAdd);
+      $(".hline").addClass("with-project-cover");
+      $("p.day").addClass("with-project-cover");
+    }
+    else {
+      $(".project-cover").removeClass(classToRemove);
+      $(".project-cover").data("classToRemove", "");
+      $(".hline").removeClass("with-project-cover");
+      $("p.day").removeClass("with-project-cover");
+    }
+
+    // alert($(self).parent().parent().data("project"));
   };
 
   //

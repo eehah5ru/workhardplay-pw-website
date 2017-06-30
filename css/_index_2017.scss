@@ -25,12 +25,25 @@ header.index-page.whp-2017 {
 section.whp-2017.index-page.description {
   @extend .row;
   @extend .expanded;
+  position: relative;
 
-  // background-image: url("/images/2017/discrassvet/discrassvet-cover.jpg");
+  .project-cover {
+    // background-image: linear-gradient(270deg, rgba(255,255,255,0), rgba(255,255,255,1)), url("/images/2017/discrassvet/discrassvet-cover.jpg");
+    background-size: 100%, 50%;
+    // background-position: left top, center center;
+    -webkit-mask-image: -webkit-gradient(linear, right top, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
 
-  span {
-    background-color: white;
   }
+
+  // span {
+  //   background-color: white;
+  // }
 
   > p {
     @extend .small-12;
@@ -69,6 +82,12 @@ section.whp-2017.index-page.description {
     span {
       background-color: white;
     }
+
+    &.with-project-cover {
+      span {
+        background: none;
+      }
+    }
   }
 
 
@@ -82,6 +101,10 @@ section.whp-2017.index-page.description {
       left: 0;
       bottom: 0;
       z-index: -1;
+
+      &.with-project-cover {
+        color: white;
+      }
     }
   }
 
@@ -141,6 +164,7 @@ section.whp-2017.index-page.description {
       @extend .large-6;
       @extend .large-offset-3;
       @extend .columns;
+      @extend .end;
     }
 
     p.long-descr-pics {
