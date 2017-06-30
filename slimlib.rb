@@ -13,6 +13,8 @@ def schedule_prj_cover_style(project_name, image_path)
 <style>
 .#{project_name}-cover {
 background-image: linear-gradient(270deg, rgba(255,255,255,0), rgba(255,255,255,1)), url("#{image_path}");
+transform: perspective(1280px) rotate3d(#{rand(-30..30)}, #{rand(-90..90)}, #{rand(20..45)}, #{rand((-50)..(-10))}deg);
+
 }
 </style>
 END

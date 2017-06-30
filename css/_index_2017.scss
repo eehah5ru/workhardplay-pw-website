@@ -29,15 +29,18 @@ section.whp-2017.index-page.description {
 
   .project-cover {
     // background-image: linear-gradient(270deg, rgba(255,255,255,0), rgba(255,255,255,1)), url("/images/2017/discrassvet/discrassvet-cover.jpg");
-    background-size: 100%, 50%;
+    // background-size: 100%, contain;
     // background-position: left top, center center;
     -webkit-mask-image: -webkit-gradient(linear, right top, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-    position: absolute;
+    position: fixed;
     z-index: -2;
     top: 0;
     left:0;
     bottom: 0;
     right: 0;
+    // transform: perspective(1280px) rotate3d(-3,90,12,-34deg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 
   }
 
