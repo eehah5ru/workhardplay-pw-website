@@ -245,7 +245,7 @@
     }
     // return false;
 
-    $("#" + project)[0].click();
+    $("#" + project + "-link")[0].click();
 
     // alert($(self).parent().parent().data("project"));
   };
@@ -266,6 +266,8 @@
       // alert("aaa");
       toggleLongDescrVisibility(e.target);
     });
+
+    window.location.hash = window.location.hash.replace(/#/, '');
   });
 
 
