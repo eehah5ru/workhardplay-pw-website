@@ -32,13 +32,14 @@ section.whp-2017.index-page.description {
     -webkit-mask-image: -webkit-gradient(linear, right top, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
     position: fixed;
     // z-index: -2;
-    top: 0;
-    left:0;
-    bottom: 0;
-    right: 0;
+    top: 5%;
+    left: 5%;
+    bottom: 5%;
+    right: 5%;
     // transform: perspective(1280px) rotate3d(-3,90,12,-34deg);
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-size: contain;
+    background-position: 0 0, center;
 
   }
 
