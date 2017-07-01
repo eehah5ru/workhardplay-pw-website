@@ -219,14 +219,15 @@
   // visibility of long descr in 2017 schedule
   //
   //
-  var toggleLongDescrVisibility = function(self) {
-    var h = $(self).parent().parent().find("p.long-descr:hidden");
+  var toggleLongDescrVisibility = function(project) {
+    var rootElement = $("[data-project='" + project + "']");
+    var h = $(rootElement).find("p.long-descr:hidden");
     var v = $("p.long-descr:visible");
 
     h.show();
     v.hide();
 
-    var project = $(self).parent().parent().data("project");
+    // var project = $(self).parent().parent().data("project");
     var classToAdd = project + "-cover";
     var classToRemove = $(".project-cover").data("classToRemove");
 
@@ -250,6 +251,12 @@
     // alert($(self).parent().parent().data("project"));
   };
 
+  var onClickOnShowProjectLonDescriptionLink = function (self) {
+    var project =  $(self).parent().parent().data("project");
+
+    toggleLongDescrVisibility(project);
+  };
+
   //
   //
   // init
@@ -264,10 +271,13 @@
 
     $("p.descr span").click(function(e) {
       // alert("aaa");
-      toggleLongDescrVisibility(e.target);
+      onClickOnShowProjectLonDescriptionLink(e.target);
     });
 
-    window.location.hash = window.location.hash.replace(/#/, '');
+    toggleLongDescrVisibility(window.location.hash.replace(/#/, ''));
+    // $("#" + window.location.hash.replace(/#/, '') + "-link")[0].click();
+    // $("#" + window.location.hash.replace(/#/, '') + "-link").click();
+    // window.location.hash = window.location.hash.replace(/#/, '');
   });
 
 
