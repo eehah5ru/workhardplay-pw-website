@@ -20,6 +20,7 @@ header.index-page.whp-2017 {
   // @include lang-switch;
   @include whp-2017-header;
   @include whp-2017-gradient-background;
+  z-index: 1;
 }
 
 section.whp-2017.index-page.description {
@@ -31,7 +32,7 @@ section.whp-2017.index-page.description {
   .project-cover {
     -webkit-mask-image: -webkit-gradient(linear, right top, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
     position: fixed;
-    // z-index: -2;
+    z-index: -2;
     top: -10%;
     left: -10%;
     bottom: -10%;
