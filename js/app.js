@@ -274,10 +274,14 @@
       onClickOnShowProjectLonDescriptionLink(e.target);
     });
 
-    toggleLongDescrVisibility(window.location.hash.replace(/#/, ''));
-    // $("#" + window.location.hash.replace(/#/, '') + "-link")[0].click();
-    // $("#" + window.location.hash.replace(/#/, '') + "-link").click();
-    // window.location.hash = window.location.hash.replace(/#/, '');
+    window.setTimeout(
+      function() {
+        toggleLongDescrVisibility(window.location.hash.replace(/#/, ''));
+        $("#" + window.location.hash.replace(/#/, '') + "-link")[0].click();
+        // $("#" + window.location.hash.replace(/#/, '') + "-link").click();
+        window.location.hash = window.location.hash.replace(/#/, '');
+      },
+      500);
   });
 
 
