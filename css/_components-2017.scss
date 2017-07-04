@@ -202,4 +202,29 @@ $primary-color-2017: darken(blue, 10%);
     }
   }
 
+  .fb-page-link {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: lightgray;
+    transform: rotatez(180deg);
+    margin-right: 3vw;
+    font-size: 10vw;
+
+    @include breakpoint(medium) {
+      margin-right: 2vw;
+      font-size: 6vw;
+    }
+
+    @include breakpoint(large) {
+      margin-right: 1.5vw;
+      font-size: 4vw;
+    }
+
+    &:hover {
+      color: blue;
+      text-decoration: underline;
+    }
+  }
+
 }
