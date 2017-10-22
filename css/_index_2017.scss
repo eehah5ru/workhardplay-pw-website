@@ -103,7 +103,10 @@ section.whp-2017.index-page.description {
   .project-col {
     @extend .small-12;
     @extend .columns;
+    @extend .row;
+    @extend .expanded;
     position: relative;
+
 
     .hline {
       position: absolute;
