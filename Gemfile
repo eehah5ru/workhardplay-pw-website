@@ -11,3 +11,6 @@ gem 'sshkit'
 # gem 'foundation'
 # gem 'compass'
 # gem "rails"
+gem 'guard'x
+gem 'guard-shell'
+gem "guard-process"
