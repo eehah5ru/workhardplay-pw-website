@@ -45,14 +45,23 @@ main =
      jsRules
 
      --
+     --
      -- static pages
+     --
      --
      staticPagesRules
 
-     archiveIndexPageRules
+     --
+     -- 2016 archive
+     --
+     archive2016IndexPageRules
+     archive2016PagesRules
 
-     archivePagesRules
-
+     --
+     -- 2017 archive
+     --
+     -- archive2017IndexPageRules
+     -- archive2017PagesRules
      --
      -- projects and posts
      --
@@ -198,18 +207,18 @@ staticPagesRules =
     notFoundEnRules = basicRules $ \x -> loadAndApplyTemplate enPageTpl siteCtx x
                                          >>= loadAndApplyTemplate rootTpl siteCtx
 
-archivePagesRules =
+archive2016PagesRules =
   rules "2016/archive/*.slim"
   where rules = matchMultiLang ruRules enRules
         ruRules = slimPageRules $ \x ->
                     applyAsTemplate archiveProjectCtx x
-                    >>= loadAndApplyTemplate "templates/archive-project-ru.slim" archiveProjectCtx
+                    >>= loadAndApplyTemplate "templates/archive-2016-project-ru.slim" archiveProjectCtx
                     >>= loadAndApplyTemplate ruPageTpl archiveProjectCtx
                     >>= loadAndApplyTemplate rootTpl archiveProjectCtx
                     >>= relativizeUrls
         enRules = slimPageRules $ \x ->
                     applyAsTemplate archiveProjectCtx x
-                    >>= loadAndApplyTemplate "templates/archive-project-en.slim" archiveProjectCtx
+                    >>= loadAndApplyTemplate "templates/archive-2016-project-en.slim" archiveProjectCtx
                     >>= loadAndApplyTemplate enPageTpl archiveProjectCtx
                     >>= loadAndApplyTemplate rootTpl archiveProjectCtx
                     >>= relativizeUrls
@@ -224,11 +233,11 @@ archivePagesRules =
                      in field "title" t
 
 
-archiveIndexPageRules =
+archive2016IndexPageRules =
   matchMultiLang ruRules enRules "2016/archive.slim"
   where ruRules = slimPageRules $ \x ->
-                    do pTpl <- loadBody "templates/archive-item.slim"
-                       plTpl <- loadBody "templates/archive-projects-list-item.slim"
+                    do pTpl <- loadBody "templates/archive-2016-item.slim"
+                       plTpl <- loadBody "templates/archive-2016-projects-list-item.slim"
                        projects <- loadAll "ru/2016/archive/*.slim"
                        projects2 <- return . take 100 . cycle $ projects
                        s <- applyTemplateList pTpl siteCtx projects
@@ -241,8 +250,8 @@ archiveIndexPageRules =
                          >>= loadAndApplyTemplate rootTpl archiveCtx
                          >>= relativizeUrls
         enRules = slimPageRules $ \x ->
-                    do pTpl <- loadBody "templates/archive-item.slim"
-                       plTpl <- loadBody "templates/archive-projects-list-item.slim"
+                    do pTpl <- loadBody "templates/archive-2016-item.slim"
+                       plTpl <- loadBody "templates/archive-2016-projects-list-item.slim"
                        projects <- loadAll "en/2016/archive/*.slim"
                        projects2 <- return . take 100 . cycle $ projects
                        s <- applyTemplateList pTpl siteCtx projects
