@@ -32,5 +32,8 @@ extra-package-dbs: []
 # arch: x86_64
 
 # Extra directories used by stack for building
-# extra-include-dirs: [/path/to/dir]
-# extra-lib-dirs: [/path/to/dir]
+extra-include-dirs:
+  - /usr/local/Cellar/libsass/3.4.3/include/sass/
+  - /usr/local/Cellar/libsass/3.4.3/include/
+extra-lib-dirs:
+  - /usr/local/Cellar/libsass/3.4.3/lib/
