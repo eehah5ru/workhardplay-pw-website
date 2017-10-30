@@ -209,7 +209,6 @@ staticPagesRules =
 
 archive2016PagesRules = do
   rules "2016/archive/*.slim"
-  rules "2017/projects/*.slim"
   where rules = matchMultiLang ruRules enRules
         ruRules = slimPageRules $ \x ->
                     applyAsTemplate archiveProjectCtx x
@@ -233,7 +232,30 @@ archive2016PagesRules = do
                            return $ aName ++ " -> " ++ pName
                      in field "title" t
 
-archive2017PagesRules = archive2016PagesRules
+archive2017PagesRules = do
+  rules "2017/projects/*.slim"
+  where rules = matchMultiLang ruRules enRules
+        ruRules = slimPageRules $ \x ->
+                    applyAsTemplate archiveProjectCtx x
+                    >>= loadAndApplyTemplate "templates/archive-2017-project-ru.slim" archiveProjectCtx
+                    >>= loadAndApplyTemplate ruPageTpl archiveProjectCtx
+                    >>= loadAndApplyTemplate rootTpl archiveProjectCtx
+                    >>= relativizeUrls
+        enRules = slimPageRules $ \x ->
+                    applyAsTemplate archiveProjectCtx x
+                    >>= loadAndApplyTemplate "templates/archive-2017-project-en.slim" archiveProjectCtx
+                    >>= loadAndApplyTemplate enPageTpl archiveProjectCtx
+                    >>= loadAndApplyTemplate rootTpl archiveProjectCtx
+                    >>= relativizeUrls
+        archiveProjectCtx = titleField `mappend`
+                            siteCtx
+        titleField :: Context String
+        titleField = let t = \i -> do
+                           m <- getMetadata (itemIdentifier i)
+                           let pName = fromMaybe "noname" (lookupString "project_title" m)
+                               aName = fromMaybe "noname" (lookupString "author" m)
+                           return $ aName ++ " -> " ++ pName
+                     in field "title" t
 
 archive2016IndexPageRules = do
   matchMultiLang ruRules enRules "2016/archive.slim"
