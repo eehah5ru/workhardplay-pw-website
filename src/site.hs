@@ -20,7 +20,8 @@ import Site.MultiLang
 
 config :: Configuration
 config = def { previewPort = 8001
-             , previewHost = "0.0.0.0" }
+             , previewHost = "0.0.0.0"
+             , inMemoryCache = True }
 
 
 main :: IO ()
@@ -303,6 +304,7 @@ archive2017IndexPageRules = do
                                         constField "projects_list" s2 `mappend`
                                         siteCtx
                        applyAsTemplate archiveCtx x
+                         >>= loadAndApplyTemplate "templates/archive-2017-page.slim" archiveCtx
                          >>= loadAndApplyTemplate ruPageTpl archiveCtx
                          >>= loadAndApplyTemplate rootTpl archiveCtx
                          >>= relativizeUrls
@@ -317,6 +319,7 @@ archive2017IndexPageRules = do
                                         constField "projects_list" s2 `mappend`
                                         siteCtx
                        applyAsTemplate archiveCtx x
+                         >>= loadAndApplyTemplate "templates/archive-2017-page.slim" archiveCtx
                          >>= loadAndApplyTemplate enPageTpl archiveCtx
                          >>= loadAndApplyTemplate rootTpl archiveCtx
                          >>= relativizeUrls
