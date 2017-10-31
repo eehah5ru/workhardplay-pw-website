@@ -1,3 +1,38 @@
+//
+//
+// mixins
+//
+//
+@mixin mask-position($posX, $posY) {
+    -webkit-mask-position: $posX $posY;
+    mask-position: $posX $posY;
+}
+
+@mixin mask-size($sX, $sY) {
+  mask-size: $sX $sY;
+  -webkit-mask-size: $sX $sY;
+
+}
+
+@mixin cover-mask($url) {
+  mask-image: url($url);
+  mask-clip: border-box; /* Can be changed in the live sample */
+  mask-repeat: no-repeat;
+
+  -webkit-mask-image: url($url);
+  -webkit-mask-clip: border-box; /* Can be changed in the live sample */
+  -webkit-mask-repeat: no-repeat;
+
+  @include mask-size(200%, 200%);
+  @include mask-position(50%, 50%);
+}
+
+
+//
+//
+// archive index page
+//
+//
 header.archive-page.whp-2017 {
   @include whp-2017-header;
   @include whp-2017-gradient-background;
@@ -33,6 +68,114 @@ header.archive-page.whp-2017 {
   }
 }
 
+article.archive-page.whp-2017 {
+  max-width: 100%;
+
+  padding-top: 2rem;
+  background: linear-gradient(0deg, pink, lightblue 30%, white);
+  overflow: hidden;
+
+  // @include cover-mask("/images/dots-transparent-50opacity-2.svg");
+
+  > ul {
+    @extend .row;
+    @extend .expanded;
+    @extend .small-up-1;
+    @extend .medium-up-2;
+    @extend .large-up-3;
+
+    list-style-type: none;
+
+    margin-bottom: 0;
+  }
+
+
+  .project-card-box {
+    // @extend .small-12;
+    // @extend .medium-6;
+    // @extend .large-4;
+    @extend .column;
+    @extend .column-block;
+    // @extend .row;
+    // @extend .expanded;
+    // word-wrap: break-word;
+    // word-break: break-word;
+
+    // margin-bottom: 4rem;
+    // &.no-filter {
+    //   filter: unset !important;
+    // }
+
+    .project-card {
+      margin: 0.5rem;
+      padding: 0.5rem;
+      border: 2px solid;
+
+      background-color: white;
+
+      text-align: center;
+    }
+
+    .thumbnail {
+      width: 100%;
+
+      // height: 200px;
+      // background-position: center;
+      // background-size: cover;
+      // @extend .small-12;
+      // @extend .columns;
+    }
+
+    .project-title {
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    .project-author {
+      text-align: center;
+    }
+  }
+
+  // .media-object-section {
+  //   @extend .small-12;
+  //   @extend .columns;
+
+  //   padding-left: 0;
+  //   padding-right: 0;
+
+  //   @include breakpoint(large) {
+  //     padding-left: rem-calc(15px);
+  //     padding-right: rem-calc(15px);
+  //   }
+
+  // }
+
+  // // .media-object-section {
+  // // }
+
+  // // .thumbnail img {
+  // //   max-width: 100%;
+  // // }
+
+  a {
+    color: $primary-color-2017;
+
+    border-bottom: thin dashed rgb(0, 0, 255);
+
+    &:hover {
+      text-decoration: none;
+      border-bottom: thin solid lighten(red, 10%);;
+
+      color: lighten(red, 10%);
+    }
+  }
+}
+
+//
+//
+// one project
+//
+//
 header.archive-project.whp-2017 {
   @include whp-2017-header;
 
@@ -48,82 +191,6 @@ header.archive-project.whp-2017 {
   }
 }
 
-article.archive-page.whp-2017 {
-  max-width: 100%;
-
-  margin-top: 2rem;
-
-  > ul {
-    @extend .row;
-    @extend .expanded;
-
-    // overflow: hidden;
-
-    > li {
-      @extend .small-12;
-      @extend .columns;
-      @extend .row;
-      @extend .expanded;
-      word-wrap: break-word;
-      word-break: break-word;
-
-      margin-bottom: 4rem;
-
-      &:nth-of-type(odd) {
-        .thumbnail {
-          @extend .large-push-6;
-          padding-right: 0
-        }
-
-        .main-section {
-          @extend .large-pull-6;
-          padding-left: 0
-        }
-      }
-
-      &:nth-of-type(even) {
-        .thumbnail {
-          padding-left: 0;
-        }
-
-        .main-section {
-          padding-right: 0;
-        }
-      }
-    }
-  }
-
-  .media-object-section,
-  thumbnail {
-    padding-left: 0;
-    padding-right: 0;
-
-    @include breakpoint(large) {
-      padding-left: rem-calc(15px);
-      padding-right: rem-calc(15px);
-    }
-
-  }
-
-  .media-object-section {
-    @extend .small-12;
-    @extend .large-6;
-    @extend .columns;
-  }
-
-  .thumbnail img {
-    max-width: 100%;
-  }
-
-  a {
-    color: $primary-color-2017;
-
-    &:hover {
-      text-decoration: underline;
-      color: lighten(red, 10%);
-    }
-  }
-}
 
 article.archive-project.whp-2017 {
   @extend .row;

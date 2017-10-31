@@ -257,6 +257,14 @@
     toggleLongDescrVisibility(project);
   };
 
+  var addProjectCardBlur = function (self) {
+    $("#" + $(self).data("projectId")).removeClass("no-filter");
+  };
+
+  var removeProjectCArdBlur = function (self) {
+    $("#" + $(self).data("projectId")).addClass("no-filter");
+  };
+
   //
   //
   // init
@@ -274,6 +282,14 @@
       onClickOnShowProjectLonDescriptionLink(e.target);
     });
 
+    $(".project-card").mouseenter(function(e) {
+      removeProjectCArdBlur(e.target);
+    });
+
+    $(".project-card").mouseleave(function(e) {
+      addProjectCardBlur(e.target);
+    });
+
     window.setTimeout(
       function() {
         toggleLongDescrVisibility(window.location.hash.replace(/#/, ''));
@@ -281,7 +297,15 @@
         // $("#" + window.location.hash.replace(/#/, '') + "-link").click();
         window.location.hash = window.location.hash.replace(/#/, '');
       },
-      500);
+      500
+    );
+
+    // $("li.project-card-box").map(function() {
+    //   var r = Math.random() * (15 - (-15)) + (-15);
+    //   var rblur = Math.random() * 2;
+    //   $(this).css("transform", "rotate3d(1, 1, 0, " + r +"deg)")
+    //     .css("filter", "blur(" + rblur + "px)");
+    // });
   });
 
 
