@@ -1,7 +1,7 @@
 {-# LANGUAGE OverloadedStrings #-}
-module Site.SlimPage where
+module Site.Compilers.Slim where
 
-import qualified Data.Aeson.Encode as AE
+import qualified Data.Aeson as AE
 import           Data.String.Conversions (convertString)
 import           Hakyll
 import Site.Types
@@ -12,7 +12,7 @@ slimPageRules :: (Item String -> Compiler (Item String)) -> Rules ()
 slimPageRules f =
    withSlimDeps $ do
      route $ setExtension "html"
-     compile $ slimCompiler
+     compile $ slimCompilerWithEmptyLocals
        >>= f
        -- >>= relativizeUrls
 
@@ -30,6 +30,11 @@ slimCompiler =
     getResourceBody >>= withItemBody (compileSlim m)
   where makeJson = return . convertString . AE.encode
 
+slimCompilerWithEmptyLocals :: Compiler (Item String)
+slimCompilerWithEmptyLocals =
+  getResourceBody >>= withItemBody compileSlimWithEmptyLocals
+
+
 compileSlim :: String -> String -> Compiler String
 compileSlim m = unixFilter "slimrb" [ "-s"
                                        , "-p"
@@ -37,5 +42,6 @@ compileSlim m = unixFilter "slimrb" [ "-s"
                                        ,  "--trace"
                                        , "-l"
                                        , m]
+
 compileSlimWithEmptyLocals :: String -> Compiler String
 compileSlimWithEmptyLocals = compileSlim "{}"
