@@ -1,6 +1,8 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Site.Context where
 
+import Control.Applicative (Alternative (..))
+
 import Hakyll
 
 import Data.Monoid ((<>), mempty)
@@ -9,6 +11,13 @@ import Site.MultiLang
 
 import Site.Utils
 
+boolFieldM :: String -> (Item a -> Compiler Bool) -> Context a
+boolFieldM name f = field name $ \i -> do
+                      b <- f i
+                      if b
+                        then pure $ error $ unwords $
+                                 ["no string value for bool field:",name]
+                        else empty
 --
 --
 -- utils
@@ -59,14 +68,20 @@ fieldYear = field "year" $ return . itemYear
 
 fieldCanonicalName = field "canonical_name" $ return . itemCanonicalName
 
+fieldLang = field "lang" $ return . itemLang
+
+
 --
 --
 -- contexts
 --
 --
 siteCtx :: Context String
-siteCtx = ruUrlField
-          <> enUrlField
+siteCtx = fieldRuUrl
+          <> fieldEnUrl
+          <> fieldLang
+          <> fieldOtherLang
+          <> fieldOtherLangUrl
           <> fieldYear
           <> fieldCanonicalName
           <> fieldRootUrl

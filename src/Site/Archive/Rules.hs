@@ -13,37 +13,44 @@ import Site.MultiLang
 import Site.Template
 
 import Site.Compilers.Slim
+import Site.Compilers.Markdown
 import Site.Archive.Compilers
 
+import Site.Archive.Utils
 --
 --
 -- rules
 --
 --
+
+--
+-- index page
+--
 archiveIndexPagesRules = do
-  matchMultiLang (ruRules "ru/2016/archive/*.slim")
-                 (enRules "en/2016/archive/*.slim")
+  matchMultiLang (rules' "ru/2016/archive/")
+                 (rules' "en/2016/archive/")
                  "2016/archive.slim"
-  matchMultiLang (ruRules "ru/2017/projects/*.slim")
-                 (enRules "en/2017/projects/*.slim")
+  matchMultiLang (rules' "ru/2017/projects/")
+                 (rules' "en/2017/projects/")
                  "2017/archive.slim"
   where
-    localizedRules pageTpl projectsPattern =
+    rules' projectsPattern =
           slimPageRules $ \x -> do
-            ctx <- mkArchiveIndexPageCtx projectsPattern
+            ctx <- mkArchiveIndexPageCtx (archiveProjectsPattern projectsPattern)
             renderArchiveIndexPage pageTpl ctx x
-    ruRules = localizedRules ruPageTpl
-    enRules = localizedRules enPageTpl
-
-
+--
+-- project page
+--
 archiveProjectPagesRules = do
-  matchMultiLang ruRules enRules "2016/archive/*.slim"
-  matchMultiLang ruRules enRules "2017/projects/*.slim"
-  where
-    localizedRules projectTpl pageTpl =
-        slimPageRules $ renderArchiveProjectPage projectTpl pageTpl archiveProjectCtx
-    ruRules = localizedRules "templates/archive-2017-project.slim"
-                                 ruPageTpl
+  matchMultiLang slimRules slimRules "2016/archive/*.slim"
+  matchMultiLang mdRules mdRules "2016/archive/*.md"
 
-    enRules = localizedRules "templates/archive-2017-project.slim"
-                                 enPageTpl
+  matchMultiLang slimRules slimRules "2017/projects/*.slim"
+  matchMultiLang mdRules mdRules "2017/projects/*.md"
+
+  where
+    slimRules =
+      slimPageRules $ render'
+    mdRules  =
+      markdownPageRules $ render'
+    render' = renderArchiveProjectPage "templates/archive-2017-project.slim" pageTpl archiveProjectCtx

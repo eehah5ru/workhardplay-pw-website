@@ -7,10 +7,13 @@ import Hakyll
 -- templates
 --
 ruPageTpl :: Identifier
-ruPageTpl = "templates/page-ru.slim"
+ruPageTpl = "templates/page.slim"
 
 enPageTpl :: Identifier
-enPageTpl = "templates/page-en.slim"
+enPageTpl = "templates/page.slim"
+
+pageTpl :: Identifier
+pageTpl = "templates/page.slim"
 
 rootTpl :: Identifier
 rootTpl = "templates/default.slim"

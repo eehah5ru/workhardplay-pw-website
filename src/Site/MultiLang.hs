@@ -3,9 +3,13 @@
 module Site.MultiLang where
 
 import System.FilePath.Posix ((</>))
+import Data.Maybe (fromMaybe)
+
 import Hakyll
 import Hakyll.Core.Util.String (replaceAll)
 import Site.Types
+
+import Site.Utils
 
 matchMultiLang
   :: Rules () -> Rules () -> FilePath -> Rules ()
@@ -24,11 +28,34 @@ localizeUrl prefix url = "/" ++ prefix ++ "/" ++ url'
              '/' -> tail url
              _ -> url
 
-ruUrlField :: Context String
-ruUrlField = multiLangUrlField "ru" "en"
+otherLang :: String -> String
+otherLang l = case l of
+                "ru" -> "en"
+                "en" -> "ru"
+                _ -> "unknown"
 
-enUrlField :: Context String
-enUrlField = multiLangUrlField "en" "ru"
+
+fieldOtherLang :: Context String
+fieldOtherLang =
+  field "other_lang" (return . otherLang . itemLang)
+
+
+fieldOtherLangUrl :: Context String
+fieldOtherLangUrl =
+  field "other_lang_url" getOtherLangUrl
+  where
+    getOtherLangUrl i = do
+      u <- return . fromMaybe "/not-found.html" =<< getRoute =<< (return . itemIdentifier) i
+      return . toUrl $ (replaceAll (pattern' i) (replacementF i) u)
+    pattern' i = (itemLang i) ++ "/"
+    replacementF i = const $ (otherLang . itemLang $ i) ++ "/"
+
+
+fieldRuUrl :: Context String
+fieldRuUrl = multiLangUrlField "ru" "en"
+
+fieldEnUrl :: Context String
+fieldEnUrl = multiLangUrlField "en" "ru"
 
 multiLangUrlField :: String -> String -> Context String
 multiLangUrlField lang fromLang = field fieldName (\x -> getUrl fromLang x >>= return . translateUrl fromLang lang >>= return . (++) "/")

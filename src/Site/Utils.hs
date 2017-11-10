@@ -20,3 +20,7 @@ itemCanonicalName = getCanonicalName . reverse . itemPathParts
 
 itemPathParts :: Item a -> [String]
 itemPathParts i = splitAll "/" (toFilePath . itemIdentifier $ i)
+
+
+loadImages :: Pattern -> Compiler [Item CopyFile]
+loadImages = loadAll

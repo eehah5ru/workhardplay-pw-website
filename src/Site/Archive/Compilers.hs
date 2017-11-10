@@ -4,16 +4,20 @@ module Site.Archive.Compilers where
 import Hakyll
 import Site.Template
 import Site.Context
+
+import Site.Archive.ProjectContext
 --
 --
 -- renderers
 --
 --
-renderProjectsItems projects =
-  applyTemplateSnapshotList "templates/archive-2017-item.slim" siteCtx projects
+renderProjectsItems projects = do
+  tpl <- loadBody "templates/archive-2017-item.slim"
+  applyTemplateList tpl archiveProjectCtx projects
 
-renderProjectsListItems projects =
-  applyTemplateSnapshotList "templates/archive-2017-projects-list-item.slim" siteCtx projects
+renderProjectsListItems projects = do
+  tpl <- loadBody "templates/archive-2017-projects-list-item.slim"
+  applyTemplateList tpl archiveProjectCtx projects
 
 renderArchiveProjectPage projectTemplate pageTemplate ctx x =
   applyAsTemplate ctx x
