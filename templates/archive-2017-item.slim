@@ -1,7 +1,11 @@
 li.project-card-box id="$canonical_name$"
   .project-card data-project-id="$canonical_name$"
+    = _if "has_video"
+      .has-video-icon id="has-video-icon-$canonical_name$" style="background-color: rgba($cover_color$, 0.7)"
+        | &nbsp;
+    = _endif
     .thumbnail
-      img src="/images/2017/$canonical_name$/$project_cover$"
+      img src="$project_cover$"
     .project-title
      a href="$url$"
        | $project_title$
