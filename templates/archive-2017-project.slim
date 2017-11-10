@@ -1,0 +1,38 @@
+css:
+  .header-cover {
+    background-image: linear-gradient(0deg, rgba($cover_color$,0), rgba($cover_color$,1)), url($project_cover$);
+    background-size: contain, cover;
+    background-position: left top, center center;
+  }
+header.archive-project.whp-2017
+  .header-cover
+    | &nbsp;
+  h1
+    a href="$root_url$"
+      | $year$
+    | &nbsp;->&nbsp;
+    a href="$archive_url$"
+      | $archive_name$
+    br
+    | $author$
+    | &nbsp;
+    | $project_title$
+
+article.archive-project.whp-2017
+  | $body$
+  = _if "has_audio"
+    figure
+      .responsive-embed.widescreen
+        iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/$soundcloud_track_id$&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"
+  = _endif
+
+  = _if "has_video"
+    figure
+      .responsive-embed.widescreen
+        iframe width="420" height="315" src="https://www.youtube.com/embed/$youtube_video_id$" frameborder="0" allowfullscreen="true"
+  = _endif
+
+  = _for "images"
+    figure
+      img src="$image_url$"
+  = _endfor
