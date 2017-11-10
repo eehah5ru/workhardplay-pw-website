@@ -24,7 +24,7 @@ import Site.Compilers.Slim
 import Site.Rules.Templates
 import Site.Rules.Assets
 import Site.Rules.StaticPages
-import Site.Rules.ArchivePages
+import Site.Archive.Rules
 
 --------------------------------------------------------------------------------
 

@@ -15,6 +15,15 @@ matchMultiLang ruRules enRules path =
   where ruPages = fromGlob $ "ru" </> path
         enPages = fromGlob $ "en" </> path
 
+
+localizeUrl :: String -> String -> String
+localizeUrl prefix [] = "/" ++ prefix ++ "/"
+localizeUrl prefix url = "/" ++ prefix ++ "/" ++ url'
+  where
+    url' = case (head url) of
+             '/' -> tail url
+             _ -> url
+
 ruUrlField :: Context String
 ruUrlField = multiLangUrlField "ru" "en"
 

@@ -8,11 +8,15 @@ import Site.Types
 
 
 
+-- loadAndApplySlimTemplate tplPattern ctx x = do
+--   tpl <- loadBody tplPattern >>= undefined
+--   undefined
+
 slimPageRules :: (Item String -> Compiler (Item String)) -> Rules ()
 slimPageRules f =
    withSlimDeps $ do
      route $ setExtension "html"
-     compile $ slimCompilerWithEmptyLocals
+     compile $ slimCompiler
        >>= f
        -- >>= relativizeUrls
 
