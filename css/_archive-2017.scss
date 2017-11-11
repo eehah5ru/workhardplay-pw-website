@@ -71,6 +71,7 @@ header.archive-page.whp-2017 {
 article.archive-page.whp-2017 {
   max-width: 100%;
 
+  z-index: 0;
   padding-top: 2rem;
   background: linear-gradient(0deg, pink, lightblue 30%, white);
   overflow: hidden;
@@ -197,6 +198,12 @@ article.archive-page.whp-2017 {
 header.archive-project.whp-2017 {
   @include whp-2017-header;
 
+  // z-index: -1;
+
+  // > h1 {
+  //   z-index: -1;
+  // }
+
   .header-cover {
     position: absolute;
     top: 0;
@@ -245,6 +252,10 @@ article.archive-project.whp-2017 {
     // &:first-of-type {
     //   margin-top: 2rem;
     // }
+  }
+
+  figure img {
+    width: 100%;
   }
 
   ul {
