@@ -26,14 +26,18 @@ import Site.Rules.Assets
 import Site.Rules.StaticPages
 import Site.Archive.Rules
 
---------------------------------------------------------------------------------
+import Site.CollectiveGlossary
+import Site.CollectiveGlossary.Rules
 
+--------------------------------------------------------------------------------
 
 main :: IO ()
 main =
   hakyllWith config $
   do
+     terms <- buildTerms
 
+     collectiveGlossaryRules terms
      templatesRules
 
      imagesRules
@@ -46,9 +50,13 @@ main =
 
      -- slim partials for deps
      match ("ru/**/_*.slim" .||. "en/**/_*.slim") $ compile getResourceBody
+
+     -- collective glossary defenitions for deps
+     match ("collective-glossary/*.md") $ compile getResourceBody
+
      staticPagesRules
 
-     archiveIndexPagesRules
-     archiveProjectPagesRules
+     archiveIndexPagesRules terms
+     archiveProjectPagesRules terms
 
 --------------------------------------------------------------------------------

@@ -3,6 +3,7 @@ module Site.Archive.Rules where
 
 import Data.Maybe (fromMaybe)
 import Data.Monoid ((<>), mempty)
+import System.FilePath.Posix ((</>))
 
 import Hakyll
 
@@ -16,6 +17,9 @@ import Site.Compilers.Slim
 import Site.Compilers.Markdown
 import Site.Archive.Compilers
 
+import Site.CollectiveGlossary
+import Site.CollectiveGlossary.Context
+
 import Site.Archive.Utils
 --
 --
@@ -26,31 +30,48 @@ import Site.Archive.Utils
 --
 -- index page
 --
-archiveIndexPagesRules = do
-  matchMultiLang (rules' "ru/2016/archive/")
-                 (rules' "en/2016/archive/")
+archiveIndexPagesRules :: Terms -> Rules ()
+archiveIndexPagesRules ts = do
+  let rules2016 = rules' "2016/archive/"
+      rules2017 = rules' "2017/projects/"
+  matchMultiLang rules2016
+                 rules2016
                  "2016/archive.slim"
-  matchMultiLang (rules' "ru/2017/projects/")
-                 (rules' "en/2017/projects/")
+  matchMultiLang rules2017
+                 rules2017
                  "2017/archive.slim"
   where
-    rules' projectsPattern =
+    rules' projectsPattern locale =
           slimPageRules $ \x -> do
-            ctx <- mkArchiveIndexPageCtx (archiveProjectsPattern projectsPattern)
+            ctx <- mkArchiveIndexPageCtx (terms locale ts) (archiveProjectsPattern (localizePath locale projectsPattern))
             renderArchiveIndexPage pageTpl ctx x
+
+
 --
 -- project page
 --
-archiveProjectPagesRules = do
-  matchMultiLang slimRules slimRules "2016/archive/*.slim"
-  matchMultiLang mdRules mdRules "2016/archive/*.md"
+archiveProjectPagesRules :: Terms -> Rules ()
+archiveProjectPagesRules ts = do
+  matchSlim "2016/archive/"
+  matchMd "2016/archive/"
 
-  matchMultiLang slimRules slimRules "2017/projects/*.slim"
-  matchMultiLang mdRules mdRules "2017/projects/*.md"
+  matchSlim "2017/projects/"
+  matchMd "2017/projects/"
 
   where
-    slimRules =
-      slimPageRules $ render'
-    mdRules  =
-      markdownPageRules $ render'
-    render' = renderArchiveProjectPage "templates/archive-2017-project.slim" pageTpl archiveProjectCtx
+    matchSlim base = matchMultiLang slimRules
+                                    slimRules
+                                    (base </> "*.slim")
+    matchMd base = matchMultiLang mdRules
+                                  mdRules
+                                  (base </> "*.md")
+    slimRules locale =
+      slimPageRules $ render' locale
+    mdRules locale  =
+      markdownPageRules $ render' locale
+    render' locale item = do
+      renderArchiveProjectPage
+        "templates/archive-2017-project.slim"
+        pageTpl
+        (archiveProjectCtx (terms locale ts))
+        item

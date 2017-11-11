@@ -17,15 +17,13 @@ staticPagesRules =
     -- 2016
     indexPage "2016/index.slim"
   where
-    indexPage = matchMultiLang ruRules enRules
-    notFoundPage = matchMultiLang ruRules enRules
+    indexPage = matchMultiLang rules' rules'
+    notFoundPage = matchMultiLang rules' rules'
 
-    localizedRules pageTpl =
+    rules' locale =
       slimPageRules $ compilers
       where compilers x =
               applyAsTemplate siteCtx x
               >>= applyTemplateSnapshot pageTpl siteCtx
               >>= applyTemplateSnapshot rootTpl siteCtx
               -- >>= relativizeUrls
-    ruRules = localizedRules ruPageTpl
-    enRules = localizedRules enPageTpl

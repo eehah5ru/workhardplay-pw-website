@@ -13,14 +13,18 @@ itemLang :: Item a -> String
 itemLang = head . itemPathParts
 
 itemCanonicalName :: Item a -> String
-itemCanonicalName = getCanonicalName . reverse . itemPathParts
+itemCanonicalName = identifierCanonicalName . itemIdentifier
+
+identifierCanonicalName :: Identifier -> String
+identifierCanonicalName = getCanonicalName . reverse . identifierPathParts
   where
     getCanonicalName =  takeBaseName . head
 
-
 itemPathParts :: Item a -> [String]
-itemPathParts i = splitAll "/" (toFilePath . itemIdentifier $ i)
+itemPathParts = identifierPathParts . itemIdentifier
 
+identifierPathParts :: Identifier -> [String]
+identifierPathParts i = splitAll "/" (toFilePath i)
 
 loadImages :: Pattern -> Compiler [Item CopyFile]
 loadImages = loadAll

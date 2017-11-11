@@ -18,12 +18,21 @@ imagesPattern i =
 
 archiveProjectsPattern :: FilePath -> Pattern
 archiveProjectsPattern base =
-  (pattern' "*.slim") .||. (pattern' "*.md")
+  (archiveProjectsSlimPattern base) .||. (archiveProjectsMdPattern base)
+
+archiveProjectsTypedPattern :: String -> FilePath -> Pattern
+archiveProjectsTypedPattern capture base =
+  pattern' capture
   where
     pattern' p = toPattern' $ base </> p
     toPattern' :: FilePath -> Pattern
     toPattern' = fromGlob
 
+archiveProjectsSlimPattern :: FilePath -> Pattern
+archiveProjectsSlimPattern = archiveProjectsTypedPattern "*.slim"
+
+archiveProjectsMdPattern :: FilePath -> Pattern
+archiveProjectsMdPattern = archiveProjectsTypedPattern "*.md"
 
 
 projectCoverPattern :: Item a -> Pattern

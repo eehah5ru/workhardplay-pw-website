@@ -64,6 +64,10 @@ fieldArchiveName =
                            "en" -> "Archive"
                            _ -> "Noname Archive"
 
+fieldGlossaryName =
+  field "glossary_name" getName
+  where
+    getName = return . chooseByItemLang "Глоссарий" "Glossary"
 fieldYear = field "year" $ return . itemYear
 
 fieldCanonicalName = field "canonical_name" $ return . itemCanonicalName
@@ -87,4 +91,5 @@ siteCtx = fieldRuUrl
           <> fieldRootUrl
           <> fieldArchiveUrl
           <> fieldArchiveName
+          <> fieldGlossaryName
           <> defaultContext

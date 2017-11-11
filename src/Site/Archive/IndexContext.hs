@@ -7,30 +7,30 @@ import Data.Monoid ((<>), mempty)
 import Hakyll
 import Site.Context
 import Site.Archive.Compilers
+import Site.Archive.ProjectContext
 
 import Site.Utils
 import Site.Archive.Utils
 
 
-
-
-mkProjectsField projectsPattern =
+mkProjectsField ctx projectsPattern =
   loadAll projectsPattern
-  >>= renderProjectsItems
+  >>= renderProjectsItems ctx
   >>= return . constField "projects"
 
-mkProjectsListField projectsPattern = do
+mkProjectsListField ctx projectsPattern = do
   loadAll projectsPattern
   >>= return . take 100 . cycle
-  >>= renderProjectsListItems
+  >>= renderProjectsListItems ctx
   >>= return . constField "projects_list"
-
 --
 -- index page ctx
 --
-mkArchiveIndexPageCtx pxPattern = do
-  projects <- mkProjectsField pxPattern
-  projectsList <- mkProjectsListField pxPattern
+mkArchiveIndexPageCtx :: Tags -> Pattern -> Compiler (Context String)
+mkArchiveIndexPageCtx terms pxPattern = do
+  let pCtx = (archiveProjectCtx terms)
+  projects <- mkProjectsField pCtx pxPattern
+  projectsList <- mkProjectsListField pCtx pxPattern
   return $
     projects
     <> projectsList

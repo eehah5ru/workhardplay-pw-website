@@ -17,6 +17,7 @@ import Site.Context
 import Site.Utils
 import Site.Archive.Utils
 
+import Site.CollectiveGlossary.Context (fieldTermsList)
 --
 --
 -- metadata predicates
@@ -99,11 +100,12 @@ fieldImages = listFieldWith "images" mkImageItem (\i -> loadImages (imagesPatter
 --
 -- project page ctx
 --
-archiveProjectCtx =
+archiveProjectCtx terms =
   fieldProjectTitle
   <> fieldProjectCover
   <> fieldHasMedia
   <> fieldHasVideo
   <> fieldHasImages
   <> fieldImages
+  <> (fieldTermsList terms)
   <> siteCtx

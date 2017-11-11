@@ -11,13 +11,13 @@ import Site.Archive.ProjectContext
 -- renderers
 --
 --
-renderProjectsItems projects = do
+renderProjectsItems ctx projects = do
   tpl <- loadBody "templates/archive-2017-item.slim"
-  applyTemplateList tpl archiveProjectCtx projects
+  applyTemplateList tpl ctx projects
 
-renderProjectsListItems projects = do
+renderProjectsListItems ctx projects = do
   tpl <- loadBody "templates/archive-2017-projects-list-item.slim"
-  applyTemplateList tpl archiveProjectCtx projects
+  applyTemplateList tpl ctx projects
 
 renderArchiveProjectPage projectTemplate pageTemplate ctx x =
   applyAsTemplate ctx x

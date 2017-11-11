@@ -11,22 +11,56 @@ import Site.Types
 
 import Site.Utils
 
-matchMultiLang
-  :: Rules () -> Rules () -> FilePath -> Rules ()
+data Locale = RU | EN | UNKNOWN deriving (Show)
+
+fromLang :: String -> Locale
+fromLang "ru" = RU
+fromLang "en" = EN
+fromLang l = error $ unwords ["unknown lang: ", l]
+
+toLang :: Locale -> String
+toLang RU = "ru"
+toLang EN = "en"
+toLang l = error $ unwords ["unknown localizer: ", show l]
+
+matchMultiLang :: (Locale -> Rules ())
+               -> (Locale -> Rules ())
+               -> FilePath
+               -> Rules ()
 matchMultiLang ruRules enRules path =
-  do match ruPages $ ruRules
-     match enPages $ enRules
-  where ruPages = fromGlob $ "ru" </> path
-        enPages = fromGlob $ "en" </> path
+  do match ruPages $ ruRules RU
+     match enPages $ enRules EN
+  where ruPages = fromGlob $ localizePath RU path
+        enPages = fromGlob $ localizePath EN path
 
 
-localizeUrl :: String -> String -> String
-localizeUrl prefix [] = "/" ++ prefix ++ "/"
-localizeUrl prefix url = "/" ++ prefix ++ "/" ++ url'
+bothLangsPattern :: String -> Pattern
+bothLangsPattern p =
+  (fromGlob (localizePath RU p)) .||. (fromGlob (localizePath EN p))
+
+localizeUrl :: Locale -> String -> String
+localizeUrl l [] = "/" ++ (toLang l) ++ "/"
+localizeUrl l url = "/" ++ (toLang l) ++ "/" ++ url'
   where
     url' = case (head url) of
              '/' -> tail url
              _ -> url
+
+localizePath :: Locale -> String -> String
+localizePath l [] = (toLang l) ++ "/"
+localizePath l path = (toLang l) </> path
+
+localizeField :: Locale -> String -> String
+localizeField l f = f ++ "_" ++ (toLang l)
+
+
+chooseByItemLang :: String -> String -> Item a -> String
+chooseByItemLang r e = chooseByLocale r e . fromLang . itemLang
+
+chooseByLocale :: String -> String -> Locale -> String
+chooseByLocale r _ RU = r
+chooseByLocale _ e EN = e
+chooseByLocale _ _ _ = error "unknown locale"
 
 otherLang :: String -> String
 otherLang l = case l of
