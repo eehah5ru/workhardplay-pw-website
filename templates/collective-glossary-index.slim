@@ -1,0 +1,14 @@
+header.archive-page.whp-2017
+  .projects-list
+    | projects_list
+  h1.large
+    a href="$url$"
+      | $title$
+
+article.archive-page.whp-2017
+  ul
+    = _for "terms"
+      li
+        a href="$term_url$"
+          | $term_name$
+    = _endfor

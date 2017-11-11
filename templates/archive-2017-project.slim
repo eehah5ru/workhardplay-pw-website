@@ -19,6 +19,11 @@ header.archive-project.whp-2017
     | $project_title$
 
 article.archive-project.whp-2017
+  = _if "terms_list"
+    p.collective-glossary-terms
+      | $terms_list$
+  = _endif
+
   = _if "has_audio"
     figure
       iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/$soundcloud_track_id$&amp;color=%23616161&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"

@@ -1,6 +1,15 @@
 meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
 meta name="viewport" content="width=device-width, initial-scale=1"
 
+meta property="og:title" content="$title$"
+meta property="og:url" content="$url$"
+
+= _if "project_cover"
+  meta property="og:image" content="$project_cover$"
+= _else
+  meta property="og:image" content="/images/whp-cover.jpg"
+= _endif
+
 
 title
   | $title$
