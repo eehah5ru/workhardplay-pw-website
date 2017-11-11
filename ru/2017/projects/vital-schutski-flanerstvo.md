@@ -1,8 +1,8 @@
 ---
-author: Кристофер Рот и Армен Аванесян
-project_title: HYPERSTITION
-project_cover: hyperstition-cover.jpg
-canonical_name: hyperstition
+author: Виталий Шуцкий
+project_title: «Онлайн-отчёт о прогулке в торговом центре Le BHV» про стоимость, статус и ценность вещи в современной неолиберальной экономике
+project_cover: vital-schutski-flanerstvo-01.jpg
+canonical_name: vital-schutski-flanerstvo
 cover_color: "255,0,0"
 ---
 
