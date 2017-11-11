@@ -1,16 +1,18 @@
 ---
-author: Антон Сорокин
-project_title: Месть Верблюдов Мутантов (игровая сессия)
+author: Anton Sorokin
+project_title: Revenge of the Mutant Camels (Game session)
 project_cover: anton-sorokin-camel-revenge-cover.jpg
 canonical_name: anton-sorokin-camel-revenge
 cover_color: "255,0,0"
+youtube_video_id: MK90xavApTA
 ---
 
-p
-  | Предлагаем всем присоединиться к вылазке в места, где сейчас пока еще незаметно, но рождается новый урбанистический порядок. Хотите – верьте, хотите – нет, но дата-центры чем-то похожи на голубятни: такие же незаметные сооружения-паразиты на теле привычного нам городского ландшафта.
-p
-  | По ходу дела мы убедимся, что ситуация с дата-центрами гораздо сложнее и противоречивее чем та, которую нам рисуют евангелисты нового цифрового миропорядка в своих пресс-релизах. Вместо холодного синего света серверных, мы погрузимся в драму того, кому и как выгодно распоряжаться большими данными, кто становится королевами и королями аутсорсинга ИТ-инфраструктуры, на наглядных примерах разберемся в архитектуре сетей, опутывающих земной шар. Никто не знает, что нас ждет за углом, то ли НИИ, то ли начало оффшорного лабиринта. Наша цель – выяснить, что важнее: политическая стабильность или энергетическая независимость. Наше средство – знакомства в курилке с системными администраторами.
-p
-  | Место действия: остатки позднесоветской промышленной мощи, торговый центр имени известного актера, и оптовый рынок.
-p
- | Не без алгоритмической случайности, сквозь московскую летнюю пыль мы попробуем посмотреть на экономические модели технобудущего и на наше место в нем. Походим по воображаемым местам, где царит автоматизация, машины работают для машин, наши внутренние коммерсанты давно не подают голоса и мы как кошки шляемся, выискивая места поинтереснее да потеплее.
+A camel died in the zoo in Minsk. As the agency "Minsk-news" informs, this happened because one of the visitors of the zoo fed the camel with a cellophane package. According to the results of the autopsy of an animal in the body, in addition to cellophane, ropes, children's mittens, polyethylene, and other objects were also found. The camel is armed with small blue bullets, but can obtain other types of weapons, as well as various bonuses, including Nike sneakers, ecstasy tablets, jambs with marijuana, and apples. The camel has to fight people on flying toilets, English phone booths, Polo mint sweets, exploding sheep, kangaroos on skis, jet aircraft, and others.
+
+Year of manufacture: 1984  
+
+Platforms: Amiga, Atari ST, Commodore 64, DOS  
+
+Genre: Horizontally-scrolling shooter  
+
+Prizes and awards: # 1 Most weird and stupid plots of all time (Atari ST games, 1992)
