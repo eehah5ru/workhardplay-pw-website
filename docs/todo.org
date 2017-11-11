@@ -1,0 +1,68 @@
+* engine
+** TODO glossary
+*** TODO tags descriptions
+*** TODO title for term page
+*** TODO title for glossary page
+*** DONE tags for project
+    CLOSED: [2017-11-11 Sat 21:58]
+*** DONE tags on archive index page
+    CLOSED: [2017-11-11 Sat 21:58]
+*** DONE link to collective glossary on index page
+    CLOSED: [2017-11-11 Sat 21:58]
+*** DONE tags index page
+    CLOSED: [2017-11-11 Sat 21:58]
+*** DONE page for each tag
+    CLOSED: [2017-11-11 Sat 21:58]
+*** DONE en-ru tags
+    CLOSED: [2017-11-11 Sat 21:58]
+** images
+*** resize
+*** extract medatada
+**** author
+**** description
+**** en and ru versions
+* design
+** TODO general
+*** favicon
+*** /images/whp-cover.jpg
+** archive index
+*** small icons for audio and video
+*** tags list
+** archive project
+*** tags
+*** missing cover image
+*** media content
+**** photo - author
+**** photo - description
+**** photo - copyright
+**** layout for photo credits
+***** small grey font under photo / inside? / vertical?
+**** DONE video
+     CLOSED: [2017-11-11 Sat 14:40]
+**** DONE photo gallery
+     CLOSED: [2017-11-11 Sat 14:40]
+*** DONE redcloth gem
+    CLOSED: [2017-11-11 Sat 14:41]
+*** DONE test pandoc markdown compiler
+    CLOSED: [2017-11-11 Sat 14:41]
+* content
+** olya martynennko as author
+* DONE links to belaruskali and pvt
+  CLOSED: [2017-11-11 Sat 14:42]
+** DONE en
+   CLOSED: [2017-04-27 Thu 14:43]
+** DONE ru
+   CLOSED: [2017-04-27 Thu 14:43]
+* DONE copy data from old website
+  CLOSED: [2017-10-31 Tue 12:19]
+* DONE capistrano
+  CLOSED: [2017-10-31 Tue 12:19]
+** DONE deploy to staging
+   CLOSED: [2017-10-31 Tue 12:19]
+** DONE user on DO
+   CLOSED: [2017-10-31 Tue 12:19]
+** DONE change rights for deploy user
+   CLOSED: [2017-10-31 Tue 12:19]
+** DONE change nginx config
+   CLOSED: [2017-10-31 Tue 12:19]
+** tags
