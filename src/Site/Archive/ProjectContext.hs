@@ -11,10 +11,12 @@ import Data.Binary
 import Data.Typeable
 
 import Hakyll
+
+import W7W.Utils
+
 import Site.Context
 
 
-import Site.Utils
 import Site.Archive.Utils
 
 import Site.CollectiveGlossary.Context (fieldTermsList)

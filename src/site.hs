@@ -12,14 +12,14 @@ import Hakyll.Core.Compiler (getUnderlying)
 import Hakyll.Web.Template.Internal (readTemplate)
 
 
-import Site.Types
+import W7W.Types
+import W7W.MultiLang
+import W7W.Compilers.Slim
+
 import Site.Config
 import Site.Context
 
-import Site.MultiLang
 import Site.Template
-
-import Site.Compilers.Slim
 
 import Site.Rules.Templates
 import Site.Rules.Assets

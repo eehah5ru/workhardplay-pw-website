@@ -3,10 +3,12 @@ module Site.Rules.StaticPages where
 
 import Hakyll
 
+import W7W.MultiLang
+import W7W.Compilers.Slim
+
 import Site.Template
-import Site.MultiLang
 import Site.Context
-import Site.Compilers.Slim
+
 
 staticPagesRules =
   do

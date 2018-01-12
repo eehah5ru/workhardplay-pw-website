@@ -7,15 +7,17 @@ import System.FilePath.Posix ((</>))
 
 import Hakyll
 
+import W7W.MultiLang
+import W7W.Compilers.Slim
+import W7W.Compilers.Markdown
+
+import Site.Archive.Compilers
+
 import Site.Context
 import Site.Archive.IndexContext
 import Site.Archive.ProjectContext
-import Site.MultiLang
 import Site.Template
 
-import Site.Compilers.Slim
-import Site.Compilers.Markdown
-import Site.Archive.Compilers
 
 import Site.CollectiveGlossary
 import Site.CollectiveGlossary.Context

@@ -5,8 +5,9 @@ import           Data.Monoid (mappend, (<>))
 
 import Hakyll
 
-import Site.Compilers.Slim
-import Site.MultiLang
+import W7W.Compilers.Slim
+import W7W.MultiLang
+
 import Site.Template
 import Site.Context
 import Site.Archive.IndexContext (mkArchiveIndexPageCtx)

@@ -5,11 +5,13 @@ import Data.Maybe (fromMaybe)
 import Data.Monoid ((<>), mempty)
 
 import Hakyll
+
+import W7W.Utils
+
 import Site.Context
 import Site.Archive.Compilers
 import Site.Archive.ProjectContext
 
-import Site.Utils
 import Site.Archive.Utils
 
 

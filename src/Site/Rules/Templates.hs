@@ -3,7 +3,7 @@ module Site.Rules.Templates where
 
 import Hakyll
 
-import Site.Compilers.Slim
+import W7W.Compilers.Slim
 
 templatesRules =
   do

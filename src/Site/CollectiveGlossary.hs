@@ -7,10 +7,11 @@ import Data.Maybe (fromMaybe)
 import Data.List (find)
 import Hakyll
 
-import Site.Archive.Utils
-import Site.MultiLang
+import W7W.MultiLang
+import W7W.Utils
 
-import Site.Utils
+import Site.Archive.Utils
+
 
 data Terms = Terms {ruTerms :: Tags
                    ,enTerms :: Tags}

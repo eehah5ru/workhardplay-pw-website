@@ -5,7 +5,7 @@ import           Hakyll.Web.Sass (sassCompilerWith)
 
 import Hakyll
 
-import Site.Types
+import W7W.Types
 import Site.Config
 
 dataRules =

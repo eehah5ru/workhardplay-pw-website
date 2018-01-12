@@ -5,7 +5,7 @@ import System.FilePath.Posix ((</>), takeBaseName)
 
 import Hakyll
 
-import Site.Utils
+import W7W.Utils
 
 --
 --

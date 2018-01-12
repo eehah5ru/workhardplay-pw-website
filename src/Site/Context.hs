@@ -7,9 +7,9 @@ import Hakyll
 
 import Data.Monoid ((<>), mempty)
 
-import Site.MultiLang
+import W7W.MultiLang
 
-import Site.Utils
+import W7W.Utils
 
 boolFieldM :: String -> (Item a -> Compiler Bool) -> Context a
 boolFieldM name f = field name $ \i -> do
