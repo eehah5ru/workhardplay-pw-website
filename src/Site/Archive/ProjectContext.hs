@@ -13,6 +13,7 @@ import Data.Typeable
 import Hakyll
 
 import W7W.Utils
+import W7W.Context
 
 import Site.Context
 

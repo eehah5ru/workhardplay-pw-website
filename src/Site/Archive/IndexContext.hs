@@ -7,6 +7,7 @@ import Data.Monoid ((<>), mempty)
 import Hakyll
 
 import W7W.Utils
+import W7W.Context
 
 import Site.Context
 import Site.Archive.Compilers
