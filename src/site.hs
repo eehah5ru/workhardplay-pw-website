@@ -15,15 +15,16 @@ import Hakyll.Web.Template.Internal (readTemplate)
 import W7W.Types
 import W7W.MultiLang
 import W7W.Compilers.Slim
+import W7W.Config
 
-import Site.Config
+import W7W.Rules.Templates
+import W7W.Rules.Assets
+-- import W7W.Rules.StaticPages
+
 import Site.Context
-
 import Site.Template
 
-import Site.Rules.Templates
-import Site.Rules.Assets
-import Site.Rules.StaticPages
+import Site.StaticPages.Rules
 import Site.Archive.Rules
 
 import Site.CollectiveGlossary

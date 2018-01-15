@@ -3,12 +3,17 @@ module Site.Template where
 
 import Hakyll
 
+import W7W.Utils
+
 --
 -- templates
 --
+
+-- FIXME: unused?
 ruPageTpl :: Identifier
 ruPageTpl = "templates/page.slim"
 
+-- FIXME: unused?
 enPageTpl :: Identifier
 enPageTpl = "templates/page.slim"
 
@@ -17,17 +22,3 @@ pageTpl = "templates/page.slim"
 
 rootTpl :: Identifier
 rootTpl = "templates/default.slim"
-
---
---
--- utils
---
---
-
-applyTemplateSnapshot tplPattern cx i = do
-  t <- loadSnapshotBody tplPattern "template"
-  applyTemplate t cx i
-
-applyTemplateSnapshotList tplPattern cx is = do
-  t <- loadSnapshotBody tplPattern "template"
-  applyTemplateList t cx is
