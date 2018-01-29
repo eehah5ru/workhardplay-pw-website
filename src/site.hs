@@ -36,9 +36,6 @@ main :: IO ()
 main =
   hakyllWith config $
   do
-     terms <- buildTerms
-
-     collectiveGlossaryRules terms
      templatesRules
 
      imagesRules
@@ -53,10 +50,13 @@ main =
      match ("ru/**/_*.slim" .||. "en/**/_*.slim") $ compile getResourceBody
 
      -- collective glossary defenitions for deps
-     match ("collective-glossary/*.md") $ compile getResourceBody
+
 
      staticPagesRules
 
+     terms <- buildTerms
+
+     collectiveGlossaryRules terms
      archiveIndexPagesRules terms
      archiveProjectPagesRules terms
 

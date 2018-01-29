@@ -26,9 +26,11 @@ terms _ = error "unknown locale"
 
 buildTerms :: Rules Terms
 buildTerms = do
-  m <- getAllMetadata "collective-glossary/*.md"
-  ru <- buildTags' m RU
-  en <- buildTags' m EN
+  mRu <- getAllMetadata "ru/collective-glossary/*.md"
+  mEn <- getAllMetadata "en/collective-glossary/*.md"
+
+  ru <- buildTags' mRu RU
+  en <- buildTags' mEn EN
   return $ mkTerms ru en
   where
     buildTags' m l = buildTags
@@ -41,14 +43,14 @@ buildTerms = do
 termToIdentifier :: Locale -> [(Identifier, Metadata)] -> String -> Identifier
 termToIdentifier l ms term =
   let e = error . unwords $ ["there is no defenition for ", term]
-      mi =  findTermCanonicalName ms term >>= return . fromCapture (fromGlob $ localizePath l "collective-glossary/*.html")
+      mi =  findTermCanonicalName ms term >>= return . fromCapture (fromGlob $ localizePath l "collective-glossary/*.md")
   in fromMaybe e mi
 
   where
 
     testF :: String -> (Identifier, Metadata) -> Bool
     testF term (i, m) =
-      fromMaybe False $ lookupString (localizeField l "title") m >>= return . (==) term
+      fromMaybe False $ lookupString "term" m >>= return . (==) term
 
     findTermCanonicalName :: [(Identifier, Metadata)] -> String -> Maybe String
     findTermCanonicalName ms term =

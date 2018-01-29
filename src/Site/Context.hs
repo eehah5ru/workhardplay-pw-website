@@ -11,6 +11,7 @@ import W7W.MultiLang
 import W7W.Utils
 import W7W.Context
 
+import Site.CollectiveGlossary.Utils (glossaryName)
 
 --
 --
@@ -34,7 +35,7 @@ fieldArchiveName =
 fieldGlossaryName =
   field "glossary_name" getName
   where
-    getName = return . chooseByItemLang "Глоссарий" "Glossary"
+    getName = return . glossaryName
 
 fieldYear = field "year" $ return . itemYear
 

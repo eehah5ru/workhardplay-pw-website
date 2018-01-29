@@ -15,15 +15,31 @@ import Site.Archive.IndexContext (mkArchiveIndexPageCtx)
 import Site.CollectiveGlossary
 import Site.CollectiveGlossary.Context
 
+--
+--
+-- rules
+--
 collectiveGlossaryRules :: Terms -> Rules ()
-collectiveGlossaryRules ts = withCollectiveGlossaryDeps $ do
+collectiveGlossaryRules ts = do
+  --
+  -- terms deps rules
+  --
+  -- matchMultiLang depsRules depsRules ("collective-glossary/*.md")
 
-  matchMultiLang indexRules indexRules "collective-glossary.md"
+  --
+  -- index page
+  --
+  withCollectiveGlossaryDeps RU $ withCollectiveGlossaryDeps EN $ do
+    matchMultiLang indexRules indexRules "collective-glossary.md"
 
+  --
+  -- terms pages
+  --
   rules' (terms RU ts)
   rules' (terms EN ts)
 
   where
+    depsRules _ = compile getResourceBody
     indexRules locale =
       slimPageRules $ \x -> do
         termsField <- mkFieldTerms (terms locale ts)
@@ -36,16 +52,16 @@ collectiveGlossaryRules ts = withCollectiveGlossaryDeps $ do
 
     rules' terms =
       tagsRules terms $ \term p -> do
-        route idRoute
+        route $ setExtension "html"
         compile $ do
           ctx <- mkCollectiveGlossaryTermPageCtx terms term p
-          makeItem ""
+          pandocCompiler
             >>= loadAndApplyTemplate "templates/collective-glossary-term.slim" ctx
             >>= loadAndApplyTemplate pageTpl ctx
             >>= loadAndApplyTemplate rootTpl ctx
 
-withCollectiveGlossaryDeps rules = do
-  collectiveGlossaryDefs <- makePatternDependency "collective-glossary/*.md"
+withCollectiveGlossaryDeps locale rules = do
+  collectiveGlossaryDefs <- makePatternDependency (fromGlob (localizePath locale "collective-glossary/*.md"))
   rulesExtraDependencies [collectiveGlossaryDefs] rules
 
 --
@@ -57,4 +73,4 @@ withCollectiveGlossaryDeps rules = do
 mkCollectiveGlossaryTermPageCtx :: Tags -> String -> Pattern -> Compiler (Context String)
 mkCollectiveGlossaryTermPageCtx terms term p = do
   ctx <- mkArchiveIndexPageCtx terms p
-  return $ ctx <> (fieldTermName term)
+  return $ (fieldTermName term) <> fieldTermTitle <> ctx

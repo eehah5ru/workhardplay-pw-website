@@ -16,12 +16,13 @@ import W7W.Utils
 import W7W.Context
 import W7W.Pictures.Context
 import W7W.Pictures.Utils
+import W7W.MultiLang
 
 import Site.Context
 
 import Site.Archive.Utils
 
-import Site.CollectiveGlossary.Context (fieldTermsList)
+import Site.CollectiveGlossary.Context (fieldTermsList, fieldHasTerms)
 --
 --
 -- metadata predicates
@@ -101,6 +102,14 @@ fieldImages = listFieldWith "images" mkImageItem (\i -> loadPictures (imagesPatt
     mkImageItem =
       urlField "image_url"
 
+fieldTermsLabel :: Context a
+fieldTermsLabel = field "terms_label" termsLabel
+  where
+    termsLabel i = do
+      return $ case (fromLang (itemLang i)) of
+                 RU -> "Термины"
+                 EN -> "Terms"
+                 _ -> "Terms"
 --
 -- project page ctx
 --
@@ -112,4 +121,6 @@ archiveProjectCtx terms =
   <> fieldHasImages
   <> fieldImages
   <> (fieldTermsList terms)
+  <> (fieldHasTerms terms)
+  <> (fieldTermsLabel)
   <> siteCtx
