@@ -1,4 +1,16 @@
 * engine
+** W7W
+*** haskell files -> src
+*** bin files from eeefff.org -> src
+*** docs -> docs
+*** git submodule move to /w7w directory
+*** install.sh
+**** links to haskell libs
+**** links for all bins
+** TODO metadata
+*** change to field names without underlines
+** OG
+*** TODO remove og url
 ** TODO glossary
 *** TODO tags descriptions
 *** TODO title for term page
@@ -20,7 +32,8 @@
 *** extract medatada
 **** author
 **** description
-**** en and ru versions
+**** DONE en and ru versions
+     CLOSED: [2018-01-29 Mon 15:01]
 * design
 ** TODO general
 *** favicon
@@ -47,6 +60,11 @@
     CLOSED: [2017-11-11 Sat 14:41]
 * content
 ** olya martynennko as author
+* deployment
+** prevent client caching for html files and css
+*** revisions in css and js files
+*** nginx
+**** copy config from eeefff.org
 * DONE links to belaruskali and pvt
   CLOSED: [2017-11-11 Sat 14:42]
 ** DONE en
