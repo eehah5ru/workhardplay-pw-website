@@ -14,7 +14,7 @@ import W7W.Utils
 --
 imagesPattern :: Item a -> Pattern
 imagesPattern i =
-  basicImagePattern i "*"
+  (basicImagePattern i "*") .||. (basicImagePattern i ((itemLang i) ++ "/*"))
 
 archiveProjectsPattern :: FilePath -> Pattern
 archiveProjectsPattern base =
@@ -37,7 +37,7 @@ archiveProjectsMdPattern = archiveProjectsTypedPattern "*.md"
 
 projectCoverPattern :: Item a -> Pattern
 projectCoverPattern i =
-  basicImagePattern i $ (itemCanonicalName i) ++ "-cover.*"
+  (basicImagePattern i ((itemCanonicalName i) ++ "-cover.*")) .||. (imagesPattern i)
 
 basicImagePattern :: Item a -> String -> Pattern
 basicImagePattern i p =

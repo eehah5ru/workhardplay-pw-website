@@ -38,6 +38,10 @@ fieldGlossaryName =
 
 fieldYear = field "year" $ return . itemYear
 
+fieldRootUrl =
+  field "root_url" getRootUrl
+  where
+    getRootUrl i = return $ "/" ++ (itemLang i) ++ "/" ++ (itemYear i) ++ "/"
 
 
 

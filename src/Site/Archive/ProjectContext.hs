@@ -14,9 +14,10 @@ import Hakyll
 
 import W7W.Utils
 import W7W.Context
+import W7W.Pictures.Context
+import W7W.Pictures.Utils
 
 import Site.Context
-
 
 import Site.Archive.Utils
 
@@ -95,7 +96,7 @@ fieldProjectCover =
         False -> return . toUrl . toFilePath . itemIdentifier . head $ covers
 
 fieldImages :: Context String
-fieldImages = listFieldWith "images" mkImageItem (\i -> loadImages (imagesPattern i))
+fieldImages = listFieldWith "images" mkImageItem (\i -> loadPictures (imagesPattern i))
   where
     mkImageItem =
       urlField "image_url"
