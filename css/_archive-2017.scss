@@ -68,6 +68,9 @@ header.archive-page.whp-2017 {
   }
 }
 
+//
+// list of projects
+//
 article.archive-page.whp-2017 {
   max-width: 100%;
 
@@ -78,12 +81,20 @@ article.archive-page.whp-2017 {
 
   // @include cover-mask("/images/dots-transparent-50opacity-2.svg");
 
+  p {
+    @extend .small-12;
+    @extend .large-6;
+    @extend .large-offset-3;
+    @extend .end;
+  }
+
   > ul {
     @extend .row;
     @extend .expanded;
     @extend .small-up-1;
     @extend .medium-up-2;
     @extend .large-up-3;
+    // @extend .align-center;
 
     list-style-type: none;
 
@@ -173,6 +184,15 @@ article.archive-page.whp-2017 {
     .project-author {
       text-align: center;
     }
+
+    .terms {
+      font-style: italic;
+      font-size: 80%;
+
+      a {
+        color: grey;
+      }
+    }
   }
 
 
@@ -233,6 +253,18 @@ article.archive-project.whp-2017 {
 
   & > *:first-child {
     margin-top: 2rem;
+  }
+
+  p.collective-glossary-terms a {
+    color: grey;
+    font-style: italic;
+    text-decoration: underline dashed red;
+    letter-spacing: 0;
+
+    &:hover {
+      color: red;
+      text-decoration: underline solid red;
+    }
   }
 
   blockquote {

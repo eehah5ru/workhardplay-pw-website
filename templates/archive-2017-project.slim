@@ -19,8 +19,9 @@ header.archive-project.whp-2017
     | $project_title$
 
 article.archive-project.whp-2017
-  = _if "terms_list"
+  = _if "has_terms"
     p.collective-glossary-terms
+      | $terms_label$:&nbsp;
       | $terms_list$
   = _endif
 
