@@ -235,6 +235,17 @@ article.archive-project.whp-2017 {
     margin-top: 2rem;
   }
 
+  blockquote {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+
+    p {
+      font-style: italic;
+    }
+  }
+
   p,
   ul,
   figure {
