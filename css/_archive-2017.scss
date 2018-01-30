@@ -81,12 +81,28 @@ article.archive-page.whp-2017 {
 
   // @include cover-mask("/images/dots-transparent-50opacity-2.svg");
 
-  p {
+
+  > p,
+  .term-definition {
     @extend .small-12;
     @extend .large-6;
     @extend .large-offset-3;
     @extend .end;
+    @extend .column;
   }
+
+  .term-definition {
+    p {
+      display: inline;
+    }
+
+    > a {
+      font-size: 150%;
+    }
+
+    margin-bottom: 1rem;
+  }
+
 
   > ul {
     @extend .row;
@@ -94,7 +110,8 @@ article.archive-page.whp-2017 {
     @extend .small-up-1;
     @extend .medium-up-2;
     @extend .large-up-3;
-    // @extend .align-center;
+    @extend .column;
+    @extend .align-center;
 
     list-style-type: none;
 
