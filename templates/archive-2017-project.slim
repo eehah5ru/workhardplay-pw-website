@@ -23,6 +23,9 @@ article.archive-project.whp-2017
     p.collective-glossary-terms
       | $terms_label$:&nbsp;
       | $terms_list$
+  = _else
+   p.collective-glossary-terms
+     | No Terms
   = _endif
 
   = _if "has_audio"
@@ -38,7 +41,12 @@ article.archive-project.whp-2017
         iframe width="100%" height="315" src="https://www.youtube.com/embed/$youtube_video_id$" frameborder="0" allowfullscreen="true"
   = _endif
 
-  = _for "images"
+  = _for "pictures"
     figure
-      img src="$image_url$"
+      img src="$picture_url$" alt="$if(has_exif_info)$$picture_title$ - $picture_creator$ $if(has_picture_description)$ - $picture_description$$endif$$endif$" title="$if(has_exif_info)$$picture_title$ - $picture_creator$ $if(has_picture_description)$ - $picture_description$$endif$$endif$"
+      = _if "has_picture_creator"
+       .picture-creator
+         | $picture_creator$
+      = _endif
+
   = _endfor
