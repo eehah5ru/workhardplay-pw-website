@@ -4,6 +4,7 @@ module Site.CollectiveGlossary.Context where
 import           Control.Monad                   (foldM, forM, forM_, mplus)
 import Data.Maybe (fromMaybe)
 import Data.Monoid ((<>), mempty)
+import Data.Tuple.Utils
 
 import Hakyll
 import Site.Context
@@ -38,14 +39,32 @@ fieldTermTitle =
       m <- getMetadata (itemIdentifier item)
       return $ glossaryName item ++ " -> " ++ (termName m)
 
-mkFieldTerms :: Tags -> Compiler (Context a)
-mkFieldTerms terms = do
-  tags' <- forM (tagsMap terms) $ \(tag, ids) -> do
-        route' <- getRoute $ tagsMakeId terms tag
-        return (tag, route')
-  return $ listField "terms" tagCtx (sequence . map makeItem $ tags')
+--
+-- utils for terms and many terms context fields
+--
+tagsInfo terms = do
+  forM (tagsMap terms) $ \(tag, ids) -> do
+    route' <- getRoute $ tagsMakeId terms tag
+    termBody <- loadSnapshotBody (tagsMakeId terms tag) "content"
+    return (tag, route', termBody)
+
+tagCtx =
+  (field "term_name" (return . fst3 . itemBody))
+  <> (field "term_url" (return . toUrl' . snd3 . itemBody))
+  <> (field "term_definition" (return . thd3 . itemBody))
   where
     toUrl' u = toUrl $ fromMaybe "/" u
-    tagCtx =
-      (field "term_name" (return . fst . itemBody))
-      <> (field "term_url" (return . toUrl' . snd . itemBody))
+
+
+mkFieldTerms :: Tags -> Compiler (Context a)
+mkFieldTerms terms = do
+  tags' <- tagsInfo terms
+  return $ listField "terms" tagCtx (sequence . map makeItem $ tags')
+
+
+
+
+mkFieldManyTerms :: Int -> Tags -> Compiler (Context a)
+mkFieldManyTerms n terms = do
+  tags' <- (return . take n . cycle) =<< tagsInfo terms
+  return $ listField "many_terms" tagCtx (sequence . map makeItem $ tags')

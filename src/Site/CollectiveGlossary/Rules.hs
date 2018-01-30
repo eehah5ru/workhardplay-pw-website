@@ -43,7 +43,8 @@ collectiveGlossaryRules ts = do
     indexRules locale =
       slimPageRules $ \x -> do
         termsField <- mkFieldTerms (terms locale ts)
-        let ctx = termsField <> siteCtx
+        manyTermsField <- mkFieldManyTerms 200 (terms locale ts)
+        let ctx = termsField <> manyTermsField <>siteCtx
         applyAsTemplate ctx x
           >>= loadAndApplyTemplate "templates/collective-glossary-index.slim" ctx
           >>= loadAndApplyTemplate pageTpl ctx
@@ -55,7 +56,10 @@ collectiveGlossaryRules ts = do
         route $ setExtension "html"
         compile $ do
           ctx <- mkCollectiveGlossaryTermPageCtx terms term p
+          getResourceBody >>= saveSnapshot "raw_content"
+
           pandocCompiler
+            >>= saveSnapshot "content"
             >>= loadAndApplyTemplate "templates/collective-glossary-term.slim" ctx
             >>= loadAndApplyTemplate pageTpl ctx
             >>= loadAndApplyTemplate rootTpl ctx
