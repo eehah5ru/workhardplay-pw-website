@@ -18,11 +18,14 @@ import W7W.Pictures.Context
 import W7W.Pictures.Utils
 import W7W.MultiLang
 
+import W7W.Pictures.Context
+import W7W.Pictures.Utils
+
 import Site.Context
 
 import Site.Archive.Utils
 
-import Site.CollectiveGlossary.Context (fieldTermsList, fieldHasTerms)
+import Site.CollectiveGlossary.Context (fieldTermsList)
 --
 --
 -- metadata predicates
@@ -39,10 +42,10 @@ hasSoundcloudTrackId = hasItemField "soundcloud_track_id"
 --   where imageFieldNames = map mkImageField [1..100]
 --         mkImageField ii = "image_" ++ (show ii)
 
-hasImages ::  Item a -> Compiler Bool
-hasImages i = do
-  is <- loadAll (imagesPattern i) :: Compiler [Item CopyFile]
-  return . not . null $ is
+-- hasImages ::  Item a -> Compiler Bool
+-- hasImages i = do
+--   is <- loadAll (imagesPattern i) :: Compiler [Item CopyFile]
+--   return . not . null $ is
 
 
 hasVideo :: MonadMetadata m => Item a -> m Bool
@@ -74,15 +77,15 @@ fieldHasVideo = do
 fieldHasAudio = do
   boolFieldM "has_audio" hasAudio
 
-fieldHasImages =
-  boolFieldM "has_images" hasImages
+-- fieldHasImages =
+--   boolFieldM "has_images" hasImages
 
 
 fieldHasMedia =
   boolFieldM "has_media" hasMedia'
   where
     hasMedia' i = sequence ps >>= return  . any id
-     where ps = [hasImages i
+     where ps = [hasPictures imagesPattern i
                 ,hasVideo i
                 ,hasAudio i]
 
@@ -96,11 +99,11 @@ fieldProjectCover =
         True -> return "/images/not-found-cover.jpg"
         False -> return . toUrl . toFilePath . itemIdentifier . head $ covers
 
-fieldImages :: Context String
-fieldImages = listFieldWith "images" mkImageItem (\i -> loadPictures (imagesPattern i))
-  where
-    mkImageItem =
-      urlField "image_url"
+-- fieldImages :: Context String
+-- fieldImages = listFieldWith "images" mkImageItem (\i -> loadPictures (imagesPattern i))
+--   where
+--     mkImageItem =
+--       urlField "image_url"
 
 fieldTermsLabel :: Context a
 fieldTermsLabel = field "terms_label" termsLabel
@@ -110,6 +113,13 @@ fieldTermsLabel = field "terms_label" termsLabel
                  RU -> "Термины"
                  EN -> "Terms"
                  _ -> "Terms"
+
+fieldHasTerms :: Tags -> Context a
+fieldHasTerms terms =
+  boolField "has_terms" hasTerms
+  where
+    hasTerms _ = not . null . tagsMap $ terms
+
 --
 -- project page ctx
 --
@@ -118,8 +128,8 @@ archiveProjectCtx terms =
   <> fieldProjectCover
   <> fieldHasMedia
   <> fieldHasVideo
-  <> fieldHasImages
-  <> fieldImages
+  <> (fieldHasPictures imagesPattern)
+  <> (fieldPictures imagesPattern)
   <> (fieldTermsList terms)
   <> (fieldHasTerms terms)
   <> (fieldTermsLabel)

@@ -24,12 +24,6 @@ fieldTermsList :: Tags -> Context a
 fieldTermsList terms =
   tagsField "terms_list" terms
 
-fieldHasTerms :: Tags -> Context a
-fieldHasTerms terms =
-  boolField "has_terms" hasTerms
-  where
-    hasTerms _ = null . tagsMap $ terms
-
 
 fieldTermName :: String -> Context a
 fieldTermName term =

@@ -17,5 +17,11 @@ executable site
                   , filepath
                   , MissingH
                   , binary
+                  , text
+                  , attoparsec
+                  , mtl
+                  , errors
+                  , directory
+                  , MissingH
   ghc-options:      -threaded
   default-language: Haskell2010
