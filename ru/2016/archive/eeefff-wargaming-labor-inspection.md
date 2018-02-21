@@ -1,7 +1,7 @@
 ---
 author: Группировка eeefff
-project_title: Инспекция труда в Wargaming
-cover_color: "255,0,0"
+projectTitle: Инспекция труда в Wargaming
+coverColor: "255,0,0"
 ---
 
 Было проведено 2 инспекции по 10-12 человек, каждая продолжительностью в 1 час:

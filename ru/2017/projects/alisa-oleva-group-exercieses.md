@@ -1,9 +1,9 @@
 ---
 author: Алиса Олева
-project_title: Групповае упражнения
-project_cover: alisa-oleva-group-exercies-cover.jpg
-canonical_name: alisa-oleva-group-exercieses
-cover_color: "255,0,0"
+projectTitle: Групповае упражнения
+projectCover: alisa-oleva-group-exercies-cover.jpg
+canonicalName: alisa-oleva-group-exercieses
+coverColor: "255,0,0"
 ---
 
 Предлагаем всем присоединиться к вылазке в места, где сейчас пока еще незаметно, но рождается новый урбанистический порядок. Хотите – верьте, хотите – нет, но дата-центры чем-то похожи на голубятни: такие же незаметные сооружения-паразиты на теле привычного нам городского ландшафта.

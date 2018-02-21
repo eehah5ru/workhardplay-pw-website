@@ -1,14 +1,14 @@
 ---
 author: Sasha Kurmaz
-project_title: "Mirror"
-project_cover: sasha-kurmaz-mirror-cover.jpg
-canonical_name: sasha-kurmaz-mirror
-cover_color: "255,0,0"
-vimeo_video_id_01: "223209637"
-vimeo_video_id_02: "223209593"
-vimeo_video_id_03: "223209496"
-vimeo_video_id_04: "223209554"
-vimeo_video_id_05: "223209433"
+projectTitle: "Mirror"
+projectCover: sasha-kurmaz-mirror-cover.jpg
+canonicalName: sasha-kurmaz-mirror
+coverColor: "255,0,0"
+vimeoVideoId01: "223209637"
+vimeoVideoId02: "223209593"
+vimeoVideoId03: "223209496"
+vimeoVideoId04: "223209554"
+vimeoVideoId05: "223209433"
 ---
 
 _"In fact, that is the meaning of the ruble, the ruble is in itself nothing other than a little piece of laziness."_  

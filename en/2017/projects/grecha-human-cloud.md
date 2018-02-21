@@ -1,9 +1,9 @@
 ---
 author: Экипаж «ГРЕЧА»
-project_title: Человеческое облако. Онлайн-сессия обсуждения
-project_cover: grecha-humancloud-cover.jpg
-canonical_name: grecha-human-cloud
-cover_color: "255,0,0"
+projectTitle: Человеческое облако. Онлайн-сессия обсуждения
+projectCover: grecha-humancloud-cover.jpg
+canonicalName: grecha-human-cloud
+coverColor: "255,0,0"
 ---
 
 p

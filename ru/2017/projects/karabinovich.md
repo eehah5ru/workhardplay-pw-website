@@ -1,9 +1,9 @@
 ---
 author: Николай Карабинович
-project_title: Ugly tapes from Balkan Dj-set
-project_cover: karabinovich-cover.jpg
-canonical_name: karabinovich
-cover_color: "255,0,0"
+projectTitle: Ugly tapes from Balkan Dj-set
+projectCover: karabinovich-cover.jpg
+canonicalName: karabinovich
+coverColor: "255,0,0"
 ---
 
 p

@@ -1,9 +1,9 @@
 ---
 author: Кристофер Рот и Армен Аванесян
-project_title: HYPERSTITION
-project_cover: hyperstition-cover.jpg
-canonical_name: hyperstition
-cover_color: "255,0,0"
+projectTitle: HYPERSTITION
+projectCover: hyperstition-cover.jpg
+canonicalName: hyperstition
+coverColor: "255,0,0"
 ---
 
 p

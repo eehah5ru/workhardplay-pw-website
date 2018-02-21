@@ -1,7 +1,7 @@
 ---
 author: eeefff
-project_title: Wargaming labor inspection
-cover_color: "255,0,0"
+projectTitle: Wargaming labor inspection
+coverColor: "255,0,0"
 ---
 
 There were two inspections of 10-12 people with the duration of 1 hour each:

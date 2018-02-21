@@ -1,9 +1,9 @@
 ---
 author: Настя Кизилова
-project_title: FOUND PROJECT!
-project_cover: kizilova-found-project-cover.jpg
-canonical_name: kizilova-found-project
-cover_color: "255,0,0"
+projectTitle: FOUND PROJECT!
+projectCover: kizilova-found-project-cover.jpg
+canonicalName: kizilova-found-project
+coverColor: "255,0,0"
 ---
 
 p

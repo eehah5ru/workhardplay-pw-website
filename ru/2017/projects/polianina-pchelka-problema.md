@@ -1,9 +1,9 @@
 ---
 author: Пчелка-Полянина
-project_title: Перформанс «Проблема, которой не существует» про проникновение, фальсификацию и иллюзию собственности
-project_cover: polianina-pchelka-problema-01.jpg
-canonical_name: polianina-pchelka-problema
-cover_color: "255,0,0"
+projectTitle: Перформанс «Проблема, которой не существует» про проникновение, фальсификацию и иллюзию собственности
+projectCover: polianina-pchelka-problema-01.jpg
+canonicalName: polianina-pchelka-problema
+coverColor: "255,0,0"
 ---
 
 p

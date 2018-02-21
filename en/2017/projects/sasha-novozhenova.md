@@ -1,9 +1,9 @@
 ---
 author: Alexandra Novozhenova
-project_title: "Lecture. Socialism-NOT-Americanism: the scientific organization of work and the work of Gustav Klutsis for the magazine “Vremya”"
-project_cover: novozhenova.jpg
-canonical_name: sasha-novozhenova
-cover_color: "255,0,0"
+projectTitle: "Lecture. socialismNotAmericanism: the scientific organization of work and the work of Gustav Klutsis for the magazine “Vremya”"
+projectCover: novozhenova.jpg
+canonicalName: sasha-novozhenova
+coverColor: "255,0,0"
 ---
 
 League of Time, which in the early 1920s propagated and disseminated the new socialist time management, economy and time management in the production and personal spheres, was part of the movement of the Scientific Labor Organization NOT – a broad initiative to develop labor and hygiene standards in production.

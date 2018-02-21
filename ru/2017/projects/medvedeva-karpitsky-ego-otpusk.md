@@ -1,9 +1,9 @@
 ---
 author: Лина Медведева и Максим Карпицкий
-project_title:  "«Его отпуск»: наладить труд/наслаждение"
-project_cover: medvedeva-karpitsky-ego-otpusk-01.jpg
-canonical_name: medvedeva-karpitsky-ego-otpusk
-cover_color: "255,0,0"
+projectTitle:  "«Его отпуск»: наладить труд/наслаждение"
+projectCover: medvedeva-karpitsky-ego-otpusk-01.jpg
+canonicalName: medvedeva-karpitsky-ego-otpusk
+coverColor: "255,0,0"
 ---
 
 p

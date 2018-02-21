@@ -1,9 +1,9 @@
 ---
 author: Экипаж «ГРЕЧА»
-project_title: Человеческое облако. Онлайн-сессия обсуждения
-project_cover: grecha-humancloud-cover.jpg
-canonical_name: grecha-human-cloud
-cover_color: "255,0,0"
+projectTitle: Человеческое облако. Онлайн-сессия обсуждения
+projectCover: grecha-humancloud-cover.jpg
+canonicalName: grecha-human-cloud
+coverColor: "255,0,0"
 ---
 Предлагаем всем присоединиться к вылазке в места, где сейчас пока еще незаметно, но рождается новый урбанистический порядок. Хотите – верьте, хотите – нет, но дата-центры чем-то похожи на голубятни: такие же незаметные сооружения-паразиты на теле привычного нам городского ландшафта.
 

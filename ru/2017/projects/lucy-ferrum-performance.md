@@ -1,9 +1,9 @@
 ---
 author: Lucy Ferrum
-project_title: Визуально-звуковой перформанс с элементами балагана и споукен ворда
-project_cover: lucy-ferrum-performance-01.jpg
-canonical_name: lucy-ferrum-performance
-cover_color: "255,0,0"
+projectTitle: Визуально-звуковой перформанс с элементами балагана и споукен ворда
+projectCover: lucy-ferrum-performance-01.jpg
+canonicalName: lucy-ferrum-performance
+coverColor: "255,0,0"
 ---
 
 p

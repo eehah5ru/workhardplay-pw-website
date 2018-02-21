@@ -1,9 +1,9 @@
 ---
 author: Пётр Владимиров
-project_title: "Экскурсия «По памятным местам»"
-project_cover: pyotr-vladimirov-through-sites-of-memory-01.jpg
-canonical_name: pyotr-vladimirov-through-sites-of-memory
-cover_color: "255,0,0"
+projectTitle: "Экскурсия «По памятным местам»"
+projectCover: pyotr-vladimirov-through-sites-of-memory-01.jpg
+canonicalName: pyotr-vladimirov-through-sites-of-memory
+coverColor: "255,0,0"
 ---
 
 p

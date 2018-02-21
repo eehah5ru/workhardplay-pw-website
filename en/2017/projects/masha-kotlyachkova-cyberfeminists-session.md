@@ -1,9 +1,9 @@
 ---
 author: 0s+1s Collective и Маша Котлячкова
-project_title:  "1,2,3,4: МЕТОД РИТМА"
-project_cover: masha-kotlyachkova-cyberfeminists-session.jpg
-canonical_name: masha-kotlyachkova-cyberfeminists-session
-cover_color: "255,0,0"
+projectTitle: "1,2,3,4: МЕТОД РИТМА"
+projectCover: masha-kotlyachkova-cyberfeminists-session.jpg
+canonicalName: masha-kotlyachkova-cyberfeminists-session
+coverColor: "255,0,0"
 ---
 
 p

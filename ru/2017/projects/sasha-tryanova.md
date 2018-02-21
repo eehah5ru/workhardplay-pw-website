@@ -1,9 +1,9 @@
 ---
 author: Александра Трянова
-project_title: "«Дача»: презентация и гадание по фотографии"
-project_cover: alexandra-tryanova-dacha-01.jpg
-canonical_name: sasha-tryanova
-cover_color: "255,0,0"
+projectTitle: "«Дача»: презентация и гадание по фотографии"
+projectCover: alexandra-tryanova-dacha-01.jpg
+canonicalName: sasha-tryanova
+coverColor: "255,0,0"
 ---
 
 Дача — пространство поля пересечения физического труда и бессмысленного баловства, место, где тебе было хорошо или крайне скучно, место принуждения и дауншифтинга. Предлагаем оценить свой дачный опыт при помощи анализа ауры места по фотоснимку и обсудить курьезы дачной практики.

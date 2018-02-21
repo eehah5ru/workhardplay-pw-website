@@ -1,7 +1,7 @@
 ---
 author: Группировка eeefff
-project_title: Economic strategies stress test
-cover_color: "255,0,0"
+projectTitle: Economic strategies stress test
+coverColor: "255,0,0"
 tags:
 ---
 “Business bosses tame business bots. They play on the stock exchange, create their own currencies and turn the budgets of small countries. How to approach this? How to deal with this? Let's play! After all, you need to become a skilled hand before taking on more serious matters.

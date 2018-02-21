@@ -1,10 +1,10 @@
 ---
 author: Владимир Грамович
-project_title: "«Слаўная моладзь пад зямлю крочыла». Заметки о соляных штольнях как музеях корпорации-государства"
-project_cover: uladz-hramovich-slaunaya-moladz-01.jpg
-canonical_name: uladz-hramovich-slaunaya-moladz
-cover_color: "255,0,0"
-soundcloud_track_id: "353846531"
+projectTitle: "«Слаўная моладзь пад зямлю крочыла». Заметки о соляных штольнях как музеях корпорации-государства"
+projectCover: uladz-hramovich-slaunaya-moladz-01.jpg
+canonicalName: uladz-hramovich-slaunaya-moladz
+coverColor: "255,0,0"
+soundcloudTrackId: "353846531"
 ---
 
 Замечания и мысли о новом городе (Солигорске) как прообразе государства-компании или корпорации-государства. А также о новом музее искусства в соляных шахтах, связи политической и финансовой независимости и корпоративных коллекций искусства.

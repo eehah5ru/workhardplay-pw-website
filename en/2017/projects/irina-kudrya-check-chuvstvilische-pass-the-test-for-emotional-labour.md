@@ -1,9 +1,9 @@
 ---
 author: Ира Кудря
-project_title: Проверь чувствилище!
-project_cover: irina-kudrya-check-chuvstvilische-pass-the-test-for-emotional-labour-01.jpg
-canonical_name: irina-kudrya-check-chuvstvilische-pass-the-test-for-emotional-labour
-cover_color: "255,0,0"
+projectTitle: Проверь чувствилище!
+projectCover: irina-kudrya-check-chuvstvilische-pass-the-test-for-emotional-labour-01.jpg
+canonicalName: irina-kudrya-check-chuvstvilische-pass-the-test-for-emotional-labour
+coverColor: "255,0,0"
 ---
 
 p

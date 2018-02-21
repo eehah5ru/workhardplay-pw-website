@@ -1,9 +1,9 @@
 ---
 author: Анастасия Вепрева
-project_title: "Лекция-проекция: Как жить если ты левый меланхолик?"
-project_cover: anastasia-vepreva-how-to-live-if-you-are-leftist-and-melancholic-cover.jpg
-canonical_name: anastasia-vepreva-how-to-live-if-you-are-leftist-and-melancholic
-cover_color: "255,0,0"
+projectTitle: "Лекция-проекция: Как жить если ты левый меланхолик?"
+projectCover: anastasia-vepreva-how-to-live-if-you-are-leftist-and-melancholic-cover.jpg
+canonicalName: anastasia-vepreva-how-to-live-if-you-are-leftist-and-melancholic
+coverColor: "255,0,0"
 ---
 
 Предлагаем всем присоединиться к вылазке в места, где сейчас пока еще незаметно, но рождается новый урбанистический порядок. Хотите – верьте, хотите – нет, но дата-центры чем-то похожи на голубятни: такие же незаметные сооружения-паразиты на теле привычного нам городского ландшафта.

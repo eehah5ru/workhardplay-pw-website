@@ -1,9 +1,9 @@
 ---
 author: "Работай Больше! Отдыхай Больше!"
-project_title: "Трансмиссия: вектор-ассамблея"
-project_cover: rbob-vector-assembly-cover.jpg
-canonical_name: rbob-vector-assembly
-cover_color: "255,0,0"
+projectTitle: "Трансмиссия: вектор-ассамблея"
+projectCover: rbob-vector-assembly-cover.jpg
+canonicalName: rbob-vector-assembly
+coverColor: "255,0,0"
 ---
 
 p

@@ -1,9 +1,9 @@
 ---
 author: K_Super
-project_title: Девочка-ночь
-project_cover: k-super-cover.jpg
-canonical_name: k-super-baby-night
-cover_color: "255,0,0"
+projectTitle: Девочка-ночь
+projectCover: k-super-cover.jpg
+canonicalName: k-super-baby-night
+coverColor: "255,0,0"
 ---
 
 p

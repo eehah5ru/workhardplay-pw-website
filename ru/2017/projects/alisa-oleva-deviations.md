@@ -1,7 +1,7 @@
 ---
 author: Алиса Олева
-project_title: "Отклонения"
-cover_color: "255,0,0"
+projectTitle: "Отклонения"
+coverColor: "255,0,0"
 tags:
 ---
 

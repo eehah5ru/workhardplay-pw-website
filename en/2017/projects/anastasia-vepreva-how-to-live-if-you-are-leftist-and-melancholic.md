@@ -1,9 +1,9 @@
 ---
 author: Анастасия Вепрева
-project_title: "Лекция-проекция: Как жить если ты левый меланхолик?"
-project_cover: anastasia-vepreva-how-to-live-if-you-are-leftist-and-melancholic-cover.jpg
-canonical_name: anastasia-vepreva-how-to-live-if-you-are-leftist-and-melancholic
-cover_color: "255,0,0"
+projectTitle: "Лекция-проекция: Как жить если ты левый меланхолик?"
+projectCover: anastasia-vepreva-how-to-live-if-you-are-leftist-and-melancholic-cover.jpg
+canonicalName: anastasia-vepreva-how-to-live-if-you-are-leftist-and-melancholic
+coverColor: "255,0,0"
 ---
 
 p

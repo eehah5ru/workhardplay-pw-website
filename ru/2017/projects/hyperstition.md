@@ -1,9 +1,9 @@
 ---
 author: Кристофер Рот и Армен Аванесян
-project_title: HYPERSTITION
-project_cover: hyperstition-cover.jpg
-canonical_name: hyperstition
-cover_color: "255,0,0"
+projectTitle: HYPERSTITION
+projectCover: hyperstition-cover.jpg
+canonicalName: hyperstition
+coverColor: "255,0,0"
 ---
 
 Предлагаем всем присоединиться к вылазке в места, где сейчас пока еще незаметно, но рождается новый урбанистический порядок. Хотите – верьте, хотите – нет, но дата-центры чем-то похожи на голубятни: такие же незаметные сооружения-паразиты на теле привычного нам городского ландшафта.

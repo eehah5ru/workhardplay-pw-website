@@ -1,9 +1,9 @@
 ---
 author: Дискрассвет
-project_title: Требуем и тезис, и трек!
-project_cover: discrassvet-cover.jpg
-canonical_name: discrassvet
-cover_color: "255,0,0"
+projectTitle: Требуем и тезис, и трек!
+projectCover: discrassvet-cover.jpg
+canonicalName: discrassvet
+coverColor: "255,0,0"
 ---
 
 Предлагаем всем присоединиться к вылазке в места, где сейчас пока еще незаметно, но рождается новый урбанистический порядок. Хотите – верьте, хотите – нет, но дата-центры чем-то похожи на голубятни: такие же незаметные сооружения-паразиты на теле привычного нам городского ландшафта.

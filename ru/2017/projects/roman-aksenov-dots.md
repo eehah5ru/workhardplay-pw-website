@@ -1,9 +1,9 @@
 ---
 author: Роман Аксенов
-project_title: Расставить точки
-project_cover: roman-aksenov-dots-cover.jpg
-canonical_name: roman-aksenov-dots
-cover_color: "255,0,0"
+projectTitle: Расставить точки
+projectCover: roman-aksenov-dots-cover.jpg
+canonicalName: roman-aksenov-dots
+coverColor: "255,0,0"
 ---
 
 p

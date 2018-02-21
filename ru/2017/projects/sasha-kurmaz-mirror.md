@@ -1,14 +1,14 @@
 ---
 author: Саша Курмаз
-project_title:  "Зеркало"
-project_cover: sasha-kurmaz-mirror-cover.jpg
-canonical_name: sasha-kurmaz-mirror
-cover_color: "255,0,0"
-vimeo_video_id_01: "223209637"
-vimeo_video_id_02: "223209593"
-vimeo_video_id_03: "223209496"
-vimeo_video_id_04: "223209554"
-vimeo_video_id_05: "223209433"
+projectTitle:  "Зеркало"
+projectCover: sasha-kurmaz-mirror-cover.jpg
+canonicalName: sasha-kurmaz-mirror
+coverColor: "255,0,0"
+vimeoVideoId01: "223209637"
+vimeoVideoId02: "223209593"
+vimeoVideoId03: "223209496"
+vimeoVideoId04: "223209554"
+vimeoVideoId05: "223209433"
 ---
 
 _«И на самом деле истинное значение рубля в этом, и рубль сам по себе не что другое, как кусочек лени»._  

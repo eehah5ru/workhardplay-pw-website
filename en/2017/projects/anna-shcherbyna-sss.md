@@ -1,9 +1,9 @@
 ---
 author: Anna Shcherbyna
-project_title: SSS (Sport Sex Success)
-project_cover: anna-shcherbyna-sss-cover.jpg
-canonical_name: anna-shcherbyna-sss
-cover_color: "255,0,0"
+projectTitle: SSS (Sport Sex Success)
+projectCover: anna-shcherbyna-sss-cover.jpg
+canonicalName: anna-shcherbyna-sss
+coverColor: "255,0,0"
 ---
 
 The work of "SSS" presents the efforts of the artist trying to look sexy and successful. Doing sports is not for losers! Training requires moral and physical effort, although they are rewarded with the pleasure and satisfaction of the process. The gym is a space of self-improvement and self-affirmation. Here you can enjoy your body, feeling its strength and flexibility, and watching your sexy reflection, taking an apt pose, and imagining the admiring gaze of the potential Spectator.

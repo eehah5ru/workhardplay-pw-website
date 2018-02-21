@@ -1,9 +1,9 @@
 ---
 author: Движение Ночь
-project_title: Ночь-Сюрприз
-project_cover: night-movement-cover.jpg
-canonical_name: night-movement-night-surprise
-cover_color: "255,0,0"
+projectTitle: Ночь-Сюрприз
+projectCover: night-movement-cover.jpg
+canonicalName: night-movement-night-surprise
+coverColor: "255,0,0"
 ---
 
 p

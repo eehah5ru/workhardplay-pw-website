@@ -1,7 +1,7 @@
 ---
 author: Uliana Bychenkova
-project_title: Feast for glory of parasitism
-cover_color: "255,0,0"
+projectTitle: Feast for glory of parasitism
+coverColor: "255,0,0"
 tags: selfcontrol
 ---
 

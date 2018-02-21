@@ -1,9 +1,9 @@
 ---
 author: Mia D. Suppiej
-project_title: PRONTI
-project_cover: mia-d-suppiej-pronti-01.jpg
-canonical_name: mia-d-suppiej-pronti
-cover_color: "255,0,0"
+projectTitle: PRONTI
+projectCover: mia-d-suppiej-pronti-01.jpg
+canonicalName: mia-d-suppiej-pronti
+coverColor: "255,0,0"
 ---
 
 p
