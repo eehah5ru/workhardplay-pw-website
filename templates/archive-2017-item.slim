@@ -1,23 +1,23 @@
-li.project-card-box id="$canonical_name$"
-  .project-card data-project-id="$canonical_name$"
+li.project-card-box id="$canonicalName$"
+  .project-card data-project-id="$canonicalName$"
     .media-icons-container
       .media-icons
-        = _if "has_video"
-          .has-video-icon style="background-color: rgba($cover_color$, 0.7)"
+        = _if "hasVideo"
+          .has-video-icon style="background-color: rgba($coverColor$, 0.7)"
             | &nbsp;
         = _endif
 
-        = _if "has_audio"
-          .has-audio-icon style="background-color: rgba($cover_color$, 0.7)"
+        = _if "hasAudio"
+          .has-audio-icon style="background-color: rgba($coverColor$, 0.7)"
             | &nbsp;
         = _endif
 
     .thumbnail
-      img src="$project_cover$"
+      img src="$projectCover$"
     .project-title
      a href="$url$"
-       | $project_title$
+       | $projectTitle$
     .project-author
       | $author$
     .terms
-      | $terms_list$
+      | $termsList$

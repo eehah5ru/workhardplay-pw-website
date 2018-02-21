@@ -23,12 +23,12 @@ import Site.CollectiveGlossary.Utils
 
 fieldTermsList :: Tags -> Context a
 fieldTermsList terms =
-  tagsField "terms_list" terms
+  tagsField "termsList" terms
 
 
 fieldTermName :: String -> Context a
 fieldTermName term =
-  constField "term_name" term
+  constField "termName" term
 
 fieldTermTitle :: Context a
 fieldTermTitle =
@@ -49,9 +49,9 @@ tagsInfo terms = do
     return (tag, route', termBody)
 
 tagCtx =
-  (field "term_name" (return . fst3 . itemBody))
-  <> (field "term_url" (return . toUrl' . snd3 . itemBody))
-  <> (field "term_definition" (return . thd3 . itemBody))
+  (field "termName" (return . fst3 . itemBody))
+  <> (field "termUrl" (return . toUrl' . snd3 . itemBody))
+  <> (field "termDefinition" (return . thd3 . itemBody))
   where
     toUrl' u = toUrl $ fromMaybe "/" u
 
@@ -67,4 +67,4 @@ mkFieldTerms terms = do
 mkFieldManyTerms :: Int -> Tags -> Compiler (Context a)
 mkFieldManyTerms n terms = do
   tags' <- (return . take n . cycle) =<< tagsInfo terms
-  return $ listField "many_terms" tagCtx (sequence . map makeItem $ tags')
+  return $ listField "manyTerms" tagCtx (sequence . map makeItem $ tags')

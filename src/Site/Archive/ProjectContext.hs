@@ -32,10 +32,10 @@ import Site.CollectiveGlossary.Context (fieldTermsList)
 --
 --
 hasYoutubeVideoId :: MonadMetadata m => Item a -> m Bool
-hasYoutubeVideoId = hasItemField "youtube_video_id"
+hasYoutubeVideoId = hasItemField "youtubeVideoId"
 
 hasSoundcloudTrackId :: MonadMetadata m => Item a -> m Bool
-hasSoundcloudTrackId = hasItemField "soundcloud_track_id"
+hasSoundcloudTrackId = hasItemField "soundcloudTrackId"
 
 -- hasImages :: MonadMetadata m => Item a -> m Bool
 -- hasImages i = sequence (map (\x -> hasItemField x i) imageFieldNames) >>= return . any id
@@ -72,17 +72,17 @@ fieldProjectTitle =
 
 
 fieldHasVideo = do
-  boolFieldM "has_video" hasVideo
+  boolFieldM "hasVideo" hasVideo
 
 fieldHasAudio = do
-  boolFieldM "has_audio" hasAudio
+  boolFieldM "hasAudio" hasAudio
 
 -- fieldHasImages =
---   boolFieldM "has_images" hasImages
+--   boolFieldM "hasImages" hasImages
 
 
 fieldHasMedia =
-  boolFieldM "has_media" hasMedia'
+  boolFieldM "hasMedia" hasMedia'
   where
     hasMedia' i = sequence ps >>= return  . any id
      where ps = [hasPictures imagesPattern i
@@ -91,7 +91,7 @@ fieldHasMedia =
 
 fieldProjectCover :: Context String
 fieldProjectCover =
-  field "project_cover" getCoverUrl
+  field "projectCover" getCoverUrl
   where
     getCoverUrl i = do
       covers <- loadAll (projectCoverPattern i) :: Compiler [Item CopyFile]
@@ -103,10 +103,10 @@ fieldProjectCover =
 -- fieldImages = listFieldWith "images" mkImageItem (\i -> loadPictures (imagesPattern i))
 --   where
 --     mkImageItem =
---       urlField "image_url"
+--       urlField "imageUrl"
 
 fieldTermsLabel :: Context a
-fieldTermsLabel = field "terms_label" termsLabel
+fieldTermsLabel = field "termsLabel" termsLabel
   where
     termsLabel i = do
       return $ case (fromLang (itemLang i)) of
@@ -116,7 +116,7 @@ fieldTermsLabel = field "terms_label" termsLabel
 
 fieldHasTerms :: Tags -> Context a
 fieldHasTerms terms =
-  boolField "has_terms" hasTerms
+  boolField "hasTerms" hasTerms
   where
     hasTerms _ = not . null . tagsMap $ terms
 

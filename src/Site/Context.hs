@@ -19,13 +19,13 @@ import Site.CollectiveGlossary.Utils (glossaryName)
 --
 --
 fieldArchiveUrl =
-  field "archive_url" getArchiveUrl
+  field "archiveUrl" getArchiveUrl
   where
     getArchiveUrl i = return $ "/" ++ (itemLang i) ++ "/" ++ (itemYear i) ++ "/archive.html"
 
 
 fieldArchiveName =
-  field "archive_name" getName
+  field "archiveName" getName
   where
     getName i = return $ case (itemLang i) of
                            "ru" -> "Архив"
@@ -33,14 +33,14 @@ fieldArchiveName =
                            _ -> "Noname Archive"
 
 fieldGlossaryName =
-  field "glossary_name" getName
+  field "glossaryName" getName
   where
     getName = return . glossaryName
 
 fieldYear = field "year" $ return . itemYear
 
 fieldRootUrl =
-  field "root_url" getRootUrl
+  field "rootUrl" getRootUrl
   where
     getRootUrl i = return $ "/" ++ (itemLang i) ++ "/" ++ (itemYear i) ++ "/"
 

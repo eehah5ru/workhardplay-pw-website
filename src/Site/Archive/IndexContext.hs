@@ -25,7 +25,7 @@ mkProjectsListField ctx projectsPattern = do
   loadAll projectsPattern
   >>= return . take 100 . cycle
   >>= renderProjectsListItems ctx
-  >>= return . constField "projects_list"
+  >>= return . constField "projectsList"
 --
 -- index page ctx
 --

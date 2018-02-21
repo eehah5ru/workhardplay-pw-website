@@ -1,9 +1,9 @@
 header.archive-page.whp-2017
   .projects-list
-    = _for "many_terms"
+    = _for "manyTerms"
       span
-        a href="$term_url$"
-          | $term_name$
+        a href="$termUrl$"
+          | $termName$
     = _endfor
   h1.large
     a href="$url$"
@@ -13,8 +13,8 @@ article.archive-page.whp-2017
   = _for "terms"
     .row.expanded
       .term-definition
-        a href="$term_url$"
-         | $term_name$
+        a href="$termUrl$"
+         | $termName$
         | &nbsp;&mdash;&nbsp;
-        | $term_definition$
+        | $termDefinition$
   = _endfor
