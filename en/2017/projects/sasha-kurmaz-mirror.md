@@ -4,10 +4,15 @@ project_title: "Mirror"
 project_cover: sasha-kurmaz-mirror-cover.jpg
 canonical_name: sasha-kurmaz-mirror
 cover_color: "255,0,0"
+vimeo_video_id_01: "223209637"
+vimeo_video_id_02: "223209593"
+vimeo_video_id_03: "223209496"
+vimeo_video_id_04: "223209554"
+vimeo_video_id_05: "223209433"
 ---
 
-_"In fact, that is the meaning of the ruble, the ruble is in itself nothing other than a little piece of laziness."_
-_Laziness—The Real Truth about Mankind, 1921_
+_"In fact, that is the meaning of the ruble, the ruble is in itself nothing other than a little piece of laziness."_  
+_Laziness—The Real Truth about Mankind, 1921_  
 _Kazimir Malevich_
 
 "In this project, I would like to rethink the logic of the relationship between work and earnings, the functions of money in the society, and the labor economy in general. I draw attention to people who, through various reasons, have found themselves in a very difficult economic and social situation; people who use a public space, as the main place for labor and earning money. This way of work might be a choice, but it is often made out of desperation, particularly within the lower registers of economic mobility.
