@@ -4,7 +4,7 @@ project_title: Deviations
 project_cover: alisa-oleva-deviations-cover.jpg
 canonical_name: alisa-oleva-deviations
 cover_color: "255,0,0"
-tags: selfcontrol
+tags: “social choreography, dispersed collectivity, практики самих себя, 8-BIT DESIRE”
 ---
 
-Бостон, Чикаго, Вашингтон, Амстердам, Эйндховен - в этих городах уже действуют камеры видео-наблюдения, которые анализируют паттерны человеческих движений и распознают подозрительное поведение. Алиса Олева пригласила присоединиться к сессии городской хореографии, во время которой были протестированы все 8 типов подозрительных движений в публичном пространстве Минска.
+Boston, Chicago, Washington, Amsterdam and Eindhoven - these cameras already have video surveillance cameras, that analyze the patterns of human movements and recognize suspicious behavior. Alisa Oleva invited us to join the session of city choreography, during which we have tested all 8 types of suspicious movements in the public space of Minsk.
