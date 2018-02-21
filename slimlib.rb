@@ -37,7 +37,7 @@ end
 #
 #
 def archive_image(file_name)
-  return "/images/2016/archive/$canonical_name$/" + file_name
+  return "/images/2016/archive/$canonicalName$/" + file_name
 end
 
 #
@@ -47,7 +47,7 @@ end
 #
 
 def class_has_video
-  return "$if(has_video)$has-video-icon$endif$"
+  return "$if(hasVideo)$has-video-icon$endif$"
 end
 
 def schedule_prj_cover_style(project_name, image_path)

@@ -1,6 +1,6 @@
 css:
   .header-cover {
-    background-image: linear-gradient(0deg, rgba($cover_color$,0), rgba($cover_color$,1)), url($project_cover$);
+    background-image: linear-gradient(0deg, rgba($coverColor$,0), rgba($coverColor$,1)), url($projectCover$);
     background-size: contain, cover;
     background-position: left top, center center;
   }
@@ -8,45 +8,45 @@ header.archive-project.whp-2017
   .header-cover
     | &nbsp;
   h1
-    a href="$root_url$"
+    a href="$rootUrl$"
       | $year$
     | &nbsp;->&nbsp;
-    a href="$archive_url$"
-      | $archive_name$
+    a href="$archiveUrl$"
+      | $archiveName$
     br
     | $author$
     | &nbsp;
-    | $project_title$
+    | $projectTitle$
 
 article.archive-project.whp-2017
-  = _if "has_terms"
+  = _if "hasTerms"
     p.collective-glossary-terms
-      | $terms_label$:&nbsp;
-      | $terms_list$
+      | $termsLabel$:&nbsp;
+      | $termsList$
   = _else
    p.collective-glossary-terms
      | No Terms
   = _endif
 
-  = _if "has_audio"
+  = _if "hasAudio"
     figure
-      iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/$soundcloud_track_id$&amp;color=%23616161&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"
+      iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/$soundcloudTrackId$&amp;color=%23616161&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"
   = _endif
 
   | $body$
 
-  = _if "has_video"
+  = _if "hasVideo"
     figure
       .responsive-embed.widescreen
-        iframe width="100%" height="315" src="https://www.youtube.com/embed/$youtube_video_id$" frameborder="0" allowfullscreen="true"
+        iframe width="100%" height="315" src="https://www.youtube.com/embed/$youtubeVideoId$" frameborder="0" allowfullscreen="true"
   = _endif
 
   = _for "pictures"
     figure
-      img src="$picture_url$" alt="$if(has_exif_info)$$picture_title$ - $picture_creator$ $if(has_picture_description)$ - $picture_description$$endif$$endif$" title="$if(has_exif_info)$$picture_title$ - $picture_creator$ $if(has_picture_description)$ - $picture_description$$endif$$endif$"
-      = _if "has_picture_creator"
+      img src="$pictureUrl$" alt="$if(hasExifInfo)$$pictureTitle$ - $pictureCreator$ $if(hasPictureDescription)$ - $pictureDescription$$endif$$endif$" title="$if(hasExifInfo)$$pictureTitle$ - $pictureCreator$ $if(hasPictureDescription)$ - $pictureDescription$$endif$$endif$"
+      = _if "hasPictureCreator"
        .picture-creator
-         | $picture_creator$
+         | $pictureCreator$
       = _endif
 
   = _endfor
