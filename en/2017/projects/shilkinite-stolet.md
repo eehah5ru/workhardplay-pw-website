@@ -1,16 +1,10 @@
 ---
-author: Йожи Столет и Полина Шилкините
-project_title: Проект «мир работы/мир без работы»
+author: Jozi Stolet and Polina Shilkinite
+project_title: "world of work / world without work"
 project_cover: shilkinite-stolet.jpg
 canonical_name: shilkinite-stolet
 cover_color: "255,0,0"
+youtube_video_id: "22Eo-3pVIoM"
 ---
 
-p
-  | Предлагаем всем присоединиться к вылазке в места, где сейчас пока еще незаметно, но рождается новый урбанистический порядок. Хотите – верьте, хотите – нет, но дата-центры чем-то похожи на голубятни: такие же незаметные сооружения-паразиты на теле привычного нам городского ландшафта.
-p
-  | По ходу дела мы убедимся, что ситуация с дата-центрами гораздо сложнее и противоречивее чем та, которую нам рисуют евангелисты нового цифрового миропорядка в своих пресс-релизах. Вместо холодного синего света серверных, мы погрузимся в драму того, кому и как выгодно распоряжаться большими данными, кто становится королевами и королями аутсорсинга ИТ-инфраструктуры, на наглядных примерах разберемся в архитектуре сетей, опутывающих земной шар. Никто не знает, что нас ждет за углом, то ли НИИ, то ли начало оффшорного лабиринта. Наша цель – выяснить, что важнее: политическая стабильность или энергетическая независимость. Наше средство – знакомства в курилке с системными администраторами.
-p
-  | Место действия: остатки позднесоветской промышленной мощи, торговый центр имени известного актера, и оптовый рынок.
-p
- | Не без алгоритмической случайности, сквозь московскую летнюю пыль мы попробуем посмотреть на экономические модели технобудущего и на наше место в нем. Походим по воображаемым местам, где царит автоматизация, машины работают для машин, наши внутренние коммерсанты давно не подают голоса и мы как кошки шляемся, выискивая места поинтереснее да потеплее.
+The project “world of work / world without work” is a project on the border of research and art. Jozi Stolet and Polina Shilkinite are interested in the displacement of the axis of labor in the modern world and in the world of the future. Invisible work of activists, artists, mothers, volunteers requires a new ethic, and this is a political issue. Cooperation with cars, unemployment, basic income. The tension of ethics and politics, directly related to the new ontologies of the modern world, was presented in the form of a lecture given by a robot and a cyber-hut with a map of the visualization of the ethics of the future.
