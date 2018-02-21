@@ -1,6 +1,6 @@
 ---
 author: Vital Shchutski
-project_title: Report on a walk in the shopping center Le BHV
+project_title: "Report on a walk in the shopping center Le BHV"
 project_cover: vital-schutski-flanerstvo-01.jpg
 canonical_name: vital-schutski-flanerstvo
 cover_color: "255,0,0"

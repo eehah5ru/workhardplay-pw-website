@@ -1,6 +1,6 @@
 ---
 author: Владимир Грамович
-project_title: «Слаўная моладзь пад зямлю крочыла». Заметки о соляных штольнях как музеях корпорации-государства
+project_title: "«Слаўная моладзь пад зямлю крочыла». Заметки о соляных штольнях как музеях корпорации-государства"
 project_cover: uladz-hramovich-slaunaya-moladz-01.jpg
 canonical_name: uladz-hramovich-slaunaya-moladz
 cover_color: "255,0,0"

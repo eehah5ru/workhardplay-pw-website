@@ -1,6 +1,6 @@
 ---
 author: Uladzimir Hramovich
-project_title: “Glorious youth stepped underground”. Notes on the salt galleries as museums of the corporation-state
+project_title: "“Glorious youth stepped underground”. Notes on the salt galleries as museums of the corporation-state"
 project_cover: uladz-hramovich-slaunaya-moladz-01.jpg
 canonical_name: uladz-hramovich-slaunaya-moladz
 cover_color: "255,0,0"

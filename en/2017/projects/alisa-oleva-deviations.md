@@ -1,6 +1,6 @@
 ---
 author: Alisa Oleva
-project_title: Deviations
+project_title: "Deviations"
 project_cover: alisa-oleva-deviations-cover.jpg
 canonical_name: alisa-oleva-deviations
 cover_color: "255,0,0"

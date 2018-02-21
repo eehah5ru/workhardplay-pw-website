@@ -1,16 +1,10 @@
 ---
-author: Александра Новоженова
-project_title: "Лекция. Социализм-НОТ-Американизм: научная организация труда и работа Густава Клуциса для журнала «Время»"
+author: Alexandra Novozhenova
+project_title: "Lecture. Socialism-NOT-Americanism: the scientific organization of work and the work of Gustav Klutsis for the magazine “Vremya”"
 project_cover: novozhenova.jpg
 canonical_name: sasha-novozhenova
 cover_color: "255,0,0"
 ---
 
-p
-  | Предлагаем всем присоединиться к вылазке в места, где сейчас пока еще незаметно, но рождается новый урбанистический порядок. Хотите – верьте, хотите – нет, но дата-центры чем-то похожи на голубятни: такие же незаметные сооружения-паразиты на теле привычного нам городского ландшафта.
-p
-  | По ходу дела мы убедимся, что ситуация с дата-центрами гораздо сложнее и противоречивее чем та, которую нам рисуют евангелисты нового цифрового миропорядка в своих пресс-релизах. Вместо холодного синего света серверных, мы погрузимся в драму того, кому и как выгодно распоряжаться большими данными, кто становится королевами и королями аутсорсинга ИТ-инфраструктуры, на наглядных примерах разберемся в архитектуре сетей, опутывающих земной шар. Никто не знает, что нас ждет за углом, то ли НИИ, то ли начало оффшорного лабиринта. Наша цель – выяснить, что важнее: политическая стабильность или энергетическая независимость. Наше средство – знакомства в курилке с системными администраторами.
-p
-  | Место действия: остатки позднесоветской промышленной мощи, торговый центр имени известного актера, и оптовый рынок.
-p
- | Не без алгоритмической случайности, сквозь московскую летнюю пыль мы попробуем посмотреть на экономические модели технобудущего и на наше место в нем. Походим по воображаемым местам, где царит автоматизация, машины работают для машин, наши внутренние коммерсанты давно не подают голоса и мы как кошки шляемся, выискивая места поинтереснее да потеплее.
+League of Time, which in the early 1920s propagated and disseminated the new socialist time management, economy and time management in the production and personal spheres, was part of the movement of the Scientific Labor Organization NOT – a broad initiative to develop labor and hygiene standards in production.
+One of the artists-producers who belonged to the circle of the journal LEF and simultaneously collaborated with the League of Time, was Gustav Klucis. In a series of his drawings of 1923-24 he tried to consistently express the theoretical formula proposed by the League of Time, in which time and energy are combined, the scientific organization of labor, socialism and americanism. The lecture is devoted to the decoding of these figures and the economic paradox of energy-time contained in them, which Klutsis encountered.

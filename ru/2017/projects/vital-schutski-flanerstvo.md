@@ -1,6 +1,6 @@
 ---
 author: Виталий Шуцкий
-project_title: «Онлайн-отчёт о прогулке в торговом центре Le BHV» про стоимость, статус и ценность вещи в современной неолиберальной экономике
+project_title: "«Онлайн-отчёт о прогулке в торговом центре Le BHV» про стоимость, статус и ценность вещи в современной неолиберальной экономике"
 project_cover: vital-schutski-flanerstvo-01.jpg
 canonical_name: vital-schutski-flanerstvo
 cover_color: "255,0,0"
