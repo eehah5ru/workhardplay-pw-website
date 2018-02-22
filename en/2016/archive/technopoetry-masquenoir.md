@@ -2,9 +2,9 @@
 author: TECHNO-POETRY + MASQUE NOIR
 projectTitle: "Performance"
 coverColor: "255,0,0"
-youtube_video_id_01_: "4OYjrwi38nA"
-youtube_video_id_02_: "qPBD6CASo_s"
-youtube_video_id_03_: "RRmt3p-6D8w"
+youtubeVideoId01: "4OYjrwi38nA"
+youtubeVideoId02: "qPBD6CASo\_s"
+youtubeVideoId03: "RRmt3p-6D8w"
 ---
 [TECHNO-POETRY][1]  
 St. Petersburg  
