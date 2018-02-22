@@ -66,5 +66,7 @@ mkFieldTerms terms = do
 
 mkFieldManyTerms :: Int -> Tags -> Compiler (Context a)
 mkFieldManyTerms n terms = do
-  tags' <- (return . take n . cycle) =<< tagsInfo terms
+  tags' <- (return . take n . cycleTerms) =<< tagsInfo terms
   return $ listField "manyTerms" tagCtx (sequence . map makeItem $ tags')
+  where cycleTerms [] = []
+        cycleTerms ts = cycle ts
