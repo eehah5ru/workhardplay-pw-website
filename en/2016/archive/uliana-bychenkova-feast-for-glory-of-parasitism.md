@@ -1,15 +1,14 @@
 ---
 author: Uliana Bychenkova
-projectTitle: Feast for glory of parasitism
+projectTitle: "Feast for glory of parasitism"
 coverColor: "255,0,0"
-tags: selfcontrol
+tags:
 ---
-
-FEAST FOR GLORY OF PARASITISM* Re-feast holiday to your taste!
+FEAST FOR GLORY OF PARASITISM\* Re-feast holiday to your taste!
 In the program: a feast, a video show "Astrological news from Prekarisentsy" \*\*, laziness, parasitism, idleness, swimming in the lake, a disco in the parking lot, a fairy tale for the night, a dream.  
 entrance: 1 tuna bank for 1 person
 
-___________________________ 
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ 
 
 \*PARASITISM – neuter gender: joyful eating of tuna
 In Russian there is a playful meaning of “tunejadsctvo” (en – social parasitism) that is similar to “tuna”. Tuna is a group of marine fish, the name comes from ancient Greek “thynō” – "rush", "throw", with the verb "yasti" (meaning "to eat").
