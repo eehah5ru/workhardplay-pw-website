@@ -1,16 +1,18 @@
 ---
-author: 0s+1s Collective и Маша Котлячкова
-projectTitle: "1,2,3,4: МЕТОД РИТМА"
+author: 0s+1s Collective and Masha Kotlyachkova
+projectTitle: "1,2,3,4: The Rhythm Method. Cyberfeminist online-performance"
 projectCover: masha-kotlyachkova-cyberfeminists-session.jpg
 canonicalName: masha-kotlyachkova-cyberfeminists-session
 coverColor: "255,0,0"
+youtubeVideoId: "Gapy-F7aDzE"
+soundcloudTrackId: "354244823"
+
 ---
 
-p
-  | Предлагаем всем присоединиться к вылазке в места, где сейчас пока еще незаметно, но рождается новый урбанистический порядок. Хотите – верьте, хотите – нет, но дата-центры чем-то похожи на голубятни: такие же незаметные сооружения-паразиты на теле привычного нам городского ландшафта.
-p
-  | По ходу дела мы убедимся, что ситуация с дата-центрами гораздо сложнее и противоречивее чем та, которую нам рисуют евангелисты нового цифрового миропорядка в своих пресс-релизах. Вместо холодного синего света серверных, мы погрузимся в драму того, кому и как выгодно распоряжаться большими данными, кто становится королевами и королями аутсорсинга ИТ-инфраструктуры, на наглядных примерах разберемся в архитектуре сетей, опутывающих земной шар. Никто не знает, что нас ждет за углом, то ли НИИ, то ли начало оффшорного лабиринта. Наша цель – выяснить, что важнее: политическая стабильность или энергетическая независимость. Наше средство – знакомства в курилке с системными администраторами.
-p
-  | Место действия: остатки позднесоветской промышленной мощи, торговый центр имени известного актера, и оптовый рынок.
-p
- | Не без алгоритмической случайности, сквозь московскую летнюю пыль мы попробуем посмотреть на экономические модели технобудущего и на наше место в нем. Походим по воображаемым местам, где царит автоматизация, машины работают для машин, наши внутренние коммерсанты давно не подают голоса и мы как кошки шляемся, выискивая места поинтереснее да потеплее.
+1,2,3,4: The Rhythm Method is informed by the multiple speeds within our works, and the rhythms of our bodies and lives.  
+Four members of 0s+1s Collective shared a group conversation — alongside text, video and performance. The collective introduced the selected works via Skype within the context of recent group discussions on how emotional labour and personal feelings form an essential part of our collective practice.  
+  
+_Rut Karin Zettergren’s_ web-girl alter-ego _Soft Light_ — clued up in technology, surveillance and dance hall — streamed a live performance lecture on the subject of artificial intelligence.  
+_Choterina Freer_ presented her multiform essay film "Impatient Voices" — in which she considers the commercialisation of both the collective impulse (as seen in social media) and of biomedical technology (health tracker apps) through using their forms and imagery with archival documentation of women’s health collectives from the 70s.  
+_Anna Kinbom_ streamed two of her songs (Love and Smaragden's Song to Mick) in her inclusive karaoke style.  
+_Sonia Hedstrand’s_ text _The Performative Worker_ was partially translated (from Swedish to Russian) by _Maria Kotlyachkova_. The text is based on the artist’s personal and political experiences of performative service labour from Parisian Au Pairs to Tokyo Host Boys.

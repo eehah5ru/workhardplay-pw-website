@@ -4,6 +4,7 @@ projectTitle: Требуем и тезис, и трек!
 projectCover: discrassvet-cover.jpg
 canonicalName: discrassvet
 coverColor: "255,0,0"
+soundcloudTrackId:
 ---
 
 p

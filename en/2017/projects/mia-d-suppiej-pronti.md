@@ -1,16 +1,26 @@
 ---
 author: Mia D. Suppiej
-projectTitle: PRONTI
+projectTitle: "PRONTI"
 projectCover: mia-d-suppiej-pronti-01.jpg
 canonicalName: mia-d-suppiej-pronti
 coverColor: "255,0,0"
+youtubeVideoId: "z6Qeh5Ro6TI"
 ---
 
-p
-  | Предлагаем всем присоединиться к вылазке в места, где сейчас пока еще незаметно, но рождается новый урбанистический порядок. Хотите – верьте, хотите – нет, но дата-центры чем-то похожи на голубятни: такие же незаметные сооружения-паразиты на теле привычного нам городского ландшафта.
-p
-  | По ходу дела мы убедимся, что ситуация с дата-центрами гораздо сложнее и противоречивее чем та, которую нам рисуют евангелисты нового цифрового миропорядка в своих пресс-релизах. Вместо холодного синего света серверных, мы погрузимся в драму того, кому и как выгодно распоряжаться большими данными, кто становится королевами и королями аутсорсинга ИТ-инфраструктуры, на наглядных примерах разберемся в архитектуре сетей, опутывающих земной шар. Никто не знает, что нас ждет за углом, то ли НИИ, то ли начало оффшорного лабиринта. Наша цель – выяснить, что важнее: политическая стабильность или энергетическая независимость. Наше средство – знакомства в курилке с системными администраторами.
-p
-  | Место действия: остатки позднесоветской промышленной мощи, торговый центр имени известного актера, и оптовый рынок.
-p
- | Не без алгоритмической случайности, сквозь московскую летнюю пыль мы попробуем посмотреть на экономические модели технобудущего и на наше место в нем. Походим по воображаемым местам, где царит автоматизация, машины работают для машин, наши внутренние коммерсанты давно не подают голоса и мы как кошки шляемся, выискивая места поинтереснее да потеплее.
+2017  
+Site specific installation and performance  
+Mixed media  
+Variable dimensions  
+(two flags 60x80cm)  
+  
+Once the starter makes the signal, an irreparable happens. The competition is started. There will be winner and looser.  
+  
+Everything is about the departure, and the preparation for the best departure.  
+  
+Two race flags visually manipulated (“Ready Steady” and “On your Marks”) stand in the exhibition space.  
+  
+Far beyond the artist sits at a desk, seeking online information (text + video) about the departure.  
+  
+The computer is connected to a projector - which shows the progressive visual composition in real time, and to an audio system that plays sounds of various nature, including the voice of the artist while reading the information found.  
+  
+The spectator is invited to question the speed, the departure, the preparation. The loss of immobility in competition dynamics, as in individual daily routines.

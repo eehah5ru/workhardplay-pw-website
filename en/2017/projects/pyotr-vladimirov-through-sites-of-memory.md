@@ -1,16 +1,11 @@
 ---
-author: Пётр Владимиров
-projectTitle: "Экскурсия «По памятным местам»"
+author: Pyotr Vladimirov
+projectTitle: ""Along memorable places". City tour"
 projectCover: pyotr-vladimirov-through-sites-of-memory-01.jpg
 canonicalName: pyotr-vladimirov-through-sites-of-memory
 coverColor: "255,0,0"
 ---
 
-p
-  | Предлагаем всем присоединиться к вылазке в места, где сейчас пока еще незаметно, но рождается новый урбанистический порядок. Хотите – верьте, хотите – нет, но дата-центры чем-то похожи на голубятни: такие же незаметные сооружения-паразиты на теле привычного нам городского ландшафта.
-p
-  | По ходу дела мы убедимся, что ситуация с дата-центрами гораздо сложнее и противоречивее чем та, которую нам рисуют евангелисты нового цифрового миропорядка в своих пресс-релизах. Вместо холодного синего света серверных, мы погрузимся в драму того, кому и как выгодно распоряжаться большими данными, кто становится королевами и королями аутсорсинга ИТ-инфраструктуры, на наглядных примерах разберемся в архитектуре сетей, опутывающих земной шар. Никто не знает, что нас ждет за углом, то ли НИИ, то ли начало оффшорного лабиринта. Наша цель – выяснить, что важнее: политическая стабильность или энергетическая независимость. Наше средство – знакомства в курилке с системными администраторами.
-p
-  | Место действия: остатки позднесоветской промышленной мощи, торговый центр имени известного актера, и оптовый рынок.
-p
- | Не без алгоритмической случайности, сквозь московскую летнюю пыль мы попробуем посмотреть на экономические модели технобудущего и на наше место в нем. Походим по воображаемым местам, где царит автоматизация, машины работают для машин, наши внутренние коммерсанты давно не подают голоса и мы как кошки шляемся, выискивая места поинтереснее да потеплее.
+“We invite you to take part in an unforgettable city tour, during which you will discover the amazing secrets of Minsk, the city that does not resemble anything!”. 
+With this short text I announced a city tour called “Along memorable places”.
+I did not know any “memorable places” through which I could tour; I was in Minsk for the first time. Therefore, the format of a city tour was put upside down: I was a guide who did not have much to tell and who, on the contrary, needed a city tour himself. Among the large number of participants there were Minsk residents, whom, on convenient occasion, I asked to tell about the places we were. Apart from getting the most general, superficial knowledge about the city, I heard a few sentimental stories.

@@ -1,16 +1,11 @@
 ---
-author: Анастасия Вепрева
-projectTitle: "Лекция-проекция: Как жить если ты левый меланхолик?"
+author: Anastasia Vepreva
+projectTitle: "Lecture-projection: How to live if you are the left melancholic?"
 projectCover: anastasia-vepreva-how-to-live-if-you-are-leftist-and-melancholic-cover.jpg
 canonicalName: anastasia-vepreva-how-to-live-if-you-are-leftist-and-melancholic
 coverColor: "255,0,0"
 ---
 
-p
-  | Предлагаем всем присоединиться к вылазке в места, где сейчас пока еще незаметно, но рождается новый урбанистический порядок. Хотите – верьте, хотите – нет, но дата-центры чем-то похожи на голубятни: такие же незаметные сооружения-паразиты на теле привычного нам городского ландшафта.
-p
-  | По ходу дела мы убедимся, что ситуация с дата-центрами гораздо сложнее и противоречивее чем та, которую нам рисуют евангелисты нового цифрового миропорядка в своих пресс-релизах. Вместо холодного синего света серверных, мы погрузимся в драму того, кому и как выгодно распоряжаться большими данными, кто становится королевами и королями аутсорсинга ИТ-инфраструктуры, на наглядных примерах разберемся в архитектуре сетей, опутывающих земной шар. Никто не знает, что нас ждет за углом, то ли НИИ, то ли начало оффшорного лабиринта. Наша цель – выяснить, что важнее: политическая стабильность или энергетическая независимость. Наше средство – знакомства в курилке с системными администраторами.
-p
-  | Место действия: остатки позднесоветской промышленной мощи, торговый центр имени известного актера, и оптовый рынок.
-p
- | Не без алгоритмической случайности, сквозь московскую летнюю пыль мы попробуем посмотреть на экономические модели технобудущего и на наше место в нем. Походим по воображаемым местам, где царит автоматизация, машины работают для машин, наши внутренние коммерсанты давно не подают голоса и мы как кошки шляемся, выискивая места поинтереснее да потеплее.
+If you are so terribly tired, and so terribly disappointed, that everything goes wrong and in the wrong direction, that the apocalypse is already knocking at the door, and the unions do not work, the corporations have seized everything and are watching your every step. If you still try to believe in people, while they deceive you, fuck up, do not look like ideal revolutionaries and do not respond to your expectations, and in general they offend you and your feelings. If all the words have lost their sense and do not mean anything, but you still write about it on Facebook, enjoying your mood and hiding in it from work - what for? - to finally rest and do nothing.
+A bright future will come,
+/ But only without us / just need to be patient / never / in spite of / well and to hell with it /

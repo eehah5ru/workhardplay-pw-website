@@ -1,16 +1,9 @@
 ---
-author: Роман Аксенов
-projectTitle: Расставить точки
+author: Roman Aksionov
+projectTitle: "Arrange the dots"
 projectCover: roman-aksenov-dots-cover.jpg
 canonicalName: roman-aksenov-dots
 coverColor: "255,0,0"
 ---
 
-p
-  | Предлагаем всем присоединиться к вылазке в места, где сейчас пока еще незаметно, но рождается новый урбанистический порядок. Хотите – верьте, хотите – нет, но дата-центры чем-то похожи на голубятни: такие же незаметные сооружения-паразиты на теле привычного нам городского ландшафта.
-p
-  | По ходу дела мы убедимся, что ситуация с дата-центрами гораздо сложнее и противоречивее чем та, которую нам рисуют евангелисты нового цифрового миропорядка в своих пресс-релизах. Вместо холодного синего света серверных, мы погрузимся в драму того, кому и как выгодно распоряжаться большими данными, кто становится королевами и королями аутсорсинга ИТ-инфраструктуры, на наглядных примерах разберемся в архитектуре сетей, опутывающих земной шар. Никто не знает, что нас ждет за углом, то ли НИИ, то ли начало оффшорного лабиринта. Наша цель – выяснить, что важнее: политическая стабильность или энергетическая независимость. Наше средство – знакомства в курилке с системными администраторами.
-p
-  | Место действия: остатки позднесоветской промышленной мощи, торговый центр имени известного актера, и оптовый рынок.
-p
- | Не без алгоритмической случайности, сквозь московскую летнюю пыль мы попробуем посмотреть на экономические модели технобудущего и на наше место в нем. Походим по воображаемым местам, где царит автоматизация, машины работают для машин, наши внутренние коммерсанты давно не подают голоса и мы как кошки шляемся, выискивая места поинтереснее да потеплее.
+The game “dots” is well known from school time. Students playing hard, seizing each other's territories in the notebook, instead of conscientiously receiving information that they proposed. In addition to entertainment and leisure, is this action, somewhat reminiscent of a situational drift, simply the acceleration of the expected result and the effect of the acquired knowledge, as a kind of drug that quickly brings the desired state of pleasure? In part, any knowledge leads to the conquest of its territories, whether it be mental, "monetary" or physical spaces. Modern states are not tired of proving this to us. Despite the tangible social vector of the development of the last century, the general "behavior" does not change in any way. Incorrectly used notebooks, work shifting to rest and fake test of "forces" and "ambitions" in this "battle" is the ironic component of the project, "grafting" on the surplus of the same ambitions.

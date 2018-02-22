@@ -4,6 +4,7 @@ projectTitle: Человеческое облако. Онлайн-сессия �
 projectCover: grecha-humancloud-cover.jpg
 canonicalName: grecha-human-cloud
 coverColor: "255,0,0"
+soundcloudTrackId:
 ---
 
 p
