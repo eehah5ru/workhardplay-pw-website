@@ -6,3 +6,5 @@ _site
 log
 .Ulysses-Group.plist
 /.Ulysses-favorites.plist
+.bundle/config
+/bundler_stubs
