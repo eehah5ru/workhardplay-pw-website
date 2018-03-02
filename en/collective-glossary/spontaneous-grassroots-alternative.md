@@ -1,0 +1,5 @@
+---
+term: spontaneous grassroots alternative
+author: Roman Aksionov
+---
+A spontaneous grassroots alternative is a phenomenon when a conditional "user" suddenly starts using the conditions or services provided to him, not according to a direct, generally accepted example, but "coming up with" his own, for example, the back rows of cinemas are used for kissing or a lecture is used for entertainment, games. Most often this happens at a time when the environment suddenly becomes cold, boring, alien or even hostile. This phenomenon includes squats, parkour and similar practices, when people "win" from a city that does not accept them, its territory, turning its rather boring "dead" world into a "living" world, thus changing it gradually. This kind of the concept can combine quite different phenomena that are specific to the given time, from the appearance of the ready-made to the examples given above. The phenomenon peculiar to the era of postmodernism, with its reassessment of everything that already exists and attempts to overestimate, reorganize all the numerous "created" can be useful in analyzing and forecasting new strategies and assessing the previous era.
