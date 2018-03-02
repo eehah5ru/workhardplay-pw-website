@@ -1,9 +1,10 @@
 ---
-author: K_Super
+author: K\_Super
 projectTitle: Девочка-ночь
 projectCover: k-super-cover.jpg
 canonicalName: k-super-baby-night
 coverColor: "255,0,0"
+tags: аффективный труд, вчерашний неотчужденный праздник, интимные интерфейсы, пусть-стоп, рассеянная коллективность
 ---
 
 p

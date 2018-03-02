@@ -4,6 +4,7 @@ projectTitle: «Эксплуатация в неолиберальной эко�
 projectCover: jury-urso-nematerialny-trud-cover.jpg
 canonicalName: jury-urso-nematerialny-trud
 coverColor: "255,0,0"
+tags: быстрое знание -ые -я, аффективный труд, аутсорсинг
 ---
 
 p

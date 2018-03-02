@@ -4,7 +4,8 @@ projectTitle: Требуем и тезис, и трек!
 projectCover: discrassvet-cover.jpg
 canonicalName: discrassvet
 coverColor: "255,0,0"
-soundcloudTrackId:
+soundcloudTrackId: "353915180"
+tags: outsourcing, all to all, dispersed collectivity, contingency, practices of ourselves, social choreography, 8-BIT DESIRE, yesterday's unalienated celebration, h o o o o o o w w w w w l
 ---
 
 p

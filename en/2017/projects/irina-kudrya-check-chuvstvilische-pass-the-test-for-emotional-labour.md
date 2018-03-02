@@ -4,6 +4,7 @@ projectTitle: Проверь чувствилище!
 projectCover: irina-kudrya-check-chuvstvilische-pass-the-test-for-emotional-labour-01.jpg
 canonicalName: irina-kudrya-check-chuvstvilische-pass-the-test-for-emotional-labour
 coverColor: "255,0,0"
+tags: practices of ourselves, affective labour, yesterday's unalienated celebration, psychodata, production drama
 ---
 
 p

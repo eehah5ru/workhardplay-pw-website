@@ -3,6 +3,7 @@ author: Lucy Ferrum
 projectTitle: Визуально-звуковой перформанс с элементами балагана и споукен ворда
 projectCover: lucy-ferrum-performance-01.jpg
 canonicalName: lucy-ferrum-performance
+soundcloudTrackId: "349330739"
 coverColor: "255,0,0"
 ---
 

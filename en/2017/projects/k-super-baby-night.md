@@ -1,9 +1,10 @@
 ---
-author: K_Super
+author: K\_Super
 projectTitle: Девочка-ночь
 projectCover: k-super-cover.jpg
 canonicalName: k-super-baby-night
 coverColor: "255,0,0"
+tags: affective labour, yesterday's unalienated celebration, intimate interfaces, dispersed collectivity, path stop
 ---
 
 p

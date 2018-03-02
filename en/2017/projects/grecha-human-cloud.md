@@ -4,7 +4,8 @@ projectTitle: Человеческое облако. Онлайн-сессия �
 projectCover: grecha-humancloud-cover.jpg
 canonicalName: grecha-human-cloud
 coverColor: "255,0,0"
-soundcloudTrackId:
+soundcloudTrackId: "332102322"
+tags: dispersed collectivity, psychodata, affective labour, intimate interfaces, outsourcing, extractive capitalism, quick knowledge, corridor anomalies
 ---
 
 p

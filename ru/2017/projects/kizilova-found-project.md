@@ -4,6 +4,7 @@ projectTitle: FOUND PROJECT!
 projectCover: kizilova-found-project-cover.jpg
 canonicalName: kizilova-found-project
 coverColor: "255,0,0"
+tags: аффективный труд, желание, спонтанная низовая инициатива, коллекция, все всем, контингентность
 ---
 
 p

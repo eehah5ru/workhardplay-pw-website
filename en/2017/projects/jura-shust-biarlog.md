@@ -4,6 +4,7 @@ projectTitle: «Бярлог». Хип-хоп заклинание, вызыва
 projectCover: jura-shust-biarlog.jpg
 canonicalName: jura-shust-biarlog
 coverColor: "255,0,0"
+soundcloudTrackId: "348734729"
 ---
 
 p

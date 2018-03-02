@@ -4,6 +4,7 @@ projectTitle: FOUND PROJECT!
 projectCover: kizilova-found-project-cover.jpg
 canonicalName: kizilova-found-project
 coverColor: "255,0,0"
+tags: affective labour, desire, spontaneous grassroots alternative, collection, all to all, contingency
 ---
 
 p

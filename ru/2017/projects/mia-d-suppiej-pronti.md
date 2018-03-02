@@ -5,6 +5,7 @@ projectCover: mia-d-suppiej-pronti-01.jpg
 canonicalName: mia-d-suppiej-pronti
 coverColor: "255,0,0"
 youtubeVideoId: "z6Qeh5Ro6TI"
+tags: интимные интерфейсы, мать-машина, желание, спортивный интерес, практики самих себя, У У У У У У У У У У У У У У У У У УУУ
 ---
 
 Сайт-специфичная инсталляция и перформанс  
