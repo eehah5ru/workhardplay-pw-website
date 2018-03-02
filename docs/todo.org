@@ -7,14 +7,20 @@
 *** install.sh
 **** links to haskell libs
 **** links for all bins
-** TODO metadata
-*** change to field names without underlines
-** OG
+** DONE metadata
+   CLOSED: [2018-03-02 Fri 17:16]
+*** DONE change to field names without underlines
+    CLOSED: [2018-03-02 Fri 17:16]
+** TODO OG
 *** TODO remove og url
-** TODO glossary
-*** TODO tags descriptions
-*** TODO title for term page
-*** TODO title for glossary page
+** DONE glossary
+   CLOSED: [2018-03-02 Fri 17:17]
+*** DONE tags descriptions
+    CLOSED: [2018-03-02 Fri 17:16]
+*** DONE title for term page
+    CLOSED: [2018-03-02 Fri 17:16]
+*** DONE title for glossary page
+    CLOSED: [2018-03-02 Fri 17:17]
 *** DONE tags for project
     CLOSED: [2017-11-11 Sat 21:58]
 *** DONE tags on archive index page
@@ -27,25 +33,31 @@
     CLOSED: [2017-11-11 Sat 21:58]
 *** DONE en-ru tags
     CLOSED: [2017-11-11 Sat 21:58]
-** images
+** TODO images
 *** resize
-*** extract medatada
+*** TODO extract medatada
 **** author
 **** description
 **** DONE en and ru versions
      CLOSED: [2018-01-29 Mon 15:01]
 * design
 ** TODO general
-*** favicon
+*** DONE favicon
+    CLOSED: [2018-03-02 Fri 17:44]
 *** /images/whp-cover.jpg
-** archive index
-*** small icons for audio and video
-*** tags list
-** archive project
-*** tags
+** DONE archive index
+   CLOSED: [2018-03-02 Fri 17:44]
+*** DONE small icons for audio and video
+    CLOSED: [2018-03-02 Fri 17:44]
+*** DONE tags list
+    CLOSED: [2018-03-02 Fri 17:44]
+** TODO archive project
+*** DONE tags
+    CLOSED: [2018-03-02 Fri 17:44]
 *** missing cover image
 *** media content
-**** photo - author
+**** DONE photo - author
+     CLOSED: [2018-03-02 Fri 17:45]
 **** photo - description
 **** photo - copyright
 **** layout for photo credits
@@ -58,8 +70,10 @@
     CLOSED: [2017-11-11 Sat 14:41]
 *** DONE test pandoc markdown compiler
     CLOSED: [2017-11-11 Sat 14:41]
-* content
-** olya martynennko as author
+* DONE content
+  CLOSED: [2018-03-02 Fri 17:45]
+** DONE olya martynennko as author
+   CLOSED: [2018-03-02 Fri 17:45]
 * deployment
 ** prevent client caching for html files and css
 *** revisions in css and js files
