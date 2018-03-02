@@ -34,6 +34,15 @@ import Site.CollectiveGlossary.Context (fieldTermsList)
 hasYoutubeVideoId :: MonadMetadata m => Item a -> m Bool
 hasYoutubeVideoId = hasItemField "youtubeVideoId"
 
+hasYoutubeVideoNumId :: MonadMetadata m => Int -> Item a -> m Bool
+hasYoutubeVideoNumId n i = hasItemField ("youtubeVideoId0" ++ (show n)) i
+
+hasVimeoVideoId :: MonadMetadata m => Item a -> m Bool
+hasVimeoVideoId = hasItemField "vimeoVideoId"
+
+hasVimeoVideoNumId :: MonadMetadata m => Int -> Item a -> m Bool
+hasVimeoVideoNumId n i = hasItemField ("vimeoVideoId0" ++ (show n)) i
+
 hasSoundcloudTrackId :: MonadMetadata m => Item a -> m Bool
 hasSoundcloudTrackId = hasItemField "soundcloudTrackId"
 
@@ -49,7 +58,12 @@ hasSoundcloudTrackId = hasItemField "soundcloudTrackId"
 
 
 hasVideo :: MonadMetadata m => Item a -> m Bool
-hasVideo i =  sequence [hasYoutubeVideoId i] >>= return . any id
+hasVideo i =  sequence videoPredicates >>= return . any id
+  where
+    videoPredicates = [ hasYoutubeVideoId i
+                      , hasVimeoVideoId i ] ++
+                      (map (\n -> hasYoutubeVideoNumId n i) [1..9]) ++
+                      (map (\n -> hasVimeoVideoNumId n i)) [1..9]
 
 hasAudio :: MonadMetadata m => Item a -> m Bool
 hasAudio i = sequence [hasSoundcloudTrackId i] >>= return . any id
