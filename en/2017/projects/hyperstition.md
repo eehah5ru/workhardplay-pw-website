@@ -1,6 +1,6 @@
 ---
 author: Christopher Roth and Armen Avanessian
-projectTitle: HYPERSTITION: A film on time and narrative
+projectTitle: "HYPERSTITION: A film on time and narrative"
 projectCover: hyperstition-cover.jpg
 canonicalName: hyperstition
 coverColor: "255,0,0"
