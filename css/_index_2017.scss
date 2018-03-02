@@ -74,6 +74,9 @@ section.whp-2017.index-page.description {
     &.hidden-text {
       color: lighten(grey, 47%);
     }
+
+    z-index: 99;
+    position: relative
   }
 
   p.first-description-p {
