@@ -42,7 +42,7 @@ buildTerms = do
 
 termToIdentifier :: Locale -> [(Identifier, Metadata)] -> String -> Identifier
 termToIdentifier l ms term =
-  let e = error . unwords $ ["there is no defenition for ", term]
+  let e = error  $ "there is no defenition for '" ++ term ++ "'"
       mi =  findTermCanonicalName ms term >>= return . fromCapture (fromGlob $ localizePath l "collective-glossary/*.md")
   in fromMaybe e mi
 
