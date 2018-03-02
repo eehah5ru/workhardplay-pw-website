@@ -1,6 +1,6 @@
 ---
-author: Экипаж «ГРЕЧА»
-projectTitle: Человеческое облако. Онлайн-сессия обсуждения
+author: GRECHA
+projectTitle: The human cloud
 projectCover: grecha-humancloud-cover.jpg
 canonicalName: grecha-human-cloud
 coverColor: "255,0,0"
@@ -8,11 +8,5 @@ soundcloudTrackId: "332102322"
 tags: dispersed collectivity, psychodata, affective labour, intimate interfaces, outsourcing, extractive capitalism, quick knowledge, corridor anomalies
 ---
 
-p
-  | Предлагаем всем присоединиться к вылазке в места, где сейчас пока еще незаметно, но рождается новый урбанистический порядок. Хотите – верьте, хотите – нет, но дата-центры чем-то похожи на голубятни: такие же незаметные сооружения-паразиты на теле привычного нам городского ландшафта.
-p
-  | По ходу дела мы убедимся, что ситуация с дата-центрами гораздо сложнее и противоречивее чем та, которую нам рисуют евангелисты нового цифрового миропорядка в своих пресс-релизах. Вместо холодного синего света серверных, мы погрузимся в драму того, кому и как выгодно распоряжаться большими данными, кто становится королевами и королями аутсорсинга ИТ-инфраструктуры, на наглядных примерах разберемся в архитектуре сетей, опутывающих земной шар. Никто не знает, что нас ждет за углом, то ли НИИ, то ли начало оффшорного лабиринта. Наша цель – выяснить, что важнее: политическая стабильность или энергетическая независимость. Наше средство – знакомства в курилке с системными администраторами.
-p
-  | Место действия: остатки позднесоветской промышленной мощи, торговый центр имени известного актера, и оптовый рынок.
-p
- | Не без алгоритмической случайности, сквозь московскую летнюю пыль мы попробуем посмотреть на экономические модели технобудущего и на наше место в нем. Походим по воображаемым местам, где царит автоматизация, машины работают для машин, наши внутренние коммерсанты давно не подают голоса и мы как кошки шляемся, выискивая места поинтереснее да потеплее.
+“The human cloud” is a way of organization of work, when a complex set of responsibilities is broken down into simple individual actions that are distributed between thousands and millions of participants of the "cloud", who are working from the distance all over the world. A separate direction is comprised by tasks, that could not yet be performed by a so called "artificial intelligence". While accomplishing such tasks the workers simultaneously earn money and improve the algorithms of machine learning.
+"The human cloud" is one of the opportunities for residents of developing countries to work remotely, but most of the tasks are worth a penny, so people are forced to spend 12-14-16 hours at the computer, constantly monitoring tasks and having no social guarantees.

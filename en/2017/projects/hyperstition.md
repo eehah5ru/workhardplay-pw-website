@@ -1,6 +1,6 @@
 ---
-author: Кристофер Рот и Армен Аванесян
-projectTitle: HYPERSTITION
+author: Christopher Roth and Armen Avanessian
+projectTitle: HYPERSTITION: A film on time and narrative
 projectCover: hyperstition-cover.jpg
 canonicalName: hyperstition
 coverColor: "255,0,0"
@@ -8,11 +8,8 @@ soundcloudTrackId: "349474606"
 tags: from the future at the present, contingency, desire, intimate interfaces, mother-machine, cyberfeminism, outsourcing, corridor anomalies
 ---
 
-p
-  | Предлагаем всем присоединиться к вылазке в места, где сейчас пока еще незаметно, но рождается новый урбанистический порядок. Хотите – верьте, хотите – нет, но дата-центры чем-то похожи на голубятни: такие же незаметные сооружения-паразиты на теле привычного нам городского ландшафта.
-p
-  | По ходу дела мы убедимся, что ситуация с дата-центрами гораздо сложнее и противоречивее чем та, которую нам рисуют евангелисты нового цифрового миропорядка в своих пресс-релизах. Вместо холодного синего света серверных, мы погрузимся в драму того, кому и как выгодно распоряжаться большими данными, кто становится королевами и королями аутсорсинга ИТ-инфраструктуры, на наглядных примерах разберемся в архитектуре сетей, опутывающих земной шар. Никто не знает, что нас ждет за углом, то ли НИИ, то ли начало оффшорного лабиринта. Наша цель – выяснить, что важнее: политическая стабильность или энергетическая независимость. Наше средство – знакомства в курилке с системными администраторами.
-p
-  | Место действия: остатки позднесоветской промышленной мощи, торговый центр имени известного актера, и оптовый рынок.
-p
- | Не без алгоритмической случайности, сквозь московскую летнюю пыль мы попробуем посмотреть на экономические модели технобудущего и на наше место в нем. Походим по воображаемым местам, где царит автоматизация, машины работают для машин, наши внутренние коммерсанты давно не подают голоса и мы как кошки шляемся, выискивая места поинтереснее да потеплее.
+_"And what if there was no beginning?" (Iain Hamilton Grant)_  
+
+HYPERSTITION: A film on time and narrative. Of thoughts and images. On plants and the outside. Abduction and Recursion. Yoctoseconds and Platonia. Plots and anaerobic organisms. About the movement of thinking and philosophy in anthropology, art, design, economy, linguistics, mathematics, and politics. And back into abstraction. 
+
+"You're always at the beginning and always at the end." (Ray Brassier) HYPERSTITION: The retooling of philosophy and political theory for the 21st Century.

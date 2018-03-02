@@ -1,17 +1,12 @@
 ---
 author: Lucy Ferrum
-projectTitle: Визуально-звуковой перформанс с элементами балагана и споукен ворда
+projectTitle: Visual-sound performance with the elements of the booth and the spoken word
 projectCover: lucy-ferrum-performance-01.jpg
 canonicalName: lucy-ferrum-performance
 soundcloudTrackId: "349330739"
 coverColor: "255,0,0"
 ---
 
-p
-  | Предлагаем всем присоединиться к вылазке в места, где сейчас пока еще незаметно, но рождается новый урбанистический порядок. Хотите – верьте, хотите – нет, но дата-центры чем-то похожи на голубятни: такие же незаметные сооружения-паразиты на теле привычного нам городского ландшафта.
-p
-  | По ходу дела мы убедимся, что ситуация с дата-центрами гораздо сложнее и противоречивее чем та, которую нам рисуют евангелисты нового цифрового миропорядка в своих пресс-релизах. Вместо холодного синего света серверных, мы погрузимся в драму того, кому и как выгодно распоряжаться большими данными, кто становится королевами и королями аутсорсинга ИТ-инфраструктуры, на наглядных примерах разберемся в архитектуре сетей, опутывающих земной шар. Никто не знает, что нас ждет за углом, то ли НИИ, то ли начало оффшорного лабиринта. Наша цель – выяснить, что важнее: политическая стабильность или энергетическая независимость. Наше средство – знакомства в курилке с системными администраторами.
-p
-  | Место действия: остатки позднесоветской промышленной мощи, торговый центр имени известного актера, и оптовый рынок.
-p
- | Не без алгоритмической случайности, сквозь московскую летнюю пыль мы попробуем посмотреть на экономические модели технобудущего и на наше место в нем. Походим по воображаемым местам, где царит автоматизация, машины работают для машин, наши внутренние коммерсанты давно не подают голоса и мы как кошки шляемся, выискивая места поинтереснее да потеплее.
+Once Lyudmila Zheleznyak (the great-granddaughter of that sailor-anarchist), during the night in a country caravan, decided to light a small stove. She crumpled up a few newspaper pages, hastily put it under a heap of pine chips, brought a match - and suddenly - the flame lit up:
+".. after the discovery of afar australopithecus, general excitement reigned in the camp of scientists, the Beatles song _«Lucy in the Sky with Diamonds»_ played on the tape recorder, which later gave the name to the discovery-Lucy .."
+So there was Lucy Ferrum. Starring Pasha Gvozd.

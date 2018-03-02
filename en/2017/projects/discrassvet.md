@@ -1,6 +1,6 @@
 ---
-author: Дискрассвет
-projectTitle: Требуем и тезис, и трек!
+author: Diskrassvet
+projectTitle: We demand both the thesis and the track!
 projectCover: discrassvet-cover.jpg
 canonicalName: discrassvet
 coverColor: "255,0,0"
@@ -8,11 +8,8 @@ soundcloudTrackId: "353915180"
 tags: outsourcing, all to all, dispersed collectivity, contingency, practices of ourselves, social choreography, 8-BIT DESIRE, yesterday's unalienated celebration, h o o o o o o w w w w w l
 ---
 
-p
-  | Предлагаем всем присоединиться к вылазке в места, где сейчас пока еще незаметно, но рождается новый урбанистический порядок. Хотите – верьте, хотите – нет, но дата-центры чем-то похожи на голубятни: такие же незаметные сооружения-паразиты на теле привычного нам городского ландшафта.
-p
-  | По ходу дела мы убедимся, что ситуация с дата-центрами гораздо сложнее и противоречивее чем та, которую нам рисуют евангелисты нового цифрового миропорядка в своих пресс-релизах. Вместо холодного синего света серверных, мы погрузимся в драму того, кому и как выгодно распоряжаться большими данными, кто становится королевами и королями аутсорсинга ИТ-инфраструктуры, на наглядных примерах разберемся в архитектуре сетей, опутывающих земной шар. Никто не знает, что нас ждет за углом, то ли НИИ, то ли начало оффшорного лабиринта. Наша цель – выяснить, что важнее: политическая стабильность или энергетическая независимость. Наше средство – знакомства в курилке с системными администраторами.
-p
-  | Место действия: остатки позднесоветской промышленной мощи, торговый центр имени известного актера, и оптовый рынок.
-p
- | Не без алгоритмической случайности, сквозь московскую летнюю пыль мы попробуем посмотреть на экономические модели технобудущего и на наше место в нем. Походим по воображаемым местам, где царит автоматизация, машины работают для машин, наши внутренние коммерсанты давно не подают голоса и мы как кошки шляемся, выискивая места поинтереснее да потеплее.
+"We demand both the thesis and the track!
+ 
+And listen and talk; And dance and lie down; And squander the forces, and receive information; And accelerate, and slow down. Is it possible to catch the moment of distinguishing one from the other? We invite all of us to speak out where it is accepted to move, and to include music louder instead of superfluous explanations. And also share the feeling of total exhaustion of both mental and physical resources! We will meet Discrassvet "keep-together-divided"! And respecting the distance, and indulging in diffusion!"
+ 
+Discrassvet is a new embodiment of Discprosvet, an experimental discursive format that tries to keep itself at different speeds. Discprosvet (and with it and Discrassvet) laughs (and cries) at multitasking and the requirement to quickly switch from one to another, alternating tracks and abstracts from the last subway train and before dawn.

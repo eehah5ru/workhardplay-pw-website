@@ -7,11 +7,9 @@ coverColor: "255,0,0"
 tags: affective labour, desire, spontaneous grassroots alternative, collection, all to all, contingency
 ---
 
-p
-  | Предлагаем всем присоединиться к вылазке в места, где сейчас пока еще незаметно, но рождается новый урбанистический порядок. Хотите – верьте, хотите – нет, но дата-центры чем-то похожи на голубятни: такие же незаметные сооружения-паразиты на теле привычного нам городского ландшафта.
-p
-  | По ходу дела мы убедимся, что ситуация с дата-центрами гораздо сложнее и противоречивее чем та, которую нам рисуют евангелисты нового цифрового миропорядка в своих пресс-релизах. Вместо холодного синего света серверных, мы погрузимся в драму того, кому и как выгодно распоряжаться большими данными, кто становится королевами и королями аутсорсинга ИТ-инфраструктуры, на наглядных примерах разберемся в архитектуре сетей, опутывающих земной шар. Никто не знает, что нас ждет за углом, то ли НИИ, то ли начало оффшорного лабиринта. Наша цель – выяснить, что важнее: политическая стабильность или энергетическая независимость. Наше средство – знакомства в курилке с системными администраторами.
-p
-  | Место действия: остатки позднесоветской промышленной мощи, торговый центр имени известного актера, и оптовый рынок.
-p
- | Не без алгоритмической случайности, сквозь московскую летнюю пыль мы попробуем посмотреть на экономические модели технобудущего и на наше место в нем. Походим по воображаемым местам, где царит автоматизация, машины работают для машин, наши внутренние коммерсанты давно не подают голоса и мы как кошки шляемся, выискивая места поинтереснее да потеплее.
+FOUND PROJECT is a project of Anastasia Kizilova, based on a participatory art practice and the principle of exchange. The idea of FOUND PROJECT is to start the exchange process of untapped artistic ideas with the aim to realize them by voluntary participants. Ideas are accepted in the archive on a voluntary basis. After the transfer, the idea is free from the repressive authority of the author and exists in the archive anonymously. Those who wish to take part in the project as donors of ideas can send their unrealized or deferred projects that they are ready to give for a realisation here: foundproject@mail.ru
+Or simply [put it here][1]
+
+THERE ARE NO PROJECTS OF OTHERS! THERE ARE IDEAS TO REALIZE!
+
+[1]:	https://docs.google.com/document/d/1pIM21BcQ23f0vV_-5YoOCicQKwwEnxQ7TOazoMkLz20/edit
