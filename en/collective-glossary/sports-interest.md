@@ -1,0 +1,5 @@
+---
+term: sports interest
+author: Anna Shcherbyna
+---
+Interest towards changes in the body resulting from doing sports. Getting into the gym for the first time or after a long break, a person can be slightly frustrated, having found their body weak and clumsy. Over time, the body transforms from disobedient junk into a source of pleasure. Observing oneself as if from the outside, noting positive changes, a person engaged in sports is satisfied. You can enjoy your body both directly, feeling its strength and flexibility, and watching your sexy reflection, taking an apt pose, imagining the admiring gaze of the potential Spectator*, who constantly monitors and celebrates successes. Despite the fact that motivation to do sports can be absolutely not connected with narcissistic motives, contemplation of the beauty of one's body is an unthinkable pleasure. Thus we can conclude that sports interest is inseparable from the Other and pleasure. * Spectator - the Other inside of the self. Their gaze is a look turned out of themselves on their selves.

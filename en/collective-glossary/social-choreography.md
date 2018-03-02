@@ -1,6 +1,5 @@
 ---
 term: social choreography
+author: Olia Sosnovskaya
 ---
-
-
-Социальная хореография
+A concept developed by Andrew Hewitt (2005). With historical changes of forms and operation of ideology ‘social choreography marks a shift in ideology’s mode of functioning’, i.e. offering ‘embodiment as the mechanism of ideology, replacing interpellation’ with a performance, ‘embodied ritual’, which produces social order on the bodies (Cvejic, and Vujanovic, 2013). Social choreography is an embodiment of ideology and the model for its functioning, it is a material aestheticised practice, a performance of the ideology in everyday movement and dance. Social choreography shows ‘how social order is aesthetically produced, instilled, and rehearsed’ (Koruga, 2013: 54). It happens continuously in all spheres of social life. However it is rather naturalised for the subjects who perform it and becomes visible only in a historical perspective. Hewitt views social choreography through connections between the aesthetic and the social (Klein, 2013: 30) and talks about two directions of thinking about social choreographies in everyday life: ‘one tracing the ways in which everyday experience can be aestheticized’ and ‘another tracing the ways in which ‘the aesthetic’ is, in fact, sectioned off and delineated as a distinct realm of experience’ (2005: 19). He calls the latter ‘aesthetic continuum of social choreography’, the corporeal practices (movements, gestures, postures, relations between bodies in time and space) spanning from daily movement to dance. 
