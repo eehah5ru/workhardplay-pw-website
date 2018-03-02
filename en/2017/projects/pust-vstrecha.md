@@ -2,6 +2,7 @@
 author: "PUST\*"
 projectTitle: "Meeting with the team of PUST\*"
 coverColor: "255,0,0"
+tags: dacha, quick knowledge
 ---
 
 Yuri Akbalkan (St. Petersburg), Snezhana Vinogradova (St. Petersburg), Alexandra Portyannikova (Moscow), Sergey Shabohin (Minsk)
