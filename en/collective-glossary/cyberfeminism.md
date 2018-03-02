@@ -1,0 +1,5 @@
+---
+term: cyberfeminism
+author: 0s+1s Collective and Maria Kotlyachkova
+---
+Cyberfeminism - something from the history that we relate to, the interest for how to use technology to work with our collective, with our practice as a group and our separate practices as artists, is there a difference anyway? It is a constant negotiation, re-negotiating terms as technology. The apps we use for chatting, the emails, information delivered or lost. Bad signal on the connection, background sounds, rain on a roof, a child, dogs barking, pots and pans in a kitchen, a laundry machine. Speaking order, echo, delay, trying to get heard in a group call. Agendas, protocols from meetings, summing up what was said on a meeting. Trying to meet IRL. Planning for the future, looking back. Being in the present. Looking for wifi in the countryside. Meeting AFK, networking with other artists, curators and collectives. Looking for a node where we can meet. What is ”we” and ”us”. Writing poetry on the Internet, having a space for creating art, it doesn’t have to be a physical space but we are forming our context.
