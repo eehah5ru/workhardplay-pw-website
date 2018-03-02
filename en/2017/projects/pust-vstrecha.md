@@ -1,5 +1,6 @@
 ---
-author: PUST* projectTitle: "Meeting with the team of PUST*"
+author: "PUST*"
+projectTitle: "Meeting with the team of PUST*"
 coverColor: "255,0,0"
 ---
 
