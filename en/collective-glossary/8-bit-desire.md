@@ -1,0 +1,5 @@
+---
+term: 8-BIT DESIRE
+author: Anton Sorokin
+---
+The desire to slow down through activity, which is seen as an illegitimate waste of time from the standpoint of neoliberal ideology (not related to personal growth, the "market value" of the subject, contradicts the rules of time management, etc.). As a rule, such activities in adulthood cause a sense of guilt due to an abundance of time spent on them. At the same time, they are also able to cause strong emotional reactions due to their connection with the past, teenage and children's experiences, "the time of carelessness". Among such activities may be all sorts of useless hobbies, collecting items that do not have value, computer games from the era of consoles and the first personal computers, reading adventure books, etc. Or, in general, classes for the sake of the lessons themselves: counting the cars in the passing train, playing with the imagined I (not stepping on the borderlines of the tiles, having time to do some activity for the allotted time, "secrets"), all kinds of diaries of observations, and so on.
