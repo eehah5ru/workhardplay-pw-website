@@ -81,9 +81,16 @@ article.archive-page.whp-2017 {
 
   // @include cover-mask("/images/dots-transparent-50opacity-2.svg");
 
+  // > .term-definition {
+  //       @extend .small-12;
+  //   @extend .large-6;
+  //   @extend .large-offset-3;
+  //   @extend .end;
+  //   @extend .column;
 
-  > p,
-  .term-definition {
+  // }
+
+  > p {
     @extend .small-12;
     @extend .large-6;
     @extend .large-offset-3;
@@ -91,17 +98,17 @@ article.archive-page.whp-2017 {
     @extend .column;
   }
 
-  .term-definition {
-    p {
-      display: inline;
-    }
+  // .term-definition {
+  //   p {
+  //     display: inline;
+  //   }
 
-    > a {
-      font-size: 150%;
-    }
+  //   > a {
+  //     font-size: 150%;
+  //   }
 
-    margin-bottom: 1rem;
-  }
+  //   margin-bottom: 1rem;
+  // }
 
 
   > ul {
@@ -137,7 +144,8 @@ article.archive-page.whp-2017 {
 
     float: left !important;
 
-    .project-card {
+    .project-card,
+    .term-card{
       margin: 0.5rem;
       padding: 0.5rem;
       border: 2px solid;
@@ -147,6 +155,40 @@ article.archive-page.whp-2017 {
       background-color: white;
 
       text-align: center;
+    }
+
+    .term-card {
+      height: 40vw;
+      overflow: hidden;
+
+      @include breakpoint(medium) {
+        height: 30vw;
+      }
+
+      .term-name {
+        @include absolute-center;
+
+        text-align: center;
+        margin-bottom: 0;
+        font-size: 120%;
+
+        // background-color: lighten(grey, 60%);
+        // padding: 5px;
+      }
+
+      .term-definition {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        color: lighten(grey, 40%);
+
+        text-align: justify;
+
+        p {
+          display: inline;
+        }
+      }
     }
 
     .media-icons-container {
@@ -241,6 +283,8 @@ header.archive-project.whp-2017 {
   //   z-index: -1;
   // }
 
+  overflow: hidden;
+
   .header-cover {
     position: absolute;
     top: 0;
@@ -272,18 +316,6 @@ article.archive-project.whp-2017 {
     margin-top: 2rem;
   }
 
-  p.collective-glossary-terms a {
-    color: grey;
-    font-style: italic;
-    text-decoration: underline dashed red;
-    letter-spacing: 0;
-
-    &:hover {
-      color: red;
-      text-decoration: underline solid red;
-    }
-  }
-
   blockquote {
     border: 0;
     margin: 0;
@@ -307,6 +339,36 @@ article.archive-project.whp-2017 {
 
     img.full-width {
       width: 100%;
+    }
+
+    a {
+      color: lighten(red, 10%);
+
+      border-bottom: thin dashed $primary-color-2017;
+      text-transform: none;
+
+      &:hover {
+        text-decoration: none;
+        border-bottom: thin solid lighten(red, 10%);
+
+        color: lighten(red, 10%);
+      }
+    }
+
+    &.collective-glossary-terms a {
+      color: grey;
+      font-style: italic;
+      // text-decoration: underline dashed red;
+      border-bottom: thin dashed lighten(red, 10%);
+      letter-spacing: 0;
+      text-transform: uppercase;
+      // border-bottom: none;
+
+      &:hover {
+        color: red;
+        // text-decoration: underline solid red;
+        border-bottom: thin solid lighten(red, 10%);
+      }
     }
 
     // &:first-of-type {
