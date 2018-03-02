@@ -39,6 +39,16 @@ fieldTermTitle =
       m <- getMetadata (itemIdentifier item)
       return $ glossaryName item ++ " -> " ++ (termName m)
 
+
+fieldAuthorLabel :: Context a
+fieldAuthorLabel = field "authorLabel" authorLabel
+  where
+    authorLabel i = do
+      return $ case (fromLang (itemLang i)) of
+                 RU -> "Автор"
+                 EN -> "Author"
+                 _ -> "Author"
+
 --
 -- utils for terms and many terms context fields
 --

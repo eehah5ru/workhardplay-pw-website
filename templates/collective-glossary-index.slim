@@ -10,11 +10,13 @@ header.archive-page.whp-2017
       | $title$
 
 article.archive-page.whp-2017
-  = _for "terms"
-    .row.expanded
-      .term-definition
-        a href="$termUrl$"
-         | $termName$
-        | &nbsp;&mdash;&nbsp;
-        | $termDefinition$
-  = _endfor
+  ul
+    = _for "terms"
+      li.project-card-box id="$termName$"
+        .term-card data-project-id="$termName$"
+          .term-definition
+            | $termDefinition$$termDefinition$$termDefinition$$termDefinition$$termDefinition$$termDefinition$$termDefinition$$termDefinition$$termDefinition$$termDefinition$$termDefinition$$termDefinition$
+          .term-name
+            a href="$termUrl$"
+              | $termName$
+    = _endfor
