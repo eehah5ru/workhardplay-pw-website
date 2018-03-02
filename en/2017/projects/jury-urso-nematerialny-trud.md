@@ -1,16 +1,10 @@
 ---
-author: Юрий Урсо
-projectTitle: «Эксплуатация в неолиберальной экономике знаний и нематериального труда». Дискуссия
+author: Jury Urso
+projectTitle: Discussion “Exploitation in the neoliberal economy of knowledge and immaterial labour”
 projectCover: jury-urso-nematerialny-trud-cover.jpg
 canonicalName: jury-urso-nematerialny-trud
 coverColor: "255,0,0"
+tags: quick knowledge, affective labour, outsoursing
 ---
 
-p
-  | Предлагаем всем присоединиться к вылазке в места, где сейчас пока еще незаметно, но рождается новый урбанистический порядок. Хотите – верьте, хотите – нет, но дата-центры чем-то похожи на голубятни: такие же незаметные сооружения-паразиты на теле привычного нам городского ландшафта.
-p
-  | По ходу дела мы убедимся, что ситуация с дата-центрами гораздо сложнее и противоречивее чем та, которую нам рисуют евангелисты нового цифрового миропорядка в своих пресс-релизах. Вместо холодного синего света серверных, мы погрузимся в драму того, кому и как выгодно распоряжаться большими данными, кто становится королевами и королями аутсорсинга ИТ-инфраструктуры, на наглядных примерах разберемся в архитектуре сетей, опутывающих земной шар. Никто не знает, что нас ждет за углом, то ли НИИ, то ли начало оффшорного лабиринта. Наша цель – выяснить, что важнее: политическая стабильность или энергетическая независимость. Наше средство – знакомства в курилке с системными администраторами.
-p
-  | Место действия: остатки позднесоветской промышленной мощи, торговый центр имени известного актера, и оптовый рынок.
-p
- | Не без алгоритмической случайности, сквозь московскую летнюю пыль мы попробуем посмотреть на экономические модели технобудущего и на наше место в нем. Походим по воображаемым местам, где царит автоматизация, машины работают для машин, наши внутренние коммерсанты давно не подают голоса и мы как кошки шляемся, выискивая места поинтереснее да потеплее.
+Franco "Bifo" Berardi in his latest book "The Age of Impotence and the Horizon of Possibility" speaks of the open system of exploitation, which young people working in the cultural industry are exposed to: art galleries, universities, publishers, magazines and newspapers exploit cognitive workers for free. In the discussion "Exploitation in the neoliberal economy of knowledge and immaterial labour" (moderated by J.Urso) we were trying to examine these issues. What is the origin of the concept of immaterial / affective labor? What is cognitive capitalism, also known as the knowledge economy? How does the exploitation of workers of immaterial labor operate? How does it all apply to the context of Belarus? 

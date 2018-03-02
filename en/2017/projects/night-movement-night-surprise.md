@@ -4,6 +4,7 @@ projectTitle: Moon Night
 projectCover: night-movement-cover.jpg
 canonicalName: night-movement-night-surprise
 coverColor: "255,0,0"
+tags: h o o o o o o w w w w w l, social choreography, yesterday's unalienated celebration, dispersed collectivity, sport interest, exploitation of hidden motivation, contingency
 ---
 
 [SET THE STRINGS OF YOUR SOUL, OPEN THE PORTS OF YOUR GRIEF, RESIGN ONESELF TO THE CALL OF DARK LOVE!][1]

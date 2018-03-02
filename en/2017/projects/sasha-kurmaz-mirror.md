@@ -9,6 +9,7 @@ vimeoVideoId02: "223209593"
 vimeoVideoId03: "223209496"
 vimeoVideoId04: "223209554"
 vimeoVideoId05: "223209433"
+tags: exploitation of hidden motivation, affective labour, outsourcing, social choreography, spontaneous grassroots alternative, path stop
 ---
 
 _"In fact, that is the meaning of the ruble, the ruble is in itself nothing other than a little piece of laziness."_  

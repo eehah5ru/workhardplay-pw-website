@@ -1,16 +1,14 @@
 ---
-author: Ира Кудря
-projectTitle: Проверь чувствилище!
+author: Irina Kudrya
+projectTitle: "Check the sensor! Pass the exam* on emotional labour! Test-discussion of emotional labour, its appropriation by corporate ethics, empathy and intimacy"
 projectCover: irina-kudrya-check-chuvstvilische-pass-the-test-for-emotional-labour-01.jpg
 canonicalName: irina-kudrya-check-chuvstvilische-pass-the-test-for-emotional-labour
 coverColor: "255,0,0"
+tags: practices of ourselves, affective labour, yesterday's unalienated celebration, psychodata, production drama
 ---
 
-p
-  | Предлагаем всем присоединиться к вылазке в места, где сейчас пока еще незаметно, но рождается новый урбанистический порядок. Хотите – верьте, хотите – нет, но дата-центры чем-то похожи на голубятни: такие же незаметные сооружения-паразиты на теле привычного нам городского ландшафта.
-p
-  | По ходу дела мы убедимся, что ситуация с дата-центрами гораздо сложнее и противоречивее чем та, которую нам рисуют евангелисты нового цифрового миропорядка в своих пресс-релизах. Вместо холодного синего света серверных, мы погрузимся в драму того, кому и как выгодно распоряжаться большими данными, кто становится королевами и королями аутсорсинга ИТ-инфраструктуры, на наглядных примерах разберемся в архитектуре сетей, опутывающих земной шар. Никто не знает, что нас ждет за углом, то ли НИИ, то ли начало оффшорного лабиринта. Наша цель – выяснить, что важнее: политическая стабильность или энергетическая независимость. Наше средство – знакомства в курилке с системными администраторами.
-p
-  | Место действия: остатки позднесоветской промышленной мощи, торговый центр имени известного актера, и оптовый рынок.
-p
- | Не без алгоритмической случайности, сквозь московскую летнюю пыль мы попробуем посмотреть на экономические модели технобудущего и на наше место в нем. Походим по воображаемым местам, где царит автоматизация, машины работают для машин, наши внутренние коммерсанты давно не подают голоса и мы как кошки шляемся, выискивая места поинтереснее да потеплее.
+For more than fifteen years, business academies have been selling, and business corporations have been buying, trainings for developing emotional intelligence and assertive behavior for their employees. More and more often analytical reviews of the labor market speak about the notion of "emotional labor" discussing professional emotional burnout. But what happens in the private sphere, where one is surrounded by relatives and friends? There is almost nothing said about the ability to feel and work emotionally as actual work. Perhaps emotional engagement, being the basis of interpersonal connections, is the ephemeral substance to be protected from the language of business structures? Whether it is appropriate to question work and to use the concept of "labour" when it comes to, for example, intimacy and empathy? In case it is, then who is our friend - the executor or the customer? What if one day the executor bills?
+
+How to “value” emotional stress, service and consumption? What is their unit? What is to be done with the result?
+
+*Only those who have reached the average and above level of feeling and have experience of emotional labor of minimum two developed and realized empathies, are to be examined. 
