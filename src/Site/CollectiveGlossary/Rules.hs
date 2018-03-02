@@ -77,4 +77,8 @@ withCollectiveGlossaryDeps locale rules = do
 mkCollectiveGlossaryTermPageCtx :: Tags -> String -> Pattern -> Compiler (Context String)
 mkCollectiveGlossaryTermPageCtx terms term p = do
   ctx <- mkArchiveIndexPageCtx terms p
-  return $ (fieldTermName term) <> fieldTermTitle <> ctx
+  return $
+    (fieldTermName term)
+    <> fieldAuthorLabel
+    <> fieldTermTitle
+    <> ctx

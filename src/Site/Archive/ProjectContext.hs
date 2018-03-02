@@ -64,7 +64,7 @@ fieldProjectTitle :: Context String
 fieldProjectTitle =
   field "title" getTitleFromItem
   where
-    projectName m = fromMaybe "noname" (lookupString "project_title" m)
+    projectName m = fromMaybe "noname" (lookupString "projectTitle" m)
     authorName m = fromMaybe "noname" (lookupString "author" m)
     getTitleFromItem item = do
       m <- getMetadata (itemIdentifier item)
