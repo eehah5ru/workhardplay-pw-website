@@ -142,6 +142,7 @@ archiveProjectCtx terms =
   <> fieldProjectCover
   <> fieldHasMedia
   <> fieldHasVideo
+  <> fieldHasAudio
   <> (fieldHasPictures imagesPattern)
   <> (fieldPictures imagesPattern)
   <> (fieldTermsList terms)
