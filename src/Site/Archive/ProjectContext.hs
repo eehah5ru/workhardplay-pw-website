@@ -99,7 +99,7 @@ fieldHasMedia =
   boolFieldM "hasMedia" hasMedia'
   where
     hasMedia' i = sequence ps >>= return  . any id
-     where ps = [hasPictures imagesPattern i
+     where ps = [hasPictures picturesPattern i
                 ,hasVideo i
                 ,hasAudio i]
 
@@ -108,7 +108,7 @@ fieldProjectCover =
   field "projectCover" getCoverUrl
   where
     getCoverUrl i = do
-      covers <- loadAll (projectCoverPattern i) :: Compiler [Item CopyFile]
+      covers <- loadAll (projectCoverPattern i) :: Compiler [Item ByteString]
       case (null covers) of
         True -> return "/images/not-found-cover.jpg"
         False -> return . toUrl . toFilePath . itemIdentifier . head $ covers
@@ -143,8 +143,8 @@ archiveProjectCtx terms =
   <> fieldHasMedia
   <> fieldHasVideo
   <> fieldHasAudio
-  <> (fieldHasPictures imagesPattern)
-  <> (fieldPictures imagesPattern)
+  <> (fieldHasPictures picturesPattern)
+  <> (fieldPictures picturesPattern)
   <> (fieldTermsList terms)
   <> (fieldHasTerms terms)
   <> (fieldTermsLabel)

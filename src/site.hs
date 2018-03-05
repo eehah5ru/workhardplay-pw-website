@@ -19,6 +19,7 @@ import W7W.Config
 
 import W7W.Rules.Templates
 import W7W.Rules.Assets
+import W7W.Pictures.Rules
 -- import W7W.Rules.StaticPages
 
 import Site.Context
@@ -38,7 +39,8 @@ main =
   do
      templatesRules
 
-     imagesRules
+     imagesRules -- static assets
+     picturesRules (1280, 1280) "pictures/**/*"
      fontsRules
      dataRules
 

@@ -12,9 +12,9 @@ import W7W.Utils
 -- project item
 --
 --
-imagesPattern :: Item a -> Pattern
-imagesPattern i =
-  (basicImagePattern i "*") .||. (basicImagePattern i ((itemLang i) ++ "/*"))
+picturesPattern :: Item a -> Pattern
+picturesPattern i =
+  (basicPicturePattern i "*") .||. (basicPicturePattern i ((itemLang i) ++ "/*"))
 
 archiveProjectsPattern :: FilePath -> Pattern
 archiveProjectsPattern base =
@@ -37,14 +37,14 @@ archiveProjectsMdPattern = archiveProjectsTypedPattern "*.md"
 
 projectCoverPattern :: Item a -> Pattern
 projectCoverPattern i =
-  (basicImagePattern i ((itemCanonicalName i) ++ "-cover.*")) .||. (imagesPattern i)
+  (basicPicturePattern i ((itemCanonicalName i) ++ "-cover.*")) .||. (picturesPattern i)
 
-basicImagePattern :: Item a -> String -> Pattern
-basicImagePattern i p =
-  fromGlob $ "images/" ++ (itemYear i) ++ "/" ++ (itemCanonicalName i) ++ "/" ++ p
+basicPicturePattern :: Item a -> String -> Pattern
+basicPicturePattern i p =
+  fromGlob $ "pictures/" ++ (itemYear i) ++ "/" ++ (itemCanonicalName i) ++ "/" ++ p
 
-basicImageUrl :: Item a -> String
-basicImageUrl i = "/images/" ++ (itemYear i) ++ "/" ++ (itemCanonicalName i) ++ "/"
+basicPictureUrl :: Item a -> String
+basicPictureUrl i = "/pictures/" ++ (itemYear i) ++ "/" ++ (itemCanonicalName i) ++ "/"
 
 --
 --
