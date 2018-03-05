@@ -18,4 +18,3 @@ O  Heart is not in right place                      O
 O                                                   O
 H O O O O O O O O O O O O O O O O O O W W W W W W W L
 ```
-
