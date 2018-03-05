@@ -1,5 +1,5 @@
 ---
-author: K\_Super
+author: "K_Super"
 projectTitle: Девочка-ночь
 projectCover: k-super-cover.jpg
 canonicalName: k-super-baby-night

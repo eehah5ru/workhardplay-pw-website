@@ -4,7 +4,7 @@ projectTitle: "Лекция-проекция: Как жить если ты ле
 projectCover: anastasia-vepreva-how-to-live-if-you-are-leftist-and-melancholic-cover.jpg
 canonicalName: anastasia-vepreva-how-to-live-if-you-are-leftist-and-melancholic
 coverColor: "255,0,0"
-youtubeVideoId: "idWGM\_s\_HzI"
+youtubeVideoId: "idWGM_s_HzI"
 tags: левая меланхолия, интимные интерфейсы, мать-машина, практики самих себя, аффективный труд
 ---
 

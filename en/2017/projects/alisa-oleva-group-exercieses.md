@@ -3,7 +3,7 @@ author: Alisa Oleva
 projectTitle: Group Exercises
 projectCover: alisa-oleva-group-exercies-cover.jpg
 canonicalName: alisa-oleva-group-exercieses
-youtubeVideoId: "s\_HzUvvN1Ns"
+youtubeVideoId: "s_HzUvvN1Ns"
 coverColor: "255,0,0"
 tags: social choreography, dispersed collectivity, psychodata, intimate interfaces, corridor anomalies, path stop, sports interest
 ---
