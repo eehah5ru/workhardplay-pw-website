@@ -2,6 +2,7 @@
 author: Aliaxey Talstou
 projectTitle: "Chyzhouka local field research cross"
 coverColor: "255,0,0"
+tags: quick knowledge, sports interest, h o o o o o o w w w w w l, dispersed collectivity, practices of ourselves
 ---
 According to the urban mithilogy of Minsk the district of Chyzhouka mostly associated with criminality, neighborhood gang fights and high level of alchohol consumtion. Other south-eastern districts have the same reputation caused by laying far away from the downtown and the mass clashes at the outskirts during the 80s-90s. Chyzhouka is a one of the early “sleeping districts”. The first buildings and streets were found here in the mid. 60s and were settled by the workers of Minsk automobile plant, Tractor plant, Minsk engine plant.
 
