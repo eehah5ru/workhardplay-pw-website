@@ -4,7 +4,7 @@ projectTitle: "Lecture-projection: How to live if you are the left melancholic?"
 projectCover: anastasia-vepreva-how-to-live-if-you-are-leftist-and-melancholic-cover.jpg
 canonicalName: anastasia-vepreva-how-to-live-if-you-are-leftist-and-melancholic
 coverColor: "255,0,0"
-youtubeVideoId: "idWGM\_s\_HzI"
+youtubeVideoId: "idWGM_s_HzI"
 tags: left melancholy, intimate interfaces, mother-machine, affective labour, practices of ourselves
 ---
 
