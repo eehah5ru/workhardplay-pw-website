@@ -2,6 +2,7 @@
 author: Alisa Oleva
 projectTitle: "Come sit next to me"
 coverColor: "255,0,0"
+tags: intimate interfaces, social choreography, dispersed collectivity, practices of ourselves
 ---
 To have a rest and to sit next to someone on a bench in a city park is an act of invisible nonverbal communication. Contact without words. Even if it's fleeting and you're busy with your own stuff. What kind of person is this? What do I know about this girl? What is my opinion about the person sitting next? What is my Instant opinion?
 
