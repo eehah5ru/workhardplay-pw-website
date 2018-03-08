@@ -2,6 +2,7 @@
 author: Diskrassvet
 projectTitle: We demand both the thesis and the track!
 projectCover: discrassvet-cover.jpg
+hidePictures: true
 canonicalName: discrassvet
 coverColor: "255,0,0"
 soundcloudTrackId: "353915180"

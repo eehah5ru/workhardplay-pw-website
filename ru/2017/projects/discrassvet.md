@@ -2,6 +2,7 @@
 author: Дискрассвет
 projectTitle: Требуем и тезис, и трек!
 projectCover: discrassvet-cover.jpg
+hidePictures: true
 canonicalName: discrassvet
 coverColor: "255,0,0"
 soundcloudTrackId: "353915180"
