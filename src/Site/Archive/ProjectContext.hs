@@ -107,11 +107,17 @@ fieldProjectCover :: Context String
 fieldProjectCover =
   field "projectCover" getCoverUrl
   where
+    missingCoverUrl = "/images/not-found-cover.jpg"
+    coverUrl i = do
+      mR <- getRoute i
+      case mR of
+        Just r -> return $ toUrl r
+        _ -> return missingCoverUrl
     getCoverUrl i = do
       covers <- loadAll (projectCoverPattern i) :: Compiler [Item ByteString]
       case (null covers) of
-        True -> return "/images/not-found-cover.jpg"
-        False -> return . toUrl . toFilePath . itemIdentifier . head $ covers
+        True -> return missingCoverUrl
+        False -> coverUrl . itemIdentifier . head $ covers
 
 -- fieldImages :: Context String
 -- fieldImages = listFieldWith "images" mkImageItem (\i -> loadPictures (imagesPattern i))
