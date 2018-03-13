@@ -1,6 +1,6 @@
 ---
 author: Jury Urso
-projectTitle: Discussion “Exploitation in the neoliberal economy of knowledge and immaterial labour”
+projectTitle: Exploitation in the neoliberal economy of knowledge and immaterial labour. Discussion
 projectCover: jury-urso-nematerialny-trud-cover.jpg
 canonicalName: jury-urso-nematerialny-trud
 coverColor: "255,0,0"

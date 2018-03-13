@@ -1,9 +1,10 @@
 ---
 author: Pyotr Vladimirov
-projectTitle: "\"Along memorable places\". City tour"
+projectTitle: "Along memorable places. City tour"
 projectCover: pyotr-vladimirov-through-sites-of-memory-01.jpg
 canonicalName: pyotr-vladimirov-through-sites-of-memory
 coverColor: "255,0,0"
+tags: outsourcing, quick knowledge, social choreography, spontaneous grassroots alternative, exploitation of hidden motivation, psychodata, contingency
 ---
 
 “We invite you to take part in an unforgettable city tour, during which you will discover the amazing secrets of Minsk, the city that does not resemble anything!”. 

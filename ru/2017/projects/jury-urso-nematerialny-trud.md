@@ -1,6 +1,6 @@
 ---
 author: Юрий Урсо
-projectTitle: «Эксплуатация в неолиберальной экономике знаний и нематериального труда». Дискуссия
+projectTitle: Эксплуатация в неолиберальной экономике знаний и нематериального труда. Дискуссия
 projectCover: jury-urso-nematerialny-trud-cover.jpg
 canonicalName: jury-urso-nematerialny-trud
 coverColor: "255,0,0"

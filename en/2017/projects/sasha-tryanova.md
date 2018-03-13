@@ -1,6 +1,6 @@
 ---
 author: Alexandra Tryanova
-projectTitle: "“dacha”: presentation and fortune-telling by the photograph"
+projectTitle: "Dacha: presentation and fortune-telling by the photograph"
 projectCover: alexandra-tryanova-dacha-01.jpg
 canonicalName: sasha-tryanova
 coverColor: "255,0,0"

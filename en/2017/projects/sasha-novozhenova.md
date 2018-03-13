@@ -1,6 +1,6 @@
 ---
 author: Alexandra Novozhenova
-projectTitle: "Lecture. socialismNotAmericanism: the scientific organization of work and the work of Gustav Klutsis for the magazine “Vremya”"
+projectTitle: "Lecture. SocialismNotAmericanism: the scientific organization of work and the work of Gustav Klutsis for the magazine “Vremya”"
 projectCover: novozhenova.jpg
 canonicalName: sasha-novozhenova
 coverColor: "255,0,0"

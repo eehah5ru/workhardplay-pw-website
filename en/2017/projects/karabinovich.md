@@ -1,5 +1,5 @@
 ---
-author: Николай Карабинович
+author: Nikolay Karabinovych
 projectTitle: Ugly tapes from Balkan Dj-set
 projectCover: karabinovich-cover.jpg
 canonicalName: karabinovich

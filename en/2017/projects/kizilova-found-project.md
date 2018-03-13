@@ -1,5 +1,5 @@
 ---
-author: Настя Кизилова
+author: Anastasia Kizilova
 projectTitle: FOUND PROJECT!
 projectCover: kizilova-found-project-cover.jpg
 canonicalName: kizilova-found-project

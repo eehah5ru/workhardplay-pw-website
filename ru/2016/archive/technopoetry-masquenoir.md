@@ -2,9 +2,9 @@
 author: ТЕХНО-ПОЭЗИЯ + MASQUE NOIR
 projectTitle: "Концерт"
 coverColor: "255,0,0"
-youtubeVideoId 01: "4OYjrwi38nA"
-youtubeVideoId 02: "qPBD6CASo\_s"
-youtubeVideoId 03: "RRmt3p-6D8w"
+youtubeVideoId01: "4OYjrwi38nA"
+youtubeVideoId02: "qPBD6CASo_s"
+youtubeVideoId03: "RRmt3p-6D8w"
 tags: левая меланхолия, У У У У У У У У У У У У У У У У У УУУ, рассеянная коллективность, социальная хореография, все всем, вчерашний неотчужденный праздник
 ---
 [ТЕХНО-ПОЭЗИЯ][1]  
