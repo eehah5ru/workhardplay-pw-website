@@ -8,8 +8,10 @@ import Site.Template
 import Site.Context
 
 staticPagesRules = do
-  rules' "2017/index.slim"
-  rules' "2017/404.slim"
-  rules' "2016/index.slim"
+  rulesAbout "about.md"
+  rulesSlim "2017/index.slim"
+  rulesSlim "2017/404.slim"
+  rulesSlim "2016/index.slim"
   where
-    rules' = staticSlimPageRules rootTpl pageTpl siteCtx
+    rulesSlim = staticSlimPageRules rootTpl (Just rootPageTpl) Nothing siteCtx
+    rulesAbout = staticPandocPageRules rootTpl (Just rootPageTpl) (Just "templates/about.slim") siteCtx

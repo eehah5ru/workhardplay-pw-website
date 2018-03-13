@@ -17,8 +17,8 @@ ruPageTpl = "templates/page.slim"
 enPageTpl :: Identifier
 enPageTpl = "templates/page.slim"
 
-pageTpl :: Identifier
-pageTpl = "templates/page.slim"
+rootPageTpl :: Identifier
+rootPageTpl = "templates/page.slim"
 
 rootTpl :: Identifier
 rootTpl = "templates/default.slim"

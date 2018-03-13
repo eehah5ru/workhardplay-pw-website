@@ -46,7 +46,7 @@ archiveIndexPagesRules ts = do
     rules' projectsPattern locale =
           slimPageRules $ \x -> do
             ctx <- mkArchiveIndexPageCtx (terms locale ts) (archiveProjectsPattern (localizePath locale projectsPattern))
-            renderArchiveIndexPage pageTpl ctx x
+            renderArchiveIndexPage rootPageTpl ctx x
 
 
 --
@@ -74,6 +74,6 @@ archiveProjectPagesRules ts = do
     render' locale item = do
       renderArchiveProjectPage
         "templates/archive-2017-project.slim"
-        pageTpl
+        rootPageTpl
         (archiveProjectCtx (terms locale ts))
         item

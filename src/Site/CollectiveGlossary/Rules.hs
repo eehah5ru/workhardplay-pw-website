@@ -47,7 +47,7 @@ collectiveGlossaryRules ts = do
         let ctx = termsField <> manyTermsField <>siteCtx
         applyAsTemplate ctx x
           >>= loadAndApplyTemplate "templates/collective-glossary-index.slim" ctx
-          >>= loadAndApplyTemplate pageTpl ctx
+          >>= loadAndApplyTemplate rootPageTpl ctx
           >>= loadAndApplyTemplate rootTpl ctx
 
 
@@ -61,7 +61,7 @@ collectiveGlossaryRules ts = do
           pandocCompiler
             >>= saveSnapshot "content"
             >>= loadAndApplyTemplate "templates/collective-glossary-term.slim" ctx
-            >>= loadAndApplyTemplate pageTpl ctx
+            >>= loadAndApplyTemplate rootPageTpl ctx
             >>= loadAndApplyTemplate rootTpl ctx
 
 withCollectiveGlossaryDeps locale rules = do
