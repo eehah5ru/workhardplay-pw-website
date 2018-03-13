@@ -91,7 +91,8 @@ article.archive-page.whp-2017 {
   // }
 
   > p,
-  pre {
+  pre,
+  ol {
     @extend .small-12;
     @extend .large-6;
     @extend .large-offset-3;

@@ -70,7 +70,7 @@ section.whp-2017.index-page.description {
     @extend .large-6;
     @extend .large-offset-3;
     @extend .columns;
-    // @extend .end;
+    @extend .end;
     &.hidden-text {
       color: lighten(grey, 47%);
     }
