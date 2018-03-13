@@ -32,6 +32,11 @@ fieldArchiveName =
                            "en" -> "Archive"
                            _ -> "Noname Archive"
 
+fieldAboutName =
+  field "aboutName" getName
+  where
+    getName = return . chooseByItemLang "Что это" "About"
+
 fieldGlossaryName =
   field "glossaryName" getName
   where
@@ -62,5 +67,6 @@ siteCtx = fieldRuUrl
           <> fieldRootUrl
           <> fieldArchiveUrl
           <> fieldArchiveName
+          <> fieldAboutName
           <> fieldGlossaryName
           <> defaultContext
