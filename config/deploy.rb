@@ -46,6 +46,7 @@ namespace :hakyll do
   task :build do
     on roles(:all) do
       run_locally do
+        execute :stack, 'exec', 'site', '--', 'clean'
         execute :stack, 'exec', 'site', '--', 'build'
       end
     end
