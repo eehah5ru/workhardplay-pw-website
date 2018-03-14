@@ -1,5 +1,5 @@
 ---
 siteName: "Work&nbsp;hard! Play&nbsp;hard!"
-title: Beginning
+title: "Work Hard! Play Hard!"
 fbLinkLabel: FB
 ---
