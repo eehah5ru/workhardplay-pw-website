@@ -112,21 +112,38 @@ $primary-color-2017: darken(blue, 10%);
       width: 100%;
       text-align: center;
 
-      transform: rotateY(56deg) rotateZ(-10deg);
-
-      font-size: 16vw;
+      transform: rotateY(56deg) rotateZ(-10deg) translateX(-20%);
+      font-size: 14vw;
 
       @include breakpoint(medium) {
+        transform: rotateY(56deg) rotateZ(-10deg);
+        font-size: 12vw;
+      }
+
+      @include breakpoint(730) {
+        font-size: 11vw;
+      }
+
+      @include breakpoint(970) {
         font-size: 10vw;
       }
 
-      @include breakpoint(1160) {
+      @include breakpoint(1084) {
+        font-size: 9vw;
+      }
+
+      @include breakpoint(1184) {
         font-size: 8vw;
+      }
+
+      @include breakpoint(1284) {
+        font-size: 7vw;
       }
 
       a {
         color: lighten(grey, 5%);
         text-decoration: underline;
+        display: inline;
 
         &:hover {
           color: lighten(grey, 30%);
@@ -137,6 +154,32 @@ $primary-color-2017: darken(blue, 10%);
   }
 
 }
+
+@mixin fb-page-link {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: lightgray;
+  transform: rotatez(180deg);
+  margin-right: 3vw;
+  font-size: 10vw;
+
+  @include breakpoint(medium) {
+    margin-right: 2vw;
+    font-size: 6vw;
+  }
+
+  @include breakpoint(large) {
+    margin-right: 1.5vw;
+    font-size: 4vw;
+  }
+
+  &:hover {
+    color: blue;
+    text-decoration: underline;
+  }
+}
+
 
 @mixin whp-2017-gradient-background {
   background: linear-gradient(0deg, white, grey);
@@ -189,28 +232,7 @@ $primary-color-2017: darken(blue, 10%);
   }
 
   .fb-page-link {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    color: lightgray;
-    transform: rotatez(180deg);
-    margin-right: 3vw;
-    font-size: 10vw;
-
-    @include breakpoint(medium) {
-      margin-right: 2vw;
-      font-size: 6vw;
-    }
-
-    @include breakpoint(large) {
-      margin-right: 1.5vw;
-      font-size: 4vw;
-    }
-
-    &:hover {
-      color: blue;
-      text-decoration: underline;
-    }
+    @include fb-page-link;
   }
 
 }
