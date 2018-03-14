@@ -8,13 +8,14 @@ body {
   // color: darken(blue, 10%);
 }
 
-nav#menu-sign.whp-2017 {
+nav#menu-sign.whp-2017{
   @include menu-sign;
 }
 
-nav#menu.whp-2017 {
+nav#menu.whp-2017{
   @include menu;
 }
+
 
 header.index-page.whp-2017 {
   // @include lang-switch;
