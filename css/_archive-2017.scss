@@ -198,9 +198,11 @@ article.archive-page.whp-2017 {
         text-align: justify;
 
         p,
-        pre {
+        pre,
+        ol {
           display: inline;
           margin: 0;
+          // padding: 0;
         }
 
         code {
@@ -264,7 +266,7 @@ article.archive-page.whp-2017 {
     }
 
     .terms {
-      font-style: italic;
+      // font-style: italic;
       font-size: 80%;
 
       a {
@@ -376,7 +378,7 @@ article.archive-project.whp-2017 {
 
     &.collective-glossary-terms a {
       color: grey;
-      font-style: italic;
+      // font-style: italic;
       // text-decoration: underline dashed red;
       border-bottom: thin dashed lighten(red, 10%);
       letter-spacing: 0;
