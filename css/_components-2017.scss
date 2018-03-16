@@ -11,8 +11,20 @@ $primary-color-2017: darken(blue, 10%);
 //
 //
 
+@mixin not-selectable {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
 @mixin lang-switch {
   .lang-switch {
+    @include not-selectable;
+
     transform: translate(2.5vw) rotate(90deg);
     display: block;
     font-size: 12vw;
@@ -38,6 +50,8 @@ $primary-color-2017: darken(blue, 10%);
 }
 
 @mixin menu-sign {
+  @include not-selectable;
+
   position: fixed;
   z-index: 2000;
   top: 0;
