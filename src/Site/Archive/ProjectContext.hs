@@ -21,6 +21,10 @@ import W7W.MultiLang
 import W7W.Pictures.Context
 import W7W.Pictures.Utils
 
+import W7W.PictureColor
+import W7W.PictureColor.Types
+import W7W.PictureColor.Operations
+
 import Site.Context
 
 import Site.Archive.Utils
@@ -125,6 +129,21 @@ fieldProjectCover =
 --     mkImageItem =
 --       urlField "imageUrl"
 
+fieldProjectColor :: Context String
+fieldProjectColor =
+  fieldPictureColor "projectColor"
+                    projectCoverPath
+                    (mkColor 255 0 0)
+                    colorChange
+  where
+    colorChange = saturate . opposite
+    projectCoverPath i = do
+      covers <- loadAll (projectCoverPattern i) :: Compiler [Item ByteString]
+      case (null covers) of
+        True -> return Nothing
+        False -> return . Just . itemIdentifier . head $ covers
+
+
 fieldTermsLabel :: Context a
 fieldTermsLabel = field "termsLabel" termsLabel
   where
@@ -149,6 +168,7 @@ archiveProjectCtx terms =
   <> fieldHasMedia
   <> fieldHasVideo
   <> fieldHasAudio
+  <> fieldProjectColor
   <> (fieldHasPictures picturesPattern)
   <> (fieldPictures picturesPattern)
   <> (fieldTermsList terms)
