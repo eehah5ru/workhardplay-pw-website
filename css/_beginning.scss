@@ -3,35 +3,44 @@ header.beginning.whp-2017 {
     @include menu;
     z-index: 0;
 
+    .menu-items {
+      padding-top: 0;
+
+      @include breakpoint(large) {
+        padding-top: 6vw;
+      }
+    }
+
     .menu-items h1 {
       transform-origin: center;
-      transform: rotateY(45deg) rotateZ(10deg) translate(-20%);
+      transform: rotateY(56deg) rotateZ(10deg) translate(-15%);
+      text-align: left;
 
-      font-size: 14vw;
+      font-size: 13vw;
 
       @include breakpoint(medium) {
-        transform: rotateY(45deg) rotateZ(10deg);
+        transform: rotateY(56deg) rotateZ(10deg);
         font-size: 12vw;
       }
 
       @include breakpoint(730) {
-        font-size: 11vw;
-      }
-
-      @include breakpoint(970) {
         font-size: 10vw;
       }
 
-      @include breakpoint(1084) {
+      @include breakpoint(970) {
         font-size: 9vw;
       }
 
-      @include breakpoint(1184) {
+      @include breakpoint(1084) {
         font-size: 8vw;
       }
 
-      @include breakpoint(1284) {
+      @include breakpoint(1184) {
         font-size: 7vw;
+      }
+
+      @include breakpoint(1284) {
+        font-size: 6vw;
       }
 
 
