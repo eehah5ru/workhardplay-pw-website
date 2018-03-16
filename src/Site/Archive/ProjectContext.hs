@@ -7,6 +7,8 @@ import Data.Maybe (fromMaybe)
 import Data.Monoid ((<>), mempty)
 import Control.Monad ((>=>))
 
+import qualified Data.Text as T
+
 import Data.Binary
 import Data.Typeable
 
@@ -159,6 +161,18 @@ fieldHasTerms terms =
   where
     hasTerms _ = not . null . tagsMap $ terms
 
+
+-- functionPictureAltTitleAttr =
+--   functionField "pictureAltTitleAttr" f
+--   where
+--     escapeQuotes = T.unpack . T.replace "\"" "&Prime;" . T.pack
+--     makeAttr c t d
+--       | (null d) = (escapeQuotes t) ++ " - " ++ (escapeQuotes c)
+--       | otherwise = (escapeQuotes t) ++ " - " ++ (escapeQuotes c) ++ " - " ++ (escapeQuotes d)
+--     f ("":"":"":[]) _ = return "empty"
+--     f (creator:title:description:[]) _ = return $ makeAttr creator title description
+--     f _ _ = error "pictureAltTitleAttr: malformed args. Usage pictureAltTitleAttr(creator, title, description)"
+
 --
 -- project page ctx
 --
@@ -174,4 +188,5 @@ archiveProjectCtx terms =
   <> (fieldTermsList terms)
   <> (fieldHasTerms terms)
   <> (fieldTermsLabel)
+  -- <> functionPictureAltTitleAttr
   <> siteCtx
