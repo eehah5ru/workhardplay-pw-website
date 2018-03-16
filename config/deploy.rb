@@ -50,6 +50,13 @@ namespace :hakyll do
     end
   end
 
+  task :prepare do
+    on roles(:all) do
+      run_locally do
+        execute "mkdir", "-p", "_site"
+      end
+    end
+  end
 
   desc "Clean website"
   task :clean do
@@ -78,6 +85,7 @@ namespace :hakyll do
   #   end
   # end
   before "hakyll:build", "hakyll:compile"
+  before "deploy", "hakyll:prepare"
   after 'deploy:started', 'hakyll:build'
 end
 
