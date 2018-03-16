@@ -50,6 +50,12 @@ fieldRootUrl =
     getRootUrl i = return $ "/" ++ (itemLang i) ++ "/" ++ (itemYear i) ++ "/"
 
 
+fieldDummyFunction =
+  functionField "dummy" f
+  where
+    f [] _ = return "empty args"
+    f [x] _ = return x
+    f _ _ = error "dummy: manay args"
 
 --
 --
@@ -69,4 +75,5 @@ siteCtx = fieldRuUrl
           <> fieldArchiveName
           <> fieldAboutName
           <> fieldGlossaryName
+          <> fieldDummyFunction
           <> defaultContext

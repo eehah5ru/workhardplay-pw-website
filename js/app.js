@@ -211,6 +211,7 @@
     else {
       showMenu();
     }
+    return false;
   };
 
 
