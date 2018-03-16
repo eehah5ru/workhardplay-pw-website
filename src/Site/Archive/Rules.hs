@@ -3,6 +3,7 @@ module Site.Archive.Rules where
 
 import Data.Maybe (fromMaybe)
 import Data.Monoid ((<>), mempty)
+import Control.Monad ((>=>))
 import System.FilePath.Posix ((</>))
 
 import Hakyll
@@ -10,6 +11,7 @@ import Hakyll
 import W7W.MultiLang
 import W7W.Compilers.Slim
 import W7W.Compilers.Markdown
+import W7W.Typography
 
 import Site.Archive.Compilers
 
@@ -70,7 +72,7 @@ archiveProjectPagesRules ts = do
     slimRules locale =
       slimPageRules $ render' locale
     mdRules locale  =
-      markdownPageRules $ render' locale
+      markdownPageRules $ beautifyTypography >=> render' locale
     render' locale item = do
       renderArchiveProjectPage
         "templates/archive-2017-project.slim"

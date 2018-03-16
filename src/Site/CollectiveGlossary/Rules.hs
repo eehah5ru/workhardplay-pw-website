@@ -7,6 +7,7 @@ import Hakyll
 
 import W7W.Compilers.Slim
 import W7W.MultiLang
+import W7W.Typography
 
 import Site.Template
 import Site.Context
@@ -59,6 +60,7 @@ collectiveGlossaryRules ts = do
           getResourceBody >>= saveSnapshot "raw_content"
 
           pandocCompiler
+            >>= beautifyTypography
             >>= saveSnapshot "content"
             >>= loadAndApplyTemplate "templates/collective-glossary-term.slim" ctx
             >>= loadAndApplyTemplate rootPageTpl ctx
