@@ -77,4 +77,5 @@ siteCtx = fieldRuUrl
           <> fieldAboutName
           <> fieldGlossaryName
           <> fieldDummyFunction
+          <> fieldRevision
           <> defaultContext
