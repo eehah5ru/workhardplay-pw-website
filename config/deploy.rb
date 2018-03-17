@@ -41,12 +41,36 @@ set :keep_releases, 5
 # set :revision, ->{run_locally "git log --pretty=format:'%H' -1"}
 # desc 'Hakyll integration'
 namespace :hakyll do
-  desc 'Build the website locally using Hakyll'
+  desc "Compile engine"
+  task :compile do
+    on roles(:all) do
+      run_locally do
+        execute :stack, "build"
+      end
+    end
+  end
 
-  task :build do
+  task :prepare do
+    on roles(:all) do
+      run_locally do
+        execute "mkdir", "-p", "_site"
+      end
+    end
+  end
+
+  desc "Clean website"
+  task :clean do
     on roles(:all) do
       run_locally do
         execute :stack, 'exec', 'site', '--', 'clean'
+      end
+    end
+  end
+
+  desc 'Build the website locally using Hakyll'
+  task :build do
+    on roles(:all) do
+      run_locally do
         execute :stack, 'exec', 'site', '--', 'build'
       end
     end
@@ -60,7 +84,8 @@ namespace :hakyll do
   #     end
   #   end
   # end
-
+  before "hakyll:build", "hakyll:compile"
+  before "deploy", "hakyll:prepare"
   after 'deploy:started', 'hakyll:build'
 end
 

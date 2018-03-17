@@ -4,7 +4,7 @@ projectTitle: "world of work / world without work"
 projectCover: shilkinite-stolet.jpg
 canonicalName: shilkinite-stolet
 coverColor: "255,0,0"
-youtubeVideoId: "22Eo-3pVIoM"
+youtubeVideoId: "HtgYZ8jJUqA"
 tags: mother-machine, intimate interfaces, from the future at the present, cyberfeminism, digital proletariat
 ---
 

@@ -41,10 +41,12 @@
 **** DONE en and ru versions
      CLOSED: [2018-01-29 Mon 15:01]
 * design
-** TODO general
+** DONE general
+   CLOSED: [2018-03-17 Sat 00:25]
 *** DONE favicon
     CLOSED: [2018-03-02 Fri 17:44]
-*** /images/whp-cover.jpg
+*** DONE /images/whp-cover.jpg
+    CLOSED: [2018-03-17 Sat 00:25]
 ** DONE archive index
    CLOSED: [2018-03-02 Fri 17:44]
 *** DONE small icons for audio and video

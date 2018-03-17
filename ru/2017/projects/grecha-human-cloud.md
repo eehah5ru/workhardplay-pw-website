@@ -5,6 +5,7 @@ projectCover: grecha-humancloud-cover.jpg
 canonicalName: grecha-human-cloud
 coverColor: "255,0,0"
 soundcloudTrackId: "332102322"
+youtubeVideoId: "8jV02E0owpI"
 tags: рассеянная коллективность, психодата, интимные интерфейсы, аутсорсинг, аффективный труд, добывающий капитализм, быстрое знание -ые -я, аномалии коридоров, цифровой пролетариат
 ---
 
