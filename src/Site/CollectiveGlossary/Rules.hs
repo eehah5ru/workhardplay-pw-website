@@ -28,16 +28,17 @@ collectiveGlossaryRules ts = do
   -- matchMultiLang depsRules depsRules ("collective-glossary/*.md")
 
   --
-  -- index page
-  --
-  withCollectiveGlossaryDeps RU $ withCollectiveGlossaryDeps EN $ do
-    matchMultiLang indexRules indexRules "collective-glossary.md"
-
-  --
   -- terms pages
   --
   rules' (terms RU ts)
   rules' (terms EN ts)
+
+  --
+  -- index page
+  --
+  withCollectiveGlossaryDeps $ do
+    matchMultiLang indexRules indexRules "collective-glossary.md"
+
 
   where
     depsRules _ = compile getResourceBody
@@ -45,7 +46,7 @@ collectiveGlossaryRules ts = do
       slimPageRules $ \x -> do
         termsField <- mkFieldTerms (terms locale ts)
         manyTermsField <- mkFieldManyTerms 200 (terms locale ts)
-        let ctx = termsField <> manyTermsField <>siteCtx
+        let ctx = termsField <> manyTermsField <> siteCtx
         applyAsTemplate ctx x
           >>= loadAndApplyTemplate "templates/collective-glossary-index.slim" ctx
           >>= loadAndApplyTemplate rootPageTpl ctx
@@ -66,9 +67,14 @@ collectiveGlossaryRules ts = do
             >>= loadAndApplyTemplate rootPageTpl ctx
             >>= loadAndApplyTemplate rootTpl ctx
 
-withCollectiveGlossaryDeps locale rules = do
-  collectiveGlossaryDefs <- makePatternDependency (fromGlob (localizePath locale "collective-glossary/*.md"))
-  rulesExtraDependencies [collectiveGlossaryDefs] rules
+
+
+withCollectiveGlossaryDeps rules = do
+  deps <- (makePatternDependency (ruDeps <> enDeps))
+  rulesExtraDependencies [deps] rules
+  where
+    ruDeps = (fromGlob (localizePath RU "collective-glossary/*.md"))
+    enDeps = (fromGlob (localizePath EN "collective-glossary/*.md"))
 
 --
 --

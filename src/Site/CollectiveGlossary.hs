@@ -35,7 +35,9 @@ buildTerms = do
   where
     buildTags' m l = buildTags
                        (((l' "**/*.slim") .||. (l' "**/*.md"))
-                        .&&. (complement (l' "**/_*.slim")))
+                        .&&. (complement (l' "**/_*.slim"))
+                        .&&. (complement (l' "**/.*.slim"))
+                        .&&. (complement (l' "**/.*.md")))
                        (termToIdentifier l m)
       where l' = fromGlob . localizePath l
 

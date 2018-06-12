@@ -48,6 +48,7 @@ main =
 
      jsRules
 
+
      -- slim partials for deps
      match ("ru/**/_*.slim" .||. "en/**/_*.slim") $ compile getResourceBody
 
