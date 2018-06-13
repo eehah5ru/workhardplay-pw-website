@@ -2,6 +2,7 @@
 module Site.CollectiveGlossary where
 
 
+import           Data.Monoid (mappend, (<>))
 
 import Data.Maybe (fromMaybe)
 import Data.List (find)
@@ -34,12 +35,20 @@ buildTerms = do
   return $ mkTerms ru en
   where
     buildTags' m l = buildTags
-                       (((l' "**/*.slim") .||. (l' "**/*.md"))
-                        .&&. (complement (l' "**/_*.slim"))
-                        .&&. (complement (l' "**/.*.slim"))
-                        .&&. (complement (l' "**/.*.md")))
+                       termsSources
                        (termToIdentifier l m)
-      where l' = fromGlob . localizePath l
+      where
+        l' = fromGlob . localizePath l
+        byYear year p = l' (year ++ "/" ++ p)
+        projectsPattern year =
+          let byYear' = byYear year
+          in ((byYear' "**/*.slim") .||. (byYear' "**/*.md"))
+             .&&. (complement . byYear' $ "**/_*.slim")
+             .&&. (complement . byYear' $ "**/.*.slim")
+             .&&. (complement . byYear' $ "**/.*.md")
+        termsSources = (projectsPattern "2016/archive") <> (projectsPattern "2017/projects")
+
+
 
 
 termToIdentifier :: Locale -> [(Identifier, Metadata)] -> String -> Identifier

@@ -10,6 +10,7 @@ import Site.Context
 staticPagesRules = do
   rulesIndex "index.md"
   rulesAbout "about.md"
+  rulesSlim "2018/index.slim"
   rulesSlim "2017/index.slim"
   rulesSlim "2017/404.slim"
   rulesSlim "2016/index.slim"
