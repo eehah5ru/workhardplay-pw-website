@@ -1,0 +1,25 @@
+section.whp-2018.index-page.description {
+  p a.parameter-name {
+    text-decoration: none;
+    color: red;
+    border-bottom: 1px dashed blue;
+    cursor: pointer;
+
+    &.active {
+      text-decoration: line-through;
+      border-bottom: none;
+    }
+  }
+
+  p span.paramater-descr {
+    display: inline-block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding-left: 1em;
+    border-left: blue 7px solid;
+
+    &.hidden {
+      display: none;
+    }
+  }
+}

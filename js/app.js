@@ -183,6 +183,31 @@
 
   //
   //
+  // 2018's parameters
+  //
+  //
+  var onClickParameterName = function(self) {
+    var descrSelector = "#" + $(self).data("parameter") + "-descr";
+
+    console.log(descrSelector);
+    console.log($(descrSelector));
+    if ($(self).hasClass("active")) {
+      // hide
+      $(self).removeClass("active");
+
+      $(descrSelector).addClass("hidden");
+    } else {
+      // show
+      $(self).addClass("active");
+      $(descrSelector).removeClass("hidden");
+    }
+
+    return false;
+  };
+
+
+  //
+  //
   // menu
   //
   //
@@ -278,6 +303,16 @@
       toggleMenu();
     });
 
+    //
+    // 2018 paramaters
+    //
+    $("a.parameter-name").click(function(e) {
+      return onClickParameterName(e.target);
+    });
+
+    //
+    // schedule projects descriptions
+    //
     $("p.descr span").click(function(e) {
       // alert("aaa");
       onClickOnShowProjectLonDescriptionLink(e.target);
