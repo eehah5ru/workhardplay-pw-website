@@ -31,6 +31,8 @@ import Site.Archive.Rules
 import Site.CollectiveGlossary
 import Site.CollectiveGlossary.Rules
 
+import Site.Participants.Rules
+
 --------------------------------------------------------------------------------
 
 main :: IO ()
@@ -59,6 +61,7 @@ main =
 
      terms <- buildTerms
 
+     participantsRules
      collectiveGlossaryRules terms
      archiveIndexPagesRules terms
      archiveProjectPagesRules terms

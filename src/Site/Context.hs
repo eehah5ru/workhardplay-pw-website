@@ -12,6 +12,7 @@ import W7W.Utils
 import W7W.Context
 
 import Site.CollectiveGlossary.Utils (glossaryName)
+import Site.Participants (fieldParticipantBio, fieldParticipantRawBio, fieldParticipantName, fieldParticipantCity)
 
 --
 --
@@ -55,7 +56,7 @@ fieldDummyFunction =
   where
     f [] _ = return "empty args"
     f [x] _ = return x
-    f _ _ = error "dummy: manay args"
+    f _ _ = error "dummy: many args"
 
 
 --
@@ -77,5 +78,9 @@ siteCtx = fieldRuUrl
           <> fieldAboutName
           <> fieldGlossaryName
           <> fieldDummyFunction
+          <> fieldParticipantBio
+          <> fieldParticipantRawBio
+          <> fieldParticipantCity
+          <> fieldParticipantName
           <> fieldRevision
           <> defaultContext
