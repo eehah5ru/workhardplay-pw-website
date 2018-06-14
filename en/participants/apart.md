@@ -1,6 +1,6 @@
 ---
 title: APART
-based: Bratislava
+city: Bratislava
 ---
 
 Collective of artists APART arose in 2012. Since the beginning, its main program content is publication activity going under the name APART LABEL, which is mapping artistic expressions in their local environment. It focuses on selected tendencies of contemporary art forms, observes their and dwells on building an archive of this specific environment. Our ambition is not to map artistic activities in their full spectrum. We focus our attention on such outputs and researches of art forms, which in some cases reflect our own interest in specific themes.
