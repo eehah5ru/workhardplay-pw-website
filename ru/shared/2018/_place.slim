@@ -2,3 +2,6 @@
     .project
       p.place
         == yield
+      - if defined?(place_comment)
+        p.descr.place-comment
+          = place_comment

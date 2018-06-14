@@ -1,2 +1,86 @@
-  == include_slim("ru/shared/2018/_day_header")
-    | ≋ВТОРНИК / 26 ИЮНЯ≋
+    == include_slim("ru/shared/2018/_day_header")
+      | ≋TUESDAY / 26 JUNE≋
+
+    == include_slim("ru/shared/2018/_place",
+         place_comment: "Registration is required via email <a href='mailto:work.hard.play.0@gmail.com'>work.hard.play.0@gmail.com</a> till 24.06")
+      | ⚡Secret sanatorium near Minsk⚡
+
+    /
+    / kristina-vegera-machine-of-limitless-hearing
+    /
+    / description
+    = capture_block_to descr=:descr
+      | The Machine of limitless hearing: sound walks
+    / / long description
+    = capture_block_to long_descr=:long_descr do
+      | This is an invitation to a research expedition for the Machine of limitless hearing, considering as a part of a human being responsible for feeling. Hearing appears here as an abstract concept and is expressed in different forms - tactile, visual, imaginary. The hearing is the ability to touch, to see, to understand another. The other is everything outside of me.
+      br
+      br
+      | During these walks, we will focus our interest on the city and all its components as an ecosystem. We will put inside our body the idea of the existence of the Machine of limitless hearing and go on a journey using some instructions from the book of Murray Schafer "A Sound Education: 100 Exercises in Listening and Sound Making". Everything that we will feel and get as an experience together allows us to learn more about the Machine.
+
+    / schedule item
+    == include_slim("ru/shared/2018/_project",
+        participant_id: "kristina-vegera",
+        project_id: "kristina-vegera-machine-of-limitless-hearing",
+        time: "14:30 &mdash; 16:00",
+        description: descr,
+        long_description: long_descr)
+
+    /
+    / union-of-convalescents-essays-on-the-aesthetic-economy-of-psyche
+    /
+    / description
+    = capture_block_to descr=:descr
+      | Two and a Half Essays on the Aesthetic Economy of Psyche.
+    / / long description
+    = capture_block_to long_descr=:long_descr do
+      | <em>First essay: Calculating Mental Disorder.</em>
+      br
+      br
+      | Demand transition to a new construction of psychiatric normativity! Accelerate production of disorders, diagnoses and therapies. Multiply and aestheticize them!
+      br
+      br
+      | Union of Convalescents will try out a newly proposed unconventional diagnostic routine. Based on certain clinical tests that blend aesthetics and bureaucracy such as the test of an invented animal and MMPI, a 558-question-long quiz, we aim to reappropriate and detourn the conventions and assembly lines of souls.
+      br
+      br
+      | Being more narrow non-specialists than psychiatrists or psychologists, we claim to see psychic life differently. We shall produce by displacing diagnoses, poetically, appealing to nonknowledges of alternative or para- psychologies. These studies are directed not only to the psyche, but also include faith beyond any principles.
+      br
+      br
+      | The dialogic performance will produce diagnoses and prescriptions.
+
+      br
+      br
+      | <em>Second Essay: Egor Sofronov "Towards a Ruthless Critique of Everything Existing, Version 2018."</em> A report in abeyance of disillusionment.
+      br
+      br
+      | Why did Charles Baudelaire ask us to conceive as properly modern "an artist perpetually in the spiritual condition of the convalescent," always in attempt to supplement the edge of insanity that haunted him? This artist experiences urban modernity and the modernist culture inhabiting it as psychically traumatic in affects irreducibly negative, while trying to capture these affects in "things, even the most trivial in appearance."
+      br
+      br
+      | The report is about writing in art, or practicing criticism. Why does the word "critique" mean negative affects and destructive operations? If in its systematic origin in Kant critique was understood as a juridical architecture for discernment and reason, then in later decades and until now critique has become a medium of specifically modern affect of negativity.
+
+
+
+    / schedule item
+    == include_slim("ru/shared/2018/_project",
+        participant_id: "union-of-convalescents",
+        project_id: "union-of-convalescents-essays-on-the-aesthetic-economy-of-psyche",
+        time: "17:00 &mdash; 19:00",
+        description: descr,
+        long_description: long_descr)
+
+    / /
+    / / dvizhenie-noch
+    / /
+    / / description
+    / = capture_block_to descr=:descr
+    /   | Night surprise.
+    / / / long description
+    / = capture_block_to long_descr=:long_descr do
+    / 
+    / / schedule item
+    / == include_slim("ru/shared/2018/_project",
+    /     participant_id: "dvizhenie-noch",
+    /     project_id: "dvizhenie-noch",
+    /     time: "00:00",
+    /     description: descr,
+    /     long_description: long_descr)

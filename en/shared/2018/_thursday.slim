@@ -1,2 +1,47 @@
-  == include_slim("ru/shared/2018/_day_header")
-    | ≋ЧЕТВЕРГ / 27 ИЮНЯ≋
+    == include_slim("ru/shared/2018/_day_header")
+      | ≋THURSDAY / 28 JUNE≋
+
+    == include_slim("ru/shared/2018/_place", place_comment: "IMPORTANT: To attend the events you need a library card, in case you do not have it, please take your passport with you and 2,24 rubles. Sessions will begin exactly at the appointed time, unfortunately those who are late will not be able to enter the hall.") do
+      | ⚡National Library of Belarus / Nezavisimosti ave, 116⚡
+
+    /
+    / problem-collective-method-reading
+    /
+    / description
+    = capture_block_to descr=:descr
+       | The Method of Reading
+    / long description
+    = capture_block_to long_descr=:long_descr do
+       | Inspired by and deconstructing the methods of the early Soviet reading groups aimed at self-education of peasants and workers, and also discussing contemporary state of reading and text, the "Problem Collective" invites to the session of collective reading. The PC offers to read the "List of MOPR Pavilion Exhibits" - a historical document found in the national archives of the Republic of Belarus. The document lists the exhibits that were placed in the MOPR Pavilion at the First All-Belarusian Agricultural and Industrial Exhibition in Minsk (1930). The MOPR Pavilion was built and designed by the artist and constructor Aleksanteri Ahola-Valo, who in the experimental display recorded the history of political violence.
+       br
+       br
+       | Image: Ahola-Valo A. Sketches of the MOPR pavilion. Paper, pencil. Minsk, 1930. The archive of A. Ahola-Valo in Hämeenlinna, Finland.
+    / schedule item
+    == include_slim("ru/shared/2018/_project",
+       participant_id: "problem-collective",
+       project_id: "problem-collective-method-reading",
+       time: "13:30 &mdash; 15:00",
+       description: descr,
+       long_description: long_descr)
+    /
+    / cara-tolmie-gender-of-sound
+    /
+    / description
+    = capture_block_to descr=:descr
+      | “Gender of Sound” Listening Session / Meeting point: the foyer on the 1st floor.
+    / long description
+    = capture_block_to long_descr=:long_descr do
+      | For the listening session each participant is asked to bring a sound or piece of music that you wish to discuss in relation to gender. You will not be expected to present these to the group as an expert, rather the object of this session will be to excavate all the signs and associations that we can from each sound together in discussion.
+      br
+      br
+      | Attempting to find ways to listen together with specific emphasis on how we might hear these sounds through a frame of gender, these sessions will endeavour to find a collective language in order to reflect upon what we hear, how it affects our bodies, its poetic dimension, its political implication and how this might relate both to personal and collective experience. These are open sessions that hope to learn and find a shared language from a wide range of listeners. It is important to us that this project lay its foundations on a wide range of testimonies from friends, peers and strangers. All experience or inexperience, passion, scepticism, excitement and taste towards music is welcomed.
+      br
+      br
+      | Gender of Sound is a research project led by Susanna Jablonski and Cara Tolmie that explores past, present and future debates on the position of gender, performativity and resistance within sound. It is supported and funded by the Royal Institute of Art, Stockholm 2017-19. <a href='https://www.kkh.se/en/research/artistic-development-projects/the-gender-of-sound/'>More information here</a>
+    / schedule item
+    == include_slim("ru/shared/2018/_project",
+       participant_id: "cara-tolmie",
+       project_id: "cara-tolmie-gender-of-sound",
+       time: "14:30 &mdash; 17:00",
+       description: descr,
+       long_description: long_descr)
