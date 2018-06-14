@@ -247,11 +247,23 @@
   //
   var toggleLongDescrVisibility = function(project) {
     var rootElement = $("[data-project='" + project + "']");
-    var h = $(rootElement).find("p.long-descr:hidden");
-    var v = $("p.long-descr:visible");
 
+    var h = $(rootElement).find("p.long-descr:hidden,.participant-bio:hidden,.participant-name:hidden");
+    var v = $("p.long-descr:visible,.participant-bio:visible,.participant-name:visible");
     h.show();
     v.hide();
+
+    // var hPB = $(rootElement).find(".participant-bio:hidden");
+    // var vPB = $(".participant-bio:visible");
+    // hPB.show();
+    // vPB.hide();
+
+    // var hPB = $(rootElement).find(".participant-bio:hidden");
+    // var vPB = $(".participant-bio:visible");
+    // hPB.show();
+    // vPB.hide();
+
+
 
     // var project = $(self).parent().parent().data("project");
     var classToAdd = project + "-cover";

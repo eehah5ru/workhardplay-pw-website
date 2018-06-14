@@ -175,7 +175,9 @@ section.whp-2017.index-page.description {
     }
 
     p.long-descr,
-    p.long-descr-pics {
+    p.long-descr-pics,
+    .participant-bio,
+    .participant-name {
       display: none;
       margin-top: -0.5rem;
     }
@@ -194,7 +196,35 @@ section.whp-2017.index-page.description {
       @extend .large-3;
       @extend .columns;
       @extend .end;
+    }
 
+    .participant-bio,
+    .participant-name {
+      @extend .small-12;
+      @extend .large-6;
+      @extend .large-offset-3;
+      @extend .columns;
+      @extend .end;
+    }
+
+    .participant-name {
+      overflow: hidden;
+      position: relative;
+      z-index: 0;
+      margin-bottom: 1em;
+
+
+      .name {
+        // background-color: #ffffffb3;
+        z-index: 99;
+        display: inline-block;
+        margin-left: 1em;
+      }
+
+      .hor-line {
+        position: absolute;
+        z-index: -1;
+      }
     }
   }
 
