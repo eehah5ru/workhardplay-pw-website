@@ -31,7 +31,7 @@ section.whp-2017.index-page.description {
   z-index: 0;
 
   .project-cover {
-    -webkit-mask-image: -webkit-gradient(linear, right top, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    //-webkit-mask-image: -webkit-gradient(linear, right top, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
     position: fixed;
     z-index: -2;
     top: -10%;
@@ -41,7 +41,7 @@ section.whp-2017.index-page.description {
     // transform: perspective(1280px) rotate3d(-3,90,12,-34deg);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: 0 0, center;
+    background-position: center;
 
     @include breakpoint(large) {
       top: 5%;

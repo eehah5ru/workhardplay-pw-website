@@ -1,8 +1,20 @@
 section.whp-2018.index-page.description {
+  p {
+    color: #330338;
+  }
+
+  a {
+    color: #fc5a60;
+  }
+
+  .project p.descr span {
+    color: #fc5a60;
+  }
+
   p a.parameter-name {
     text-decoration: none;
-    color: red;
-    border-bottom: 1px dashed blue;
+    color: #fc5a60;
+    border-bottom: 1px dashed #fc5a60;
     cursor: pointer;
 
     &.active {
@@ -16,7 +28,7 @@ section.whp-2018.index-page.description {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     padding-left: 1em;
-    border-left: blue 7px solid;
+    border-left: #330338 7px solid;
 
     &.hidden {
       display: none;
