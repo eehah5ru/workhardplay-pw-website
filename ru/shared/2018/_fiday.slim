@@ -50,6 +50,7 @@
   == include_slim("ru/shared/2018/_project",
       participant_id: "valentina-petrova",
       project_id: "valentina-petrova-working-posters",
+      project_id_suffix: "-03",
       time: "15:20 &mdash; 16:05",
       description: descr,
       long_description: long_descr)
@@ -77,7 +78,8 @@
   /
   /
   /
-  == include_slim("ru/shared/2018/_place")
+  == include_slim("ru/shared/2018/_place",
+      place_comment: "Музыка в перерывах: Вова Синий, Trashbird, no.nothing.never")
     | ⚡КЛУБ-БАР «ЛУЧ» / 3 этаж, Толбухина ул. 4⚡
 
   /
@@ -111,5 +113,178 @@
       participant_id: "pavlo-mitenko",
       project_id: "pavlo-mitenko-dispositive-is-the-message",
       time: "19:50 &mdash; 20:30",
+      description: descr,
+      long_description: long_descr)
+
+  /
+  / niichegodelat-ilya-firdman-injections-of-pure-time
+  /
+  / description
+  = capture_block_to descr=:descr do
+    | Инъекции чистого времени. Интерактивный перформанс.
+  / long description
+  = capture_block_to long_descr=:long_descr do
+    | Времени не хватает всем и всегда. Его отнимает любимая работа, его отнимает нелюбимая работа, его отнимают повседневные дела и вредные привычки. Для того, чтобы освободить время, можно переорганизовать собственный день или политическую реальность, но ситуация может стать настолько критической, что необходимо получить инъекцию чистого времени здесь и сейчас. Сотрудник н и и ч е г о д е л а т ь Илья Фирдман предлагает разработанную им заместительную терапию: вы получаете капсулу с временем и можете на несколько минут погрузиться в чистое ничегонеделание, в то время, как терапевт справляется с отнимающими ваше время делами за вас.
+  / schedule item
+  == include_slim("ru/shared/2018/_project",
+      participant_id: "niichegodelat-ilya-firdman",
+      project_id: "niichegodelat-ilya-firdman-injections-of-pure-time",
+      time: "19:50 &mdash; 20:30",
+      description_prefix: "/ параллельно /",
+      description: descr,
+      long_description: long_descr)
+
+
+  /
+  / valentina-petrova-working-posters
+  /
+  / description
+  = capture_block_to descr=:descr do
+    | Серия лекций о советских рабочих плакатах в эре позднего капитализма.
+  / long description
+  = capture_block_to long_descr=:long_descr do
+    | Перформанс, растянутый во времени и пространстве.
+  / schedule item
+  == include_slim("ru/shared/2018/_project",
+      participant_id: "valentina-petrova",
+      project_id: "valentina-petrova-working-posters",
+      project_id_suffix: "-04",
+      time: "20:40 &mdash; 21:00",
+      description: descr,
+      long_description: long_descr)
+
+  /
+  / niichegodelat-russkikh-zinzyver-boring-dance
+  /
+  / description
+  = capture_block_to descr=:descr do
+    | Скучный танец.
+  / long description
+  = capture_block_to long_descr=:long_descr do
+    em
+      | После бессонной ночи слабеет тело,
+      br
+      |Милым становится и не своим, — ничьим.
+      br
+      | В медленных жилах еще занывают стрелы —
+      br
+      | И улыбаешься людям, как серафим.
+      br
+      | (Марина Цветаева)
+    br
+    br
+    | Потерпев неудачу на поприще кураторства и критики в сфере современного искусства, бывшая пенсионерка, а ныне сотрудница Н И И Ч Е Г О Д Е Л А Т Ь Марина Русских пережила сильнейший нервный срыв, следствием которого стали бессонница и прокрастинация, от которых женщина пытается излечиться медикаментозными и прочими средствами
+  / schedule item
+  == include_slim("ru/shared/2018/_project",
+      participant_id: "niichegodelat-russkikh-zinzyver",
+      project_id: "niichegodelat-russkikh-zinzyver-boring-dance",
+      time: "21:10 &mdash; 21:22",
+      description: descr,
+      long_description: long_descr)
+
+  /
+  / cara-tolmie-syringa
+  /
+  / description
+  = capture_block_to descr=:descr do
+    | Syringa. Перформанс.
+  / long description
+  = capture_block_to long_descr=:long_descr do
+    | Syringa &mdash; это последний перформанс Кары Толми с использованием голоса, хрупкого прикосновения и музыки. Это нежный акт, балансирующий на смещении между внутренним и внешним представлением себя. Syringa - это диспозиция, которая слушает и учится у неявных звуков, повторяющихся операций, записей, нежных рук, нечеловеческих ритмов и взрывного семплинга.
+    br
+    br
+    | Подпись к картинке: из перформанса «Incongruous Diva», Norberg Festival 2017.
+
+  / schedule item
+  == include_slim("ru/shared/2018/_project",
+      participant_id: "cara-tolmie",
+      project_id: "cara-tolmie-syringa",
+      time: "21:40 &mdash; 22:20",
+      description: descr,
+      long_description: long_descr)
+
+  /
+  / niichegodelat-helga-zinzyver-dj-set-sleeping-music
+  /
+  / description
+  = capture_block_to descr=:descr do
+    |  Dj-set «Музыка для сна».
+  / long description
+  = capture_block_to long_descr=:long_descr do
+    | Текучие волны звука заполняют пространство сна. Воздух соткан из обрывков разговоров, популярных композиций, неизвестных импровизаций.
+    br
+    br
+    | Опыт исключенного диджея: Можно что-то повеселее? Мы не можем танцевать. - Ок, вы можете не танцевать. Это дискотека для уставших.
+    br
+    br
+    | Вообще не двигаться, наблюдать за импульсами коры головного мозга. Разговаривать, петь, молчать, видеть сны, присутствовать здесь и сейчас, там и потом, внутри и тогда. Танцевать, конечно, тоже. Если захочется.
+    br
+    br
+    | В своей перформативно-звуковой практике Хельга предлагает расширить границы понятия “дискотека” и двигаться (или не двигаться), руководствуясь внутренними ощущениями от звуковых волн.
+  / schedule item
+  == include_slim("ru/shared/2018/_project",
+      participant_id: "niichegodelat-helga-zinzyver",
+      project_id: "niichegodelat-helga-zinzyver-dj-set-sleeping-music",
+      time: "22:30 &mdash; 23:40",
+      description: descr,
+      long_description: long_descr)
+
+
+  /
+  / crii-joy
+  /
+  / description
+  = capture_block_to descr=:descr do
+    |  ДЖОЙ: БАЗА ДАННЫХ ДВИЖЕНИЙ ДЛЯ РЕЙВА.
+  / long description
+  = capture_block_to long_descr=:long_descr do
+    | Это проект по производству ускорения. Ускорение мы понимаем как прокатиться с ветерком с чистой радостью. Во время рейва мы не используем никаких других технологий кроме собственных и чужих тел. Мы предлагаем покататься на своем и на чужом теле для производства чистой радости.
+    br
+    br
+    | Как у каждой ниндзя-черепашки, есть свой собственный тип оружия и методология обращения с ним, так и у каждого танцующего есть собственное коронное движение для танца и автоматизации тела.
+    br
+    br
+    | Алгоритм:
+    br
+    br
+    | 1. Биохакинг без хирургического и медикаментозного вмешательства (за исключением легких веществ): можно надеть ролики и поехать (тело двигается само), можно имплантировать чип, и дверь будет открываться сама. Мы предлагаем: ты можешь использовать чужое движение и его повторение, хакнув тело.
+    br
+    br
+    | 2. Чистая радость производится повторением. Повторением чужого движения как автомат или машина, которая движется без цели. Когда я повторяю за тобой, мое тело движется само. <b>Твое движение - моя машина</b>.
+    br
+    br
+    | 3. База данных будет представлена в форме сайта на сервере google и практики на одной из вечеринок РБОБ. Примерное время проведения 1.5 часа.
+    br
+    br
+    | Практика: сначала мы танцуем движения из базы сайта , потом все желающие предлагают свои движения, которые в свою очередь затем войдут в базу данных.
+    br
+    br
+    | <b>Индивидуальные движения будут коллективизрованы!</b>
+
+  / schedule item
+  == include_slim("ru/shared/2018/_project",
+      participant_id: "crii",
+      project_id: "crii-joy",
+      time: "23:50 &mdash; 00:50",
+      description: descr,
+      long_description: long_descr)
+
+  /
+  / bitchcoin-that-s-me-me-me
+  /
+  / description
+  = capture_block_to descr=:descr do
+    | Dj-set “That's Me Me Me. Please be SsSsSsSsSsSsSsSsSs. I Have A Message For You”.
+  / long description
+  = capture_block_to long_descr=:long_descr do
+    | Интимный диджей-сет квир и фем музыкантов/ок и интерфейс для плейлиста во вконтакте: <a href='https://bitchcoin.in/' target='_blank'>https://bitchcoin.in/</a>.
+    br
+    br
+    | Склейки и междометия bitchcoin. Спекулятивная дискотека, где происходит перекодирование музыки в текст и наоборот. Время чтения интимного послания не равно времени прослушивания сета.
+  / schedule item
+  == include_slim("ru/shared/2018/_project",
+      participant_id: "bitchcoin",
+      project_id: "bitchcoin-that-s-me-me-me",
+      time: "01:00 &mdash; 02:00",
       description: descr,
       long_description: long_descr)
