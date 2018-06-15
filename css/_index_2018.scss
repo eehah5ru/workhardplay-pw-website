@@ -1,21 +1,61 @@
+//
+//
+// colors
+//
+//
+// $primary-color-2018: #aa0b9b;
+// $secondary-color-2018: #fe6102;
+$primary-color-2018: #330338;
+$secondary-color-2018: #fc5a60;
+$header-color-2018: #b3b0b0;
+//
+//
+//
+//
+
+nav#menu-sign.whp-2017 {
+  color: $primary-color-2018;
+
+  svg path {
+    fill: $primary-color-2018;
+
+    &:hover {
+      fill: $secondary-color-2018;
+    }
+  }
+}
+
+header.index-page.whp-2018 {
+  background: linear-gradient(0deg,white,#ffb400,#f517e1);
+
+  h1 {
+    color: $header-color-2018;
+  }
+}
+
 section.whp-2018.index-page.description {
   p {
-    color: #330338;
+    color: $primary-color-2018;
   }
 
   a {
-    color: #fc5a60;
+    color: $secondary-color-2018;
+
+    &:hover {
+      color: $primary-color-2018;
+    }
   }
 
   .project p.descr span,
   .project p.descr.no-long span {
-    color: #fc5a60;
+    color: $secondary-color-2018;
+    border-bottom: 1px dashed $primary-color-2018;
   }
 
   p a.parameter-name {
     text-decoration: none;
-    color: #fc5a60;
-    border-bottom: 1px dashed #fc5a60;
+    color: $secondary-color-2018;
+    border-bottom: 1px dashed $primary-color-2018;
     cursor: pointer;
 
     &.active {
@@ -29,10 +69,19 @@ section.whp-2018.index-page.description {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     padding-left: 1em;
-    border-left: #330338 7px solid;
+    border-left: $primary-color-2018 7px solid;
 
     &.hidden {
       display: none;
     }
+  }
+
+  .participant-name {
+    color: $primary-color-2018;
+    margin-top: 0.5rem !important;
+
+    // .name {
+    //   color: $secondary-color-2018;
+    // }
   }
 }
