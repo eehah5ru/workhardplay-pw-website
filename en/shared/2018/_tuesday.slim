@@ -67,20 +67,3 @@
         time: "17:00 &mdash; 19:00",
         description: descr,
         long_description: long_descr)
-
-    / /
-    / / dvizhenie-noch
-    / /
-    / / description
-    / = capture_block_to descr=:descr
-    /   | Night surprise.
-    / / / long description
-    / = capture_block_to long_descr=:long_descr do
-    / 
-    / / schedule item
-    / == include_slim("ru/shared/2018/_project",
-    /     participant_id: "dvizhenie-noch",
-    /     project_id: "dvizhenie-noch",
-    /     time: "00:00",
-    /     description: descr,
-    /     long_description: long_descr)
