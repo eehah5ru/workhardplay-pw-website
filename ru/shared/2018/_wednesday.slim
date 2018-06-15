@@ -1,2 +1,77 @@
   == include_slim("ru/shared/2018/_day_header")
     | ≋СРЕДА / 27 ИЮНЯ≋
+
+  == include_slim("ru/shared/2018/_place",
+      place_comment: "Регистрация: <a href='work.hard.play.0@gmail.com'>work.hard.play.0@gmail.com</a> до 24.06")
+    | ⚡Секретный санаторий рядом с Минском⚡
+
+  /
+  / mutro-art-group-fiz-ra
+  /
+  / description
+  = capture_block_to descr=:descr do
+    | ФИЗ-РА.
+  / long description
+  = capture_block_to long_descr=:long_descr do
+    | Смысл в том, чтобы почувствовать свое собственное тело как улучшенное после временного ограничения движения и чувств.
+    br
+    br
+    | Участники хэппенинга создадут и наденут друг на друга ограничивающие костюмы, после чего мы проведем урок старой доброй физры.
+  / schedule item
+  == include_slim("ru/shared/2018/_project",
+      participant_id: "mutro-art-group",
+      project_id: "mutro-art-group-fiz-ra",
+      time: "10:00",
+      description: descr,
+      long_description: long_descr)
+
+  /
+  / natalia-rebelo-fontana-de-trevas
+  /
+  / description
+  = capture_block_to descr=:descr do
+    | Перформанс «Фонтан мрака».
+  / long description
+  = capture_block_to long_descr=:long_descr do
+    | «Фонтан мрака» это перформанс. Его название вдохновлено Фонтаном Треви в Риме, но Треви превращается в trevas, что означает «мрак» на португальском языке. Перформанс основан на голосе и звуке.
+  / schedule item
+  == include_slim("ru/shared/2018/_project",
+      participant_id: "natalia-rebelo",
+      project_id: "natalia-rebelo-fontana-de-trevas",
+      time: "20:00 &mdash; 20:10",
+      description: descr,
+      long_description: long_descr)
+
+  /
+  / apart-sensitive-antennae
+  /
+  / description
+  = capture_block_to descr=:descr do
+    | чувственные антенны. Перформанс
+  / long description
+  = capture_block_to long_descr=:long_descr do
+    | Данный перформанс &mdash; это своего рода коллаж из текстов, которые мы создали в прошлом году и хотим перестроить и адаптировать к Работай Больше! Отдыхай Больше! В прошлом году мы были сосредоточены на теме прекарности, труда, автоматизации. Нарратив построен на двух историях: одна более практическая, сосредоточенная на СЕЙЧАС и на нашем личном опыте, связанном с коллективностью, неолиберальной критикой в постсоветской стране, которая быстро переходит к воображению полного автоматизированного общества. Искусственный интеллект под именем АДА говорит о новом обществе и о том, что ей нужно было изменить. Нарратив работает с такими теориями как русский космизм, ксенофеминизм, словацкий неоавангард и проблематизирует концепцию лени.
+  / schedule item
+  == include_slim("ru/shared/2018/_project",
+      participant_id: "apart",
+      project_id: "apart-sensitive-antennae",
+      time: "20:20 &mdash; 20:50",
+      description: descr,
+      long_description: long_descr)
+
+  /
+  / masha-kotlyachkova-biobar
+  /
+  / description
+  = capture_block_to descr=:descr do
+    | Биобар «Танго психобиотиков».
+  / long description
+  = capture_block_to long_descr=:long_descr do
+    | Бар для тебя и твоих нечеловеческих друзей, на утро после которого ты не почувствуешь ни грусти, ни апатии.
+  / schedule item
+  == include_slim("ru/shared/2018/_project",
+      participant_id: "masha-kotlyachkova",
+      project_id: "masha-kotlyachkova-biobar",
+      time: "21:00 &mdash; 23:00",
+      description: descr,
+      long_description: long_descr)

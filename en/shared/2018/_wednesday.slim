@@ -1,2 +1,77 @@
   == include_slim("ru/shared/2018/_day_header")
-    | ≋СРЕДА / 27 ИЮНЯ≋
+    | ≋WEDNESDAY / 27 JUNE≋
+
+  == include_slim("ru/shared/2018/_place",
+      place_comment: "Registration is required via email <a href='work.hard.play.0@gmail.com'>work.hard.play.0@gmail.com</a> till 24.06")
+    | ⚡Secret sanatorium near Minsk⚡
+
+  /
+  / mutro-art-group-fiz-ra
+  /
+  / description
+  = capture_block_to descr=:descr do
+    | FIZ-RA.
+  / long description
+  = capture_block_to long_descr=:long_descr do
+    | The goal is to feel one’s own body as perfected after a temporary constraint of one’s movement and feelings.
+    br
+    br
+    | Participants of the happening will dress each other in constraining clothes, after which there will be a good old favourite ‘fiz-ra’ session.
+  / schedule item
+  == include_slim("ru/shared/2018/_project",
+      participant_id: "mutro-art-group",
+      project_id: "mutro-art-group-fiz-ra",
+      time: "10:00",
+      description: descr,
+      long_description: long_descr)
+
+  /
+  / natalia-rebelo-fontana-de-trevas
+  /
+  / description
+  = capture_block_to descr=:descr do
+    | Performance “Fontana de Trevas”.
+  / long description
+  = capture_block_to long_descr=:long_descr do
+    | «Fontana de Trevas» is a performance piece. The name is inspired by Fontana di Trevi in Rome, but Trevi is transformed into trevas, which means murk in Portuguese. It is a voice and sound piece.
+  / schedule item
+  == include_slim("ru/shared/2018/_project",
+      participant_id: "natalia-rebelo",
+      project_id: "natalia-rebelo-fontana-de-trevas",
+      time: "20:00 &mdash; 20:10",
+      description: descr,
+      long_description: long_descr)
+
+  /
+  / apart-sensitive-antennae
+  /
+  / description
+  = capture_block_to descr=:descr do
+    | sensitive antennae.
+  / long description
+  = capture_block_to long_descr=:long_descr do
+    | Performance is some kind of collage of texts we created last year and are hyperconnected, changed, customized for Work Hard! Play Hard!.  Last year we were focused on topic of Precarity, Labor, Full automation so the narrative is based on two stories, one is more practical, focused on NOW and our personal experience with collectivity,  neoliberal critique in post-soviet country which fluenty will pass to imagination of full automated society. AI called ADA is speaking about new society and what she had to change. The story worked with theories as Russian Cosmism, Xenofeminism, Slovak neo-avantgarde and problematize concept of laziness.
+  / schedule item
+  == include_slim("ru/shared/2018/_project",
+      participant_id: "apart",
+      project_id: "apart-sensitive-antennae",
+      time: "20:20 &mdash; 20:50",
+      description: descr,
+      long_description: long_descr)
+
+  /
+  / masha-kotlyachkova-biobar
+  /
+  / description
+  = capture_block_to descr=:descr do
+    | Biobar “Tango of psychobiotics”.
+  / long description
+  = capture_block_to long_descr=:long_descr do
+    | A bar for you and your non-human friends, the morning after which you will feel neither sad nor apathetic.
+  / schedule item
+  == include_slim("ru/shared/2018/_project",
+      participant_id: "masha-kotlyachkova",
+      project_id: "masha-kotlyachkova-biobar",
+      time: "21:00 &mdash; 23:00",
+      description: descr,
+      long_description: long_descr)
