@@ -45,3 +45,27 @@
        time: "14:30 &mdash; 17:00",
        description: descr,
        long_description: long_descr)
+
+    == include_slim("ru/shared/2018/_place")
+      | ⚡City⚡
+
+    /
+    / kristina-vegera-machine-of-limitless-hearing
+    /
+    / description
+    = capture_block_to descr=:descr
+      | The Machine of limitless hearing: sound walks
+    / / long description
+    = capture_block_to long_descr=:long_descr do
+      | This is an invitation to a research expedition for the Machine of limitless hearing, considering as a part of a human being responsible for feeling. Hearing appears here as an abstract concept and is expressed in different forms - tactile, visual, imaginary. The hearing is the ability to touch, to see, to understand another. The other is everything outside of me.
+      br
+      br
+      | During these walks, we will focus our interest on the city and all its components as an ecosystem. We will put inside our body the idea of the existence of the Machine of limitless hearing and go on a journey using some instructions from the book of Murray Schafer "A Sound Education: 100 Exercises in Listening and Sound Making". Everything that we will feel and get as an experience together allows us to learn more about the Machine.
+
+    / schedule item
+    == include_slim("ru/shared/2018/_project",
+        participant_id: "kristina-vegera",
+        project_id: "kristina-vegera-machine-of-limitless-hearing",
+        time: "17:15 &mdash; 18:15",
+        description: descr,
+        long_description: long_descr)
