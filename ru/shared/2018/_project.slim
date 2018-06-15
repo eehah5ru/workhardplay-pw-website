@@ -4,15 +4,17 @@
       == schedule_prj_cover_style project_id, "/pictures/2018/#{project_id}/#{project_id}-cover.jpg", project_id_suffix: project_id_suffix
       p.time
         = time
-      p.descr
+      p.descr class="#{(defined? long_description) ? '' : 'no-long'}"
         span
           - if defined? description_prefix
             = description_prefix
             |&ensp;
-          = _participantName participant_id
-          |.&ensp;
+          - if defined? participant_id
+            = _participantName participant_id
+            |.&ensp;
           == description
-      p.long-descr
-        == long_description
-      / FIXME: remove helper.
-      == sh18_participant_info participant_id
+      - if defined? long_description
+        p.long-descr
+          == long_description
+          / FIXME: remove helper.
+          == sh18_participant_info participant_id
