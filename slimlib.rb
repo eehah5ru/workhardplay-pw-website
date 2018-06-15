@@ -94,10 +94,10 @@ def class_has_video
   return "$if(hasVideo)$has-video-icon$endif$"
 end
 
-def schedule_prj_cover_style(project_name, image_path)
+def schedule_prj_cover_style(project_name, image_path, options={})
   return <<END
 <style>
-.#{project_name}-cover {
+.#{project_name}#{options[:project_id_suffix]}-cover {
   background-image: linear-gradient(270deg, rgba(255,255,255,0), rgba(255,255,255,1)), url("#{image_path}");
   opacity: 0.5;
   filter: saturate(200%);
@@ -107,8 +107,8 @@ transform: perspective(1280px) rotate3d(#{rand(-30..30)}, #{rand(-90..90)}, #{ra
 
 }
 </style>
-<h1 name="#{project_name}" id="#{project_name}" style="width:0; hieght:0;"></h1>
-<a class="scroll" id="#{project_name}-link" href="##{project_name}" style="width:0; hieght:0;"></a>
+<h1 name="#{project_name}#{options[:project_id_suffix]}" id="#{project_name}#{options[:project_id_suffix]}" style="width:0; hieght:0;"></h1>
+<a class="scroll" id="#{project_name}#{options[:project_id_suffix]}-link" href="##{project_name}#{options[:project_id_suffix]}" style="width:0; hieght:0;"></a>
 END
 end
 
