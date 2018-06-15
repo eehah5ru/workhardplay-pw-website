@@ -1,10 +1,14 @@
+  - project_id_suffix="" unless defined? project_id_suffix
   .project-col
-    .project data-project=project_id
-      == schedule_prj_cover_style project_id, "/pictures/2018/#{project_id}/#{project_id}-cover.jpg"
+    .project data-project="#{project_id}#{project_id_suffix}"
+      == schedule_prj_cover_style project_id, "/pictures/2018/#{project_id}/#{project_id}-cover.jpg", project_id_suffix: project_id_suffix
       p.time
         = time
       p.descr
         span
+          - if defined? description_prefix
+            = description_prefix
+            |&ensp;
           = _participantName participant_id
           |.&ensp;
           == description
