@@ -78,8 +78,7 @@
   /
   /
   /
-  == include_slim("ru/shared/2018/_place",
-      place_comment: "Музыка в перерывах: Вова Синий, Trashbird, no.nothing.never")
+  == include_slim("ru/shared/2018/_place")
     | ⚡КЛУБ-БАР «ЛУЧ» / 3 этаж, Толбухина ул. 4⚡
 
   /
@@ -288,3 +287,15 @@
       time: "01:00 &mdash; 02:00",
       description: descr,
       long_description: long_descr)
+
+  /
+  / DJs
+  /
+  / description
+  = capture_block_to descr=:descr do
+    | Вова Синий, Trashbird, no.nothing.never, data sabotage
+  / schedule item
+  == include_slim("ru/shared/2018/_project",
+      project_id: "djs",
+      time: "Музыка в перерывах",
+      description: descr)
