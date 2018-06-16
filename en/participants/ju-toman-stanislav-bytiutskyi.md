@@ -1,8 +1,6 @@
 ---
-title: Ju Toman (with Stanislav Bytiutskyi)
-city: no city (and Kyiv)
+title: Ju Toman
+city: no city
 ---
 
 Ju Thoman / film researcher, video essayist, translator.
-
-Stanislav Bytiutskyi / director, film critic.
