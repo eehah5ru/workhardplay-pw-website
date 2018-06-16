@@ -1,6 +1,6 @@
 ---
 title: Apparatus 22 and Sergey Kantsedal
-city: Bucharest and Kharkov / Turin
+city: Brussels / Bucharest and Turin
 ---
 
 Apparatus 22 is a transdisciplinary art collective founded in January 2011 by current members Erika Olea, Maria Farcas, Dragos Olea and Ioana Nemes (1979 — 2011) in Bucharest, Romania. Since 2015 working between Bucharest and Brussels, Apparatus 22 think itself as a collective of dreamers, researchers, poetic activists and (failed) futurologists.
