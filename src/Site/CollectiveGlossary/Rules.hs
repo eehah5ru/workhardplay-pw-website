@@ -25,7 +25,7 @@ collectiveGlossaryRules ts = do
   --
   -- terms deps rules
   --
-  -- matchMultiLang depsRules depsRules ("collective-glossary/*.md")
+  matchMultiLang depsRules depsRules ("collective-glossary/*.md")
 
   --
   -- terms pages
@@ -70,7 +70,7 @@ collectiveGlossaryRules ts = do
 
 
 withCollectiveGlossaryDeps rules = do
-  deps <- (makePatternDependency (ruDeps <> enDeps))
+  deps <- (makePatternDependency (ruDeps .||. enDeps))
   rulesExtraDependencies [deps] rules
   where
     ruDeps = (fromGlob (localizePath RU "collective-glossary/*.md"))

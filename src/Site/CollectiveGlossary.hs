@@ -42,11 +42,11 @@ buildTerms = do
         byYear year p = l' (year ++ "/" ++ p)
         projectsPattern year =
           let byYear' = byYear year
-          in ((byYear' "**/*.slim") .||. (byYear' "**/*.md"))
-             .&&. (complement . byYear' $ "**/_*.slim")
-             .&&. (complement . byYear' $ "**/.*.slim")
-             .&&. (complement . byYear' $ "**/.*.md")
-        termsSources = (projectsPattern "2016/archive") <> (projectsPattern "2017/projects")
+          in ((byYear' "*.slim") .||. (byYear' "*.md"))
+             .&&. (complement . byYear' $ "_*.slim")
+             .&&. (complement . byYear' $ ".*.slim")
+             .&&. (complement . byYear' $ ".*.md")
+        termsSources = (projectsPattern "2016/archive") .||. (projectsPattern "2017/projects")
 
 
 
