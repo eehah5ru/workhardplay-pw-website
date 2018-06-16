@@ -126,33 +126,44 @@ $primary-color-2017: darken(blue, 10%);
       width: 100%;
       text-align: center;
 
-      transform: rotateY(56deg) rotateZ(-10deg) translateX(-20%);
-      font-size: 13vw;
+      // transform: rotateY(56deg) rotateZ(-10deg) translateX(-20%);
+
+      transform: rotateZ(-34deg) rotateY(23deg);
+      transform-origin: 50% 50%;
+      font-size: 8vw;
 
       @include breakpoint(medium) {
-        transform: rotateY(56deg) rotateZ(-10deg);
-        font-size: 12vw;
-      }
-
-      @include breakpoint(730) {
-        font-size: 11vw;
-      }
-
-      @include breakpoint(970) {
-        font-size: 10vw;
-      }
-
-      @include breakpoint(1084) {
-        font-size: 9vw;
-      }
-
-      @include breakpoint(1184) {
-        font-size: 8vw;
-      }
-
-      @include breakpoint(1284) {
         font-size: 7vw;
       }
+
+      @include breakpoint(large) {
+        font-size: 5vw;
+      }
+
+      // @include breakpoint(medium) {
+      //   transform: rotateY(56deg) rotateZ(-10deg);
+      //   font-size: 12vw;
+      // }
+
+      // @include breakpoint(730) {
+      //   font-size: 11vw;
+      // }
+
+      // @include breakpoint(970) {
+      //   font-size: 10vw;
+      // }
+
+      // @include breakpoint(1084) {
+      //   font-size: 9vw;
+      // }
+
+      // @include breakpoint(1184) {
+      //   font-size: 8vw;
+      // }
+
+      // @include breakpoint(1284) {
+      //   font-size: 7vw;
+      // }
 
       a {
         color: lighten(grey, 5%);
