@@ -14,7 +14,13 @@
             |.&ensp;
           == description
       - if defined? long_description
-        p.long-descr
-          == long_description
+        - if long_description =~ /^\s*<p>/
+          .long-descr
+            == long_description
           / FIXME: remove helper.
           == sh18_participant_info participant_id
+        - else
+          p.long-descr
+            == long_description
+            / FIXME: remove helper.
+            == sh18_participant_info participant_id

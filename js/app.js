@@ -248,8 +248,8 @@
   var toggleLongDescrVisibility = function(project) {
     var rootElement = $("[data-project='" + project + "']");
 
-    var h = $(rootElement).find("p.long-descr:hidden,.participant-bio:hidden,.participant-name:hidden");
-    var v = $("p.long-descr:visible,.participant-bio:visible,.participant-name:visible");
+    var h = $(rootElement).find(".long-descr:hidden,.participant-bio:hidden,.participant-name:hidden");
+    var v = $(".long-descr:visible,.participant-bio:visible,.participant-name:visible");
     h.show();
     v.hide();
 
