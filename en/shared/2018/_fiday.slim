@@ -80,7 +80,7 @@
   /
   /
   == include_slim("ru/shared/2018/_place",
-      place_comment: "Music in breaks: Vova Siniy, Trashbird, no.nothing.never")
+      place_comment: "")
     | ⚡Club-Bar Luch / 3 floor, Tolbuhina 4⚡
 
   /
@@ -284,3 +284,15 @@
       time: "01:00 &mdash; 02:00",
       description: descr,
       long_description: long_descr)
+
+  /
+  / DJs
+  /
+  / description
+  = capture_block_to descr=:descr do
+    | Vova Siniy, Trashbird, no.nothing.never, data sabotage
+  / schedule item
+  == include_slim("ru/shared/2018/_project",
+      project_id: "djs",
+      time: "Music in breaks",
+      description: descr)

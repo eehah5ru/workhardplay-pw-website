@@ -264,12 +264,17 @@
     // vPB.hide();
 
 
+    if (_.isEmpty(project)) {
+      return;
+    }
+    console.log("going with empty project: " + project);
 
     // var project = $(self).parent().parent().data("project");
     var classToAdd = project + "-cover";
     var classToRemove = $(".project-cover").data("classToRemove");
 
     if (classToAdd != classToRemove) {
+      console.log("adding with-project-cover");
       $(".project-cover").removeClass(classToRemove);
       $(".project-cover").addClass(classToAdd);
       $(".project-cover").data("classToRemove", classToAdd);
@@ -341,9 +346,14 @@
     window.setTimeout(
       function() {
         toggleLongDescrVisibility(window.location.hash.replace(/#/, ''));
-        $("#" + window.location.hash.replace(/#/, '') + "-link")[0].click();
+        var projectName = window.location.hash.replace(/#/, '');
+        window.location.hash = projectName;
+        if (_.isEmpty(projectName)) {
+          return;
+        }
+        $("#" + projectName + "-link")[0].click();
         // $("#" + window.location.hash.replace(/#/, '') + "-link").click();
-        window.location.hash = window.location.hash.replace(/#/, '');
+
       },
       500
     );

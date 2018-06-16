@@ -46,9 +46,30 @@ section.whp-2018.index-page.description {
     }
   }
 
+  .project-col.general-info {
+    p {
+      @extend .small-12;
+      @extend .large-6;
+      @extend .large-offset-3;
+      @extend .columns;
+      @extend .end;
+    }
+
+    &.first {
+      margin-top: 2rem;
+    }
+  }
+
+  .project-col .hline {
+    color: $primary-color-2018;
+  }
+
   .project p.descr span,
   .project p.descr.no-long span {
     color: $secondary-color-2018;
+  }
+
+  .project p.descr span {
     border-bottom: 1px dashed $primary-color-2018;
   }
 
