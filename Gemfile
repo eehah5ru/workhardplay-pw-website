@@ -3,6 +3,7 @@ source "https://rubygems.org"
 
 gem 'sass'
 gem 'slim'
+gem "pandoc-ruby"
 gem 'capistrano'
 # gem 'capistrano-ssh-doctor', '~> 1.0'
 gem "capistrano-scm-copy"
