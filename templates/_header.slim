@@ -3,10 +3,12 @@ meta name="viewport" content="width=device-width, initial-scale=1"
 
 meta property="og:title" content="$title$"
 
+meta property="og:type" content="website"
+
 = _if "projectCover"
-  meta property="og:image" content="$projectCover$"
+  meta property="og:image" content="http://workhardplay.pw/$projectCover$?$revision$"
 = _else
-  meta property="og:image" content="/images/whp-cover.jpg"
+  meta property="og:image" content="http://workhardplay.pw/images/whp-cover.jpg?$revision$"
 = _endif
 
 
