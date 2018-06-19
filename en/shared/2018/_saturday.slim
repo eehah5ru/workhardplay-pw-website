@@ -158,6 +158,24 @@
       description: descr,
       long_description: long_descr)
 
+  /
+  / ildar-iakubov-crypto-casino
+  /
+  / description
+  = capture_block_to descr=:descr
+    | Crypto Casino / Registration required at: <a href='https://www.ildar.io/crypto-casino/'>www.ildar.io/crypto-casino/</a>.
+  / / long description
+  = capture_block_to long_descr=:long_descr do
+    | Only those who work hard will gamble in our casino. To earn some cryptocurrency  to make bets our guest would have to be employed in our casino first. Details and registration: <a href='https://www.ildar.io/crypto-casino/'>www.ildar.io/crypto-casino/</a>.
+
+  / schedule item
+  == include_slim("ru/shared/2018/_project",
+      participant_id: "ildar-iakubov",
+      project_id: "ildar-iakubov-crypto-casino",
+      time: "23:00 &mdash; 02:00",
+      description: descr,
+      long_description: long_descr)
+
   == include_slim("ru/shared/2018/_place")
     | ⚡City / all day⚡
 
