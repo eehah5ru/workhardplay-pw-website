@@ -36,7 +36,7 @@ collectiveGlossaryRules ts = do
   --
   -- index page
   --
-  withCollectiveGlossaryDeps $ do
+  withCollectiveGlossaryDeps ts $ do
     matchMultiLang indexRules indexRules "collective-glossary.md"
 
 
@@ -69,9 +69,12 @@ collectiveGlossaryRules ts = do
 
 
 
-withCollectiveGlossaryDeps rules = do
-  deps <- (makePatternDependency (ruDeps .||. enDeps))
-  rulesExtraDependencies [deps] rules
+withCollectiveGlossaryDeps ts rules = do
+  -- deps <- (makePatternDependency (ruDeps .||. enDeps))
+  tagsRuDeps <- (return . tagsDependency . terms RU) ts
+  tagsEnDeps <- return . tagsDependency . terms EN $ ts
+
+  rulesExtraDependencies [tagsRuDeps, tagsEnDeps] rules
   where
     ruDeps = (fromGlob (localizePath RU "collective-glossary/*.md"))
     enDeps = (fromGlob (localizePath EN "collective-glossary/*.md"))
