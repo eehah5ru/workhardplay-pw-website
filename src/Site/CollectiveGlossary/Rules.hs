@@ -25,7 +25,7 @@ collectiveGlossaryRules ts = do
   --
   -- terms deps rules
   --
-  matchMultiLang depsRules depsRules ("collective-glossary/*.md")
+  -- matchMultiLang depsRules depsRules ("collective-glossary/*.md")
 
   --
   -- terms pages
