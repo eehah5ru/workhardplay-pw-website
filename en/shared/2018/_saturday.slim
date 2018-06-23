@@ -9,7 +9,7 @@
   /
   / description
   = capture_block_to descr=:descr
-    |  A walk through the semicircle. / Meeting by <a href="https://www.google.com/maps/place/53%C2%B056'02.9%22N+27%C2%B038'53.8%22E/@53.9341441,27.6460923,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d53.934141!4d27.648281">the cafe "Arbat"</a>(metro station "Vostok").
+    |  A walk through the semicircle. / Places are limited, register at <a href='mailto:minskurban@gmail.com'>minskurban@gmail.com</a> until 29.06. Please send the name and phone number.
   / / long description
   = capture_block_to long_descr=:long_descr do
     | The semicircle is an artificial canal and a complex engineering structure that seems to be an accidental natural artifact. Its material forms embody the rationality to which the socialist city was subject: the maximization of production, the improvement of health, the provision of leisure. To make nature work for the city, it was necessary to build a large-scale engineering and landscape-architectural system, which it is now unable to support.
@@ -49,24 +49,6 @@
   == include_slim("ru/shared/2018/_place")
     | ⚡Dance Studio / Very Horuzhei, 3⚡
 
-  /
-  / alexandra-novozhenova-arithmetic-of-mobiliazation
-  /
-  / description
-  = capture_block_to descr=:descr
-    | Arithmetic of mobilization. Lecture.
-
-  / / long description
-  = capture_block_to long_descr=:long_descr do
-    | "5X5 = 25", an exhibition of constructivist artists in 1921, already by its name brought to the fore the radical self-evidence of materialistic equality. Equality in the title can be understood not only arithmetically, but also as the underlying constructivist definition of the construction: a balance of multidirectional forces, which determine its stable existence in physical space. The arithmetic of the first five-year plan, with which artists dealt a decade later, radically differed from the straightforward truth of the constructivist equation. Two plus two now equated five, by which expressing the truth of mobilization.
-
-  / schedule item
-  == include_slim("ru/shared/2018/_project",
-      participant_id: "alexandra-novozhenova",
-      project_id: "alexandra-novozhenova-arithmetic-of-mobiliazation",
-      time: "18:30 &mdash; 19:30",
-      description: descr,
-      long_description: long_descr)
 
   /
   / anastasia-vepreva-lecture-the-ideal-formulation-of-the-refusal-of-the-artist
@@ -158,26 +140,9 @@
       description: descr,
       long_description: long_descr)
 
-  /
-  / ildar-iakubov-crypto-casino
-  /
-  / description
-  = capture_block_to descr=:descr
-    | Crypto Casino / Registration required at: <a href='https://www.ildar.io/crypto-casino/'>www.ildar.io/crypto-casino/</a>.
-  / / long description
-  = capture_block_to long_descr=:long_descr do
-    | Only those who work hard will gamble in our casino. To earn some cryptocurrency  to make bets our guest would have to be employed in our casino first. Details and registration: <a href='https://www.ildar.io/crypto-casino/'>www.ildar.io/crypto-casino/</a>.
-
-  / schedule item
-  == include_slim("ru/shared/2018/_project",
-      participant_id: "ildar-iakubov",
-      project_id: "ildar-iakubov-crypto-casino",
-      time: "23:00 &mdash; 02:00",
-      description: descr,
-      long_description: long_descr)
 
   == include_slim("ru/shared/2018/_place")
-    | ⚡City / all day⚡
+    | ⚡City⚡
 
   /
   / roman-osminkin-series-of-street-political-hip-hop-sets-dance-however-you-can
@@ -195,5 +160,23 @@
       participant_id: "roman-osminkin",
       project_id: "roman-osminkin-series-of-street-political-hip-hop-sets-dance-however-you-can",
       description: descr,
-      time: "",
+      time: "all day",
+      long_description: long_descr)
+
+  /
+  / ildar-iakubov-crypto-casino
+  /
+  / description
+  = capture_block_to descr=:descr
+    | Crypto Casino / Registration required at: <a href='https://www.ildar.io/crypto-casino/'>www.ildar.io/crypto-casino/</a>.
+  / / long description
+  = capture_block_to long_descr=:long_descr do
+    | Only those who work hard will gamble in our casino. To earn some cryptocurrency  to make bets our guest would have to be employed in our casino first. Details and registration: <a href='https://www.ildar.io/crypto-casino/'>www.ildar.io/crypto-casino/</a>.
+
+  / schedule item
+  == include_slim("ru/shared/2018/_project",
+      participant_id: "ildar-iakubov",
+      project_id: "ildar-iakubov-crypto-casino",
+      time: "23:00 &mdash; 02:00",
+      description: descr,
       long_description: long_descr)
