@@ -52,33 +52,6 @@
   /
   /
   == include_slim("ru/shared/2018/_place")
-    | ⚡Place will be specified later⚡
-
-  /
-  / your-mothers-maidenname
-  /
-  / description
-  = capture_block_to descr=:descr do
-    | Feminist piano rap.
-  / long description
-  = capture_block_to long_descr=:long_descr do
-    | Your mother’s maiden name (Saint Petersburg, Russia) performs profeminist piano rap. This is an art- and pedagogical research project with feminist agenda and focus on continuous reflection around horizontal relationship and regulation on relationship between classes.
-    br
-    br
-    | 40-50 minutes.
-
-  / schedule item
-  == include_slim("ru/shared/2018/_project",
-      participant_id: "your-mothers-maidenname",
-      project_id: "your-mothers-maidenname",
-      time: "15:30 &mdash; 16:30",
-      description: descr,
-      long_description: long_descr)
-
-  /
-  /
-  /
-  == include_slim("ru/shared/2018/_place")
     | ⚡Place will be specified later. Video programme.⚡
 
   /
@@ -279,6 +252,34 @@
       time: "19:30",
       description: descr,
       long_description: long_descr)
+
+  /
+  /
+  /
+  == include_slim("ru/shared/2018/_place")
+    | ⚡"Lohvinau" Book Store / Nyezalyezhnastsi ave. 37а⚡
+
+  /
+  / your-mothers-maidenname
+  /
+  / description
+  = capture_block_to descr=:descr do
+    | Feminist piano rap.
+  / long description
+  = capture_block_to long_descr=:long_descr do
+    | Your mother’s maiden name (Saint Petersburg, Russia) performs profeminist piano rap. This is an art- and pedagogical research project with feminist agenda and focus on continuous reflection around horizontal relationship and regulation on relationship between classes.
+    br
+    br
+    | 40-50 minutes.
+
+  / schedule item
+  == include_slim("ru/shared/2018/_project",
+      participant_id: "your-mothers-maidenname",
+      project_id: "your-mothers-maidenname",
+      time: "20:00 &mdash; 21:00",
+      description: descr,
+      long_description: long_descr)
+
 
   /
   / dvizhenie notch

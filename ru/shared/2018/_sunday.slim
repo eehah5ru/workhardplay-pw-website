@@ -52,33 +52,6 @@
   /
   /
   == include_slim("ru/shared/2018/_place")
-    | ⚡Место будет объявлено чуть позже⚡
-
-
-  /
-  / your-mothers-maidenname
-  /
-  / description
-  = capture_block_to descr=:descr do
-    | Феминистский фортепианный рэп.
-  / long description
-  = capture_block_to long_descr=:long_descr do
-    | Локально-менструментальный ансамбль "Девичья фамилия вашей матери" (Санкт-Петербург) исполняет феминистский фортепианный рэп. Это художественный и педагогический исследовательский проект, направленный на пропаганду феминистских идей и непрерывную рефлексию вокруг горизонтальной работы и регуляции межклассовых отношений.
-    br
-    br
-    | 40-50 минут.
-  / schedule item
-  == include_slim("ru/shared/2018/_project",
-      participant_id: "your-mothers-maidenname",
-      project_id: "your-mothers-maidenname",
-      time: "15:30 &mdash; 16:30",
-      description: descr,
-      long_description: long_descr)
-
-  /
-  /
-  /
-  == include_slim("ru/shared/2018/_place")
     | ⚡Место будет объявлено чуть позже. Видео-программа.⚡
 
 
@@ -280,6 +253,33 @@
       time: "19:30",
       description: descr,
       long_description: long_descr)
+
+  /
+  /
+  /
+  == include_slim("ru/shared/2018/_place")
+    | ⚡Кнігарня «Логвінаў» / пр. Независимости 37а⚡
+
+  /
+  / your-mothers-maidenname
+  /
+  / description
+  = capture_block_to descr=:descr do
+    | Феминистский фортепианный рэп.
+  / long description
+  = capture_block_to long_descr=:long_descr do
+    | Локально-менструментальный ансамбль "Девичья фамилия вашей матери" (Санкт-Петербург) исполняет феминистский фортепианный рэп. Это художественный и педагогический исследовательский проект, направленный на пропаганду феминистских идей и непрерывную рефлексию вокруг горизонтальной работы и регуляции межклассовых отношений.
+    br
+    br
+    | 40-50 минут.
+  / schedule item
+  == include_slim("ru/shared/2018/_project",
+      participant_id: "your-mothers-maidenname",
+      project_id: "your-mothers-maidenname",
+      time: "20:00 &mdash; 21:00",
+      description: descr,
+      long_description: long_descr)
+
 
   /
   / dvizhenie notch
