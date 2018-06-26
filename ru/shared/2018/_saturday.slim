@@ -48,6 +48,27 @@
   == include_slim("ru/shared/2018/_place")
     | ⚡Танцевальная студия / Веры Хоружей, 3⚡
 
+
+
+  /
+  / workhardplayhard-working-group-fatigue-and-pharmachoreography
+  /
+  / description
+  = capture_block_to descr=:descr
+    | Усталость и фармахореография. Перформативный семинар
+
+  / / long description
+  = capture_block_to long_descr=:long_descr do
+    | В ходе семинара рабочая группа РБ!ОБ! предлагает протестировать протоколы коллективности для изучения усталости и фармахореографии, аффектов и дисциплины, творчества и коррупции. Что может быть контролируемым и запланированным, а что нужно сохранить спонтанным или «небезопасным»?
+  / schedule item
+  == include_slim("ru/shared/2018/_project",
+      participant_id: "workhardplayhard-working-group",
+      project_id: "workhardplayhard-working-group-fatigue-and-pharmachoreography",
+      time: "18:30 &mdash; 19:30",
+      description: descr,
+      long_description: long_descr)
+
+
   /
   / anastasia-vepreva-lecture-the-ideal-formulation-of-the-refusal-of-the-artist
   /
@@ -163,20 +184,20 @@
       time: "весь день",
       long_description: long_descr)
 
-  /
-  / ildar-iakubov-crypto-casino
-  /
-  / description
-  = capture_block_to descr=:descr
-    | Крипто Казино / Требуется регистрация: <a href='https://www.ildar.io/crypto-casino/'>www.ildar.io/crypto-casino/</a>.
-  / / long description
-  = capture_block_to long_descr=:long_descr do
-    | В нашем казино отдохнет только тот, кто хорошо поработал. Чтобы получить криптовалюту для ставок, гостям придется сначала трудоустроиться в нашем казино. Детали и обязательная регистрация: <a href='https://www.ildar.io/crypto-casino/'>www.ildar.io/crypto-casino/</a>.
+  / /
+  / / ildar-iakubov-crypto-casino
+  / /
+  / / description
+  / = capture_block_to descr=:descr
+  /   | Крипто Казино / Требуется регистрация: <a href='https://www.ildar.io/crypto-casino/'>www.ildar.io/crypto-casino/</a>.
+  / / / long description
+  / = capture_block_to long_descr=:long_descr do
+  /   | В нашем казино отдохнет только тот, кто хорошо поработал. Чтобы получить криптовалюту для ставок, гостям придется сначала трудоустроиться в нашем казино. Детали и обязательная регистрация: <a href='https://www.ildar.io/crypto-casino/'>www.ildar.io/crypto-casino/</a>.
 
-  / schedule item
-  == include_slim("ru/shared/2018/_project",
-      participant_id: "ildar-iakubov",
-      project_id: "ildar-iakubov-crypto-casino",
-      time: "23:00 &mdash; 02:00",
-      description: descr,
-      long_description: long_descr)
+  / / schedule item
+  / == include_slim("ru/shared/2018/_project",
+  /     participant_id: "ildar-iakubov",
+  /     project_id: "ildar-iakubov-crypto-casino",
+  /     time: "23:00 &mdash; 02:00",
+  /     description: descr,
+  /     long_description: long_descr)
