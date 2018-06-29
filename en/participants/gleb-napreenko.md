@@ -3,4 +3,4 @@ title: Gleb Napreenko
 city: Moscow
 ---
 
-Родился в 1989 году в Москве. Психоаналитик, искусствовед. В 2016–2017 годах — главный редактор журнала "Разногласия". Преподаватель истории и теории искусства в Школе Родченко и институте База. Живет в Москве.
+Borned in 1989 in Moscow. Psychoanalyst, art historian. In 2016-2017 - the editor-in-chief of the journal "Disagreements". Teacher of history and theory of art at the Rodchenko School and the Baza Institute. Based in Moscow.
