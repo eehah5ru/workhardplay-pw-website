@@ -82,7 +82,7 @@ archiveProjectPagesRules ts = do
       markdownPageRules $ beautifyTypography >=> render' locale
     render' locale item = do
       renderArchiveProjectPage
-        "templates/archive-2017-project.slim"
-        rootPageTpl
-        (archiveProjectCtx (terms locale ts))
-        item
+       "templates/archive-2017-project.slim"
+       rootPageTpl
+       (archiveProjectCtx (terms locale ts))
+       item
