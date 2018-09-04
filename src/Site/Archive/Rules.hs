@@ -38,12 +38,16 @@ archiveIndexPagesRules :: Terms -> Rules ()
 archiveIndexPagesRules ts = do
   let rules2016 = rules' "2016/archive/"
       rules2017 = rules' "2017/projects/"
+      rules2018 = rules' "2018/projects/"
   matchMultiLang rules2016
                  rules2016
                  "2016/archive.slim"
   matchMultiLang rules2017
                  rules2017
                  "2017/archive.slim"
+  matchMultiLang rules2018
+                 rules2018
+                 "2018/archive.slim"
   where
     rules' projectsPattern locale =
           slimPageRules $ \x -> do
@@ -61,6 +65,9 @@ archiveProjectPagesRules ts = do
 
   matchSlim "2017/projects/"
   matchMd "2017/projects/"
+
+  matchSlim "2018/projects/"
+  matchMd "2018/projects/"
 
   where
     matchSlim base = matchMultiLang slimRules
