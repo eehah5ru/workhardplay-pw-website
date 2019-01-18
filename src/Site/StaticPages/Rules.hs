@@ -22,9 +22,9 @@ staticPagesRules = do
   rulesSlim "2017/404.slim"
   rulesSlim "2016/index.slim"
   where
-    rulesSlim = staticSlimPageRules rootTpl (Just rootPageTpl) Nothing siteCtx
-    rulesAbout = staticPandocPageRules rootTpl (Just rootPageTpl) (Just "templates/about.slim") siteCtx
-    rulesIndex = staticPandocPageRules rootTpl (Just rootPageTpl) (Just "templates/index.slim") siteCtx
+    rulesSlim = staticSlimPageRulesM rootTpl (Just rootPageTpl) Nothing mkSiteCtx
+    rulesAbout = staticPandocPageRulesM rootTpl (Just rootPageTpl) (Just "templates/about.slim") mkSiteCtx
+    rulesIndex = staticPandocPageRulesM rootTpl (Just rootPageTpl) (Just "templates/index.slim") mkSiteCtx
     with2018deps rules = do
       let lDeps = \l -> (fromGlob (localizePath l "2018/shared/_*.slim"))
       deps <- makePatternDependency $ ("ru/**/_*.slim" .||. "en/**/_*.slim")

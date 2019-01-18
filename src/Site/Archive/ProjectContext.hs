@@ -176,17 +176,19 @@ fieldHasTerms terms =
 --
 -- project page ctx
 --
-archiveProjectCtx terms =
-  fieldProjectTitle
-  <> fieldProjectCover
-  <> fieldHasMedia
-  <> fieldHasVideo
-  <> fieldHasAudio
-  <> fieldProjectColor
-  <> (fieldHasPictures picturesPattern)
-  <> (fieldPictures picturesPattern)
-  <> (fieldTermsList terms)
-  <> (fieldHasTerms terms)
-  <> (fieldTermsLabel)
-  -- <> functionPictureAltTitleAttr
-  <> siteCtx
+mkArchiveProjectCtx terms =
+  do 
+     siteCtx <- mkSiteCtx
+     return $ fieldProjectTitle
+       <> fieldProjectCover
+       <> fieldHasMedia
+       <> fieldHasVideo
+       <> fieldHasAudio
+       <> fieldProjectColor
+       <> (fieldHasPictures picturesPattern)
+       <> (fieldPictures picturesPattern)
+       <> (fieldTermsList terms)
+       <> (fieldHasTerms terms)
+       <> (fieldTermsLabel)
+       -- <> functionPictureAltTitleAttr
+       <> siteCtx

@@ -64,23 +64,25 @@ fieldDummyFunction =
 -- contexts
 --
 --
-siteCtx :: Context String
-siteCtx = fieldRuUrl
-          <> fieldEnUrl
-          <> fieldLang
-          <> fieldOtherLang
-          <> fieldOtherLangUrl
-          <> fieldYear
-          <> fieldCanonicalName
-          <> fieldRootUrl
-          <> fieldArchiveUrl
-          <> fieldArchiveName
-          <> fieldAboutName
-          <> fieldGlossaryName
-          <> fieldDummyFunction
-          <> fieldParticipantBio
-          <> fieldParticipantRawBio
-          <> fieldParticipantCity
-          <> fieldParticipantName
-          <> fieldRevision
-          <> defaultContext
+mkSiteCtx :: Compiler (Context String)
+mkSiteCtx = do
+  r <- mkFieldRevision
+  return $ fieldRuUrl
+           <> fieldEnUrl
+           <> fieldLang
+           <> fieldOtherLang
+           <> fieldOtherLangUrl
+           <> fieldYear
+           <> fieldCanonicalName
+           <> fieldRootUrl
+           <> fieldArchiveUrl
+           <> fieldArchiveName
+           <> fieldAboutName
+           <> fieldGlossaryName
+           <> fieldDummyFunction
+           <> fieldParticipantBio
+           <> fieldParticipantRawBio
+           <> fieldParticipantCity
+           <> fieldParticipantName
+           <> r
+           <> defaultContext

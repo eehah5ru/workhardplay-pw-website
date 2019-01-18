@@ -29,5 +29,4 @@ participantsRules = do
          >>= saveSnapshot "content"
          -- applyTemplates here!!!
 
-mkParticipantPageCtx = do
-  siteCtx
+mkParticipantPageCtx = mkSiteCtx

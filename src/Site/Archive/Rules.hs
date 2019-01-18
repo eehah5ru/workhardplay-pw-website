@@ -55,6 +55,7 @@ archiveIndexPagesRules ts = do
             renderArchiveIndexPage rootPageTpl ctx x
 
 
+
 --
 -- project page
 --
@@ -81,8 +82,10 @@ archiveProjectPagesRules ts = do
     mdRules locale  =
       markdownPageRules $ beautifyTypography >=> render' locale
     render' locale item = do
+      ctx <- mkArchiveProjectCtx (terms locale ts)
       renderArchiveProjectPage
        "templates/archive-2017-project.slim"
        rootPageTpl
-       (archiveProjectCtx (terms locale ts))
+       ctx
        item
+

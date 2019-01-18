@@ -28,14 +28,16 @@ mkProjectsListField ctx projectsPattern = do
   >>= return . constField "projectsList"
   where cycleProjects [] = []
         cycleProjects px = cycle px
+
 --
 -- index page ctx
 --
 mkArchiveIndexPageCtx :: Tags -> Pattern -> Compiler (Context String)
 mkArchiveIndexPageCtx terms pxPattern = do
-  let pCtx = (archiveProjectCtx terms)
+  pCtx <- mkArchiveProjectCtx terms
   projects <- mkProjectsField pCtx pxPattern
   projectsList <- mkProjectsListField pCtx pxPattern
+  siteCtx <- mkSiteCtx
   return $
     projects
     <> projectsList
