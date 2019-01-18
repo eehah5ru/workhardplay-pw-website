@@ -5,6 +5,8 @@
 # resolver: lts-9.11
 resolver: lts-12.24
 
+# ghc-options:
+#   "$locals": -Wall -prof
 # Local packages, usually specified by relative directory name
 packages:
 - '.'
@@ -25,6 +27,7 @@ flags:
 
 # Extra package databases containing global packages
 extra-package-dbs: []
+
 
 # Control whether we use the GHC we find on the path
 # system-ghc: true
