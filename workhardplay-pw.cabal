@@ -9,6 +9,7 @@ executable site
   build-depends:    base == 4.*
                   , hakyll == 4.12.*
                   , hakyll-sass == 0.2.*
+                  , hlibsass == 0.1.8.0
                   , data-default
                   , hsass == 0.7.0
                   , aeson
