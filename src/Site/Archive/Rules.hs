@@ -12,6 +12,7 @@ import W7W.MultiLang
 import W7W.Compilers.Slim
 import W7W.Compilers.Markdown
 import W7W.Typography
+import qualified W7W.Cache as Cache
 
 import Site.Archive.Compilers
 
@@ -34,8 +35,8 @@ import Site.Archive.Utils
 --
 -- index page
 --
-archiveIndexPagesRules :: Terms -> Rules ()
-archiveIndexPagesRules ts = do
+archiveIndexPagesRules :: Cache.Caches -> Terms -> Rules ()
+archiveIndexPagesRules caches ts = do
   let rules2016 = rules' "2016/archive/"
       rules2017 = rules' "2017/projects/"
       rules2018 = rules' "2018/projects/"
@@ -51,7 +52,7 @@ archiveIndexPagesRules ts = do
   where
     rules' projectsPattern locale =
           slimPageRules $ \x -> do
-            ctx <- mkArchiveIndexPageCtx (terms locale ts) (archiveProjectsPattern (localizePath locale projectsPattern))
+            ctx <- mkArchiveIndexPageCtx caches (terms locale ts) (archiveProjectsPattern (localizePath locale projectsPattern))
             renderArchiveIndexPage rootPageTpl ctx x
 
 
@@ -59,8 +60,8 @@ archiveIndexPagesRules ts = do
 --
 -- project page
 --
-archiveProjectPagesRules :: Terms -> Rules ()
-archiveProjectPagesRules ts = do
+archiveProjectPagesRules :: Cache.Caches -> Terms -> Rules ()
+archiveProjectPagesRules caches ts = do
   matchSlim "2016/archive/"
   matchMd "2016/archive/"
 
@@ -82,7 +83,7 @@ archiveProjectPagesRules ts = do
     mdRules locale  =
       markdownPageRules $ beautifyTypography >=> render' locale
     render' locale item = do
-      ctx <- mkArchiveProjectCtx (terms locale ts)
+      ctx <- mkArchiveProjectCtx caches (terms locale ts)
       renderArchiveProjectPage
        "templates/archive-2017-project.slim"
        rootPageTpl

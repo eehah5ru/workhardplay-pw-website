@@ -9,6 +9,8 @@ import Hakyll
 import W7W.Utils
 import W7W.Context
 
+import qualified W7W.Cache as Cache
+
 import Site.Context
 import Site.Archive.Compilers
 import Site.Archive.ProjectContext
@@ -32,9 +34,9 @@ mkProjectsListField ctx projectsPattern = do
 --
 -- index page ctx
 --
-mkArchiveIndexPageCtx :: Tags -> Pattern -> Compiler (Context String)
-mkArchiveIndexPageCtx terms pxPattern = do
-  pCtx <- mkArchiveProjectCtx terms
+mkArchiveIndexPageCtx :: Cache.Caches -> Tags -> Pattern -> Compiler (Context String)
+mkArchiveIndexPageCtx caches terms pxPattern = do
+  pCtx <- mkArchiveProjectCtx caches terms
   projects <- mkProjectsField pCtx pxPattern
   projectsList <- mkProjectsListField pCtx pxPattern
   siteCtx <- mkSiteCtx

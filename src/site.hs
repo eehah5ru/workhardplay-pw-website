@@ -4,6 +4,9 @@
 -- import           Data.ByteString.Lazy as BSL
 import           Data.Default (def)
 import Data.Maybe (fromMaybe)
+
+import qualified W7W.Cache as Cache
+
 -- import           Data.Monoid (mappend, (<>))
 import           Hakyll
 -- import           Hakyll.Core.Configuration (Configuration, previewPort)
@@ -39,6 +42,8 @@ main :: IO ()
 main =
   hakyllWith config $
   do
+     caches <- preprocess $ Cache.newCaches
+
      templatesRules
 
      imagesRules -- static assets
@@ -60,10 +65,10 @@ main =
      staticPagesRules
 
      terms <- buildTerms
-
+              
      participantsRules
-     collectiveGlossaryRules terms
-     archiveIndexPagesRules terms
-     archiveProjectPagesRules terms
+     collectiveGlossaryRules caches terms
+     archiveIndexPagesRules caches terms
+     archiveProjectPagesRules caches terms
 
 --------------------------------------------------------------------------------

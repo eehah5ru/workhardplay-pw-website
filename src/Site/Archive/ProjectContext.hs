@@ -19,6 +19,7 @@ import W7W.Context
 import W7W.Pictures.Context
 import W7W.Pictures.Utils
 import W7W.MultiLang
+import qualified W7W.Cache as Cache
 
 import W7W.Pictures.Context
 import W7W.Pictures.Utils
@@ -120,7 +121,7 @@ fieldProjectCover =
         Just r -> return $ toUrl r
         _ -> return missingCoverUrl
     getCoverUrl i = do
-      covers <- loadAll (projectCoverPattern i) :: Compiler [Item ByteString]
+      covers <- loadAll (projectCoverPattern i) :: Compiler [Item ()]
       case (null covers) of
         True -> return missingCoverUrl
         False -> coverUrl . itemIdentifier . head $ covers
@@ -131,16 +132,18 @@ fieldProjectCover =
 --     mkImageItem =
 --       urlField "imageUrl"
 
-fieldProjectColor :: Context String
-fieldProjectColor =
-  fieldPictureColor "projectColor"
+fieldProjectColor :: Cache.Caches -> Context String
+fieldProjectColor caches =
+  fieldPictureColor caches
+                    "projectColor"
                     projectCoverPath
                     (mkColor 255 0 0)
                     colorChange
   where
     colorChange = saturate . opposite
     projectCoverPath i = do
-      covers <- loadAll (projectCoverPattern i) :: Compiler [Item ByteString]
+      -- covers <- -- loadAll (projectCoverPattern i) :: Compiler [Item ByteString]
+      covers <- loadPictures (projectCoverPattern i)
       case (null covers) of
         True -> return Nothing
         False -> return . Just . itemIdentifier . head $ covers
@@ -176,7 +179,8 @@ fieldHasTerms terms =
 --
 -- project page ctx
 --
-mkArchiveProjectCtx terms =
+
+mkArchiveProjectCtx caches terms =
   do 
      siteCtx <- mkSiteCtx
      return $ fieldProjectTitle
@@ -184,9 +188,9 @@ mkArchiveProjectCtx terms =
        <> fieldHasMedia
        <> fieldHasVideo
        <> fieldHasAudio
-       <> fieldProjectColor
+       <> (fieldProjectColor caches)
        <> (fieldHasPictures picturesPattern)
-       <> (fieldPictures picturesPattern)
+       <> (fieldPictures caches picturesPattern)
        <> (fieldTermsList terms)
        <> (fieldHasTerms terms)
        <> (fieldTermsLabel)

@@ -2,12 +2,15 @@
 module Site.CollectiveGlossary.Rules where
 
 import           Data.Monoid (mappend, (<>))
+import qualified W7W.Cache as Cache
 
 import Hakyll
 
 import W7W.Compilers.Slim
 import W7W.MultiLang
 import W7W.Typography
+
+import qualified W7W.Cache as Cache
 
 import Site.Template
 import Site.Context
@@ -20,8 +23,8 @@ import Site.CollectiveGlossary.Context
 --
 -- rules
 --
-collectiveGlossaryRules :: Terms -> Rules ()
-collectiveGlossaryRules ts = do
+collectiveGlossaryRules :: Cache.Caches -> Terms -> Rules ()
+collectiveGlossaryRules caches ts = do
   --
   -- terms deps rules
   --
@@ -58,7 +61,7 @@ collectiveGlossaryRules ts = do
       tagsRules terms $ \term p -> do
         route $ setExtension "html"
         compile $ do
-          ctx <- mkCollectiveGlossaryTermPageCtx terms term p
+          ctx <- mkCollectiveGlossaryTermPageCtx caches terms term p
           getResourceBody >>= saveSnapshot "raw_content"
 
           pandocCompiler
@@ -86,9 +89,9 @@ withCollectiveGlossaryDeps ts rules = do
 --
 --
 
-mkCollectiveGlossaryTermPageCtx :: Tags -> String -> Pattern -> Compiler (Context String)
-mkCollectiveGlossaryTermPageCtx terms term p = do
-  ctx <- mkArchiveIndexPageCtx terms p
+mkCollectiveGlossaryTermPageCtx :: Cache.Caches -> Tags -> String -> Pattern -> Compiler (Context String)
+mkCollectiveGlossaryTermPageCtx caches terms term p = do
+  ctx <- mkArchiveIndexPageCtx caches terms p
   return $
     (fieldTermName term)
     <> fieldAuthorLabel
