@@ -9,3 +9,4 @@ log
 .bundle/config
 /bundler_stubs
 .vagrant
+/stack.yaml
