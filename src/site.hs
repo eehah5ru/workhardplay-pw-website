@@ -39,36 +39,38 @@ import Site.Participants.Rules
 --------------------------------------------------------------------------------
 
 main :: IO ()
-main =
+main = do
+  caches <- Cache.newCaches
+
   hakyllWith config $
-  do
-     caches <- preprocess $ Cache.newCaches
-
-     templatesRules
-
-     imagesRules -- static assets
-     picturesRules (1280, 1280) "pictures/**/*"
-     fontsRules
-     dataRules
-
-     cssAndSassRules
-
-     jsRules
+    do
 
 
-     -- slim partials for deps
-     match ("ru/**/_*.slim" .||. "en/**/_*.slim") $ compile getResourceBody
+       templatesRules
 
-     -- collective glossary defenitions for deps
+       imagesRules -- static assets
+       picturesRules (1280, 1280) "pictures/**/*"
+       fontsRules
+       dataRules
+
+       cssAndSassRules
+
+       jsRules
 
 
-     staticPagesRules
+       -- slim partials for deps
+       match ("ru/**/_*.slim" .||. "en/**/_*.slim") $ compile getResourceBody
 
-     terms <- buildTerms
-              
-     participantsRules
-     collectiveGlossaryRules caches terms
-     archiveIndexPagesRules caches terms
-     archiveProjectPagesRules caches terms
+       -- collective glossary defenitions for deps
+
+
+       staticPagesRules
+
+       terms <- buildTerms
+
+       participantsRules
+       collectiveGlossaryRules caches terms
+       archiveIndexPagesRules caches terms
+       archiveProjectPagesRules caches terms
 
 --------------------------------------------------------------------------------
