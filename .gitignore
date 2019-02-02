@@ -8,3 +8,5 @@ log
 /.Ulysses-favorites.plist
 .bundle/config
 /bundler_stubs
+.vagrant
+/stack.yaml

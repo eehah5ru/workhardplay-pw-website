@@ -28,5 +28,3 @@ if [ ! -e /home/vagrant/.nvm ]; then
     curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 fi
 
-# install cabal-install
-stack install --resolver lts-9.21 cabal-install

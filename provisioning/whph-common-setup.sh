@@ -21,10 +21,3 @@ npm install
 
 # FIXME: nothing saved in bower.json
 npx bower install
-
-#
-# stack part
-#
-# stack install cabal-install
-stack setup
-
