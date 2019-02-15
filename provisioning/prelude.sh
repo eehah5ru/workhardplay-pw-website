@@ -56,10 +56,8 @@ fi
 
 #
 # update locales
-apt-get install language-pack-UTF-8
-locale-gen UTF-8
 
 locale-gen en_US.UTF-8 && update-locale LANG=en_US.UTF-8
-locale-gen ru_RU.UTF-8 
+locale-gen ru_RU.UTF-8
 
-
+dpkg-reconfigure locales
