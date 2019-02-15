@@ -3,7 +3,7 @@
 Vagrant.configure(2) do |config|
   config.vm.define "master" do |master|
     # config.vm.box = "puppetlabs/debian-7.8-64-nocm"
-    master.vm.box = "ubuntu/trusty64"  
+    master.vm.box = "ubuntu/trusty64"
 
     #
     #
@@ -21,7 +21,7 @@ Vagrant.configure(2) do |config|
     # master.unison.ssh_host = "10.0.0.1" # Default: '127.0.0.1'
     # master.unison.ssh_port = 22 # Default: 2222
     # master.unison.ssh_user = "deploy" # Default: 'vagrant'
-    # master.unison.perms = 0 # if you get "properties changed on both sides" error 
+    # master.unison.perms = 0 # if you get "properties changed on both sides" error
 
     # `vagrant unison-sync-polling` command will restart unison in VM if memory
     # usage gets above this threshold (in MB).
@@ -33,34 +33,34 @@ Vagrant.configure(2) do |config|
     #
     # end of unison
     #
-    
+
     master.vm.synced_folder "provisioning", '/vagrant'
 
     master.vm.provider "virtualbox" do |vb|
       vb.memory = "4096"
       vb.name ="master"
-     vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]            
+     vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
     end
-    
+
     master.ssh.forward_agent = true
 
     master.vm.hostname = "whph-master"
 
     master.vm.provision "file", source: ".ruby-version", destination: "~/tmp-whph-website/.ruby-version"
     master.vm.provision "file", source: ".nvmrc", destination: "~/tmp-whph-website/.nvmrc"
-    
+
     master.vm.provision "shell",
                         path: "provisioning/prelude.sh",
                         privileged: true
 
     master.vm.provision :host_shell do |host_shell|
       host_shell.inline = 'vagrant unison-sync-once'
-    end    
-    
+    end
+
     master.vm.provision "shell", privileged: false, path: "provisioning/user-specific.sh"
     master.vm.provision "shell", path: "provisioning/whph-common-setup.sh", privileged: false
-    master.vm.provision "shell", path: "provisioning/whph-master-setup.sh", privileged: false    
-     
+    master.vm.provision "shell", path: "provisioning/whph-master-setup.sh", privileged: false
+
   end
 
   #
@@ -70,8 +70,8 @@ Vagrant.configure(2) do |config|
   #
   config.vm.define "slave" do |slave|
     # slave.vm.box = "puppetlabs/debian-7.8-64-nocm"
-    slave.vm.box = "ubuntu/trusty64"  
-    
+    slave.vm.box = "ubuntu/trusty64"
+
     #
     #
     # unison config
@@ -88,7 +88,7 @@ Vagrant.configure(2) do |config|
     # # slave.unison.ssh_host = "10.0.0.1" # Default: '127.0.0.1'
     # # slave.unison.ssh_port = 22 # Default: 2222
     # # slave.unison.ssh_user = "deploy" # Default: 'vagrant'
-    # # slave.unison.perms = 0 # if you get "properties changed on both sides" error 
+    # # slave.unison.perms = 0 # if you get "properties changed on both sides" error
 
     # # `vagrant unison-sync-polling` command will restart unison in VM if memory
     # # usage gets above this threshold (in MB).
@@ -100,24 +100,24 @@ Vagrant.configure(2) do |config|
     #
     # end of unison
     #
-    
+
     slave.vm.synced_folder "provisioning", '/vagrant'
 
-    slave.vm.synced_folder ".", "/home/vagrant/whph-website", type: "rsync", :rsync__args => ["--verbose", "--archive", "--delete", "-z", "--links", "--no-owner", "--no-group"], rsync__exclude: ['.stack-work', '_cache', '_site']
+    slave.vm.synced_folder ".", "/home/vagrant/whph-website", type: "rsync", :rsync__args => ["--verbose", "--archive", "--delete", "-z", "--links", "--no-owner", "--no-group"], rsync__exclude: ['.stack-work', '_cache', '_site', "_tmp", "src"]
 
-    
+
 
     slave.vm.provider "virtualbox" do |vb|
       vb.memory = "2048"
       vb.name ="slave"
-      # vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]      
+      # vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
     end
 
-    
-    
+
+
     slave.ssh.forward_agent = true
 
-    config.vm.network :private_network, ip: "192.168.30.100"    
+    config.vm.network :private_network, ip: "192.168.30.100"
 
     slave.vm.hostname = "whph-slave"
 
@@ -127,22 +127,22 @@ Vagrant.configure(2) do |config|
       slave.hostsupdater.aliases = ["work-hard.test"]
       slave.hostsupdater.remove_on_suspend = true
     end
-    
+
     #
     #
     # PROVISIONING
     #
     #
-    
+
     slave.vm.provision "shell", path: "provisioning/prelude.sh"
 
     # slave.vm.provision :host_shell do |host_shell|
     #   host_shell.inline = 'vagrant unison-sync-once'
-    # end    
-    
+    # end
+
     slave.vm.provision "shell", privileged: false, path: "provisioning/user-specific.sh"
     slave.vm.provision "shell", path: "provisioning/whph-common-setup.sh", privileged: false
-    slave.vm.provision "shell", path: "provisioning/whph-slave-setup.sh", privileged: false    
-     
-  end  
+    slave.vm.provision "shell", path: "provisioning/whph-slave-setup.sh", privileged: false
+
+  end
 end
