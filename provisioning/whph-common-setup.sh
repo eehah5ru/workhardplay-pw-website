@@ -17,6 +17,8 @@ nvm install `cat .nvmrc`
 
 nvm use
 
+rm -rf node_modules
+
 npm install
 
 # FIXME: nothing saved in bower.json

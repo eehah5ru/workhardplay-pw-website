@@ -20,7 +20,7 @@
     "url": "https://github.com/eehah5ru/workhardplay-pw-website/issues"
   },
   "homepage": "https://github.com/eehah5ru/workhardplay-pw-website#readme",
-  "dependencies": {
+  "devDependencies": {
     "bower": "^1.8.4",
     "yarn": "^1.13.0"
   }

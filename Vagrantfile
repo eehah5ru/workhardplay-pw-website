@@ -71,31 +71,31 @@ Vagrant.configure(2) do |config|
   config.vm.define "slave" do |slave|
     # slave.vm.box = "puppetlabs/debian-7.8-64-nocm"
     slave.vm.box = "ubuntu/trusty64"  
-
+    
     #
     #
     # unison config
     #
     #
-    slave.unison.host_folder = "./"  #relative to the folder your Vagrantfile is in
-    slave.unison.guest_folder = "whph-website/" #relative to the vagrant home folder (e.g. /home/vagrant)
+    # slave.unison.host_folder = "./"  #relative to the folder your Vagrantfile is in
+    # slave.unison.guest_folder = "whph-website/" #relative to the vagrant home folder (e.g. /home/vagrant)
 
-    # Optional configs
-    # File patterns to ignore when syncing. Ensure you don't have spaces between the commas!
-    slave.unison.ignore = "Name {.DS_Store,_site,_cache,_tmp}" # Default: none
+    # # Optional configs
+    # # File patterns to ignore when syncing. Ensure you don't have spaces between the commas!
+    # slave.unison.ignore = "Name {.DS_Store,_site,_cache,_tmp}" # Default: none
 
-    # SSH connection details for Vagrant to communicate with VM.
-    # slave.unison.ssh_host = "10.0.0.1" # Default: '127.0.0.1'
-    # slave.unison.ssh_port = 22 # Default: 2222
-    # slave.unison.ssh_user = "deploy" # Default: 'vagrant'
-    # slave.unison.perms = 0 # if you get "properties changed on both sides" error 
+    # # SSH connection details for Vagrant to communicate with VM.
+    # # slave.unison.ssh_host = "10.0.0.1" # Default: '127.0.0.1'
+    # # slave.unison.ssh_port = 22 # Default: 2222
+    # # slave.unison.ssh_user = "deploy" # Default: 'vagrant'
+    # # slave.unison.perms = 0 # if you get "properties changed on both sides" error 
 
-    # `vagrant unison-sync-polling` command will restart unison in VM if memory
-    # usage gets above this threshold (in MB).
-    slave.unison.mem_cap_mb = 200 # Default: 200
+    # # `vagrant unison-sync-polling` command will restart unison in VM if memory
+    # # usage gets above this threshold (in MB).
+    # slave.unison.mem_cap_mb = 200 # Default: 200
 
-    # Change polling interval (in seconds) at which to sync changes
-    slave.unison.repeat = 5 # Default: 1
+    # # Change polling interval (in seconds) at which to sync changes
+    # slave.unison.repeat = 5 # Default: 1
 
     #
     # end of unison
@@ -103,17 +103,43 @@ Vagrant.configure(2) do |config|
     
     slave.vm.synced_folder "provisioning", '/vagrant'
 
+    slave.vm.synced_folder ".", "/home/vagrant/whph-website", type: "rsync", :rsync__args => ["--verbose", "--archive", "--delete", "-z", "--links", "--no-owner", "--no-group"], rsync__exclude: ['.stack-work', '_cache', '_site']
+
+    
+
     slave.vm.provider "virtualbox" do |vb|
       vb.memory = "2048"
       vb.name ="slave"
       # vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]      
     end
+
+    
     
     slave.ssh.forward_agent = true
 
+    config.vm.network :private_network, ip: "192.168.30.100"    
+
     slave.vm.hostname = "whph-slave"
+
+    if defined?(VagrantPlugins::HostsUpdater)
+
+      # Pass the found host names to the hostsupdater plugin so it can perform magic.
+      slave.hostsupdater.aliases = ["work-hard.test"]
+      slave.hostsupdater.remove_on_suspend = true
+    end
+    
+    #
+    #
+    # PROVISIONING
+    #
+    #
     
     slave.vm.provision "shell", path: "provisioning/prelude.sh"
+
+    # slave.vm.provision :host_shell do |host_shell|
+    #   host_shell.inline = 'vagrant unison-sync-once'
+    # end    
+    
     slave.vm.provision "shell", privileged: false, path: "provisioning/user-specific.sh"
     slave.vm.provision "shell", path: "provisioning/whph-common-setup.sh", privileged: false
     slave.vm.provision "shell", path: "provisioning/whph-slave-setup.sh", privileged: false    
