@@ -1,4 +1,14 @@
+= _if('teaser')
+  header.beginning.teaser.whp-2017
+    .projects-list
+      - 1000.times do
+        span
+          | $teaser$
+= _endif
+
 header.beginning.whp-2017
+
+
   nav.menu.beginning.whp-2017
     include templates/_menu_items.slim
 

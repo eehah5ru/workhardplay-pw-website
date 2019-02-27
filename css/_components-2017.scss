@@ -262,3 +262,33 @@ $primary-color-2017: darken(blue, 10%);
   }
 
 }
+
+@mixin project-list {
+  .projects-list {
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    list-style-type: none;
+    margin-left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+
+    color: lighten(grey, 20%);
+
+    span:before {
+      content: "  ->  "
+    }
+    a {
+      color: lighten(grey, 20%);
+
+      &:hover {
+        color: $primary-color-2017;
+        text-decoration: underline;
+      }
+    }
+
+    li {
+      display: inline-block;
+    }
+  }
+}
