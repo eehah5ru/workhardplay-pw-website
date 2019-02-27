@@ -9,8 +9,6 @@ export DEBIAN_FRONTEND=noninteractive
 echo "nameserver 8.8.8.8" > /etc/resolvconf/resolv.conf.d/base
 resolvconf -u
 
-apt-get update
-
 sudo add-apt-repository ppa:eugenesan/ppa -y
 sudo add-apt-repository ppa:avsm/ppa -y
 
@@ -36,7 +34,7 @@ if ! which unison; then
     sudo -u vagrant mkdir -p ~vagrant/tmp
     su vagrant -c "mkdir -p ~vagrant/bin"
     cd ~vagrant/tmp
-    rm -r unison-2.51.2
+    rm -rf unison-2.51.2
     sudo -u vagrant wget https://github.com/bcpierce00/unison/archive/v2.51.2.tar.gz
     sudo -u vagrant tar xzvf v2.51.2.tar.gz
     cd unison-2.51.2
@@ -48,7 +46,18 @@ if ! which unison; then
     ln -s /home/vagrant/bin/unison /usr/local/bin
 fi
 
+if ! which pandoc; then
+    su vagrant -c "mkdir -p ~vagrant/bin"
+    cd ~vagrant/tmp
+    wget https://github.com/jgm/pandoc/releases/download/2.6/pandoc-2.6-1-amd64.deb
+    sudo dpkg -i pandoc-2.6-1-amd64.deb
+    rm pandoc-2.6-1-amd64.deb
+fi
+
+#
+# update locales
+
 locale-gen en_US.UTF-8 && update-locale LANG=en_US.UTF-8
-locale-gen ru_RU.UTF-8 
+locale-gen ru_RU.UTF-8
 
-
+dpkg-reconfigure locales
