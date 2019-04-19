@@ -9,7 +9,7 @@ body {
 }
 
 nav#menu-sign.whp-2017{
-  @include menu-sign;
+  @include menu-sign(blue, red);
 }
 
 nav#menu.whp-2017{

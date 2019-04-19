@@ -1,0 +1,71 @@
+$primary-color-2019: white;
+$secondary-color-2019: #1f681f;
+
+nav#menu-sign.whp-2019 {
+  @include menu-sign($primary-color-2019, $secondary-color-2019);
+}
+
+.lang-switch.whp-2019 {
+  @include lang-switch($primary-color-2019, $secondary-color-2019);
+}
+
+header.index-page.whph-2019 {
+  @include whp-2017-header;
+  @include project-list;
+
+  // background: linear-gradient(180deg,#7fed98,#00b3f9, #c2c2c2);
+  background: linear-gradient(180deg,#7fed98,#00b3f9, white);
+  overflow: hidden;
+
+  span {
+    font-size: unset;
+    text-transform: uppercase;
+    line-height: 0.8;
+    color: #93fed8;
+  }
+
+  h1 {
+    color: #93fed8;
+  }
+}
+
+section.index-page.teaser.whp-2019 {
+  min-height: 100%;
+  height: 100%;
+
+  h1 {
+    font-size: 10vw;
+    color: $primary-color-2019;
+    text-align: center;
+  }
+}
+
+section.index-page.description.whp-2019 {
+  padding-bottom: 4rem;
+}
+
+section.index-page.description.whp-2019,
+section.index-page.teaser.whp-2019 {
+  background: linear-gradient(0deg,#7fed98,#00b3f9, white);
+
+  color: $primary-color-2019;
+
+  p {
+    color: $primary-color-2019;
+    font-size: 120%;
+  }
+
+  a {
+    color: $secondary-color-2019;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  @include with-parameters($primary-color-2019, $secondary-color-2019);
+
+  .project-col.general-info.first {
+    margin-top: 6rem;
+  }
+}

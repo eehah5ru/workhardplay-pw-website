@@ -321,8 +321,9 @@
     });
 
     //
-    // 2018 paramaters
+    // 2018-2019 paramaters
     //
+    $("span.parameter-descr").addClass("hidden");
     $("a.parameter-name").click(function(e) {
       return onClickParameterName(e.target);
     });

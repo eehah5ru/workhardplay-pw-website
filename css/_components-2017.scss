@@ -21,42 +21,40 @@ $primary-color-2017: darken(blue, 10%);
                                   supported by Chrome and Opera */
 }
 
-@mixin lang-switch {
-  .lang-switch {
-    @include not-selectable;
+@mixin lang-switch($first-color, $second-color) {
+  @include not-selectable;
 
-    transform: translate(2.5vw) rotate(90deg);
-    display: block;
-    font-size: 12vw;
-    line-height: 1;
-    padding-left: 6vw;
-    color: $not-jet;
-    // text-decoration: underline;
-    top: 0;
-    right: 0;
-    position: absolute;
-    z-index: 2000;
+  transform: translate(2.5vw) rotate(90deg);
+  display: block;
+  font-size: 12vw;
+  line-height: 1;
+  padding-left: 6vw;
+  color: $first-color;
+  top: 0;
+  right: 0;
+  position: absolute;
+  z-index: 99;
 
-    @include breakpoint(440) {
-      font-size: 5vw;
-    }
-
-
-    &:hover {
-      color: $red;
-      text-shadow: $blue -4px -4px;
-    }
+  @include breakpoint(440) {
+    font-size: 5vw;
   }
+
+
+  &:hover {
+    color: $second-color;
+    text-decoration: underline;
+  }
+
 }
 
-@mixin menu-sign {
+@mixin menu-sign($first-color, $second-color) {
   @include not-selectable;
 
   position: fixed;
   z-index: 2000;
   top: 0;
   left: 0;
-  color: blue;
+  color: $first-color;
   cursor: pointer;
   line-height: 1;
 
@@ -75,10 +73,10 @@ $primary-color-2017: darken(blue, 10%);
     }
 
     path {
-      fill: blue;
+      fill: $first-color;
 
       &:hover {
-        fill: red;
+        fill: $second-color;
       }
 
     }
@@ -119,7 +117,7 @@ $primary-color-2017: darken(blue, 10%);
     @include vertical-center;
     width: 100%;
 
-    // perspective: 800px;
+    perspective: 2000px;
 
     h1 {
       color: lighten(grey, 5%);
@@ -128,7 +126,7 @@ $primary-color-2017: darken(blue, 10%);
 
       // transform: rotateY(56deg) rotateZ(-10deg) translateX(-20%);
 
-      transform: rotateZ(-34deg) rotateY(23deg);
+      transform: rotateZ(-34deg) rotateY(45deg);
       transform-origin: 50% 50%;
       font-size: 8vw;
 
