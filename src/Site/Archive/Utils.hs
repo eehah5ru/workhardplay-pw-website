@@ -41,10 +41,14 @@ projectCoverPattern i =
 
 basicPicturePattern :: Item a -> String -> Pattern
 basicPicturePattern i p =
-  fromGlob $ "pictures/" ++ (itemYear i) ++ "/" ++ (itemCanonicalName i) ++ "/" ++ p
+  fromGlob $ "pictures/" ++ (yearPart i) ++ (itemCanonicalName i) ++ "/" ++ p
+  where
+    yearPart = maybe "" (\x -> x ++ "/") . itemYear
 
 basicPictureUrl :: Item a -> String
-basicPictureUrl i = "/pictures/" ++ (itemYear i) ++ "/" ++ (itemCanonicalName i) ++ "/"
+basicPictureUrl i = "/pictures/" ++ (yearPart i) ++ (itemCanonicalName i) ++ "/"
+  where
+    yearPart = maybe "" (\x -> x ++ "/") . itemYear
 
 --
 --

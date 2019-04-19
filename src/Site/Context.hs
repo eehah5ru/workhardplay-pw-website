@@ -22,7 +22,8 @@ import Site.Participants (fieldParticipantBio, fieldParticipantRawBio, fieldPart
 fieldArchiveUrl =
   field "archiveUrl" getArchiveUrl
   where
-    getArchiveUrl i = return $ "/" ++ (itemLang i) ++ "/" ++ (itemYear i) ++ "/archive.html"
+    getArchiveUrl i = return $ "/" ++ (itemLang i) ++ "/" ++ (yearPart i) ++ "archive.html"
+    yearPart = maybe (error "year is missing!") (\x -> x ++ "/") . itemYear
 
 
 fieldArchiveName =
@@ -43,12 +44,19 @@ fieldGlossaryName =
   where
     getName = return . glossaryName
 
-fieldYear = field "year" $ return . itemYear
+fieldHasYear = boolField "hasYear" $  hasYear'
+  where
+    hasYear' = maybe False (const True) . itemYear
+
+fieldYear = field "year" fieldYear'
+  where
+    fieldYear' = maybe empty return . itemYear
 
 fieldRootUrl =
   field "rootUrl" getRootUrl
   where
-    getRootUrl i = return $ "/" ++ (itemLang i) ++ "/" ++ (itemYear i) ++ "/"
+    getRootUrl i = return $ "/" ++ (itemLang i) ++ "/" ++ (yearPart i)
+    yearPart = maybe "" (\x -> x ++ "/") . itemYear
 
 
 fieldDummyFunction =
@@ -73,6 +81,7 @@ mkSiteCtx = do
            <> fieldOtherLang
            <> fieldOtherLangUrl
            <> fieldYear
+           <> fieldHasYear
            <> fieldCanonicalName
            <> fieldRootUrl
            <> fieldArchiveUrl

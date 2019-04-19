@@ -18,10 +18,17 @@ staticPagesRules = do
   rulesAbout "about.md"
   with2018deps (rulesSlim "2018/index.slim")
 
+    --
+  -- 2019
+  --
+  rulesMd "2019/invitation.md"
+  rulesMd "2019/index.md"
+
   rulesSlim "2017/index.slim"
   rulesSlim "2017/404.slim"
   rulesSlim "2016/index.slim"
   where
+    rulesMd = staticPandocPageRulesM rootTpl (Just rootPageTpl) Nothing mkSiteCtx
     rulesSlim = staticSlimPageRulesM rootTpl (Just rootPageTpl) Nothing mkSiteCtx
     rulesAbout = staticPandocPageRulesM rootTpl (Just rootPageTpl) (Just "templates/about.slim") mkSiteCtx
     rulesIndex = staticPandocPageRulesM rootTpl (Just rootPageTpl) (Just "templates/index.slim") mkSiteCtx
