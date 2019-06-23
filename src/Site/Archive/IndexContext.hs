@@ -39,7 +39,7 @@ mkArchiveIndexPageCtx caches terms pxPattern = do
   pCtx <- mkArchiveProjectCtx caches terms
   projects <- mkProjectsField pCtx pxPattern
   projectsList <- mkProjectsListField pCtx pxPattern
-  siteCtx <- mkSiteCtx
+  siteCtx <- (mkSiteCtx caches)
   return $
     projects
     <> projectsList

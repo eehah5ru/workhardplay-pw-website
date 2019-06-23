@@ -36,6 +36,8 @@ import Site.CollectiveGlossary.Rules
 
 import Site.Participants.Rules
 
+import Site.Schedule.Rules
+
 --------------------------------------------------------------------------------
 
 main :: IO ()
@@ -64,11 +66,12 @@ main = do
        -- collective glossary defenitions for deps
 
 
-       staticPagesRules
+       staticPagesRules caches
 
        terms <- buildTerms
 
        participantsRules
+       scheduleRules caches "2019"
        collectiveGlossaryRules caches terms
        archiveIndexPagesRules caches terms
        archiveProjectPagesRules caches terms

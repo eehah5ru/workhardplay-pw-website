@@ -182,7 +182,7 @@ fieldHasTerms terms =
 
 mkArchiveProjectCtx caches terms =
   do 
-     siteCtx <- mkSiteCtx
+     siteCtx <- (mkSiteCtx caches)
      return $ fieldProjectTitle
        <> fieldProjectCover
        <> fieldHasMedia

@@ -28,5 +28,156 @@ executable site
                   , pandoc
                   , cache
                   , hashable
+                  , raw-strings-qq
+  ghc-options:      -threaded
+  default-language: Haskell2010
+
+executable check-project-file
+  main-is:          Tools/CheckProjectFile.hs
+  HS-Source-Dirs:   src
+  build-depends:    base == 4.*
+                  , hakyll == 4.12.*
+                  , hakyll-sass == 0.2.*
+                  , hlibsass == 0.1.8.0
+                  , data-default
+                  , hsass == 0.7.0
+                  , aeson
+                  , bytestring
+                  , string-conversions
+                  , filepath
+                  , MissingH
+                  , binary
+                  , text
+                  , attoparsec
+                  , mtl
+                  , errors
+                  , directory
+                  , MissingH
+                  , colour
+                  , pandoc
+                  , cache
+                  , hashable
+                  , raw-strings-qq
+                  , rainbow == 0.30.0.2
+  ghc-options:      -threaded
+  default-language: Haskell2010
+
+executable generate-participant-id
+  main-is:          Tools/GenerateParticipantId.hs
+  HS-Source-Dirs:   src
+  build-depends:    base == 4.*
+                  , hakyll == 4.12.*
+                  , hakyll-sass == 0.2.*
+                  , hlibsass == 0.1.8.0
+                  , data-default
+                  , hsass == 0.7.0
+                  , aeson
+                  , bytestring
+                  , string-conversions
+                  , filepath
+                  , MissingH
+                  , binary
+                  , text
+                  , attoparsec
+                  , mtl
+                  , errors
+                  , directory
+                  , MissingH
+                  , colour
+                  , pandoc
+                  , cache
+                  , hashable
+                  , raw-strings-qq
+                  , rainbow == 0.30.0.2
+  ghc-options:      -threaded
+  default-language: Haskell2010
+
+executable generate-project-id
+  main-is:          Tools/GenerateProjectId.hs
+  HS-Source-Dirs:   src
+  build-depends:    base == 4.*
+                  , hakyll == 4.12.*
+                  , hakyll-sass == 0.2.*
+                  , hlibsass == 0.1.8.0
+                  , data-default
+                  , hsass == 0.7.0
+                  , aeson
+                  , bytestring
+                  , string-conversions
+                  , filepath
+                  , MissingH
+                  , binary
+                  , text
+                  , attoparsec
+                  , mtl
+                  , errors
+                  , directory
+                  , MissingH
+                  , colour
+                  , pandoc
+                  , cache
+                  , hashable
+                  , raw-strings-qq
+                  , rainbow == 0.30.0.2
+  ghc-options:      -threaded
+  default-language: Haskell2010
+
+executable generate-participant-file
+  main-is:          Tools/GenerateParticipantFile.hs
+  HS-Source-Dirs:   src
+  build-depends:    base == 4.*
+                  , hakyll == 4.12.*
+                  , hakyll-sass == 0.2.*
+                  , hlibsass == 0.1.8.0
+                  , data-default
+                  , hsass == 0.7.0
+                  , aeson
+                  , bytestring
+                  , string-conversions
+                  , filepath
+                  , MissingH
+                  , binary
+                  , text
+                  , attoparsec
+                  , mtl
+                  , errors
+                  , directory
+                  , MissingH
+                  , colour
+                  , pandoc
+                  , cache
+                  , hashable
+                  , raw-strings-qq
+                  , rainbow == 0.30.0.2
+  ghc-options:      -threaded
+  default-language: Haskell2010
+
+executable generate-event-file
+  main-is:          Tools/GenerateEventFile.hs
+  HS-Source-Dirs:   src
+  build-depends:    base == 4.*
+                  , hakyll == 4.12.*
+                  , hakyll-sass == 0.2.*
+                  , hlibsass == 0.1.8.0
+                  , data-default
+                  , hsass == 0.7.0
+                  , aeson
+                  , bytestring
+                  , string-conversions
+                  , filepath
+                  , MissingH
+                  , binary
+                  , text
+                  , attoparsec
+                  , mtl
+                  , errors
+                  , directory
+                  , MissingH
+                  , colour
+                  , pandoc
+                  , cache
+                  , hashable
+                  , raw-strings-qq
+                  , rainbow == 0.30.0.2
   ghc-options:      -threaded
   default-language: Haskell2010

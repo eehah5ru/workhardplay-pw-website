@@ -14,6 +14,7 @@ import W7W.Context
 import Site.CollectiveGlossary.Utils (glossaryName)
 import Site.Participants (fieldParticipantBio, fieldParticipantRawBio, fieldParticipantName, fieldParticipantCity)
 
+import qualified W7W.Cache as Cache
 --
 --
 -- site specific context fields
@@ -72,26 +73,37 @@ fieldDummyFunction =
 -- contexts
 --
 --
-mkSiteCtx :: Compiler (Context String)
-mkSiteCtx = do
-  r <- mkFieldRevision
-  return $ fieldRuUrl
-           <> fieldEnUrl
-           <> fieldLang
-           <> fieldOtherLang
-           <> fieldOtherLangUrl
-           <> fieldYear
-           <> fieldHasYear
-           <> fieldCanonicalName
-           <> fieldRootUrl
-           <> fieldArchiveUrl
-           <> fieldArchiveName
-           <> fieldAboutName
-           <> fieldGlossaryName
-           <> fieldDummyFunction
+
+--
+-- minimal
+--
+minimalSiteCtx :: Context String
+minimalSiteCtx =
+  fieldRuUrl
+    <> fieldEnUrl
+    <> fieldLang
+    <> fieldOtherLang
+    <> fieldOtherLangUrl
+    <> fieldYear
+    <> fieldHasYear
+    <> fieldCanonicalName
+    <> fieldRootUrl
+    <> fieldArchiveUrl
+    <> fieldArchiveName
+    <> fieldAboutName
+    <> fieldGlossaryName
+    <> fieldDummyFunction
+    <> defaultContext
+
+--
+-- site default
+--
+mkSiteCtx :: Cache.Caches -> Compiler (Context String)
+mkSiteCtx caches  = do
+  r <- mkFieldRevision caches
+  return $ minimalSiteCtx
            <> fieldParticipantBio
            <> fieldParticipantRawBio
            <> fieldParticipantCity
            <> fieldParticipantName
            <> r
-           <> defaultContext

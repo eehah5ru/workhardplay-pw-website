@@ -49,7 +49,7 @@ collectiveGlossaryRules caches ts = do
       slimPageRules $ \x -> do
         termsField <- mkFieldTerms (terms locale ts)
         manyTermsField <- mkFieldManyTerms 200 (terms locale ts)
-        siteCtx <- mkSiteCtx
+        siteCtx <- (mkSiteCtx caches)
         let ctx = termsField <> manyTermsField <> siteCtx
         applyAsTemplate ctx x
           >>= loadAndApplyTemplate "templates/collective-glossary-index.slim" ctx
