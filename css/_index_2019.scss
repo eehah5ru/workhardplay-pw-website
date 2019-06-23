@@ -68,4 +68,35 @@ section.index-page.teaser.whp-2019 {
   .project-col.general-info.first {
     margin-top: 6rem;
   }
+
+
+  //
+  //
+  // schedule
+  //
+  //
+  p.day {
+    color: #1f681f;
+
+    span {
+      background-color: white;
+    }
+  }
+
+  .project p.descr span {
+    color: $secondary-color-2019;
+  }
+
+  .project-col .hline {
+    color: white;
+  }
+
+  .participant-name .name {
+    background-color: white;
+    color: #1f681f;
+  }
+
+  .participant-name .hor-line {
+    color: white;
+  }
 }

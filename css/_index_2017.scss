@@ -149,9 +149,19 @@ section.whp-2017.index-page.description {
       margin-top: 1rem;
     }
 
-    p.place-comment {
+    p.place-comment,
+    .place-comment {
+      @extend .small-12;
+      @extend .large-6;
+      @extend .columns;
+      @extend .end;
+
       margin-top: 1rem;
       opacity: .4;
+    }
+
+    .place-comment p {
+      margin-bottom: 0;
     }
 
     p.descr {
