@@ -1,0 +1,17 @@
+.project-col
+  .project
+    p.place
+      | ⚡$title$⚡
+    = _if("body")
+      .descr.place-comment
+        | $body$
+    = _endif
+
+= _if("hasEvents")
+  = _for("events")
+    ' $body$
+  = _endfor
+
+= _else
+  | no events
+= _endif
