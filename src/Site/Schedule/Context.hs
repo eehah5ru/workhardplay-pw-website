@@ -52,7 +52,9 @@ loadParticipants i = loadAll =<< participantPattern i
 
 loadEvents :: Item a -> Compiler ([Item String])
 loadEvents i = do
-  eventsPattern >>= loadAll
+  eP <- eventsPattern
+  loadAllSnapshots eP "content"
+
   where
     eventsPattern :: Compiler Pattern
     eventsPattern = do
@@ -62,21 +64,26 @@ loadEvents i = do
 
 loadDays :: Item a -> Compiler ([Item String])
 loadDays i = do
-  daysPattern >>= loadAll
+  dP <- daysPattern
+  loadAllSnapshots dP "content"
+
   where
     daysPattern :: Compiler Pattern
     daysPattern = do
       return $ fromGlob $ itemLang i </> (year' i) </> "schedule/*.md"
     year' = maybe (error "no year in schedule context!") id . itemYear
 
+
 loadPlaces :: Item a -> Compiler ([Item String])
 loadPlaces i = do
-  placesPattern >>= loadAll
+  pP <- placesPattern
+  loadAllSnapshots pP "content"
   where
     placesPattern :: Compiler Pattern
     placesPattern = do
       return $ fromGlob $ itemLang i </> (year' i) </> "schedule" </> itemCanonicalName i </> "*.md"
     year' = maybe (error "no year in schedule context!") id . itemYear
+
 
 mkFieldDays :: Cache.Caches -> Compiler (Context String)
 mkFieldDays caches = do
@@ -86,17 +93,24 @@ mkFieldDays caches = do
 mkFieldPlaces :: Cache.Caches -> Compiler (Context String)
 mkFieldPlaces caches = do
   ctx <- mkPlaceContext caches
-  return $ listFieldWith "places" ctx loadPlaces
+  return $ listFieldWith "places" ctx (loadPlaces >=> sortByOrder)
 
 mkFieldEvents :: Cache.Caches -> Compiler (Context String)
 mkFieldEvents caches = do
   ctx <- mkEventContext caches
-  return $ listFieldWith "events" ctx loadEvents
+  return $ listFieldWith "events" ctx (loadEvents >=> sortByOrder)
 
 mkFieldParticipant :: Cache.Caches -> Compiler (Context String)
 mkFieldParticipant caches = do
   ctx <- mkParticipantContext caches
   return $ listFieldWith "participant" ctx loadParticipants
+
+
+fieldContent :: Context String
+fieldContent = field "content" content'
+  where
+    content' i = loadSnapshotBody (itemIdentifier i) "content"
+
 
 fieldHasPlaces :: Context String
 fieldHasPlaces = boolFieldM "hasPlaces" hasPlaces'
@@ -129,25 +143,25 @@ fieldParticipantName = field "participantName" participantName'
 mkParticipantContext :: Cache.Caches -> Compiler (Context String)
 mkParticipantContext c = do
   siteCtx <- mkSiteCtx c
-  return $ siteCtx
+  return $ fieldContent <> siteCtx
 
 mkEventContext :: Cache.Caches -> Compiler (Context String)
 mkEventContext c = do
   siteCtx <- mkSiteCtx c
   pF <- mkFieldParticipant c
-  return $ fieldParticipantName <> fieldHasParticipant <> pF <> siteCtx
+  return $ fieldParticipantName <> fieldHasParticipant <> pF <> fieldContent <> siteCtx
 
 mkPlaceContext :: Cache.Caches -> Compiler (Context String)
 mkPlaceContext c = do
   siteCtx <- mkSiteCtx c
   fEvents <- mkFieldEvents c
-  return $ fEvents <> fieldHasEvents <> siteCtx
+  return $ fEvents <> fieldHasEvents <> fieldContent <> siteCtx
 
 mkDayContext :: Cache.Caches -> Compiler (Context String)
 mkDayContext caches = do
   siteCtx <- mkSiteCtx caches
   fPlaces <- mkFieldPlaces caches
-  return $ fPlaces <> fieldHasPlaces <> siteCtx
+  return $ fPlaces <> fieldHasPlaces <> fieldContent <> siteCtx
 
 mkScheduleContext :: Cache.Caches -> Compiler (Context String)
 mkScheduleContext caches = do

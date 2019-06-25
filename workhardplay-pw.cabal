@@ -181,3 +181,33 @@ executable generate-event-file
                   , rainbow == 0.30.0.2
   ghc-options:      -threaded
   default-language: Haskell2010
+
+executable get-author
+  main-is:          Tools/GetAuthor.hs
+  HS-Source-Dirs:   src
+  build-depends:    base == 4.*
+                  , hakyll == 4.12.*
+                  , hakyll-sass == 0.2.*
+                  , hlibsass == 0.1.8.0
+                  , data-default
+                  , hsass == 0.7.0
+                  , aeson
+                  , bytestring
+                  , string-conversions
+                  , filepath
+                  , MissingH
+                  , binary
+                  , text
+                  , attoparsec
+                  , mtl
+                  , errors
+                  , directory
+                  , MissingH
+                  , colour
+                  , pandoc
+                  , cache
+                  , hashable
+                  , raw-strings-qq
+                  , rainbow == 0.30.0.2
+  ghc-options:      -threaded
+  default-language: Haskell2010

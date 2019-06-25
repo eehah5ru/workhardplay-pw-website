@@ -25,21 +25,33 @@ scheduleRules caches year = do
 
   matchMultiLang participantRules'' participantRules'' participantsPattern
 
-  matchMultiLang eventRules'' eventRules'' (eventsPattern)
+  withDeps [participantsDeps] $ matchMultiLang eventRules'' eventRules'' (eventsPattern)
 
-  matchMultiLang placeRules'' placeRules'' (placesPattern "monday")
-  matchMultiLang placeRules'' placeRules'' (placesPattern "tuesday")
-  matchMultiLang placeRules'' placeRules'' (placesPattern "wednesday")
-  matchMultiLang placeRules'' placeRules'' (placesPattern "thursday")
-  matchMultiLang placeRules'' placeRules'' (placesPattern "friday")
-  matchMultiLang placeRules'' placeRules'' (placesPattern "saturday")
-  matchMultiLang placeRules'' placeRules'' (placesPattern "sunday")
+  withDeps [participantsDeps, eventsDeps] $ do
+    matchMultiLang placeRules'' placeRules'' (placesPattern "all-days")
+    matchMultiLang placeRules'' placeRules'' (placesPattern "monday")
+    matchMultiLang placeRules'' placeRules'' (placesPattern "tuesday")
+    matchMultiLang placeRules'' placeRules'' (placesPattern "wednesday")
+    matchMultiLang placeRules'' placeRules'' (placesPattern "thursday")
+    matchMultiLang placeRules'' placeRules'' (placesPattern "friday")
+    matchMultiLang placeRules'' placeRules'' (placesPattern "saturday")
+    matchMultiLang placeRules'' placeRules'' (placesPattern "sunday")
 
-  matchMultiLang daysRules'' daysRules'' daysPattern
+  withDeps [participantsDeps, eventsDeps, placesDeps] $ matchMultiLang daysRules'' daysRules'' daysPattern
 
-  matchMultiLang scheduleRules' scheduleRules' schedulePattern
+  withDeps [participantsDeps, eventsDeps, placesDeps, daysDeps] $ matchMultiLang scheduleRules' scheduleRules' schedulePattern
 
   where
+
+    days = [ "all-days"
+           , "monday"
+           , "tuesday"
+           , "wednesday"
+           , "thursday"
+           , "friday"
+           , "saturday"
+           , "sunday" ]
+
     schedulePattern = year </> "schedule.md"
 
     daysPattern = year </> "schedule/*.md"
@@ -50,16 +62,30 @@ scheduleRules caches year = do
 
     participantsPattern = year </> "participants/*.md"
 
-    rawContentRules l = do
-      compile $ do
-        getResourceBody >>= saveSnapshot "raw_content"
+    -- rawContentCompiler l =
+    --    getResourceBody >>= saveSnapshot "raw_content"
 
+    depsPattern' p = f' RU .||. f' EN
+      where
+        f' l = fromGlob . localizePath l $ p
+
+    participantsDeps = depsPattern' participantsPattern
+
+    eventsDeps = depsPattern' eventsPattern
+
+    placesDeps = (foldr (.||.) mempty $ map (depsPattern' . placesPattern) days)
+
+    daysDeps = depsPattern' daysPattern
+
+    withDeps dPatterns rules  = do
+      deps <- mapM makePatternDependency dPatterns
+      rulesExtraDependencies deps rules
+
+    -- if separate page is not needed
     contentRules l cTpl ctxF = do
-     route $ setExtension "html"
-
-     compile $ do
-       ctx <- ctxF caches
-       pandocCompiler
+      compile $ do
+        ctx <- ctxF caches
+        pandocCompiler
          >>= beautifyTypography
          >>= applyAsTemplate ctx
          >>= loadAndApplyTemplate cTpl ctx
@@ -72,6 +98,7 @@ scheduleRules caches year = do
         beautifyTypography x
           >>= applyAsTemplate ctx
           >>= loadAndApplyTemplate cTpl ctx
+          >>= saveSnapshot "content"
           >>= loadAndApplyTemplate pTpl ctx
           >>= loadAndApplyTemplate rootPageTpl ctx
           >>= loadAndApplyTemplate rootTpl ctx
@@ -83,23 +110,20 @@ scheduleRules caches year = do
           >>= saveSnapshot "content"
 
     eventRules'' locale = do
-      rawContentRules locale
-      contentRules locale contentTemplate mkEventContext
       pageRules locale contentTemplate pageTemplate mkEventContext
+
       where
         contentTemplate = "templates/schedule-event-item-2019.slim"
         pageTemplate = "templates/schedule-event-page-2019.slim"
 
     placeRules'' locale = do
-     rawContentRules locale
-     contentRules locale contentTemplate mkPlaceContext
-     --pageRules locale contentTemplate pageTemplate
-     where
-       contentTemplate = "templates/schedule-place-item-2019.slim"
+      -- without separate page
+      contentRules locale contentTemplate mkPlaceContext
+      --pageRules locale contentTemplate pageTemplate
+      where
+        contentTemplate = "templates/schedule-place-item-2019.slim"
 
     daysRules'' locale = do
-      rawContentRules locale
-      contentRules locale contentTemplate mkDayContext
       pageRules locale contentTemplate pageTemplate mkDayContext
 
       where

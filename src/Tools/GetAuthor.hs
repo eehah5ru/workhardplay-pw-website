@@ -5,7 +5,7 @@ import System.Exit
 import System.IO
 import Control.Monad (when, unless)
 
-import W7W.MultiLang
+import qualified W7W.MultiLang as ML
 import qualified Data.Text as T
 import qualified Data.Text.IO as TIO
 import qualified Site.Schedule.ProjectFile as PF
@@ -15,23 +15,18 @@ import Rainbow
 
 import Tools.Utils
 
-printEventFile :: Locale -> PF.ProjectFile -> IO ()
-printEventFile l pf =
-  case fromProjectFile l pf of
-    Just eventF -> do
-      TIO.putStrLn (toText eventF)
-      exitWith ExitSuccess
-    Nothing -> e'
-  where
-    e' = do
-      logError "error generating event file"
-      (exitWith $ ExitFailure 1)
+printAuthor :: ML.Locale -> PF.ProjectFile -> IO ()
+printAuthor l pf = TIO.putStrLn $ PF.textOrMissing (PF.author $ pf) (translate l)
+   where
+    translate :: (PF.Multilang a) => ML.Locale -> a -> PF.TextField
+    translate l x = ML.chooseByLocale (PF.ru x) (PF.en x) l
+
 
 
 main :: IO ()
 main = do
   locale <- parseLocale =<< getArgs
-  withProjectFileInput $ printEventFile locale
+  withProjectFileInput $ printAuthor locale
 
    where
     parseLocale [] = do
@@ -39,8 +34,8 @@ main = do
       exitWith $ ExitFailure 1
 
     parseLocale (l:[]) = do
-      case fromLang l of
-        UNKNOWN -> e'
+      case ML.fromLang l of
+        ML.UNKNOWN -> e'
         locale -> return locale
       where
         e' = do
