@@ -50,9 +50,9 @@ loadParticipant i = load =<< participantIdentifier i
 loadParticipants :: Item a -> Compiler ([Item String])
 loadParticipants i = loadAll =<< participantPattern i
 
-loadEvents :: Item a -> Compiler ([Item String])
-loadEvents i = do
-  eP <- eventsPattern
+loadEvents :: Pattern -> Item a -> Compiler ([Item String])
+loadEvents v i = do
+  eP <- return . ((.&&.) v) =<< eventsPattern
   loadAllSnapshots eP "content"
 
   where
@@ -62,9 +62,9 @@ loadEvents i = do
 
     year' = maybe (error "no year in schedule context!") id . itemYear
 
-loadDays :: Item a -> Compiler ([Item String])
-loadDays i = do
-  dP <- daysPattern
+loadDays :: Pattern -> Item a -> Compiler ([Item String])
+loadDays v i = do
+  dP <- return . ((.&&.) v) =<< daysPattern
   loadAllSnapshots dP "content"
 
   where
@@ -74,9 +74,9 @@ loadDays i = do
     year' = maybe (error "no year in schedule context!") id . itemYear
 
 
-loadPlaces :: Item a -> Compiler ([Item String])
-loadPlaces i = do
-  pP <- placesPattern
+loadPlaces :: Pattern -> Item a -> Compiler ([Item String])
+loadPlaces v i = do
+  pP <- return . ((.&&.) v) =<< placesPattern
   loadAllSnapshots pP "content"
   where
     placesPattern :: Compiler Pattern
@@ -85,25 +85,25 @@ loadPlaces i = do
     year' = maybe (error "no year in schedule context!") id . itemYear
 
 
-mkFieldDays :: Cache.Caches -> Compiler (Context String)
-mkFieldDays caches = do
-  ctx <- (mkDayContext caches)
-  return $ listFieldWith "days" ctx (loadDays >=> sortByOrder)
+mkFieldDays :: Cache.Caches -> Pattern -> Compiler (Context String)
+mkFieldDays caches v = do
+  ctx <- (mkDayContext caches v)
+  return $ listFieldWith "days" ctx (loadDays v >=> sortByOrder)
 
-mkFieldPlaces :: Cache.Caches -> Compiler (Context String)
-mkFieldPlaces caches = do
-  ctx <- mkPlaceContext caches
-  return $ listFieldWith "places" ctx (loadPlaces >=> sortByOrder)
+mkFieldPlaces :: Cache.Caches -> Pattern -> Compiler (Context String)
+mkFieldPlaces caches v = do
+  ctx <- mkPlaceContext caches v
+  return $ listFieldWith "places" ctx (loadPlaces v >=> sortByOrder)
 
-mkFieldEvents :: Cache.Caches -> Compiler (Context String)
-mkFieldEvents caches = do
-  ctx <- mkEventContext caches
-  return $ listFieldWith "events" ctx (loadEvents >=> sortByOrder)
+mkFieldEvents :: Cache.Caches -> Pattern -> Compiler (Context String)
+mkFieldEvents caches v = do
+  ctx <- mkEventContext caches v
+  return $ listFieldWith "events" ctx (loadEvents v >=> sortByOrder)
 
 mkFieldParticipant :: Cache.Caches -> Compiler (Context String)
 mkFieldParticipant caches = do
   ctx <- mkParticipantContext caches
-  return $ listFieldWith "participant" ctx loadParticipants
+  return $ listFieldWith "participant" ctx (loadParticipants)
 
 
 fieldContent :: Context String
@@ -112,18 +112,18 @@ fieldContent = field "content" content'
     content' i = loadSnapshotBody (itemIdentifier i) "content"
 
 
-fieldHasPlaces :: Context String
-fieldHasPlaces = boolFieldM "hasPlaces" hasPlaces'
+fieldHasPlaces :: Pattern -> Context String
+fieldHasPlaces v = boolFieldM "hasPlaces" hasPlaces'
   where
     hasPlaces' i = do
-      places <- loadPlaces i
+      places <- loadPlaces v i
       return $ (length places) /= 0
 
-fieldHasEvents :: Context String
-fieldHasEvents = boolFieldM "hasEvents" hasEvents'
+fieldHasEvents :: Pattern -> Context String
+fieldHasEvents v = boolFieldM "hasEvents" hasEvents'
   where
     hasEvents' i = do
-      events <- loadEvents i
+      events <- loadEvents v i
       return $ (length events) /= 0
 
 fieldHasParticipant :: Context String
@@ -145,28 +145,28 @@ mkParticipantContext c = do
   siteCtx <- mkSiteCtx c
   return $ fieldContent <> siteCtx
 
-mkEventContext :: Cache.Caches -> Compiler (Context String)
-mkEventContext c = do
+mkEventContext :: Cache.Caches -> Pattern -> Compiler (Context String)
+mkEventContext c v = do
   siteCtx <- mkSiteCtx c
   pF <- mkFieldParticipant c
   return $ fieldParticipantName <> fieldHasParticipant <> pF <> fieldContent <> siteCtx
 
-mkPlaceContext :: Cache.Caches -> Compiler (Context String)
-mkPlaceContext c = do
+mkPlaceContext :: Cache.Caches -> Pattern -> Compiler (Context String)
+mkPlaceContext c v = do
   siteCtx <- mkSiteCtx c
-  fEvents <- mkFieldEvents c
-  return $ fEvents <> fieldHasEvents <> fieldContent <> siteCtx
+  fEvents <- mkFieldEvents c v
+  return $ fEvents <> fieldHasEvents v <> fieldContent <> siteCtx
 
-mkDayContext :: Cache.Caches -> Compiler (Context String)
-mkDayContext caches = do
+mkDayContext :: Cache.Caches -> Pattern -> Compiler (Context String)
+mkDayContext caches v = do
   siteCtx <- mkSiteCtx caches
-  fPlaces <- mkFieldPlaces caches
-  return $ fPlaces <> fieldHasPlaces <> fieldContent <> siteCtx
+  fPlaces <- mkFieldPlaces caches v
+  return $ fPlaces <> fieldHasPlaces v <> fieldContent <> siteCtx
 
-mkScheduleContext :: Cache.Caches -> Compiler (Context String)
-mkScheduleContext caches = do
+mkScheduleContext :: Cache.Caches -> Pattern -> Compiler (Context String)
+mkScheduleContext caches v = do
   ctx <- (mkSiteCtx caches)
-  fDays <- (mkFieldDays caches)
+  fDays <- (mkFieldDays caches v)
   return $ fDays
     <> ctx
 
@@ -185,3 +185,6 @@ sortByOrder =
     sortByM :: (Monad m, Ord k) => (a -> m k) -> [a] -> m [a]
     sortByM f xs = liftM (map fst . sortBy (comparing snd)) $
                    mapM (\x -> liftM (x,) (f x)) xs
+
+
+hasTxtVersion = hasVersion "txt"
