@@ -84,6 +84,18 @@ loadPlaces v i = do
       return $ fromGlob $ itemLang i </> (year' i) </> "schedule" </> itemCanonicalName i </> "*.md"
     year' = maybe (error "no year in schedule context!") id . itemYear
 
+loadSchedules :: Pattern -> Item a -> Compiler ([Item String])
+loadSchedules v i = do
+  sP <- return . ((.&&.) v) =<< schedulePattern
+  loadAllSnapshots sP "content"
+
+  where
+    year' = maybe (error "no year in schedule context!") id . itemYear
+
+    schedulePattern :: Compiler Pattern
+    schedulePattern = do
+      return $ fromGlob $ itemLang i </> (year' i) </> "schedule.md"
+
 
 mkFieldDays :: Cache.Caches -> Pattern -> Compiler (Context String)
 mkFieldDays caches v = do
@@ -105,6 +117,10 @@ mkFieldParticipant caches v = do
   ctx <- mkParticipantContext caches
   return $ listFieldWith "participant" ctx (loadParticipants v)
 
+mkFieldSchedule :: Cache.Caches -> Pattern -> Compiler (Context String)
+mkFieldSchedule caches v = do
+  ctx <- mkScheduleContext caches v
+  return $ listFieldWith "schedule" ctx (loadSchedules v)
 
 fieldContent :: Context String
 fieldContent = field "content" content'
@@ -185,6 +201,3 @@ sortByOrder =
     sortByM :: (Monad m, Ord k) => (a -> m k) -> [a] -> m [a]
     sortByM f xs = liftM (map fst . sortBy (comparing snd)) $
                    mapM (\x -> liftM (x,) (f x)) xs
-
-
-hasTxtVersion = hasVersion "txt"

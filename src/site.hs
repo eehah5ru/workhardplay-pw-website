@@ -64,14 +64,13 @@ main = do
        match ("ru/**/_*.slim" .||. "en/**/_*.slim") $ compile getResourceBody
 
        -- collective glossary defenitions for deps
-
+       participantsRules
+       scheduleRules caches "2019"
 
        staticPagesRules caches
 
        terms <- buildTerms
 
-       participantsRules
-       scheduleRules caches "2019"
        collectiveGlossaryRules caches terms
        archiveIndexPagesRules caches terms
        archiveProjectPagesRules caches terms
