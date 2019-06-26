@@ -47,8 +47,8 @@ loadParticipant :: Item a -> Compiler (Item String)
 loadParticipant i = load =<< participantIdentifier i
 
 
-loadParticipants :: Item a -> Compiler ([Item String])
-loadParticipants i = loadAll =<< participantPattern i
+loadParticipants :: Pattern -> Item a -> Compiler ([Item String])
+loadParticipants v i = loadAll =<< return . ((.&&.) v) =<< participantPattern i
 
 loadEvents :: Pattern -> Item a -> Compiler ([Item String])
 loadEvents v i = do
@@ -100,10 +100,10 @@ mkFieldEvents caches v = do
   ctx <- mkEventContext caches v
   return $ listFieldWith "events" ctx (loadEvents v >=> sortByOrder)
 
-mkFieldParticipant :: Cache.Caches -> Compiler (Context String)
-mkFieldParticipant caches = do
+mkFieldParticipant :: Cache.Caches -> Pattern -> Compiler (Context String)
+mkFieldParticipant caches v = do
   ctx <- mkParticipantContext caches
-  return $ listFieldWith "participant" ctx (loadParticipants)
+  return $ listFieldWith "participant" ctx (loadParticipants v)
 
 
 fieldContent :: Context String
@@ -126,11 +126,11 @@ fieldHasEvents v = boolFieldM "hasEvents" hasEvents'
       events <- loadEvents v i
       return $ (length events) /= 0
 
-fieldHasParticipant :: Context String
-fieldHasParticipant = boolFieldM "hasParticipant" hasParticipant'
+fieldHasParticipant :: Pattern -> Context String
+fieldHasParticipant v = boolFieldM "hasParticipant" hasParticipant'
   where
     hasParticipant' i = do
-      return . ((/=) 0) . length =<< loadParticipants i
+      return . ((/=) 0) . length =<< loadParticipants v i
 
 fieldParticipantName :: Context String
 fieldParticipantName = field "participantName" participantName'
@@ -148,8 +148,8 @@ mkParticipantContext c = do
 mkEventContext :: Cache.Caches -> Pattern -> Compiler (Context String)
 mkEventContext c v = do
   siteCtx <- mkSiteCtx c
-  pF <- mkFieldParticipant c
-  return $ fieldParticipantName <> fieldHasParticipant <> pF <> fieldContent <> siteCtx
+  pF <- mkFieldParticipant c v
+  return $ fieldParticipantName <> fieldHasParticipant v <> pF <> fieldContent <> siteCtx
 
 mkPlaceContext :: Cache.Caches -> Pattern -> Compiler (Context String)
 mkPlaceContext c v = do

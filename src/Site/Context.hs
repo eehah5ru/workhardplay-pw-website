@@ -3,7 +3,10 @@ module Site.Context where
 
 import Control.Applicative (Alternative (..))
 
+import System.Random
+
 import Hakyll
+import Hakyll.Core.Compiler.Internal (compilerUnsafeIO)
 
 import Data.Monoid ((<>), mempty)
 
@@ -68,6 +71,25 @@ fieldDummyFunction =
     f _ _ = error "dummy: many args"
 
 
+fieldRandomFunction =
+  functionField "random" f
+  where
+    usage = "usage: random(min, max)"
+    f [] _ =  error $ "random: empty args. " ++ usage
+    f ([_]) _ = error $ "too few args. " ++ usage
+    f [minS, maxS] _ = return . show =<< compilerUnsafeIO getRandomInt
+      where
+        getRandomInt = do
+          g <- newStdGen
+          (i, g') <- return $ randomR (min, max) g
+          return i
+        min :: Int
+        min = read minS
+
+        max :: Int
+        max = read maxS
+
+    f _ _ = error $ "too many args. " ++ usage
 --
 --
 -- contexts
@@ -93,6 +115,7 @@ minimalSiteCtx =
     <> fieldAboutName
     <> fieldGlossaryName
     <> fieldDummyFunction
+    <> fieldRandomFunction
     <> defaultContext
 
 --
