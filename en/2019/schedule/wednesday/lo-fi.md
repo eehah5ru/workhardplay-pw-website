@@ -1,4 +1,4 @@
 ---
 order: 1
-title: "Октябрьская 16/3"
+title: "LO-FI. vulica Kastryčnickaja 16/3"
 ---

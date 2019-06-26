@@ -3,9 +3,31 @@ title: "WORK HARD! PLAY HARD! SIDE AFFECTS"
 header1: "Work&nbsp;Hard!"
 header2: "Play&nbsp;Hard!"
 header3: "Side Affects"
-template: "templates/index-teaser-2019.slim"
+changesInScheduleLabel: "The schedule may change"
+freeEntranceLabel: "Entrance to all events is free"
+scheduleLabel: "SCHEDULE"
+template: "templates/index-2019.slim" 
 ---
 
-# July 1 &mdash; 7 2019 #
-# Minsk, Belarus #
+July 1 &mdash; 7 2019  
+Minsk, Belarus
+
+In the course of the first nights her throat was sore, almost nothing could be swallowed, temperature, fever, irritation, dreaming. The image of the [great stone](#){.parameter-name data-parameter="great-stone"}
+[The great stone disintegrated inside of her overheated brain into several components: the image of a stone, the materiality of which she was researching in computer games; lacunas, trenches and all other poisonous imprints of extractive capitalism – her body was sticking into hot and wet bedsheets – and relation to the territory out of property positions. She felt at a loss and got bogged down in a wildwood, deforestation and vagaries of google maps between the village with the paganish name and the homonymic industrial People's Republic of China park. She wanted to occupy these "productions of tomorrow".]{.parameter-descr id="great-stone-descr"}
+was appearing sporadically. In those nights she laid behind a wall from a common room of the collective. She heard fragments of voices discussing [rhythm](#){.parameter-name data-parameter="rythm"}
+[She heard Nina and K. talking about rhythm. Feeble vibrations of the voices reached her skin with a slight shiver. She has often been seized by a collective rhythm: of dark dancefloors, stinging texts and demonstrations. These days the deformed metabolism reassembled her body, incorporating failures, malfunctions and inconsistencies with oneself. “In the end, the synchronization of the rhythms of production and the inevitability of acceleration often turned out to be captured by the colonial logics,” sounded behind the wall. Her attention melted in the intoxication —  everything fell into the pulsation of antibodies in her organism.]{.parameter-descr id="rythm-descr"}
+and [alienation](#){.parameter-name data-parameter="alienation"}
+[Sickness alienated her from herself and she enjoyed it. She felt herself exfoliating and pilling, [as a moulting insect, when its exoskeleton becomes too small, and the second skin grows under the first one](https://commons.wikimedia.org/wiki/File:Cicada_molting_animated-2.gif?uselang=ru){target="_blank"}. “Renewal,” – she thought.]{.parameter-descr id="alienation-descr"}
+: persistent and expressive voice of Nina and K.’s sweet voice. A [weak disease](#){.parameter-name data-parameter="weak-sickness"}
+[Inside the disease itself, the psycho-pharmacological aspects of late capitalism are not obvious: behind the pill of ibuprofen, which brings little comfort, the chains of production and distribution of pharmaceutical drugs, privatisation of knowledge and resources, relations of “the north” and “the south”, normalisation of pain in a female body and mechanisms of desubjectivation are compressed. A weak disease is the disalignment of collective and individual time of rest and work, inaction, burnout. It is more symptomatic for late capitalism. In a precarious economy illness is not protected with a sick leave or a sanatorium, what trade unions and organised workers’ parties struggled for. In this case illness is the unexpended cost of working time, biopolitical diffusion of power.]{.parameter-descr id="weak-sickness-descr"}
+is a weak form of exclusion. Energy accumulates inside and spent together with sweat. Bed is a place of accumulation and waste. 
+
+"[Intoxication](#){.parameter-name data-parameter="toxication"}
+[The gift of deceleration, acting through the foretaste of irreversibility. Intoxication as the bursting of the everyday or as a rehearsal of the revolution at least. Muscles intoxicated by lactic acid during the training. Stress tests of collectives, dirty data and positive feedback loops in algorithmic systems, entropy of all kinds. The triumph of weak bodies, rejecting vitamins and stimulants, falling out of the deadlines grid and hourly contracts. Only the illness could prove to her with authority that she needs rest, opening the veil of long-desired. These desires-pulses were lightening the pain.]{.parameter-descr id="toxication-descr"}
+as a gift of deceleration," – flashed through her mind when K. entered the room. "Do you need anything?" – echoed in her head with throbbing pain. A part of her continued to think about the phenomenon of the stone, computer games where you are sliding through the geological bed of earth chasing the enemy. "I can go to the pharmacy. Do you want anything?" – a [repetition](#){.parameter-name data-parameter="repetition"}
+[Repetition of the gesture occurs almost imperceptibly, being lost in the multitudes of significant and minor differences within the choreography of mundanity. The repetition of the gesture, bringing each time new connections and causality. Muscle tension recalled memories of her endlessly repeating dance phrases, trying to get the disobedient body to inhabit them, make them routine, bring to automatism. To bring to automatism and to automate – is it the same thing? She, however, hated rehearsals: it seemed to her that repetition and anticipation of the experience destroy its intensity. And more than that, sometimes anticipation became the event itself. “Is futuristic thinking a rehearsal?”]{.parameter-descr id="repetition-descr"}
+thundered in her frontal sinuses. Why are there so few games where you can stop and stay forever – several human-machine days – soaking oneself into synthetic geology, where you can find the side lines of development, move beyond straightforwardness, code eventually a virus and spread it. "K. is very sweet, so caring. I'll call the virus after her – the [Care Virus](#){.parameter-name data-parameter="virus-of-care"}
+[Certain areas of her brain buzzed with the power of connections that have never occurred. She wanted to be caring for what surrounded her, but she didn’t know what it meant. A lump squeezed her throat, vertically grasping and releasing her again. “Waves of fear,” she thought. She wanted to write a virus that would be liberating towards the transverse lines of development of the worlds, lived by interfaces and characters, past whom you rush without noticing. She wanted their agency to sound in full voice. A virus that generates new worlds. "But the satellite virus is not able to be self-sufficient, it needs an auxiliary virus for the full replication of care."]{.parameter-descr id="virus-of-care-descr"}
+," she thought.
+
 

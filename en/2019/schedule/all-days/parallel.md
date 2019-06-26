@@ -1,3 +1,3 @@
 ---
-title: "Параллельно с событиями РБ!ОБ!"
+title: "In parallel with all WH!PH! events"
 ---

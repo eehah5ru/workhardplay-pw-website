@@ -1,4 +1,4 @@
 ---
 order: 3
-title: "СРЕДА / 3 ИЮЛЯ"
+title: "Wednesday / 3 July"
 ---

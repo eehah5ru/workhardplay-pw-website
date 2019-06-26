@@ -1,4 +1,4 @@
 ---
 order: 7
-title: "ВОСКРЕСЕНЬЕ / 7 ИЮЛЯ"
+title: "Sunday / 7 July"
 ---

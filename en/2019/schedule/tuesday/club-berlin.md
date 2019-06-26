@@ -1,4 +1,4 @@
 ---
 order: 2
-title: "Место будет объявлено позже"
+title: "Place would be announced later"
 ---

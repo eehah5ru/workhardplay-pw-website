@@ -1,5 +1,5 @@
 ---
-order: 5
+order: 50
 time: "21:30 - 22:30"
 title: "Да ты успокойся!"
 shortDescription: "DJ set"

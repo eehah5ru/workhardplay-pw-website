@@ -1,6 +1,5 @@
 ---
 order: 1
-title: "Секретный санаторий под Минском"
+title: "Secret Sanatorium near Minsk"
 ---
-Участие по предварительной регистрации по почте work.hard.play.0 (at) gmail.com. Регистрация закрывается 3 июля 23:55.
-
+Participation by registration at work.hard.play.0 (at) gmail.com. Register before July 3 at 23:55.

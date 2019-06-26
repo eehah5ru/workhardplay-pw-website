@@ -1,4 +1,4 @@
 ---
 order: 5
-title: "ПЯТНИЦА / 5 ИЮЛЯ"
+title: "Friday / 5 July"
 ---

@@ -1,4 +1,4 @@
 ---
 order: 6
-title: "СУББОТА / 6 ИЮЛЯ"
+title: "Saturday / 6 July"
 ---

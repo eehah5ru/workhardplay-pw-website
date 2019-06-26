@@ -1,4 +1,4 @@
 ---
 order: 1 
-title: "Лаборатория социального театра. Ул. Куйбышева, 22 (Горизонт, 4.5 этаж)"
+title: "Laboratory of social theatre Vulica Kujbyšava, 22 (Horizont, 4.5 floor)"
 ---
