@@ -3,7 +3,7 @@ order: 9
 time: "01:00 - 02:00"
 projectIdSuffix: "-one"
 title: "Pickled cucumber DJ-set"
-shortDescription: ":  Dance-motivation-music-camp"
+shortDescription: "Dance-motivation-music-camp"
 participantId: kimchi-eukimchi
 ---
 

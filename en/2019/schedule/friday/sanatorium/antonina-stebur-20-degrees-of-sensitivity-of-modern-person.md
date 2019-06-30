@@ -3,7 +3,7 @@ order: 20
 time: "16:30 - 17:30"
 projectIdSuffix: "-one"
 title: "20 degrees of sensitivity of modern person"
-shortDescription: ":  Game and discussion"
+shortDescription: "Game and discussion"
 participantId: antonina-stebur
 ---
 

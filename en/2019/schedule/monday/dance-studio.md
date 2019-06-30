@@ -1,5 +1,5 @@
 ---
 order: 2
-title: "Place would be announced later"
+title: "Belarusian Students' Association. vulica Kastryčnickaja, 16. 4 floor"
 ---
 

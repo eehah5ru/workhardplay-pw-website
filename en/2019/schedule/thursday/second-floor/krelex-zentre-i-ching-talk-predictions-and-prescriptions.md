@@ -3,7 +3,7 @@ order: 50
 time: "14:30 - 16:00"
 projectIdSuffix: "-one"
 title: "I Ching talk. Predictions and prescriptions"
-shortDescription: ":  Skype fortune telling"
+shortDescription: "Skype fortune telling"
 participantId: krelex-zentre
 ---
 

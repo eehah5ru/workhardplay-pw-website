@@ -3,7 +3,7 @@ order: 4
 time: "14:30 - 15:10"
 projectIdSuffix: "-one"
 title: "Presentation of the conceptual video-essay (Untitled, 2019)"
-shortDescription: ":  Video-presentation-discussion"
+shortDescription: "Video-presentation-discussion"
 participantId: jury-urso
 ---
 

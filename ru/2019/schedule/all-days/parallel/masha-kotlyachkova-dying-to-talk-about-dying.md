@@ -2,7 +2,7 @@
 order: 30
 time: ""
 title: "Умираю поговорить о смерти"
-shortDescription: "разговор Разговор"
+shortDescription: "Разговор"
 participantId: masha-kotlyachkova
 projectIdSuffix: "-one"
 ---

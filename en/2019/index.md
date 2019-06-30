@@ -7,6 +7,7 @@ changesInScheduleLabel: "The schedule may change"
 freeEntranceLabel: "Entrance to all events is free"
 scheduleLabel: "SCHEDULE"
 template: "templates/index-2019.slim" 
+projectCover: "images/whp-cover-2019-en.png"
 ---
 
 July 1 &mdash; 7 2019  
@@ -30,4 +31,6 @@ thundered in her frontal sinuses. Why are there so few games where you can stop 
 [Certain areas of her brain buzzed with the power of connections that have never occurred. She wanted to be caring for what surrounded her, but she didn’t know what it meant. A lump squeezed her throat, vertically grasping and releasing her again. “Waves of fear,” she thought. She wanted to write a virus that would be liberating towards the transverse lines of development of the worlds, lived by interfaces and characters, past whom you rush without noticing. She wanted their agency to sound in full voice. A virus that generates new worlds. "But the satellite virus is not able to be self-sufficient, it needs an auxiliary virus for the full replication of care."]{.parameter-descr id="virus-of-care-descr"}
 ," she thought.
 
+Participants:
 
+akunka, Silvia Amancei & Bogdan Armanu, Alex Anikina, Anya and Valentine, Apart Collective, Aleksei Borisionok, Uliana Bychenkova, Aliaxey Talstou, Tatiana Efrussi, Kirila Cvetkovska, Vera Zalutskaya, Gediminas Daugela & Alisa Smorodina, Nastya Dmitrievskaya, dosaaf, eeefff, Max Evstropov / party of the dead, Ilya Firdman, Netzwerk für revolutionäre Ungeduld // FUTUR3 festival-crew, The Future Body At Work, Lena Ischenko, Anya Litovskih, Masha Sarycheva, Tonya Trubitsyna, Nadezhda Ishkinyaeva, Three Julietttes (Uliana Bychenkova,Janna Dolgova, Inna Krasnoper), Nikita Kadan, Karen Karnak, Roman Aksenov, kassandra, Vera Kavaleuskaya, Kimchi Eukimchi, Anna Kinbom, Choterina Freer and Rut Karin Zettergren, Klabukova Lena & Katya Pislari, Masha Kotlyachkova, Yuliya Kozhemyako, Krёlex zentre, Anton Lapov and Larion Lozovoy, Brianna Leatherbury and DJ Max, Matthieu Levet, Markéta Kinterová, n i i c h e g o d e l a t (Research Institute of doing nothing), Arina Nesterova, Nikita Nechaev, Night Movement, obey-ne-robey, Alisa Oleva, Andrew Paterson and Anna Huana, DJ pickpocket, Sasha Pistoletova and Yozhi Stolet, Nataliya Protassenia, Sergey Babkin, pshkn, Sasha Puchkova, Daria Sazanovich, Peter Sit, Egor Sofronov, Olia Sosnovskaya, Antonina Stebur, Anna Tereshkina, Helga Zinzyver, TOYBOY, «Union of convalescents» and playfellows, Jury Urso, Elena Vogman, Clemens von Wedemeyer, Andrey Vozyanov, Xin Xin, Vova Yuzhny, Vita Zelenska, Marina Israilova, Dzina Zhuk
