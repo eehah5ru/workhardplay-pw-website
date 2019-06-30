@@ -52,6 +52,11 @@ def field name
   return "$#{name.to_s}$"
 end
 
+def _unless cond, &block
+  return "$if(#{cond})$$else$\n#{yield}\n"
+end
+
+
 def _if cond, &block
   return "$if(#{cond})$\n#{yield}\n"
 end
