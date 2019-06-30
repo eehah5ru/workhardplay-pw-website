@@ -1,2 +1,2 @@
 $time$
-$participantName$. $title$. $if(hideShortDescription)$$else$$shortDescription$$endif$
+$if(hideParticipant)$$else$$participantName$. $endif$$title$. $if(hideDetails)$$else$$if(hideShortDescription)$$else$$shortDescription$$endif$$endif$

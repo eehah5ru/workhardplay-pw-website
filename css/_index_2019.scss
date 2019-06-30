@@ -44,8 +44,18 @@ section.index-page.teaser.whp-2019 {
 
 section.index-page.description.whp-2019 {
   padding-bottom: 4rem;
+  background: linear-gradient(white 0.1%, #00b3f9 0.5%, #7fed98 50%);
 
-  background: linear-gradient(white 1%, #00b3f9 2%, #7fed98 50%);
+  @include breakpoint(medium) {
+    background: linear-gradient(white 0.5%, #00b3f9 1%, #7fed98 50%);
+  }
+
+  @include breakpoint(large) {
+    background: linear-gradient(white 1%, #00b3f9 2%, #7fed98 50%);
+  }
+
+
+
 }
 
 
@@ -87,7 +97,8 @@ section.index-page.teaser.whp-2019 {
     }
   }
 
-  .project p.descr span {
+  .project p.descr span,
+  .project p.descr.no-long span {
     color: $secondary-color-2019;
   }
 
