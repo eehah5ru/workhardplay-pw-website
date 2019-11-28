@@ -33,6 +33,7 @@ import Site.Context
 import Site.Archive.Utils
 
 import Site.CollectiveGlossary.Context (fieldTermsList)
+import qualified Site.Schedule.Context as SC
 --
 --
 -- metadata predicates
@@ -183,6 +184,7 @@ fieldHasTerms terms =
 mkArchiveProjectCtx caches terms =
   do 
      siteCtx <- (mkSiteCtx caches)
+     participantField <- (SC.mkFieldParticipant caches hasNoVersion)
      return $ fieldProjectTitle
        <> fieldProjectCover
        <> fieldHasMedia
@@ -194,5 +196,8 @@ mkArchiveProjectCtx caches terms =
        <> (fieldTermsList terms)
        <> (fieldHasTerms terms)
        <> (fieldTermsLabel)
+       <> SC.fieldParticipantName
+       <> SC.fieldHasParticipant hasNoVersion -- without versions!!!
+       <> participantField
        -- <> functionPictureAltTitleAttr
        <> siteCtx

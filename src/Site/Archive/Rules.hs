@@ -40,6 +40,7 @@ archiveIndexPagesRules caches ts = do
   let rules2016 = rules' "2016/archive/"
       rules2017 = rules' "2017/projects/"
       rules2018 = rules' "2018/projects/"
+      rules2019 = rules' "2019/projects/"      
   matchMultiLang rules2016
                  rules2016
                  "2016/archive.slim"
@@ -49,6 +50,9 @@ archiveIndexPagesRules caches ts = do
   matchMultiLang rules2018
                  rules2018
                  "2018/archive.slim"
+  matchMultiLang rules2019
+                 rules2019
+                 "2019/archive.slim"                 
   where
     rules' projectsPattern locale =
           slimPageRules $ \x -> do
@@ -70,6 +74,9 @@ archiveProjectPagesRules caches ts = do
 
   matchSlim "2018/projects/"
   matchMd "2018/projects/"
+
+  matchSlim "2019/projects/"
+  matchMd "2019/projects/"
 
   where
     matchSlim base = matchMultiLang slimRules
