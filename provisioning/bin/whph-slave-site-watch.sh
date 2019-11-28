@@ -9,8 +9,8 @@ export NVM_DIR="$HOME/.nvm"
 
 cd /home/vagrant/whph-website
 
-echo "current locale settings:"
-locale
+# echo "current locale settings:"
+# locale
 
 echo "setting locale to en_US.UTF-8"
 export LANG=ru_RU.UTF-8
