@@ -16,8 +16,8 @@ li.project-card-box id="$canonicalName$"
       img src="$projectCover$"
     .project-title
      a href="$url$"
-       | $projectTitle$
+       | $if(projectTitle)$$projectTitle$$else$$title$$endif$
     .project-author
-      | $author$
+      | $if(author)$$author$$else$$participantName$$endif$
     .terms
       | $termsList$

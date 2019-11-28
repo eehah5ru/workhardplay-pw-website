@@ -14,9 +14,9 @@ header.archive-project.whp-2017
     a href="$archiveUrl$"
       | $archiveName$
     br
-    | $author$
+    | $if(author)$$author$$else$$participantName$$endif$
     | &nbsp;
-    | $projectTitle$
+    | $if(projectTitle)$$projectTitle$$else$$title$$endif$
 
 article.archive-project.whp-2017
   = _if "hasTerms"
