@@ -1,8 +1,7 @@
 ---
-author: Имя автора в кавычках. "Алиса Олева"
-projectTitle: Название проекта в кавычках "Групповые упражнения"
-canonicalName: Не обязательно alisa-oleva-group-exercieses
-youtubeVideoId: Если есть, то в кавычках айди видео на ютюбе "s_HzUvvN1Ns"
-soundcloudTrackId: Если есть, то в кавычках айди аудио на саундклауде "353915180"
-tags: social choreography, dispersed collectivity, practices of ourselves, 8-BIT DESIRE
+author: "Ju Toman"
+projectTitle: "“F247 ' plankton-karaoke”. Video"
+canonicalName: ju-toman-stanislav-bytiutskyi-beyond
+tags: corridor anomalies, outsourcing, quick knowledge, desire, object, production drama, social choreography, digital proletariat, places of transparency, tongue and teeth of creativity, htp
 ---
+Structuralist video experience of transparency and mechanisms of the invisible control, encrusted in the glass walls of business centers. Corporate ethics of visibility, gloss and smart design of enslavement, chips and sunlight shining through the roof. What if something happens to me?

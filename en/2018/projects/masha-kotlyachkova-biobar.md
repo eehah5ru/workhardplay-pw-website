@@ -1,8 +1,7 @@
 ---
-author: Имя автора в кавычках. "Алиса Олева"
-projectTitle: Название проекта в кавычках "Групповые упражнения"
-canonicalName: Не обязательно alisa-oleva-group-exercieses
-youtubeVideoId: Если есть, то в кавычках айди видео на ютюбе "s_HzUvvN1Ns"
-soundcloudTrackId: Если есть, то в кавычках айди аудио на саундклауде "353915180"
-tags: social choreography, dispersed collectivity, practices of ourselves, 8-BIT DESIRE
+author: "Masha Kotlyachkova"
+projectTitle: "Biobar “Tango of psychobiotics”"
+canonicalName: masha-kotlyachkova-biobar
+tags: quick knowledge, all to all, yesterday's unalienated celebration, dacha, desire, practices of ourselves, sports interest, practice of small movements, extensions, pharmachoreography, sanatorium
 ---
+A bar for you and your non-human friends, the morning after which we felt neither sad nor apathetic.

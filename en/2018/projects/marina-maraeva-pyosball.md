@@ -1,8 +1,7 @@
 ---
-author: Имя автора в кавычках. "Алиса Олева"
-projectTitle: Название проекта в кавычках "Групповые упражнения"
-canonicalName: Не обязательно alisa-oleva-group-exercieses
-youtubeVideoId: Если есть, то в кавычках айди видео на ютюбе "s_HzUvvN1Ns"
-soundcloudTrackId: Если есть, то в кавычках айди аудио на саундклауде "353915180"
-tags: social choreography, dispersed collectivity, practices of ourselves, 8-BIT DESIRE
+author: "Marina Maraeva"
+projectTitle: "Pyosball"
+canonicalName: marina-maraeva-pyosball
+tags: h o o o o o o w w w w w l, affective labour, all to all, path stop, dispersed collectivity, spontaneous grassroots alternative, sports interest, sanatorium, protocols of self-organisation
 ---
+Collective modification of football game rules done by humans and at least one dog.

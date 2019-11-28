@@ -1,8 +1,8 @@
 ---
-author: Имя автора в кавычках. "Алиса Олева"
-projectTitle: Название проекта в кавычках "Групповые упражнения"
-canonicalName: Не обязательно alisa-oleva-group-exercieses
-youtubeVideoId: Если есть, то в кавычках айди видео на ютюбе "s_HzUvvN1Ns"
+author: "Your mother’s maiden name"
+projectTitle: "Feminist piano rap"
+canonicalName: your-mothers-maidenname
 soundcloudTrackId: Если есть, то в кавычках айди аудио на саундклауде "353915180"
-tags: social choreography, dispersed collectivity, practices of ourselves, 8-BIT DESIRE
+tags: h o o o o o o w w w w w l, affective labour, yesterday's unalienated celebration, desire, practices of ourselves, dispersed collectivity, social choreography, political dancefloor, terror of relationship, protocols of self-organisation
 ---
+"Your mother’s maiden name" (Anna Tereshkina, Araik Vietinghoff; Saint Petersburg, Russia) performs profeminist piano rap. This is an art- and pedagogical research project with feminist agenda and focus on continuous reflection around horizontal relationship and regulation on relationship between classes.
