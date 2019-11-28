@@ -5,13 +5,13 @@ projectCover: jura-shust-biarlog.jpg
 canonicalName: jura-shust-biarlog
 coverColor: "255,0,0"
 soundcloudTrackId: "348734729"
-tags: from the future at the present, intimate interfaces, h o o o o o o w w w w w l, desire, contingency
+tags: from the future at the present, intimate interfaces, h o o o o o o w w w w w l, desire, contingency, Joy Acceleration, pharmachoreography, political dancefloor
 ---
 
 Combining the aesthetics of rap and the ancient speech, the performance is a recitative reading to the accompaniment of the technogenic bit sample. Like verbal constellation, based on the principle of the hyperlink, the text fuses together concepts such as science and religion, actualizing the principles of theistic evolutionism. In particular, the text projects several scenes where the brown bear is in a state of hibernation, Halley's comet is moving in its orbit, the human stream is pulsing in the depths of the subway, the velocity of particles striving to collapse in the run-up to spring is being accelerated in the large hadron collider.
 Cosmological theory and technological acceleration are woven together with an archaic worldview in the hypnotic trance of the spell that causes the Higgs boson or the so-called "particle of God".  
-  
-  
+
+
 **Awakening**  
 
 While I lay in the paws of the brown bear,  
