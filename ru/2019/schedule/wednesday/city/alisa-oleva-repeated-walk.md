@@ -2,7 +2,7 @@
 order: 1
 time: "21:00 - 23:00"
 title: "повторяющаяся прогулка"
-shortDescription: "Прогулка"
+shortDescription: "Прогулка. Точка встречи: <a href='https://yandex.com/maps/157/minsk/?ll=27.557962%2C53.916684&mode=search&sll=27.557203%2C53.917272&sspn=0.002135%2C0.000888&text=53.9169558%2C%2027.556858&z=18' target='_blank'>(53.9169558, 27.5568558)</a>"
 participantId: alisa-oleva
 projectIdSuffix: "-one"
 ---

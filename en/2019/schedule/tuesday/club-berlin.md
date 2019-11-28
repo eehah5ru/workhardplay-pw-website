@@ -1,4 +1,4 @@
 ---
 order: 2
-title: "Place would be announced later"
+title: "Berlin Club_Minsk, Tučynski lane, 2"
 ---
