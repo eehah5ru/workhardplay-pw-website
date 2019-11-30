@@ -4,7 +4,7 @@ projectTitle: SSS (Sport Sex Success)
 projectCover: anna-shcherbyna-sss-cover.jpg
 canonicalName: anna-shcherbyna-sss
 coverColor: "255,0,0"
-tags: sports interest, affective labour, practices of ourselves, 8-BIT DESIRE, intimate interfaces, from the future at the present
+tags: "sports interest, affective labour, practices of ourselves, 8-BIT DESIRE, intimate interfaces, from the future at the present"
 ---
 
 The work of "SSS" presents the efforts of the artist trying to look sexy and successful. Doing sports is not for losers! Training requires moral and physical effort, although they are rewarded with the pleasure and satisfaction of the process. The gym is a space of self-improvement and self-affirmation. Here you can enjoy your body, feeling its strength and flexibility, and watching your sexy reflection, taking an apt pose, and imagining the admiring gaze of the potential Spectator.
