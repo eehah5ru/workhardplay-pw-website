@@ -1,10 +1,10 @@
 'use strict';
 
 import $ from 'jquery';
+import { onLoad, transitionend, RegExpEscape } from './foundation.core.utils';
 import { Keyboard } from './foundation.util.keyboard';
 import { MediaQuery } from './foundation.util.mediaQuery';
-import { transitionend } from './foundation.util.core';
-import { Plugin } from './foundation.plugin';
+import { Plugin } from './foundation.core.plugin';
 
 import { Triggers } from './foundation.util.triggers';
 
@@ -118,10 +118,17 @@ class OffCanvas extends Plugin {
       }
     }
 
-    this.options.isRevealed = this.options.isRevealed || new RegExp(this.options.revealClass, 'g').test(this.$element[0].className);
+    // Get the revealOn option from the class.
+    var revealOnRegExp = new RegExp(RegExpEscape(this.options.revealClass) + '([^\\s]+)', 'g');
+    var revealOnClass = revealOnRegExp.exec(this.$element[0].className);
+    if (revealOnClass) {
+      this.options.isRevealed = true;
+      this.options.revealOn = this.options.revealOn || revealOnClass[1];
+    }
 
-    if (this.options.isRevealed === true) {
-      this.options.revealOn = this.options.revealOn || this.$element[0].className.match(/(reveal-for-medium|reveal-for-large)/g)[0].split('-')[2];
+    // Ensure the `reveal-on-*` class is set.
+    if (this.options.isRevealed === true && this.options.revealOn) {
+      this.$element.first().addClass(`${this.options.revealClass}${this.options.revealOn}`);
       this._setMQChecker();
     }
 
@@ -159,15 +166,17 @@ class OffCanvas extends Plugin {
   _setMQChecker() {
     var _this = this;
 
-    $(window).on('changed.zf.mediaquery', function() {
+    this.onLoadListener = onLoad($(window), function () {
+      if (MediaQuery.atLeast(_this.options.revealOn)) {
+        _this.reveal(true);
+      }
+    });
+
+    $(window).on('changed.zf.mediaquery', function () {
       if (MediaQuery.atLeast(_this.options.revealOn)) {
         _this.reveal(true);
       } else {
         _this.reveal(false);
-      }
-    }).one('load.zf.offcanvas', function() {
-      if (MediaQuery.atLeast(_this.options.revealOn)) {
-        _this.reveal(true);
       }
     });
   }
@@ -175,12 +184,14 @@ class OffCanvas extends Plugin {
   /**
    * Removes the CSS transition/position classes of the off-canvas content container.
    * Removing the classes is important when another off-canvas gets opened that uses the same content container.
+   * @param {Boolean} hasReveal - true if related off-canvas element is revealed.
    * @private
    */
   _removeContentClasses(hasReveal) {
-    this.$content.removeClass(this.contentClasses.base.join(' '));
-    if (hasReveal === true) {
-      this.$content.removeClass(this.contentClasses.reveal.join(' '));
+    if (typeof hasReveal !== 'boolean') {
+      this.$content.removeClass(this.contentClasses.base.join(' '));
+    } else if (hasReveal === false) {
+      this.$content.removeClass(`has-reveal-${this.position}`);
     }
   }
 
@@ -191,9 +202,10 @@ class OffCanvas extends Plugin {
    * @private
    */
   _addContentClasses(hasReveal) {
-    this._removeContentClasses();
-    this.$content.addClass(`has-transition-${this.options.transition} has-position-${this.position}`);
-    if (hasReveal === true) {
+    this._removeContentClasses(hasReveal);
+    if (typeof hasReveal !== 'boolean') {
+      this.$content.addClass(`has-transition-${this.options.transition} has-position-${this.position}`);
+    } else if (hasReveal === true) {
       this.$content.addClass(`has-reveal-${this.position}`);
     }
   }
@@ -269,7 +281,8 @@ class OffCanvas extends Plugin {
    * @function
    * @param {Object} event - Event object passed from listener.
    * @param {jQuery} trigger - element that triggered the off-canvas to open.
-   * @fires OffCanvas#opened
+   * @fires Offcanvas#opened
+   * @todo also trigger 'open' event?
    */
   open(event, trigger) {
     if (this.$element.hasClass('is-open') || this.isRevealed) { return; }
@@ -291,15 +304,10 @@ class OffCanvas extends Plugin {
       this.$element.siblings('[data-off-canvas-content]').css('transition-duration', '');
     }
 
-    /**
-     * Fires when the off-canvas menu opens.
-     * @event OffCanvas#opened
-     */
     this.$element.addClass('is-open').removeClass('is-closed');
 
     this.$triggers.attr('aria-expanded', 'true');
-    this.$element.attr('aria-hidden', 'false')
-        .trigger('opened.zf.offcanvas');
+    this.$element.attr('aria-hidden', 'false');
 
     this.$content.addClass('is-open-' + this.position);
 
@@ -338,13 +346,19 @@ class OffCanvas extends Plugin {
     }
 
     this._addContentClasses();
+
+    /**
+     * Fires when the off-canvas menu opens.
+     * @event Offcanvas#opened
+     */
+    this.$element.trigger('opened.zf.offcanvas');
   }
 
   /**
    * Closes the off-canvas menu.
    * @function
    * @param {Function} cb - optional cb to fire after closure.
-   * @fires OffCanvas#closed
+   * @fires Offcanvas#closed
    */
   close(cb) {
     if (!this.$element.hasClass('is-open') || this.isRevealed) { return; }
@@ -356,7 +370,7 @@ class OffCanvas extends Plugin {
     this.$element.attr('aria-hidden', 'true')
       /**
        * Fires when the off-canvas menu opens.
-       * @event OffCanvas#closed
+       * @event Offcanvas#closed
        */
         .trigger('closed.zf.offcanvas');
 
@@ -433,6 +447,7 @@ class OffCanvas extends Plugin {
     this.close();
     this.$element.off('.zf.trigger .zf.offcanvas');
     this.$overlay.off('.zf.offcanvas');
+    if (this.onLoadListener) $(window).off(this.onLoadListener);
   }
 }
 

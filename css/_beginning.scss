@@ -1,7 +1,25 @@
+header.beginning.teaser.whp-2017 {
+  @include whp-2017-header;
+  @include project-list;
+
+  background: linear-gradient(180deg,#7fed98,#00b3f9, #c2c2c2);
+  overflow: hidden;
+
+  span {
+    font-size: unset;
+    text-transform: uppercase;
+    line-height: 0.8;
+    color: #93fed8;
+  }
+}
+
 header.beginning.whp-2017 {
   nav.menu.whp-2017 {
     @include menu;
     z-index: 0;
+
+    background: none;
+
 
     .menu-items {
       padding-top: 0;
@@ -15,6 +33,7 @@ header.beginning.whp-2017 {
       transform-origin: center;
       transform: rotateZ(34deg) rotateY(23deg);
 
+      color: #93fed8;
       // font-size: 13vw;
 
       // @include breakpoint(medium) {
@@ -44,6 +63,8 @@ header.beginning.whp-2017 {
 
       a {
         text-decoration: none;
+
+        color: #93fed8;
       }
     }
   }

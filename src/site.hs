@@ -4,6 +4,9 @@
 -- import           Data.ByteString.Lazy as BSL
 import           Data.Default (def)
 import Data.Maybe (fromMaybe)
+
+import qualified W7W.Cache as Cache
+
 -- import           Data.Monoid (mappend, (<>))
 import           Hakyll
 -- import           Hakyll.Core.Configuration (Configuration, previewPort)
@@ -33,37 +36,43 @@ import Site.CollectiveGlossary.Rules
 
 import Site.Participants.Rules
 
+import Site.Schedule.Rules
+
 --------------------------------------------------------------------------------
 
 main :: IO ()
-main =
+main = do
+  caches <- Cache.newCaches
+
   hakyllWith config $
-  do
-     templatesRules
-
-     imagesRules -- static assets
-     picturesRules (1280, 1280) "pictures/**/*"
-     fontsRules
-     dataRules
-
-     cssAndSassRules
-
-     jsRules
+    do
 
 
-     -- slim partials for deps
-     match ("ru/**/_*.slim" .||. "en/**/_*.slim") $ compile getResourceBody
+       templatesRules
 
-     -- collective glossary defenitions for deps
+       imagesRules -- static assets
+       picturesRules (1280, 1280) "pictures/**/*"
+       fontsRules
+       dataRules
+
+       cssAndSassRules
+
+       jsRules
 
 
-     staticPagesRules
+       -- slim partials for deps
+       match ("ru/**/_*.slim" .||. "en/**/_*.slim") $ compile getResourceBody
 
-     terms <- buildTerms
+       -- collective glossary defenitions for deps
+       participantsRules
+       scheduleRules caches "2019"
 
-     participantsRules
-     collectiveGlossaryRules terms
-     archiveIndexPagesRules terms
-     archiveProjectPagesRules terms
+       staticPagesRules caches
+
+       terms <- buildTerms
+
+       collectiveGlossaryRules caches terms
+       archiveIndexPagesRules caches terms
+       archiveProjectPagesRules caches terms
 
 --------------------------------------------------------------------------------

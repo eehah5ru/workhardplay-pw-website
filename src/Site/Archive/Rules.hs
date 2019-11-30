@@ -12,6 +12,7 @@ import W7W.MultiLang
 import W7W.Compilers.Slim
 import W7W.Compilers.Markdown
 import W7W.Typography
+import qualified W7W.Cache as Cache
 
 import Site.Archive.Compilers
 
@@ -34,11 +35,12 @@ import Site.Archive.Utils
 --
 -- index page
 --
-archiveIndexPagesRules :: Terms -> Rules ()
-archiveIndexPagesRules ts = do
+archiveIndexPagesRules :: Cache.Caches -> Terms -> Rules ()
+archiveIndexPagesRules caches ts = do
   let rules2016 = rules' "2016/archive/"
       rules2017 = rules' "2017/projects/"
       rules2018 = rules' "2018/projects/"
+      rules2019 = rules' "2019/projects/"      
   matchMultiLang rules2016
                  rules2016
                  "2016/archive.slim"
@@ -48,18 +50,22 @@ archiveIndexPagesRules ts = do
   matchMultiLang rules2018
                  rules2018
                  "2018/archive.slim"
+  matchMultiLang rules2019
+                 rules2019
+                 "2019/archive.slim"                 
   where
     rules' projectsPattern locale =
           slimPageRules $ \x -> do
-            ctx <- mkArchiveIndexPageCtx (terms locale ts) (archiveProjectsPattern (localizePath locale projectsPattern))
+            ctx <- mkArchiveIndexPageCtx caches (terms locale ts) (archiveProjectsPattern (localizePath locale projectsPattern))
             renderArchiveIndexPage rootPageTpl ctx x
+
 
 
 --
 -- project page
 --
-archiveProjectPagesRules :: Terms -> Rules ()
-archiveProjectPagesRules ts = do
+archiveProjectPagesRules :: Cache.Caches -> Terms -> Rules ()
+archiveProjectPagesRules caches ts = do
   matchSlim "2016/archive/"
   matchMd "2016/archive/"
 
@@ -68,6 +74,9 @@ archiveProjectPagesRules ts = do
 
   matchSlim "2018/projects/"
   matchMd "2018/projects/"
+
+  matchSlim "2019/projects/"
+  matchMd "2019/projects/"
 
   where
     matchSlim base = matchMultiLang slimRules
@@ -81,8 +90,10 @@ archiveProjectPagesRules ts = do
     mdRules locale  =
       markdownPageRules $ beautifyTypography >=> render' locale
     render' locale item = do
+      ctx <- mkArchiveProjectCtx caches (terms locale ts)
       renderArchiveProjectPage
        "templates/archive-2017-project.slim"
        rootPageTpl
-       (archiveProjectCtx (terms locale ts))
+       ctx
        item
+

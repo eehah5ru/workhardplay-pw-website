@@ -1,3 +1,11 @@
+nav#menu-sign.whp-2016 {
+  @include menu-sign(darken(grey, 5%), blue);
+}
+
+
+.lang-switch.whp-2016 {
+  @include lang-switch(darken(grey, 5%), $primary-color-2017);
+}
 header.index-2016 {
   position: relative;
 

@@ -1,0 +1,28 @@
+// here should be moved all components from 2017 file
+
+@mixin with-parameters($text-color, $link-color) {
+  p a.parameter-name {
+    text-decoration: none;
+    color: $link-color;
+    border-bottom: 1px dashed $text-color;
+    cursor: pointer;
+
+    &.active {
+      text-decoration: line-through;
+      border-bottom: none;
+    }
+  }
+
+  p span.paramater-descr,
+  p span.parameter-descr {
+    display: inline-block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding-left: 1em;
+    border-left: $text-color 7px solid;
+
+    &.hidden {
+      display: none;
+    }
+  }
+}

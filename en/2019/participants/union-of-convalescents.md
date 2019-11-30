@@ -1,0 +1,14 @@
+---
+title: "Union of Convalescents"
+city: "!!!!"
+---
+
+Union of Convalescents is a collective artistic initiative to research constructions of psychiatric normativity. Privileging immaterial production and interdisciplinarity, its practice unfolds in local specificity and sustained participation. It was launched in 2014 as part of MediaImpact Festival of Activist Art. Its agents are Natalia Nikulenkova, Pavel Mitenko, Egor Sofronov. It is based in Moscow.
+
+Regenerative practices will be led by:
+
+Vanya Shatravin-Dostov is an artist. Graduated from Smolny College of Liberal Arts (Saint Petersburg State University, Bard College), and The School of Engaged Art “What is to be Done”. As an artist currently Vanya is working on an artistic research of surveillance cameras. Vanya's main project is Studio 4413, which is an artist-run platform that intents to unite and coordinate diverse activist and artistic microcummunities. Born and raised in Moscow, he lives and works in Saint Petersburg, Russia.
+
+Egor Rogalev is an artist whose practice touches upon the transition from documentary photography, which captures social transformations on the background of late modernist architecture of dormitory districts, to contemporary post-medial art, which considerably expanded the horizons of previous research and gave a wide scope to experimentation with large-scale installations, video and sound. Participant of numerous exhibition projects, including the Special Project of the 6th Moscow International Biennale of Young Art «Perfect age» (Education Center MMOMA, 2018), «Body copyleft», the first part — «Unrecognition» (CCI Fabrika, within the framework of the Fabrika Workshops residency, 2018), The exhibition of nominees for the Kurekhin Prize 2018 (Sergey Kurekhin Center for Contemporary Art, St. Petersburg, 2018), the V-A-C Foundation’s multi-disciplinary project «Hosting the Inhuman» (MMOMA, as part of the Carte blanche program, 2017) and others.
+
+Natalia Nikulenkova is an artist. Born in 1987 in Nizhny Novgorod. Cofounder of the Union of Convalescents. She graduated from the School of Engaged Art “What Is To Be Done” and Baza Institute. Natalia is one of the few Russian artists who work at the intersection of participatory art and research into psychic conditions. Lives in Moscow.

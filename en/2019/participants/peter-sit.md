@@ -1,0 +1,6 @@
+---
+title: "Peter Sit"
+city: "!!!!"
+---
+
+Peter Sit studied photography and intermedia in Bratislava and in Prague. In 2012 he co-founded art collective APART, where he worked until mid 2019. One of the collective’s activities was the publishing house APART LABEL, where he co-edited more than 20 publications. Together with Apart he exhibited in Kunsthalle Bratislava, Karlín Studios in Prague, Easttopics in Budapest, Plusmínusnula in Žilina, Biennial of Graphic Design in Brno, CCA Chronicle in Bytom. In 2018, he co-curated the 9th  Futurological Congress in Bratislava together with Julieta Aranda. Since 2018 he co-organizes Bratislava BAK Summer School. Since 2017, he has been a member of the research team of the Czechoslovak psychotronics’, which is researching its institutional and ideological connections as well as its potential overlaps with contemporary art. In his work, Peter Sit is interested in collectivity and its potential in today's world order, work issues, radical hospitalism, and an imagination of a better future. As an artist, he is examining  an extended field of artist's activity across an entire range of artistic production. Moving across and combining the positions of artist, organizer, publisher, curator, editor is a crucial part of the artist's practice.

@@ -3,25 +3,5 @@
 }
 
 .lang-switch.whp-2017 {
-  transform: translate(2.5vw) rotate(90deg);
-  display: block;
-  font-size: 12vw;
-  line-height: 1;
-  padding-left: 6vw;
-  color: darken(grey, 5%);
-  top: 0;
-  right: 0;
-  position: absolute;
-  z-index: 99;
-
-  @include breakpoint(440) {
-    font-size: 5vw;
-  }
-
-
-  &:hover {
-    color: blue;
-    text-decoration: underline;
-  }
-
+  @include lang-switch(darken(grey, 5%), $primary-color-2017);
 }

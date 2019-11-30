@@ -3,7 +3,10 @@ module Site.Context where
 
 import Control.Applicative (Alternative (..))
 
+import System.Random
+
 import Hakyll
+import Hakyll.Core.Compiler.Internal (compilerUnsafeIO)
 
 import Data.Monoid ((<>), mempty)
 
@@ -14,6 +17,7 @@ import W7W.Context
 import Site.CollectiveGlossary.Utils (glossaryName)
 import Site.Participants (fieldParticipantBio, fieldParticipantRawBio, fieldParticipantName, fieldParticipantCity)
 
+import qualified W7W.Cache as Cache
 --
 --
 -- site specific context fields
@@ -22,7 +26,8 @@ import Site.Participants (fieldParticipantBio, fieldParticipantRawBio, fieldPart
 fieldArchiveUrl =
   field "archiveUrl" getArchiveUrl
   where
-    getArchiveUrl i = return $ "/" ++ (itemLang i) ++ "/" ++ (itemYear i) ++ "/archive.html"
+    getArchiveUrl i = return $ "/" ++ (itemLang i) ++ "/" ++ (yearPart i) ++ "archive.html"
+    yearPart = maybe (error "year is missing!") (\x -> x ++ "/") . itemYear
 
 
 fieldArchiveName =
@@ -43,12 +48,19 @@ fieldGlossaryName =
   where
     getName = return . glossaryName
 
-fieldYear = field "year" $ return . itemYear
+fieldHasYear = boolField "hasYear" $  hasYear'
+  where
+    hasYear' = maybe False (const True) . itemYear
+
+fieldYear = field "year" fieldYear'
+  where
+    fieldYear' = maybe empty return . itemYear
 
 fieldRootUrl =
   field "rootUrl" getRootUrl
   where
-    getRootUrl i = return $ "/" ++ (itemLang i) ++ "/" ++ (itemYear i) ++ "/"
+    getRootUrl i = return $ "/" ++ (itemLang i) ++ "/" ++ (yearPart i)
+    yearPart = maybe "" (\x -> x ++ "/") . itemYear
 
 
 fieldDummyFunction =
@@ -59,28 +71,62 @@ fieldDummyFunction =
     f _ _ = error "dummy: many args"
 
 
+fieldRandomFunction =
+  functionField "random" f
+  where
+    usage = "usage: random(min, max)"
+    f [] _ =  error $ "random: empty args. " ++ usage
+    f ([_]) _ = error $ "too few args. " ++ usage
+    f [minS, maxS] _ = return . show =<< compilerUnsafeIO getRandomInt
+      where
+        getRandomInt = do
+          g <- newStdGen
+          (i, g') <- return $ randomR (min, max) g
+          return i
+        min :: Int
+        min = read minS
+
+        max :: Int
+        max = read maxS
+
+    f _ _ = error $ "too many args. " ++ usage
 --
 --
 -- contexts
 --
 --
-siteCtx :: Context String
-siteCtx = fieldRuUrl
-          <> fieldEnUrl
-          <> fieldLang
-          <> fieldOtherLang
-          <> fieldOtherLangUrl
-          <> fieldYear
-          <> fieldCanonicalName
-          <> fieldRootUrl
-          <> fieldArchiveUrl
-          <> fieldArchiveName
-          <> fieldAboutName
-          <> fieldGlossaryName
-          <> fieldDummyFunction
-          <> fieldParticipantBio
-          <> fieldParticipantRawBio
-          <> fieldParticipantCity
-          <> fieldParticipantName
-          <> fieldRevision
-          <> defaultContext
+
+--
+-- minimal
+--
+minimalSiteCtx :: Context String
+minimalSiteCtx =
+  fieldRuUrl
+    <> fieldEnUrl
+    <> fieldLang
+    <> fieldOtherLang
+    <> fieldOtherLangUrl
+    <> fieldYear
+    <> fieldHasYear
+    <> fieldCanonicalName
+    <> fieldRootUrl
+    <> fieldArchiveUrl
+    <> fieldArchiveName
+    <> fieldAboutName
+    <> fieldGlossaryName
+    <> fieldDummyFunction
+    <> fieldRandomFunction
+    <> defaultContext
+
+--
+-- site default
+--
+mkSiteCtx :: Cache.Caches -> Compiler (Context String)
+mkSiteCtx caches  = do
+  r <- mkFieldRevision caches
+  return $ minimalSiteCtx
+           <> fieldParticipantBio
+           <> fieldParticipantRawBio
+           <> fieldParticipantCity
+           <> fieldParticipantName
+           <> r

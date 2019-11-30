@@ -1,0 +1,124 @@
+$primary-color-2019: white;
+$secondary-color-2019: #1f681f;
+
+nav#menu-sign.whp-2019 {
+  @include menu-sign($primary-color-2019, $secondary-color-2019);
+}
+
+.lang-switch.whp-2019 {
+  @include lang-switch($primary-color-2019, $secondary-color-2019);
+}
+
+header.index-page.whph-2019 {
+  @include whp-2017-header;
+  @include project-list;
+
+  // background: linear-gradient(180deg,#7fed98,#00b3f9, #c2c2c2);
+  background: linear-gradient(180deg,#7fed98,#00b3f9, white);
+  overflow: hidden;
+
+  span {
+    font-size: unset;
+    text-transform: uppercase;
+    line-height: 0.8;
+    color: #93fed8;
+  }
+
+  h1 {
+    color: #93fed8;
+  }
+}
+
+section.index-page.teaser.whp-2019 {
+  background: linear-gradient(0deg,#7fed98,#00b3f9, white);
+
+  min-height: 100%;
+  height: 100%;
+
+  h1 {
+    font-size: 10vw;
+    color: $primary-color-2019;
+    text-align: center;
+  }
+}
+
+section.index-page.description.whp-2019 {
+  padding-bottom: 4rem;
+  background: linear-gradient(white 0.1%, #00b3f9 0.5%, #7fed98 50%);
+
+  @include breakpoint(medium) {
+    background: linear-gradient(white 0.5%, #00b3f9 1%, #7fed98 50%);
+  }
+
+  @include breakpoint(large) {
+    background: linear-gradient(white 1%, #00b3f9 2%, #7fed98 50%);
+  }
+
+
+
+}
+
+
+section.index-page.description.whp-2019,
+section.index-page.teaser.whp-2019 {
+
+  color: $primary-color-2019;
+
+  p {
+    color: $primary-color-2019;
+    font-size: 120%;
+  }
+
+  a {
+    color: $secondary-color-2019;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  @include with-parameters($primary-color-2019, $secondary-color-2019);
+
+  .project-col.general-info.first {
+    margin-top: 6rem;
+  }
+
+
+  //
+  //
+  // schedule
+  //
+  //
+  p.day {
+    color: #1f681f;
+
+    span {
+      background-color: white;
+    }
+  }
+
+  .project p.descr span,
+  .project p.descr.no-long span {
+    color: $secondary-color-2019;
+  }
+
+  .project-col .hline {
+    color: white;
+  }
+
+  .participant-name .name {
+    background-color: white;
+    color: #1f681f;
+  }
+
+  .participant-name .hor-line {
+    color: white;
+  }
+
+  // .project {
+  //   .long-descr,
+  //   .participant-bio {
+  //     text-shadow: 2px 2px $secondary-color-2019;
+  //   }
+  // }
+}

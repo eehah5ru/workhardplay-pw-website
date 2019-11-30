@@ -52,6 +52,11 @@ def field name
   return "$#{name.to_s}$"
 end
 
+def _unless cond, &block
+  return "$if(#{cond})$$else$\n#{yield}\n"
+end
+
+
 def _if cond, &block
   return "$if(#{cond})$\n#{yield}\n"
 end
@@ -104,6 +109,29 @@ def schedule_prj_cover_style(project_name, image_path, options={})
 /*background-image: url("#{image_path}");*/
 
 transform: perspective(1280px) rotate3d(#{rand(-30..30)}, #{rand(-90..90)}, #{rand(20..45)}, #{rand((-50)..(-10))}deg);
+
+}
+</style>
+<h1 name="#{project_name}#{options[:project_id_suffix]}" id="#{project_name}#{options[:project_id_suffix]}" style="width:0; hieght:0;"></h1>
+<a class="scroll" id="#{project_name}#{options[:project_id_suffix]}-link" href="##{project_name}#{options[:project_id_suffix]}" style="width:0; hieght:0;"></a>
+END
+end
+
+def schedule_prj_cover_style_2019(project_name, image_path, options={})
+  x = rand(-30..30)
+  y = rand(-90..90)
+  z = rand(20..45)
+  deg = options[:deg] || rand((-50)..(-10))
+
+  return <<END
+<style>
+.#{project_name}#{options[:project_id_suffix]}-cover {
+  background-image: url("#{image_path}");
+  opacity: 0.3;
+  filter: saturate(200%);
+/*background-image: url("#{image_path}");*/
+
+transform: perspective(1280px) rotate3d(#{x}, #{y}, #{z}, #{deg}deg);
 
 }
 </style>

@@ -13,16 +13,13 @@ $header-color-2018: #b3b0b0;
 //
 //
 
-nav#menu-sign.whp-2017 {
-  color: $primary-color-2018;
+nav#menu-sign.whp-2018 {
+  @include menu-sign($primary-color-2018, $secondary-color-2018);
+}
 
-  svg path {
-    fill: $primary-color-2018;
 
-    &:hover {
-      fill: $secondary-color-2018;
-    }
-  }
+.lang-switch.whp-2018 {
+  @include lang-switch(darken(grey, 5%), $primary-color-2017);;
 }
 
 header.index-page.whp-2018 {
@@ -45,6 +42,8 @@ section.whp-2018.index-page.description {
       color: $primary-color-2018;
     }
   }
+
+  @include with-parameters($primary-color-2018, $secondary-color-2018);
 
   .project-col.general-info {
     p {
@@ -73,29 +72,7 @@ section.whp-2018.index-page.description {
     border-bottom: 1px dashed $primary-color-2018;
   }
 
-  p a.parameter-name {
-    text-decoration: none;
-    color: $secondary-color-2018;
-    border-bottom: 1px dashed $primary-color-2018;
-    cursor: pointer;
 
-    &.active {
-      text-decoration: line-through;
-      border-bottom: none;
-    }
-  }
-
-  p span.paramater-descr {
-    display: inline-block;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding-left: 1em;
-    border-left: $primary-color-2018 7px solid;
-
-    &.hidden {
-      display: none;
-    }
-  }
 
   .participant-name {
     color: $primary-color-2018;

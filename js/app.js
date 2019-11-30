@@ -273,6 +273,10 @@
     var classToAdd = project + "-cover";
     var classToRemove = $(".project-cover").data("classToRemove");
 
+    console.log("project: " + project);
+    console.log("classToAdd: " + classToAdd);
+    console.log("classToRemove: " + classToRemove);
+
     if (classToAdd != classToRemove) {
       console.log("adding with-project-cover");
       $(".project-cover").removeClass(classToRemove);
@@ -282,6 +286,7 @@
       $("p.day").addClass("with-project-cover");
     }
     else {
+      console.log("removing with-project-cover");
       $(".project-cover").removeClass(classToRemove);
       $(".project-cover").data("classToRemove", "");
       $(".hline").removeClass("with-project-cover");
@@ -321,8 +326,9 @@
     });
 
     //
-    // 2018 paramaters
+    // 2018-2019 paramaters
     //
+    $("span.parameter-descr").addClass("hidden");
     $("a.parameter-name").click(function(e) {
       return onClickParameterName(e.target);
     });
