@@ -1,6 +1,6 @@
 ---
 author: "Gleb Napreenko"
-projectTitle: "Podcast "Work and rest in psychoanalysis". The work of truth, the price of knowledge."
+projectTitle: "Podcast \"Work and rest in psychoanalysis\". The work of truth, the price of knowledge."
 canonicalName: gleb-napreenko-01
 soundcloudTrackId: "99209837"
 tags: "corridor anomalies, affective labour, quick knowledge, desire, intimate interfaces, production drama, dispersed collectivity, pharmachoreography, sanatorium, terror of relationship"
