@@ -5,7 +5,7 @@ projectCover: alisa-oleva-group-exercies-cover.jpg
 canonicalName: alisa-oleva-group-exercieses
 youtubeVideoId: "s_HzUvvN1Ns"
 coverColor: "255,0,0"
-tags: social choreography, dispersed collectivity, psychodata, intimate interfaces, corridor anomalies, path stop, sports interest, practice of small movements, extensions, places of transparency, protocols of self-organisation, self-destructing structures
+tags: "social choreography, dispersed collectivity, psychodata, intimate interfaces, corridor anomalies, path stop, sports interest, practice of small movements, extensions, places of transparency, protocols of self-organisation, self-destructing structures"
 ---
 
 How many friends on facebook do you have? How many followers on instagram? How many members are in your family? How many colleagues do you have? With whom of those do you keep in touch? Who stays in your sight? With whom do you form some kind of group? What does a group of people in the city space mean and how does it differ from the crowd? What is the binder material and where it gets thinner, falls out, slips and tears, and where it is possible to maintain a sense of inclusion, connection and contact.  

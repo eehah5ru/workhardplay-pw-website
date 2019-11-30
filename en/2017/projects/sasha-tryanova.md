@@ -4,7 +4,7 @@ projectTitle: "Dacha: presentation and fortune-telling by the photograph"
 projectCover: alexandra-tryanova-dacha-01.jpg
 canonicalName: sasha-tryanova
 coverColor: "255,0,0"
-tags: dacha, outsourcing, psychodata, practice of small movements, protocols of self-organisation, sanatorium
+tags: "dacha, outsourcing, psychodata, practice of small movements, protocols of self-organisation, sanatorium"
 ---
 
 Dacha is the space of intersection of physical labor and meaningless naughtiness, a place where you felt well and extremely bored, a place of сompulsion and downshifting. We suggested to evaluate your dacha experience by analyzing the aura of the place from the photograph and to discuss the curiosities of the dacha practice.
