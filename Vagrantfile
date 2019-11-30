@@ -137,6 +137,7 @@ Vagrant.configure(2) do |config|
                                             '_cache',
                                             '_site',
                                             "_tmp",
+                                            "bin",
                                             "src",
                                             "w7w/src"]
 
