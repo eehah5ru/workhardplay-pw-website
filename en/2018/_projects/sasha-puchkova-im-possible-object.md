@@ -4,7 +4,7 @@ projectTitle: "(im) possible object. Discussion around. Self-destructing systems
 canonicalName: Не обязательно alisa-oleva-group-exercieses
 youtubeVideoId: Если есть, то в кавычках айди видео на ютюбе "s_HzUvvN1Ns"
 soundcloudTrackId: Если есть, то в кавычках айди аудио на саундклауде "353915180"
-tags: social choreography, dispersed collectivity, practices of ourselves, 8-BIT DESIRE
+tags: "8-BIT DESIRE, corridor anomalies, digital proletariat, dispersed collectivity, extensions, intimate interfaces, object, practice of small movements, psychodata, speculative synthesis"
 ---
 The research group is an experimental fluid formation. That is part of the project (im) possible-object which was presented at the CCI "Fabrika" in July 2018 as part of the Moscow International Biennale for Young Art.
 

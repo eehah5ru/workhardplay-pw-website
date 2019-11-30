@@ -4,7 +4,7 @@ projectTitle: "\"Gender of Sound\" Listening Session"
 canonicalName: Не обязательно alisa-oleva-group-exercieses
 youtubeVideoId: Если есть, то в кавычках айди видео на ютюбе "s_HzUvvN1Ns"
 soundcloudTrackId: Если есть, то в кавычках айди аудио на саундклауде "353915180"
-tags: social choreography, dispersed collectivity, practices of ourselves, 8-BIT DESIRE
+tags: "intimate interfaces, political dancefloor, practices of ourselves, psychodata, quick knowledge"
 ---
 For the listening session each participant is asked to bring a sound or piece of music that you wish to discuss in relation to gender. You will not be expected to present these to the group as an expert, rather the object of this session will be to excavate all the signs and associations that we can from each sound together in discussion.
 

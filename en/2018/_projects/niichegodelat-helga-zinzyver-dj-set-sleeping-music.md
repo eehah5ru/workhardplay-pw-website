@@ -4,7 +4,7 @@ projectTitle: "DJ set \"Sleeping music\""
 canonicalName: Не обязательно alisa-oleva-group-exercieses
 youtubeVideoId: Если есть, то в кавычках айди видео на ютюбе "s_HzUvvN1Ns"
 soundcloudTrackId: Если есть, то в кавычках айди аудио на саундклауде "353915180"
-tags: social choreography, dispersed collectivity, practices of ourselves, 8-BIT DESIRE
+tags: "dispersed collectivity, intimate interfaces, political dancefloor, practice of small movements, yesterday's unalienated celebration"
 ---
 Flowing waves of sound fill the sleep space. The air is woven from fragments of conversation, popular compositions, unknown improvisations.
 
