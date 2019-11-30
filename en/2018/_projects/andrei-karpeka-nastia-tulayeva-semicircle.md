@@ -1,8 +1,7 @@
 ---
 author: "Andrei Karpeka and Nastia Tulayeva"
 projectTitle: "A walk through the semicircle"
-canonicalName: Не обязательно alisa-oleva-group-exercieses
-youtubeVideoId: Если есть, то в кавычках айди видео на ютюбе "s_HzUvvN1Ns"
+youtubeVideoId: "s_HzUvvN1Ns"
 soundcloudTrackId: Если есть, то в кавычках айди аудио на саундклауде "353915180"
 tags: "dispersed collectivity, from the future at the present, left melancholy, places of transparency, practice of small movements, quick knowledge, self-destructing structures, social choreography"
 ---
