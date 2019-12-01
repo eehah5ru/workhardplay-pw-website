@@ -6,7 +6,7 @@ canonicalName: masha-kotlyachkova-cyberfeminists-session
 coverColor: "255,0,0"
 youtubeVideoId: "Gapy-F7aDzE"
 soundcloudTrackId: "354244823"
-tags: cyberfeminism, intimate interfaces, mother-machine, dispersed collectivity, affective labour, practices of ourselves, digital proletariat, Joy Acceleration, extensions, pharmachoreography, political dancefloor, protocols of self-organisation, speculative synthesis, terror of relationship
+tags: "cyberfeminism, intimate interfaces, mother-machine, dispersed collectivity, affective labour, practices of ourselves, digital proletariat, joy acceleration, extensions, pharmachoreography, political dancefloor, protocols of self-organisation, speculative synthesis, terror of relationship"
 ---
 
 1,2,3,4: The Rhythm Method is informed by the multiple speeds within our works, and the rhythms of our bodies and lives.  

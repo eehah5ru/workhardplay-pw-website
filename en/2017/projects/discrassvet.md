@@ -1,12 +1,12 @@
 ---
 author: Diskrassvet
-projectTitle: We demand both the thesis and the track!
+projectTitle: "We demand both the thesis and the track!"
 projectCover: discrassvet-cover.jpg
 hidePictures: true
 canonicalName: discrassvet
 coverColor: "255,0,0"
 soundcloudTrackId: "353915180"
-tags: outsourcing, all to all, dispersed collectivity, contingency, practices of ourselves, social choreography, 8-BIT DESIRE, yesterday's unalienated celebration, h o o o o o o w w w w w l, Joy Acceleration, National Academy of Sciences as witch, pharmachoreography, political dancefloor, protocols of self-organisation
+tags: "outsourcing, all to all, dispersed collectivity, contingency, practices of ourselves, social choreography, 8-BIT DESIRE, yesterday's unalienated celebration, h o o o o o o w w w w w l, joy acceleration, national academy of sciences as witch, pharmachoreography, political dancefloor, protocols of self-organisation"
 ---
 
 "We demand both the thesis and the track!

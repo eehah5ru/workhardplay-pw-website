@@ -55,8 +55,8 @@ main = do
        fontsRules
        dataRules
 
-       cssAndSassRules
-
+       cssAndSassRules ("css/_*.scss" .||. "css/**/_*.scss") [ "css/app.scss"]       
+  
        jsRules
 
 

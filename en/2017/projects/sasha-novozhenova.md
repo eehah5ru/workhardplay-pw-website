@@ -4,7 +4,7 @@ projectTitle: "Lecture. SocialismNotAmericanism: the scientific organization of 
 projectCover: novozhenova.jpg
 canonicalName: sasha-novozhenova
 coverColor: "255,0,0"
-tags: from the future at the present, desire, affective labour, practices of ourselves, production drama, all to all, Joy Acceleration, protocols of self-organisation, speculative synthesis
+tags: "from the future at the present, desire, affective labour, practices of ourselves, production drama, all to all, joy acceleration, protocols of self-organisation, speculative synthesis"
 ---
 
 League of Time, which in the early 1920s propagated and disseminated the new socialist time management, economy and time management in the production and personal spheres, was part of the movement of the Scientific Labor Organization NOT – a broad initiative to develop labor and hygiene standards in production.
