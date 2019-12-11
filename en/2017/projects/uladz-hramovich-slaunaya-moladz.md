@@ -5,7 +5,7 @@ projectCover: uladz-hramovich-slaunaya-moladz-01.jpg
 canonicalName: uladz-hramovich-slaunaya-moladz
 coverColor: "255,0,0"
 soundcloudTrackId: "353846531"
-tags: "collection, object, extractive capitalism, corridor anomalies, outsourcing, National Academy of Sciences as witch, places of transparency, HTP"
+tags: "collection, object, extractive capitalism, corridor anomalies, outsourcing, national academy of sciences as witch, places of transparency, htp"
 ---
 
 Remarks and thoughts about the new Belarusian city (Salihorsk) as a prototype of a state-company or state-corporation. And also about the new museum of art in salt mines, the connection of political and financial independence and corporate art collections.
