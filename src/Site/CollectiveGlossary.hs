@@ -47,7 +47,7 @@ buildTerms = do
              .&&. (complement . byYear' $ ".*.slim")
              .&&. (complement . byYear' $ ".*.md")
         -- FIXME: remove dependency on projects pattern!!!
-        termsSources = (projectsPattern "2016/archive") .||. (projectsPattern "2017/projects") .||. (projectsPattern "2018/projects")
+        termsSources = (projectsPattern "2016/archive") .||. (projectsPattern "2017/projects") .||. (projectsPattern "2018/projects") .||. (projectsPattern "2019/projects")
 
 
 
