@@ -30,6 +30,7 @@ executable site
                   , hashable
                   , raw-strings-qq
                   , random
+                  , containers
   ghc-options:      -threaded
   default-language: Haskell2010
 
