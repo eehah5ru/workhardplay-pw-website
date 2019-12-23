@@ -1,4 +1,4 @@
-# vagranted WPHP
+# WPHP website
 
 ## master
 
