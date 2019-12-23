@@ -4,7 +4,7 @@
 
 ### requirements
 
-install drive cli: `pip install drive-cli`
+install drive cli: `pip install drive-cli` 
 
 ### commands
 
