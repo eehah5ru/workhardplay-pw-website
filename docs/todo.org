@@ -1,5 +1,7 @@
-* engine
-** W7W
+* TODO engine
+** debug
+*** add printing of the revision in the very beginning of running site binary
+** TODO W7W
 *** haskell files -> src
 *** bin files from eeefff.org -> src
 *** docs -> docs
