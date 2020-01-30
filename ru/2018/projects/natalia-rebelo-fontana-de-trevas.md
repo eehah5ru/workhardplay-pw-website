@@ -1,6 +1,6 @@
 ---
 author: "Наталия Ребело"
-projectTitle: "Перформанс \"Фонтан мрака\""
+projectTitle: "Перформанс «Фонтан мрака»"
 canonicalName: Не обязательно alisa-oleva-group-exercieses
 youtubeVideoId: Если есть, то в кавычках айди видео на ютюбе "s_HzUvvN1Ns"
 soundcloudTrackId: Если есть, то в кавычках айди аудио на саундклауде "353915180"
