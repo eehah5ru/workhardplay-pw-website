@@ -2,7 +2,7 @@
 author: "Марина Русских и Helga Zinzyver"
 projectTitle: "Скучный танец"
 canonicalName: niichegodelat-russkikh-zinzyver-boring-dance
-youtubeVideoId: "1elKVTCPE8E"
+youtubeVideoId: "SxWmU_9b83U"
 tags: "практика маленьких движений, аффективный труд, вчерашний неотчужденный праздник, желание, практики самих себя, путь стоп,  политический танцпол, террор родства"
 ---
 _После бессонной ночи слабеет тело,
