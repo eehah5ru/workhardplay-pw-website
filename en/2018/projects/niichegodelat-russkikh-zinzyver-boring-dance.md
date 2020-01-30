@@ -2,7 +2,7 @@
 author: "Marina Russkikh and Helga Zinzyver"
 projectTitle: "Boring Dance"
 canonicalName: niichegodelat-russkikh-zinzyver-boring-dance
-youtubeVideoId: "1elKVTCPE8E"
+youtubeVideoId: "SxWmU_9b83U"
 tags: "practice of small movements, affective labour, yesterday's unalienated celebration, desire, practices of ourselves, path stop, political dancefloor, terror of relationship"
 ---
 _After a night of insomnia, the body grows weaker,
