@@ -2,7 +2,6 @@
 author: "Lena Klabukova"
 projectTitle: "BE WATER MY FRIEND. Workshop"
 canonicalName: lena-klabukova-be-water
-youtubeVideoId: Если есть, то в кавычках айди видео на ютюбе "s_HzUvvN1Ns"
 soundcloudTrackId: Если есть, то в кавычках айди аудио на саундклауде "353915180"
 tags: corridor anomalies, quick knowledge, extractive capitalism, desire, intimate interfaces, mother-machine, oriental retromania, practices of ourselves, psychodata, sports interest, practice of small movements, extensions, national academy of sciences as witch, sanatorium
 ---
