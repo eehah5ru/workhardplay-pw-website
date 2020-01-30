@@ -1,5 +1,5 @@
 ---
-author: "АРТ ГРУППА МУТРО"
+author: "atom"
 projectTitle: "ФИЗ-РА"
 canonicalName: mutro-art-group-fiz-ra
 youtubeVideoId: "tQOeEqEdAT8"
