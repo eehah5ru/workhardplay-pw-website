@@ -2,6 +2,8 @@
 projectTitle: "eurospin "
 shortDescription: "микс"
 participantId: akunka
+mixcloudTrackId: "/narma/eurospin/"
+tags: optional but please add them!. tags are commaseparated. Please doublequote!
 ---
 
 **_eurospin_**  
