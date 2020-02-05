@@ -3,7 +3,7 @@ author: "Anya Scherbyna"
 projectTitle: "Neon Cuckoo Bee or Parasite-artist. Artistic research"
 canonicalName: anya-scherbyna-parasite-artist
 youtubeVideoId: "GMNA7A27fO8"
-tags: "corridor anomalies, outsourcing, affective labour, quick knowledge, all to all, desire, practices of ourselves, production drama, path stop, spontaneous grassroots alternative, exploitation of hidden motivation, irla: an ideal rejection letter to an artist, practice of small movements, tongue and teeth of creativity"
+tags: "corridor anomalies, outsourcing, affective labour, quick knowledge, all to all, desire, practices of ourselves, production drama, path stop, spontaneous grassroots alternative, exploitation of hidden motivation, irla: an ideal rejection letter to an artist, practice of small movements, tongue and teeth of creativity, care virus, weak disease"
 ---
 “In 1909, the entomologist Carlo Emery noted that social parasites among insects tend to be parasites of species or genera to which they are closely related. For instance, the many lineages of cuckoo bees lay their eggs in the nest cells of other bees in the same family. Females of cuckoo bees do not make their own nests. Also, they lack the special long hairs which collect pollen.”
 

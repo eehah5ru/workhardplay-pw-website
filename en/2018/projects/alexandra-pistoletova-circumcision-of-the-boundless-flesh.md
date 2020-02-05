@@ -2,7 +2,7 @@
 author: "Postanatomical theatre Maailmanloppu"
 projectTitle: "“Circumcision of the Boundless Flesh” Musical-installation"
 canonicalName: alexandra-pistoletova-circumcision-of-the-boundless-flesh
-tags: "h o o o o o o w w w w w l, corridor anomalies, affective labour, desire, intimate interfaces, mother-machine, practices of ourselves, dispersed collectivity, extensions, terror of relationship"
+tags: "h o o o o o o w w w w w l, corridor anomalies, affective labour, desire, intimate interfaces, mother-machine, practices of ourselves, dispersed collectivity, extensions, terror of relationship, alienation, rhythm"
 ---
 Borderless, foreskin, scalpel, circumcision – performance about the surgery, happiness and futuristic forecasts, bio-hacker, love as an ethical art. the musical move. "Endless Circumcision of the Flesh" / “Circumcision of the Boundless Flesh”
 
