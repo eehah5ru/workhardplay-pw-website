@@ -2,6 +2,7 @@
 projectTitle: "Denoting \"emptiness\""
 shortDescription: "Art object, text"
 participantId: karen-karnak-roman-aksenov
+tags: "great stone, alienation, exclusion of non-perspective pedestrians, coincidance"
 ---
 
 __We were walking down the street and understanding that the whole space was marked up, divided, constructed without us, and continued by some people we know nothing about, some Others, and not even people, but functions, so with these functions, the space continues to be being designed, changed and adapted for the same and other functions.__

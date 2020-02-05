@@ -2,6 +2,7 @@
 projectTitle: "Chronic Film"
 shortDescription: "lecture-performance (over Skype)"
 participantId: alex-anikina
+tags: "great stone, repetition, coincidance, rhythm"
 ---
 
 The lecture-performance Chronic Film is based on a procedural film of the same name, a generative algorithm that plays out every possible combination of pixels that can be generated on a screen of a certain resolution. Due to the mathematics of the algorithm, it is visualised as continuous noise. The length depends on resolution; if HD resolution is desirable, the film has to last for billions of years, resulting in a posthumanist film not made for human senses.

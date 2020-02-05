@@ -2,7 +2,7 @@
 projectTitle: "Collective Reading"
 shortDescription: "No"
 participantId: aleksei-borisionok
-tags: optional but please add them!. tags are commaseparated. Please doublequote!
+tags: "great stone, rhythm, alienation, weak disease, care virus"
 ---
 
 Aleksei Borisonok proposed to read a few texts by our friends and comrades on the issues of disease and body affects, private and shared memory, commons and singularity as a way to collectively celebrate and mourn those who are no longer with us. The method of reading was discussed collectively. Texts by Alina Popa, Sasha Novozhenova and 16 Beaver collective are below.

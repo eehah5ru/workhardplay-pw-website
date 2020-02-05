@@ -2,6 +2,7 @@
 projectTitle: "Fail Security"
 shortDescription: "Online-discussion and shy ceremony"
 participantId: lena-ischenko-anya-litovskih-masha-sarycheva-tonya-trubitsyna
+tags: "great stone, weak disease, repetition, exclusion of non-perspective pedestrians"
 ---
 
 Anya Litovskih, fail security: «Bereznyaky is famous for its’ failures. Sinkholes in Bereznyaky city appears as a result of soil subsidence — thy city was built right on the saltmine which is now full of groundwater. The sinkholes in the city surrounded by fences and guarded by UralKaliy company, which is responsible for these failures in some ways. Recently the company hired female security service. These women spending their time watching CCTV and looking after the size of sinkholes. Some of them silently walking along the fence, it’s prohibited for them to talk.
