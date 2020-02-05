@@ -1,7 +1,8 @@
 ---
 author: "Cara Tolmie"
 projectTitle: "\"Gender of Sound\" Listening Session"
-tags: "intimate interfaces, political dancefloor, practices of ourselves, psychodata, quick knowledge"
+mixcloudTrackId: work_hard_play_hard/cara-tolmie-gender-of-sound-listening-session/
+tags: "intimate interfaces, political dancefloor, practices of ourselves, psychodata, rhythm, quick knowledge"
 ---
 For the listening session each participant is asked to bring a sound or piece of music that you wish to discuss in relation to gender. You will not be expected to present these to the group as an expert, rather the object of this session will be to excavate all the signs and associations that we can from each sound together in discussion.
 

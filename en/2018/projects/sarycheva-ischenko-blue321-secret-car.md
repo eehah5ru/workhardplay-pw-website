@@ -1,7 +1,11 @@
 ---
 author: "Maria Sarycheva and Elena Ischenko in collaboration with Blue 321"
 projectTitle: "Secret Car"
-tags: "all to all, corridor anomalies, dispersed collectivity, joy acceleration, practices of ourselves, spontaneous grassroots alternative"
+mixcloudTrackId01: work_hard_play_hard/мария-сарычева-елена-ищенко-и-синяя-321-секретная-машина-настя-вепрева/
+mixcloudTrackId02: work_hard_play_hard/мария-сарычева-елена-ищенко-и-синяя-321-секретная-машина-ульяна-быченкова-и-жанна-долгова/
+mixcloudTrackId03: work_hard_play_hard/мария-сарычева-елена-ищенко-и-синяя-321-секретная-машина-саша-зубрицкая-1/
+mixcloudTrackId04: work_hard_play_hard/мария-сарычева-елена-ищенко-и-синяя-321-секретная-машина-саша-зубрицкая-2/
+tags: "all to all, care virus, corridor anomalies, dispersed collectivity, joy acceleration, practices of ourselves, spontaneous grassroots alternative"
 ---
 Could Car possible became your close relative? Could Batmobile expect to have something bigger with Batman?  Could you stop to think about Car only in terms of transport? Could you legally marry her, or she will always remain your lover? Could you acknowledge her labour?
 

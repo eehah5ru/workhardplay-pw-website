@@ -1,7 +1,7 @@
 ---
 author: "Union of Convalescents"
 projectTitle: "Two and a Half Essays on the Aesthetic Economy of Psyche"
-tags: social choreography, dispersed collectivity, practices of ourselves, 8-BIT DESIRE
+tags: "alienation, all to all, care virus, intoxication, left melancholy, pharmachoreography, practices of ourselves, psychodata, sanatorium, weak disease"
 ---
 First essay: Calculating Mental Disorder.
 
@@ -11,7 +11,7 @@ Union of Convalescents tried out a newly proposed unconventional diagnostic rout
 
 Being more narrow non-specialists than psychiatrists or psychologists, we claim to see psychic life differently. We shall produce by displacing diagnoses, poetically, appealing to nonknowledges of alternative or para- psychologies. These studies are directed not only to the psyche, but also include faith beyond any principles.
 
-The dialogic performance will produce diagnoses and prescriptions.
+The dialogic performance produced diagnoses and prescriptions.
 
 Second Essay: Egor Sofronov "Towards a Ruthless Critique of Everything Existing, Version 2018." A report in abeyance of disillusionment.
 
