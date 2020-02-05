@@ -3,7 +3,7 @@ projectTitle: "eurospin"
 shortDescription: "mix"
 participantId: akunka
 mixcloudTrackId: "/narma/eurospin/"
-tags: optional but please add them!. tags are commaseparated. Please doublequote!
+tags: "rhythm, intoxication, repetition, exclusion of non-perspective pedestrians, coincidance"
 ---
 
 **_eurospin_**  

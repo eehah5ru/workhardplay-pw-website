@@ -2,7 +2,7 @@
 author: "Alisa Oleva"
 projectTitle: "Reflections walk"
 canonicalName: alisa-oleva-reflections-walk
-tags: "corridor anomalies, affective labour, all to all, intimate interfaces, dispersed collectivity, social choreography, practice of small movements, extensions, places of transparency, terror of relationship"
+tags: "corridor anomalies, affective labour, intimate interfaces, dispersed collectivity, social choreography, practice of small movements, extensions, places of transparency, terror of relationship, rhythm, care virus, alienation"
 ---
 let's start moving. trying to keep each other in sight in the mirror. get along well with it. you can come close or go rather far, the main thing is that you can always see me in a mirror. and i can always see you. we will walk like this for a while. this gaze keeps us as if we stroll holding hands, but expanded into the space.
 

@@ -3,7 +3,7 @@ author: "The Center for the Research on Intimate Interfaces (Polina Shilkinite, 
 projectTitle: "JOY: DATABASE OF DANCE MOVES FOR RAVE"
 canonicalName: crii-joy
 mixcloudTrackId: "/work_hard_play_hard/центр-исследования-интимных-интерфейсов-джой-база-данных-движений-для-рейва/"
-tags: "joy acceleration, 8-BIT DESIRE, h o o o o o o w w w w w l, corridor anomalies, outsourcing, all to all, yesterday's unalienated celebration, collection, dispersed collectivity, social choreography, political dancefloor"
+tags: "joy acceleration, 8-BIT DESIRE, h o o o o o o w w w w w l, corridor anomalies, outsourcing, all to all, yesterday's unalienated celebration, collection, dispersed collectivity, social choreography, political dancefloor, rhythm, repetition"
 ---
 This project is a production of acceleration. We understand acceleration as a ride with the wind in a burst of pure joy. During raves we don’t use other technologies except our own bodies and bodies of other people. We offer to ride on your body and on a strangers bodies for the production of pure joy. Each Teenage MUTANT NINJA TURTLE has its own type of weapon and methodology for this weapon, same way every dancer has his own best move for dancing and for body automatization.
 
