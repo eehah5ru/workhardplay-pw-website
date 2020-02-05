@@ -3,7 +3,7 @@ author: eeefff
 projectTitle: "Wargaming labor inspection"
 coverColor: "255,0,0"
 youtubeVideoId: "GA-xthAh8tk"
-tags: digital proletariat, h o o o o o o w w w w w l, corridor anomalies, outsourcing, path stop
+tags: "digital proletariat, corridor anomalies, outsourcing, path stop, great stone, weak disease, places of transparency, tongue and teeth of creativity, htp"
 ---
 There were two inspections of 10-12 people with the duration of 1 hour each:
 

@@ -2,7 +2,7 @@
 author: Anton Sorokin
 projectTitle: "Product Placement"
 coverColor: "255,0,0"
-tags: quick knowledge, 8-BIT DESIRE, intimate interfaces, spontaneous grassroots alternative, dispersed collectivity, psychodata
+tags: "8-BIT DESIRE, intimate interfaces, dispersed collectivity, psychodata, coincidance, rhythm, political dancefloor, tongue and teeth of creativity"
 ---
 Technologies have changed and continue to change the processes of listening and perception of music. While they set the framework for the production, circulation and consumption of music products, commodifying them, they also open up space for the construction of new audial experiments, for active listening and monitoring / modifying / managing the listening process. How will we use the right to construct the process of listening of the other? What critical readings will we try to introduce and will they be "heard"?
 
