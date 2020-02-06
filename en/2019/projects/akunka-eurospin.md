@@ -3,7 +3,7 @@ projectTitle: "eurospin"
 shortDescription: "mix"
 participantId: akunka
 mixcloudTrackId: "/narma/eurospin/"
-tags: "rhythm, intoxication, repetition, exclusion of non-perspective pedestrians, coincidance"
+tags: "rhythm, intoxication, repetition, exclusion of non-perspective pedestrians, coincidance, all to all, dispersed collectivity, collection, desire, h o o o o o o w w w w w l, joy acceleration, places of transparency, psychodata, social choreography"
 ---
 
 **_eurospin_**  

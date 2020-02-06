@@ -2,7 +2,7 @@
 projectTitle: "Polyamory as the cat in the bag"
 shortDescription: "Hosted participatory discussion event "
 participantId: andrew-paterson-and-anna-huana
-tags: "alienation, repetition, care virus"
+tags: "alienation, repetition, care virus, all to all, affective labour, collection, corridor anomalies, desire, path stop, practices of ourselves, terror of relationship, protocols of self-organisation"
 ---
 
 This session opened for discussion the relationship between polyamory–the maintaining of multiple caring, intimate, and love relations, physical or conceptual–and the flexible, multi-project work of artistic and cultural production which involves more than one other. If one accepts that love is often a motivator for many intensive and intimate exchanges with another collaborator, be it a particular site, community, persons human or non-human, over time.. And that one may be juggling several ongoing commitments in parallel.. Maybe Polyamory is something we should discuss more..
