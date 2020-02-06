@@ -2,7 +2,7 @@
 projectTitle: "Nina, K. and Connie"
 shortDescription: "Online audio performance"
 participantId: anna-kinbom-choterina-freer-and-rut-karin-zettergren
-tags: "rhythm, weak disease, repetition, care virus, coincidance"
+tags: "rhythm, weak disease, repetition, care virus, coincidance, affective labour, contingency, cyberfeminism, from the future at the present, speculative synthesis, left melancholy"
 ---
 
 Nina, K. and Connie is an online audio performance developed from the ideas in the  WH!PH! Side Affects text. The performance focuses on the three characters in the text. The protagonist, who we have called Connie, is lying with fever and experiencing delusions. On the other side of the wall, Nina and K. are heard speaking within their collective situation.
