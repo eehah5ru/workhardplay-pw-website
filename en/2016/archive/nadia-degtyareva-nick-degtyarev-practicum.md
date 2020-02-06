@@ -2,8 +2,8 @@
 author: Nadia Degtyareva, Nick Degtyarev
 projectTitle: "The distributed support practicum"
 coverColor: "255,0,0"
-tags: practices of ourselves, all to all
---- 
+tags: "practices of ourselves, all to all, digital proletariat, extensions, extractive capitalism, great stone, htp, production drama, protocols of self-organisation"
+---
 
 In the nearest future the industrial labour as well as job creation will become irrelevant and lose its value for both actors of capitalistic relations and those who oppose them through the development of alternative and parallel types of economies. Prior to that change attempts to battle with industrial aspects of the capitalist system were limited mainly to practices of resistance against industrial specialization resulting in transformation of life into factory, and later transformation of the industrial labour itself into unconditional activity which has eventually occupied all dimensions of the social area. However, it didn’t stop the splitting of labour. The ideal machine, that requires neither repair, nor maintenance, which arose in Marx’s mind, has abolished not only the pricing, but also has made human labour itself redundant. In light of this the next step in the maintenance of activity and living was the experimental establishment of the unconditional basic income for citizens (sic) within the economies of the national states.
 What kind of consequences these changes may cause? The results of the plebiscite in Switzerland in 2016 show that the government’s arguments about harmful effects of basic income were accepted by the majority who voted against its establishment. This outcome is determined by the attempts of the conservative sector of the economy to defend their positions, as well as by aspiration of citizens (sic) to defend themselves from symbolic loss. Given this optics, it's crucial to pay attention to what is regarded as “unconditional”. Unconditionality in this case comes down to the one and only condition: the income has to be fully independent from all of the repressive machineries of hypercapitalism.

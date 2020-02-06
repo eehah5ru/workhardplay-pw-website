@@ -2,7 +2,7 @@
 author: Uliana Bychenkova
 projectTitle: "Feast for glory of parasitism"
 coverColor: "255,0,0"
-tags: h o o o o o o w w w w w l, desire, yesterday's unalienated celebration
+tags: "h o o o o o o w w w w w l, desire, yesterday's unalienated celebration, affective labour, care virus, corridor anomalies, joy acceleration, pharmachoreography"
 ---
 FEAST FOR GLORY OF PARASITISM\* Re-feast holiday to your taste!
 In the program: a feast, a video show "Astrological news from Prekarisentsy" \*\*, laziness, parasitism, idleness, swimming in the lake, a disco in the parking lot, a fairy tale for the night, a dream.  

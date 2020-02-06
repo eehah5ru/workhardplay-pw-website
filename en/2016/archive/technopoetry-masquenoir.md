@@ -5,7 +5,7 @@ coverColor: "255,0,0"
 youtubeVideoId01: "4OYjrwi38nA"
 youtubeVideoId02: "qPBD6CASo_s"
 youtubeVideoId03: "RRmt3p-6D8w"
-tags: left melancholy, h o o o o o o w w w w w l, dispersed collectivity, social choreography, all to all, yesterday's unalienated celebration
+tags: "left melancholy, h o o o o o o w w w w w l, all to all, yesterday's unalienated celebration, coincidance, joy acceleration, political dancefloor" 
 ---
 [TECHNO-POETRY][1]  
 St. Petersburg  
