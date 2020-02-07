@@ -2,8 +2,8 @@
 projectTitle: "Reflector"
 shortDescription: "Performance, Antipsychiatric stage play"
 participantId: union-of-convalescents-and-playfellows
+tags: "alienation, care virus, corridor anomalies, dispersed collectivity, extractive capitalism, intimate interfaces, intoxication, pharmachoreography, production drama, weak disease"
 ---
-
 The play consists of a conversation and reading with the use of real-time video and fragments of audio recordings. Participants simultaneously act as performers, screenwriters and directors - each produces its own text and is able to influence the overall dramatic composition of the event.
 
 The play addresses the feeling of ontological insecurity caused by contemporary forms of communication, the economic conditions of cognitive production and the neuroexistential revision of the foundations of the human psychics.

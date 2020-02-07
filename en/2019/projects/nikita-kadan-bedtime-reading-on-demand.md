@@ -2,6 +2,7 @@
 projectTitle: "Bedtime reading on demand"
 shortDescription: "Everyday life practice"
 participantId: nikita-kadan
+tags: "affective labour, corridor anomalies, intimate interfaces, repetition"
 ---
 
 Bedtime reading creates the meaningful, reflective transition between reality and sleep, which cannot take place when you just fall after overwork (cognitive as well as creative) or self-wasting, self-burning partying as labour.
@@ -10,7 +11,7 @@ Bedtime reading is usually a ritual performed between close people. When an unfa
 
 You have the opportunity to pre-order my reading for any of the nights / evenings / days of my presence in Minsk (or another venue of the WHPH), and I commit to be ready to fulfill your order at any time of the day. I can sit in your bed (or other sleeping place) beside you or on a chair next to you. I will wear my home clothes. You can choose a book from the list offered below. The schedule of readings is made on the first day of the WHPH and may be adjusted depending on the availability.
 
-Preliminary reading list:  
+Reading list:  
 Marcel Proust, “Sodom and Gomorrah”  
 Bruno Schulz "Cinnamon Shops", “Sanatorium Under the Sign of the Hourglass"  
 Fyodor Dostoevsky "A Gentle Creature"  
@@ -22,4 +23,5 @@ Yuri Leiderman "Moabit Chronicles"
 "Ancient Chinese Philosophy", Ed. “Thought”, Moscow, 1973  
 Jacques Ranciere "On the Shores of Politics", "Disagreement: Politics and Philosophy", "The Distribution of the Sensible"  
 Thomas Bernhard “The Loser”  
+
 Image: drawing by Bruno Schulz.
