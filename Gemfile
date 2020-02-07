@@ -15,3 +15,5 @@ gem 'sshkit'
 gem 'guard'
 gem 'guard-shell'
 gem "guard-process"
+gem "rake"
+gem 'rmagick'
