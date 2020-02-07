@@ -2,7 +2,7 @@
 projectTitle: "Personalize This — Towards the Commons"
 shortDescription: "Participatory session based on user-generated content."
 participantId: egor-sofronov
-tags: "repetition, weak disease, coincidance"
+tags: "repetition, weak disease, coincidance, 8-BIT DESIRE, all to all, collection, digital proletariat, intimate interfaces, object, practices of ourselves, psychodata, quick knowledge"
 ---
 
 Participatory session based on user-generated content. Narrations of neurochemical attention chains, individual pathologies or tactical microgestures of evasion, cunning or submission, of filter bubbles, of privacies turned outside out all over, narcissist mirages, computable and alienable self-representations.

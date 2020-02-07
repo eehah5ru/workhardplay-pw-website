@@ -2,7 +2,7 @@
 projectTitle: "|Agent|"
 shortDescription: "A number of cognitive and physical experiments upon the group of participants"
 participantId: klabukova-lena-and-katya-pislari
-tags: "intoxication, repetition, weak disease, coincidance"
+tags: "intoxication, repetition, weak disease, coincidance, contingency, corridor anomalies, dispersed collectivity, extensions, intimate interfaces, national academy of sciences as witch, pharmachoreography, speculative synthesis"
 ---
 
 Our organization participates in the third stage of the prelaboratory analysis of a family of active agents, or a single agent in a series of states, acting inside the human body and exhibiting virus-like properties, as well as complex mutual activity with indirect correlations. Provisionally the most distinct agent subtypes are being called “Love” and “Non-Love”. The exact design was not yet fully discovered but it has been traced that the mutual amount of different subtypes of the agent directly or inversely correlates with the levels of affordance of a number of primary neurotransmitters. This makes it possible to indirectly assess the state of an individual, but the individual herself through her cognitive-emotional activity creates an environment of varying levels of auspiciousness for one or another form of the active agent. It has also been established that both the family of agents and the corresponding cognitive-emotional states are capable of being transmitted through social environment.
