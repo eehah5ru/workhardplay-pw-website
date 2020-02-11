@@ -2,6 +2,7 @@
 projectTitle: "Ethnography in Zootopia: Cities after anthropocentrism"
 shortDescription: "Lecture with soundscape"
 participantId: andrey-vozyanov
+mixcloudTrackId: "/work_hard_play_hard/андрей-возьянов-этнография-в-зверополисе-города-после-антропоцентризма-лекция-с-саундскейпом/"
 tags: "great stone, alienation, care virus, exclusion of non-perspective pedestrians, all to all, dacha, dispersed collectivity, speculative synthesis, protocols of self-organisation"
 ---
 

@@ -2,6 +2,7 @@
 projectTitle: "Here where others"
 shortDescription: "Moderated discussion"
 participantId: kirila-cvetkovska-vera-zalutskaya
+mixcloudTrackId: "/work_hard_play_hard/кирила-цветковска-вера-залуцкая-здесь-где-другие-модерируемая-дискуссия/"
 tags: "rhythm, weak disease, care virus, 8-BIT DESIRE, corridor anomalies, dacha, digital proletariat, path stop, practices of ourselves, practice of small movements, protocols of self-organisation, sanatorium, tongue and teeth of creativity"
 ---
 
