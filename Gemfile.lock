@@ -27,6 +27,9 @@ GEM
     guard-process (1.2.1)
       guard-compat (~> 1.2, >= 1.2.1)
       spoon (~> 0.0.1)
+    guard-rake (1.0.0)
+      guard
+      rake
     guard-shell (0.7.1)
       guard (>= 2.0.0)
       guard-compat (~> 1.0)
@@ -81,6 +84,7 @@ DEPENDENCIES
   capistrano-scm-copy
   guard
   guard-process
+  guard-rake
   guard-shell
   pandoc-ruby
   rake

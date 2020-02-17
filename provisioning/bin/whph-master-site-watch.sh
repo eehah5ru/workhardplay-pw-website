@@ -9,11 +9,9 @@ export NVM_DIR="$HOME/.nvm"
 
 cd /home/vagrant/whph-website
 
-git submodule init
-git submodule update
+# git submodule init
+# git submodule update
 
 rvm . do bundle install
 
-(rvm . do rake server:clean)
-
-# stack exec site -- clean
+(nohup guard &) && (rvm . do rake server:watch)

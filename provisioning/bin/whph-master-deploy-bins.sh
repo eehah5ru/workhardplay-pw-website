@@ -12,6 +12,8 @@ cd /home/vagrant/whph-website
 git submodule init
 git submodule update
 
+rvm . do bundle install
+
 dist_dir=`stack path | grep "^dist-dir:" | awk -F ': ' '{print $2}' `
 
-stack build && rsync -avz $dist_dir/build/site/site deploy@myfutures.trade:~/whph-slave-bins/
+(rvm . do rake stack:build) && rsync -avz $dist_dir/build/site/site deploy@myfutures.trade:~/whph-slave-bins/

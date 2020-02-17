@@ -12,4 +12,8 @@ cd /home/vagrant/whph-website
 git submodule init
 git submodule update
 
-stack build && stack exec site -- watch --port 8001
+rvm . do bundle install
+
+(rvm . do rake stack:build) && (rvm . do rake server:watch)
+
+# stack build && stack exec site -- watch --port 8001

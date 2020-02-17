@@ -14,6 +14,8 @@ cd /home/vagrant/whph-website
 
 # stack build && stack exec site -- watch --port 8001
 
+rvm . do bundle install
+
 mkdir -p bin
 
 rsync -avz deploy@myfutures.trade:~/whph-slave-bins/site bin/

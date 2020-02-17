@@ -8,4 +8,9 @@ cd /home/vagrant/whph-website
 git submodule init
 git submodule update
 
-stack build 
+
+rvm . do bundle install
+
+rvm . do rake stack:build
+
+# stack build 

@@ -53,13 +53,18 @@ Vagrant.configure(2) do |config|
                             "/home/vagrant/whph-website",
                             type: "rsync",
                             :rsync__args => ["--verbose", "--archive", "--delete", "-z", "--links", "--no-owner", "--no-group"],
-                            rsync__exclude: ['.stack-work', '_cache', '_site', "_tmp", "w7w"]
+                            rsync__exclude: ['.stack-work', '_cache', '_site', "_tmp", "w7w", "pictures", "nohup.out", "guard.log"]
 
     master.vm.synced_folder "w7w",
                             "/home/vagrant/whph-website/w7w",
                             type: "rsync",
                             :rsync__args => ["--verbose", "--archive", "--delete", "-z", "--links", "--no-owner", "--no-group"]
-                            # rsync__exclude: ['.stack-work', '_cache', '_site', "_tmp", "src"]    
+
+    master.vm.synced_folder "pictures",
+                            "/home/vagrant/whph-website/pictures",
+                            type: "rsync",
+                            :rsync__args => ["--verbose", "--archive", "--delete", "-z", "--links", "--no-owner", "--no-group"],
+                            rsync__auto: false
     
 
     master.vm.provider "virtualbox" do |vb|
@@ -139,8 +144,16 @@ Vagrant.configure(2) do |config|
                                             "_tmp",
                                             "bin",
                                             "src",
-                                            "w7w/src"]
+                                            "w7w/src",
+                                            "pictures",
+                                            "nohup.out",
+                                            "guard.log"]
 
+    slave.vm.synced_folder "pictures",
+                            "/home/vagrant/whph-website/pictures",
+                            type: "rsync",
+                            :rsync__args => ["--verbose", "--archive", "--delete", "-z", "--links", "--no-owner", "--no-group"],
+                            rsync__auto: false    
 
 
     slave.vm.provider "virtualbox" do |vb|

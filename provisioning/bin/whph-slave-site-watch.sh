@@ -9,22 +9,22 @@ export NVM_DIR="$HOME/.nvm"
 
 cd /home/vagrant/whph-website
 
-echo "current locale settings:"
-locale
+# echo "current locale settings:"
+# locale
 
 echo "setting locale to en_US.UTF-8"
 export LANG=ru_RU.UTF-8
 export LANGUAGE=ru_RU.UTF-8
 export LC_ALL=ru_RU.UTF-8
-locale
+# locale
 
 # git submodule init
 # git submodule update
 
 # stack build && stack exec site -- watch --port 8001
 
+rvm . do bundle install
+
 mkdir -p bin
 
-rsync -avz deploy@myfutures.trade:~/whph-slave-bins/site bin/
-
-bin/site watch --port 8001
+(nohup guard &) && (rvm . do rake slave:watch)

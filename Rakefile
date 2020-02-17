@@ -33,13 +33,20 @@ def dst_pictures
   pictures.map{|p| dst_picture p}
 end
 
+# module Vagrant
+#   def self::up target
+#     sh "vagrant"
+#   end
+  
+# end
+
+
 namespace :stack do
   desc "build executables"
   task :build do
     sh "stack build"
   end
 end
-
 
 namespace :server do
 
@@ -69,7 +76,7 @@ namespace :resize do
 
   desc "resize all pics in #{SRC_DIR} into #{DST_DIR}"
   task :all => dst_pictures do
-    puts "done"
+    puts "Resizing pictues: done"
   end
   
   pictures.each do |picture_path|
@@ -88,6 +95,116 @@ namespace :resize do
   end
 end
 
+
+desc "REMOTE TASKS on vagrant machines"
+namespace :vagrant do
+  desc "update vagrant plugins"
+  task :plugin_update do
+    sh "vagrant plugin update"
+  end
+
+  desc "vagrant / master REMOTE TASKS"
+  namespace :master do
+    desc "up vagrant machine"
+    task :up do
+      sh "vagrant up master"
+    end
+
+    desc "halt vagrant machine"
+    task :halt do
+      sh "vagrant halt master"
+    end
+
+    desc "reload vagrant machine"
+    task :reload do
+      sh "vagrant reload master"
+    end
+
+    desc "provision"
+    task :provision do
+      sh "vagrant provision master"
+    end
+    
+    desc "start hakyll server watch"
+    task :watch => [:up] do
+      sh "vagrant ssh master -c \"bash /vagrant/bin/whph-master-site-watch.sh\""
+    end
+
+    desc "clean hakyll server"
+    task :clean => [:up] do
+      sh "vagrant ssh master -c \"bash /vagrant/bin/whph-master-site-clean.sh\""
+    end
+
+    desc "deploy site bin"
+    task :deploy_bin => [:up] do
+      sh "vagrant ssh master -c \"bash /vagrant/bin/whph-master-deploy-bins.sh\""
+    end
+  end
+
+  desc " vagrant / slave REMOTE TASKS"
+  namespace :slave do
+    #
+    # vagrant tasks
+    #
+    desc "up vagrant machine"
+    task :up do
+      sh "vagrant up slave"
+    end
+
+    desc "halt vagrant machine"
+    task :halt do
+      sh "vagrant halt slave"
+    end
+
+    desc "reload vagrant machine"
+    task :reload do
+      sh "vagrant reload slave"
+    end
+
+    desc "provision"
+    task :provision do
+      sh "vagrant provision slave"
+    end
+
+    #
+    # hakyll tasks
+    #
+    desc "start hakyll server watch"
+    task :watch => [:up] do
+      sh "vagrant ssh slave -c \"bash /vagrant/bin/whph-slave-site-watch.sh\""
+    end
+
+    desc "clean hakyll server"
+    task :clean => [:up] do
+      sh "vagrant ssh slave -c \"bash /vagrant/bin/whph-slave-site-clean.sh\""
+    end    
+    
+  end
+  
+end
+
+desc "MASTER LOCAL tasks"
+namespace :master do
+
+end
+
+
+desc "SLAVE LOCAL tasks"
+namespace :slave do
+  task :make_bin do
+    mkdir_p "bin"
+  end
+
+  desc "fetch latest version of hakyll site binary"
+  task :fetch_bin => [:make_bin] do
+    sh "rsync -avz deploy@myfutures.trade:~/whph-slave-bins/site bin/"
+  end
+
+  task :watch => [:fetch_bin, "resize:all"] do
+    sh "bin/site watch --port 8001"
+  end
+end
+  
 # task :resize do
 #   # base_dir = File.dirname(__FILE__)
   
