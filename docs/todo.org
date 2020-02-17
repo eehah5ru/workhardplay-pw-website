@@ -1,9 +1,16 @@
-* MC
-** clean -> clean & start again
-** vm memory -> increase?
+* TODO MC
+** TODO clean -> clean & start again
+** provision runs when setup pressed
+** DONE vm memory -> increase?
+   CLOSED: [2020-02-17 Mon 18:30]
 ** TODO vagrant master
 *** deploy bins -> rake
 *** update docs
+** TODO vagrant both
+*** TODO multiple guard instances
+**** kill them after stopping site watch?
+***** in site-watch script?
+***** check rsync auto doesn't produce any guard processes inside of vagrant instance
 * TODO optimized pics
 ** TODO pics are converted to jpg files
 ** IPTC tags
@@ -92,7 +99,7 @@
    CLOSED: [2018-03-02 Fri 17:45]
 * deployment
 ** prevent client caching for html files and css
-*** revisions in css and js files
+*** TODO revisions in css and js files
 *** nginx
 **** copy config from eeefff.org
 * DONE links to belaruskali and pvt
