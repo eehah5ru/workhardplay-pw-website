@@ -11,9 +11,10 @@ li.project-card-box id="$canonicalName$"
           .has-audio-icon style="background-color: rgba($coverColor$, 0.7)"
             | &nbsp;
         = _endif
-
-    .thumbnail
-      img src="$projectCover$"
+    = _if "projectCover"
+      .thumbnail
+        img src="$projectCover$"
+    = _endif
     .project-title
      a href="$url$"
        | $if(projectTitle)$$projectTitle$$else$$title$$endif$
