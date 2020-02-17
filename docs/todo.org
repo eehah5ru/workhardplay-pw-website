@@ -1,3 +1,14 @@
+* MC
+** clean -> clean & start again
+** vm memory -> increase?
+** vagrant
+*** start stop scripts -> rake
+
+* optimized pics
+** IPTC tags
+*** check if it works
+** pic color -> IPTC
+*** port haskell to ruby
 * TODO engine
 ** debug
 *** add printing of the revision in the very beginning of running site binary

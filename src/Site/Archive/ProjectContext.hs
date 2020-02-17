@@ -1,6 +1,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Site.Archive.ProjectContext where
 
+
 import Data.ByteString.Lazy (ByteString)
 
 import Data.Maybe (fromMaybe)
@@ -137,21 +138,33 @@ fieldProjectCover =
 --     mkImageItem =
 --       urlField "imageUrl"
 
-fieldProjectColor :: Cache.Caches -> Context String
-fieldProjectColor caches =
-  fieldPictureColor caches
-                    "projectColor"
-                    projectCoverPath
-                    (mkColor 255 0 0)
-                    colorChange
+--
+--
+-- FIXME: color using cached data in the file
+--
+-- 
+fieldProjectColor :: Cache.Caches -> Context a
+fieldProjectColor caches = field "projectColor" f
   where
-    colorChange = saturate . opposite
-    projectCoverPath i = do
-      -- covers <- -- loadAll (projectCoverPattern i) :: Compiler [Item ByteString]
-      covers <- loadPictures (projectCoverPattern i)
-      case (null covers) of
-        True -> return Nothing
-        False -> return . Just . itemIdentifier . head $ covers
+    f :: Item a -> Compiler String 
+    f i = return . formatColor $ mkColor 255 0 0
+
+-- fieldProjectColor :: Cache.Caches -> Context String
+-- fieldProjectColor caches =
+--   fieldPictureColor caches
+--                     "projectColor"
+--                     projectCoverPath
+--                     (mkColor 255 0 0)
+--                     colorChange
+--   where
+--     colorChange = saturate . opposite
+--     projectCoverPath i = do
+--       -- covers <- -- loadAll (projectCoverPattern i) :: Compiler [Item ByteString]
+--       covers <- loadPictures (projectCoverPattern i)
+--       case (null covers) of
+--         True -> return Nothing
+--         False -> return . Just . itemIdentifier . head $ covers
+
 
 
 fieldTermsLabel :: Context a

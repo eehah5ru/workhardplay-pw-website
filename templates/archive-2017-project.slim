@@ -1,9 +1,11 @@
-css:
-  .header-cover {
-    background-image: linear-gradient(0deg, rgba($projectColor$,0), rgba($projectColor$,1)), url($projectCover$);
-    background-size: contain, cover;
-    background-position: left top, center center;
-  }
+= _if "projectCover"
+  css:
+    .header-cover {
+      background-image: linear-gradient(0deg, rgba($projectColor$,0), rgba($projectColor$,1)), url($projectCover$);
+      background-size: contain, cover;
+      background-position: left top, center center;
+    }
+= _endif
 header.archive-project.whp-2017
   .header-cover
     | &nbsp;

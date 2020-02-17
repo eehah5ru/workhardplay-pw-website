@@ -51,7 +51,8 @@ main = do
        templatesRules
 
        imagesRules -- static assets
-       picturesRules (1280, 1280) "pictures/**/*"
+       -- picturesRules (1280, 1280) "pictures/**/*"
+       copyPicturesRules "pictures/**/*"
        fontsRules
        dataRules
 
