@@ -1,10 +1,11 @@
 * MC
 ** clean -> clean & start again
 ** vm memory -> increase?
-** vagrant
-*** start stop scripts -> rake
-
-* optimized pics
+** TODO vagrant master
+*** deploy bins -> rake
+*** update docs
+* TODO optimized pics
+** TODO pics are converted to jpg files
 ** IPTC tags
 *** check if it works
 ** pic color -> IPTC
