@@ -157,7 +157,7 @@ Vagrant.configure(2) do |config|
 
 
     slave.vm.provider "virtualbox" do |vb|
-      vb.memory = "2048"
+      vb.memory = "2560"
       vb.name ="slave"
       # vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
     end
