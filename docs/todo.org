@@ -1,14 +1,25 @@
-* TODO MC
-** TODO clean -> clean & start again
-** provision runs when setup pressed
+* DONE MC
+  CLOSED: [2020-02-18 Tue 13:41]
+** DONE clean -> clean & start again
+   CLOSED: [2020-02-18 Tue 13:41]
+** DONE provision runs when setup pressed
+   CLOSED: [2020-02-18 Tue 13:41]
 ** DONE vm memory -> increase?
    CLOSED: [2020-02-17 Mon 18:30]
-** TODO vagrant master
-*** deploy bins -> rake
-*** update docs
-** TODO vagrant both
-*** TODO multiple guard instances
-**** kill them after stopping site watch?
+** DONE vagrant master
+   CLOSED: [2020-02-18 Tue 13:10]
+*** DONE deploy bins -> rake
+    CLOSED: [2020-02-18 Tue 12:56]
+*** DONE update docs
+    CLOSED: [2020-02-18 Tue 12:58]
+*** DONE rsync-auto
+    CLOSED: [2020-02-18 Tue 13:10]
+** DONE vagrant both
+   CLOSED: [2020-02-18 Tue 13:11]
+*** DONE multiple guard instances
+    CLOSED: [2020-02-18 Tue 13:10]
+**** DONE kill them after stopping site watch?
+     CLOSED: [2020-02-18 Tue 13:10]
 ***** in site-watch script?
 ***** check rsync auto doesn't produce any guard processes inside of vagrant instance
 * TODO optimized pics
@@ -17,7 +28,7 @@
 *** check if it works
 ** pic color -> IPTC
 *** port haskell to ruby
-* TODO engine
+* engine
 ** debug
 *** add printing of the revision in the very beginning of running site binary
 ** TODO W7W
