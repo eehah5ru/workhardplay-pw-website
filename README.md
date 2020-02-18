@@ -59,6 +59,8 @@ collect all formats from events:
 ## WHPH MC - master
 
 ### build binary
-- `vagrant up master`
-- `vagrant rsync-auto master`
-- `vagrant ssh master -c "bash /vagrant/bin/whph-master-deploy-bins.sh"`
+- `rake vagrant:master:deploy_bin`
+
+### start server locally
+- `rake vagrant:master:watch`
+- `rake vagrant:master:rsync_auto`
