@@ -14,4 +14,4 @@ cd /home/vagrant/whph-website
 
 rvm . do bundle install
 
-(nohup guard &) && (rvm . do rake server:watch)
+(nohup guard &) && (rvm . do rake server:watch) #; (killall -9 guard)

@@ -27,4 +27,4 @@ rvm . do bundle install
 
 mkdir -p bin
 
-(nohup guard &) && (rvm . do rake slave:watch)
+(nohup guard &) && (rvm . do rake slave:watch) #; (killall -9 guard)
