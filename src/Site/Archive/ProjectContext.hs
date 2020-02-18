@@ -7,6 +7,7 @@ import Data.ByteString.Lazy (ByteString)
 import Data.Maybe (fromMaybe)
 import Data.Monoid ((<>), mempty)
 import Control.Monad ((>=>))
+import Control.Applicative ((<|>))
 
 import qualified Data.Text as T
 
@@ -91,11 +92,29 @@ fieldProjectTitle :: Context String
 fieldProjectTitle =
   field "title" getTitleFromItem
   where
-    projectName m = fromMaybe "noname" (lookupString "projectTitle" m)
-    authorName m = fromMaybe "noname" (lookupString "author" m)
+    format' m = fromMaybe "noname" m
+    
     getTitleFromItem item = do
-      m <- getMetadata (itemIdentifier item)
-      return $ (authorName m) ++ " -> " ++ (projectName m)
+      a <- formattedAuthor
+      p <- formattedProjectName
+      
+      return $ a ++ " -> " ++ p
+
+      where
+        meta = getMetadata (itemIdentifier item)
+
+        authorFromMeta = meta >>= return . lookupString "projectTitle"
+
+        authorFromParticipant = SC.maybeParticipantName item
+
+        projectNameFromMeta = meta >>= return . lookupString "author"
+        
+        formattedAuthor = do
+          a' <- authorFromParticipant
+          a'' <- authorFromMeta
+          return $ format' $  a' <|> a''
+
+        formattedProjectName = return . format' =<< projectNameFromMeta
 
 
 fieldHasVideo = do
@@ -127,7 +146,7 @@ fieldProjectCover =
         Just r -> return $ toUrl r
         _ -> return missingCoverUrl
     getCoverUrl i = do
-      covers <- loadAll (projectCoverPattern i) :: Compiler [Item ()]
+      covers <- loadAll (projectCoverPattern i) :: Compiler [Item CopyFile]
       case (null covers) of
         True -> return missingCoverUrl
         False -> coverUrl . itemIdentifier . head $ covers

@@ -37,11 +37,30 @@ participantPattern i = do
     -- FIXME: replace with non-errror logic creating for example non-existing participant. undisclosed or so
     e' i = error $ "unresolved participantID fo event " ++ (itemCanonicalName i)
     year' = maybe "3000" id . itemYear
+
     getParticipantId i = do
       return . maybe (e' i) id =<< getMetadataField (itemIdentifier i) "participantId"
 
 participantIdentifier i = do
   return . flip fromCapture "" =<< participantPattern i
+
+hasParticipant i = do
+  return . ((/=) 0) . length =<< loadParticipants hasNoVersion i
+
+
+maybeParticipantName i = do
+  pId <- participantIdentifier i
+  getMetadataField pId "title"
+
+
+participantName i = do
+  pId <- participantIdentifier i
+  return . maybe (e' i) id =<< maybeParticipantName i
+
+  where
+    e' i = error $ "error getting participant name for " ++ (itemCanonicalName i)
+
+
 
 loadParticipant :: Item a -> Compiler (Item String)
 loadParticipant i = load =<< participantIdentifier i
@@ -143,18 +162,10 @@ fieldHasEvents v = boolFieldM "hasEvents" hasEvents'
       return $ (length events) /= 0
 
 fieldHasParticipant :: Pattern -> Context String
-fieldHasParticipant v = boolFieldM "hasParticipant" hasParticipant'
-  where
-    hasParticipant' i = do
-      return . ((/=) 0) . length =<< loadParticipants v i
+fieldHasParticipant v = boolFieldM "hasParticipant" hasParticipant
 
 fieldParticipantName :: Context String
-fieldParticipantName = field "participantName" participantName'
-  where
-    e' i = error $ "error getting participant name for " ++ (itemCanonicalName i)
-    participantName' i = do
-      pId <- participantIdentifier i
-      return . maybe (e' i) id =<< getMetadataField pId "title"
+fieldParticipantName = field "participantName" participantName
 
 mkParticipantContext :: Cache.Caches -> Compiler (Context String)
 mkParticipantContext c = do
