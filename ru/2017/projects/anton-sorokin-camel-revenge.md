@@ -1,8 +1,6 @@
 ---
 author: Антон Сорокин
 projectTitle: "Месть Верблюдов Мутантов (игровая сессия)"
-projectCover: anton-sorokin-camel-revenge-cover.jpg
-canonicalName: anton-sorokin-camel-revenge
 coverColor: "255,0,0"
 youtubeVideoId: "MK90xavApTA"
 tags: "8-битное желание, социальная хореография, мать-машина, спортивный интерес, интимные интерфейсы, психодата, желание, цифровой пролетариат, джой ускорение, фармахореография, спекулятивный синтез, пвт, отравление, повторение"

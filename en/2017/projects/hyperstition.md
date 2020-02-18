@@ -1,8 +1,6 @@
 ---
 author: Christopher Roth and Armen Avanessian
 projectTitle: "HYPERSTITION: A film on time and narrative"
-projectCover: hyperstition-cover.jpg
-canonicalName: hyperstition
 coverColor: "255,0,0"
 soundcloudTrackId: "349474606"
 tags: "from the future at the present, contingency, desire, intimate interfaces, mother-machine, cyberfeminism, outsourcing, corridor anomalies, digital proletariat, coincidance, speculative synthesis"

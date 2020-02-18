@@ -1,8 +1,6 @@
 ---
 author: Александра Трянова
 projectTitle: "Дача: презентация и гадание по фотографии"
-projectCover: alexandra-tryanova-dacha-01.jpg
-canonicalName: sasha-tryanova
 coverColor: "255,0,0"
 tags: "психодата, дача, аутсорсинг"
 ---

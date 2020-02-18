@@ -1,8 +1,6 @@
 ---
 author: Alisa Oleva
 projectTitle: "Deviations"
-projectCover: alisa-oleva-deviations-cover.jpg
-canonicalName: alisa-oleva-deviations
 coverColor: "255,0,0"
 tags: "social choreography, dispersed collectivity, 8-BIT DESIRE, practice of small movements, places of transparency, repetition, exclusion of non-perspective pedestrians"
 ---

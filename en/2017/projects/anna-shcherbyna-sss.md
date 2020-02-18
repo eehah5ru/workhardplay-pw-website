@@ -1,8 +1,6 @@
 ---
 author: Anna Shcherbyna
 projectTitle: SSS (Sport Sex Success)
-projectCover: anna-shcherbyna-sss-cover.jpg
-canonicalName: anna-shcherbyna-sss
 coverColor: "255,0,0"
 tags: "sports interest, affective labour, practices of ourselves, intimate interfaces, joy acceleration, extensions, pharmachoreography, sanatorium, rhythm, alienation, repetition"
 ---

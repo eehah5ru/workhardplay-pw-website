@@ -1,8 +1,6 @@
 ---
 author: Alexandra Tryanova
 projectTitle: "Dacha: presentation and fortune-telling by the photograph"
-projectCover: alexandra-tryanova-dacha-01.jpg
-canonicalName: sasha-tryanova
 coverColor: "255,0,0"
 tags: "dacha, outsourcing, psychodata, practice of small movements, protocols of self-organisation, sanatorium"
 ---

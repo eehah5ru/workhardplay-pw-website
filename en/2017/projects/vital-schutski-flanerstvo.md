@@ -1,8 +1,6 @@
 ---
 author: Vital Shchutski
 projectTitle: "Report on a walk in the shopping center Le BHV"
-projectCover: vital-schutski-flanerstvo-01.jpg
-canonicalName: vital-schutski-flanerstvo
 coverColor: "255,0,0"
 soundcloudTrackId: "394447914"
 tags: "corridor anomalies, collection, object, desire, psychodata, social choreography, quick knowledge, places of transparency, self-destructing structures, htp, exclusion of non-perspective pedestrians"

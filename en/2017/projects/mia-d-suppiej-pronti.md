@@ -1,8 +1,6 @@
 ---
 author: Mia D. Suppiej
 projectTitle: "PRONTI"
-projectCover: mia-d-suppiej-pronti-01.jpg
-canonicalName: mia-d-suppiej-pronti
 coverColor: "255,0,0"
 youtubeVideoId: "z6Qeh5Ro6TI"
 tags: "intimate interfaces, mother-machine, desire, sports interest, practices of ourselves, h o o o o o o w w w w w l, contingency, irla: an ideal rejection letter to an artist, joy acceleration, extensions, pharmachoreography, tongue and teeth of creativity, rhythm, coincidance"

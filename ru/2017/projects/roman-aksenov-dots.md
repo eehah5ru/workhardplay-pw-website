@@ -1,8 +1,6 @@
 ---
 author: Роман Аксенов
 projectTitle: "Расставить точки"
-projectCover: roman-aksenov-dots-cover.jpg
-canonicalName: roman-aksenov-dots
 coverColor: "255,0,0"
 tags: "быстрое знание -ые -я, спонтанная низовая альтернатива, эксплуатация скрытой мотивации, путь стоп, спортивный интерес"
 ---

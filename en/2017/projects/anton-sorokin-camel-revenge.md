@@ -1,8 +1,6 @@
 ---
 author: Anton Sorokin
 projectTitle: Revenge of the Mutant Camels (Game session)
-projectCover: anton-sorokin-camel-revenge-cover.jpg
-canonicalName: anton-sorokin-camel-revenge
 coverColor: "255,0,0"
 youtubeVideoId: MK90xavApTA
 tags: "desire, 8-BIT DESIRE, social choreography, mother-machine, sports interest, intimate interfaces, psychodata, digital proletariat, joy acceleration, pharmachoreography, speculative synthesis, htp, intoxication, repetition"

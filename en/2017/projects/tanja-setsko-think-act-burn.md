@@ -1,8 +1,6 @@
 ---
 author: Tanja Setsko
 projectTitle: "Think! Act! Burn! (Discussion about pleasure and fatigue)"
-projectCover: tanja-setsko-think-act-burn-01.jpg
-canonicalName: tanja-setsko-think-act-burn
 coverColor: "255,0,0"
 tags: "path stop, practices of ourselves, affective labour, left melancholy, production drama, dispersed collectivity, contingency, irla: an ideal rejection letter to an artist, extensions, pharmachoreography, protocols of self-organisation, sanatorium, alienation, weak disease, intoxication, care virus"
 ---

@@ -1,8 +1,6 @@
 ---
 author: Mia D. Suppiej
 projectTitle: "PRONTI"
-projectCover: mia-d-suppiej-pronti-01.jpg
-canonicalName: mia-d-suppiej-pronti
 coverColor: "255,0,0"
 youtubeVideoId: "z6Qeh5Ro6TI"
 tags: "интимные интерфейсы, мать-машина, желание, спортивный интерес, практики самих себя, у у у у у у у у у у у у у у у у у ууу, ипох: идеальное письмо отказа художнику, джой ускорение, extensions, фармахореография, язык и зубы креативности, ритм, совпадание"

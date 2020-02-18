@@ -1,8 +1,6 @@
 ---
 author: Roman Aksionov
 projectTitle: "Arrange the dots"
-projectCover: roman-aksenov-dots-cover.jpg
-canonicalName: roman-aksenov-dots
 coverColor: "255,0,0"
 tags: "quick knowledge, spontaneous grassroots alternative, exploitation of hidden motivation, path stop, sports interest"
 ---

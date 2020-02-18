@@ -1,8 +1,6 @@
 ---
 author: "Экипаж «ГРЕЧА»"
 projectTitle: Человеческое облако
-projectCover: grecha-humancloud-cover.jpg
-canonicalName: grecha-human-cloud
 coverColor: "255,0,0"
 soundcloudTrackId: "332102322"
 youtubeVideoId: "8jV02E0owpI"

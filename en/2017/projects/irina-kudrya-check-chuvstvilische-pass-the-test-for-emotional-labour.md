@@ -1,8 +1,6 @@
 ---
 author: Irina Kudrya
 projectTitle: "Check the sensor! Pass the exam* on emotional labour! Test-discussion of emotional labour, its appropriation by corporate ethics, empathy and intimacy"
-projectCover: irina-kudrya-check-chuvstvilische-pass-the-test-for-emotional-labour-01.jpg
-canonicalName: irina-kudrya-check-chuvstvilische-pass-the-test-for-emotional-labour
 coverColor: "255,0,0"
 tags: "practices of ourselves, affective labour, yesterday's unalienated celebration, psychodata, production drama, extensions, sanatorium, terror of relationship, care virus, weak disease"
 ---

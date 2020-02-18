@@ -1,8 +1,6 @@
 ---
 author: Alexandra Novozhenova
 projectTitle: "Lecture. SocialismNotAmericanism: the scientific organization of work and the work of Gustav Klutsis for the magazine “Vremya”"
-projectCover: novozhenova.jpg
-canonicalName: sasha-novozhenova
 coverColor: "255,0,0"
 tags: "from the future at the present, desire, affective labour, practices of ourselves, production drama, all to all, joy acceleration, protocols of self-organisation, speculative synthesis, rhythm, repetition, coincidance"
 ---

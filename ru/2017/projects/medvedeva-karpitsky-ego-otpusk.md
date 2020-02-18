@@ -1,8 +1,6 @@
 ---
 author: Лина Медведева и Максим Карпицкий
 projectTitle:  "«Его отпуск»: наладить труд/наслаждение"
-projectCover: medvedeva-karpitsky-ego-otpusk-01.jpg
-canonicalName: medvedeva-karpitsky-ego-otpusk
 coverColor: "255,0,0"
 tags: "вирус заботы, спонтанная низовая альтернатива, желание, предмет, производственная драма, аутсорсинг, санаторий, пвт"
 ---

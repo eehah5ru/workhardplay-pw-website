@@ -1,8 +1,6 @@
 ---
 author: "K_Super"
 projectTitle: "Девочка-ночь"
-projectCover: k-super-cover.jpg
-canonicalName: k-super-baby-night
 coverColor: "255,0,0"
 tags: "аффективный труд, вчерашний неотчужденный праздник, интимные интерфейсы, путь стоп, рассеянная коллективность, фармахореография,  политический танцпол, ритм, отравление"
 ---

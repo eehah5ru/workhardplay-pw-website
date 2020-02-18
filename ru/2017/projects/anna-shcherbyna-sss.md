@@ -1,8 +1,6 @@
 ---
 author: Анна Щербина
 projectTitle: "SSS (Sport Sex Success)"
-projectCover: anna-shcherbyna-sss-cover.jpg
-canonicalName: anna-shcherbyna-sss
 coverColor: "255,0,0"
 tags: "спортивный интерес, практики самих себя, аффективный труд, интимные интерфейсы, джой ускорение, extensions, фармахореография, санаторий, ритм, отчуждение, повторение"
 ---

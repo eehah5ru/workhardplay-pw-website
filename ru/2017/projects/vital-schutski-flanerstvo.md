@@ -1,8 +1,6 @@
 ---
 author: Виталий Шуцкий
 projectTitle: "Онлайн-отчёт о прогулке в торговом центре Le BHV"
-projectCover: vital-schutski-flanerstvo-01.jpg
-canonicalName: vital-schutski-flanerstvo
 soundcloudTrackId: "394447914"
 coverColor: "255,0,0"
 tags: "желание, коллекция, предмет, психодата, социальная хореография, быстрое знание -ые -я, аномалии коридоров, места прозрачности, саморазрушающиеся структуры, пвт, исключение неперспективных пешеходов"

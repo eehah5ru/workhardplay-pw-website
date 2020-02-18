@@ -1,8 +1,6 @@
 ---
 author: Jozi Stolet and Polina Shilkinite
 projectTitle: "world of work / world without work"
-projectCover: shilkinite-stolet.jpg
-canonicalName: shilkinite-stolet
 coverColor: "255,0,0"
 youtubeVideoId: "HtgYZ8jJUqA"
 tags: "mother-machine, intimate interfaces, from the future at the present, cyberfeminism, digital proletariat, contingency, irla: an ideal rejection letter to an artist, extensions, sanatorium, self-destructing structures, speculative synthesis, tongue and teeth of creativity, htp, care virus"

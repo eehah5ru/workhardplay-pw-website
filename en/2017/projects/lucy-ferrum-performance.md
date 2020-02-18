@@ -1,8 +1,6 @@
 ---
 author: Lucy Ferrum
 projectTitle: Visual-sound performance with the elements of the booth and the spoken word
-projectCover: lucy-ferrum-performance-01.jpg
-canonicalName: lucy-ferrum-performance
 soundcloudTrackId: "349330739"
 coverColor: "255,0,0"
 tags: "h o o o o o o w w w w w l, intimate interfaces, oriental retromania, practices of ourselves, extensions, pharmachoreography, political dancefloor, terror of relationship, great stone, rhythm"

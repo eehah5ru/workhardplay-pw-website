@@ -1,8 +1,6 @@
 ---
 author: Sasha Kurmaz
 projectTitle: "Mirror"
-projectCover: sasha-kurmaz-mirror-cover.jpg
-canonicalName: sasha-kurmaz-mirror
 coverColor: "255,0,0"
 vimeoVideoId01: "223209637"
 vimeoVideoId02: "223209593"

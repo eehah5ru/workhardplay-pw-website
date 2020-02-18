@@ -1,8 +1,6 @@
 ---
 author: Anastasia Kizilova
 projectTitle: "FOUND PROJECT!"
-projectCover: kizilova-found-project-cover.jpg
-canonicalName: kizilova-found-project
 coverColor: "255,0,0"
 tags: "affective labour, desire, spontaneous grassroots alternative, collection, all to all, contingency, irla: an ideal rejection letter to an artist, protocols of self-organisation, self-destructing structures, speculative synthesis, tongue and teeth of creativity, care virus"
 ---

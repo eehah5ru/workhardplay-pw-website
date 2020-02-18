@@ -1,8 +1,6 @@
 ---
 author: Jura Shust
 projectTitle: "Awakening (2010)"
-projectCover: jura-shust-biarlog.jpg
-canonicalName: jura-shust-biarlog
 coverColor: "255,0,0"
 soundcloudTrackId: "348734729"
 tags: "from the future at the present, intimate interfaces, h o o o o o o w w w w w l, desire, contingency, joy acceleration, pharmachoreography, political dancefloor, national academy of sciences as witch, yesterday's unalienated celebration, great stone, rhythm, repetition"

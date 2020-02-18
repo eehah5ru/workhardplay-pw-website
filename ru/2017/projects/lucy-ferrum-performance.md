@@ -1,8 +1,6 @@
 ---
 author: Lucy Ferrum
 projectTitle: Визуально-звуковой перформанс с элементами балагана и споукен ворда
-projectCover: lucy-ferrum-performance-01.jpg
-canonicalName: lucy-ferrum-performance
 soundcloudTrackId: "349330739"
 coverColor: "255,0,0"
 tags: "у у у у у у у у у у у у у у у у у ууу, интимные интерфейсы, ориентальная ретромания, практики самих себя, extensions, фармахореография,  политический танцпол, террор родства, великий камень, ритм"

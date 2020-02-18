@@ -1,8 +1,6 @@
 ---
 author: 0s+1s Collective and Masha Kotlyachkova
 projectTitle: "1,2,3,4: The Rhythm Method. Cyberfeminist online-performance"
-projectCover: masha-kotlyachkova-cyberfeminists-session.jpg
-canonicalName: masha-kotlyachkova-cyberfeminists-session
 coverColor: "255,0,0"
 youtubeVideoId: "Gapy-F7aDzE"
 soundcloudTrackId: "354244823"

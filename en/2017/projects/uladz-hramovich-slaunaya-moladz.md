@@ -1,8 +1,6 @@
 ---
 author: Uladzimir Hramovich
 projectTitle: "“Glorious youth stepped underground”. Notes on the salt galleries as museums of the corporation-state"
-projectCover: uladz-hramovich-slaunaya-moladz-01.jpg
-canonicalName: uladz-hramovich-slaunaya-moladz
 coverColor: "255,0,0"
 soundcloudTrackId: "353846531"
 tags: "collection, object, extractive capitalism, corridor anomalies, outsourcing, national academy of sciences as witch, places of transparency, htp, great stone"

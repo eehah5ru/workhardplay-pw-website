@@ -1,8 +1,6 @@
 ---
 author: Владимир Грамович
 projectTitle: "«Слаўная моладзь пад зямлю крочыла». Заметки о соляных штольнях как музеях корпорации-государства"
-projectCover: uladz-hramovich-slaunaya-moladz-01.jpg
-canonicalName: uladz-hramovich-slaunaya-moladz
 coverColor: "255,0,0"
 soundcloudTrackId: "353846531"
 tags: "коллекция, предмет, добывающий капитализм, аутсорсинг, аномалии коридоров, национальная академия наук как ведьма, места прозрачности, пвт, великий камень"

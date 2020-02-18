@@ -1,8 +1,6 @@
 ---
 author: Jury Urso
 projectTitle: Exploitation in the neoliberal economy of knowledge and immaterial labour. Discussion
-projectCover: jury-urso-nematerialny-trud-cover.jpg
-canonicalName: jury-urso-nematerialny-trud
 coverColor: "255,0,0"
 tags: "quick knowledge, affective labour, outsourcing, irla: an ideal rejection letter to an artist, national academy of sciences as witch, places of transparency, tongue and teeth of creativity, htp, weak disease"
 ---

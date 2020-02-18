@@ -1,8 +1,6 @@
 ---
 author: Alisa Oleva
 projectTitle: Group Exercises
-projectCover: alisa-oleva-group-exercies-cover.jpg
-canonicalName: alisa-oleva-group-exercieses
 youtubeVideoId: "s_HzUvvN1Ns"
 coverColor: "255,0,0"
 tags: "social choreography, dispersed collectivity, psychodata, corridor anomalies, path stop, practice of small movements, extensions, places of transparency, protocols of self-organisation, self-destructing structures, rhythm, repetition"

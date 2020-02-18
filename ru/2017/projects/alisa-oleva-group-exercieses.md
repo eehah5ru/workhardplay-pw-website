@@ -1,8 +1,6 @@
 ---
 author: Алиса Олева
 projectTitle: Групповые упражнения
-projectCover: alisa-oleva-group-exercies-cover.jpg
-canonicalName: alisa-oleva-group-exercieses
 youtubeVideoId: "s_HzUvvN1Ns"
 coverColor: "255,0,0"
 tags: "социальная хореография, рассеянная коллективность, психодата, аномалии коридоров, путь стоп, практика маленьких движений, extensions, места прозрачности, протоколы самоорганизации, саморазрушающиеся структуры, ритм, повторение"

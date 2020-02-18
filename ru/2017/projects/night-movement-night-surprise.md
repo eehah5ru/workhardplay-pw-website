@@ -1,8 +1,6 @@
 ---
 author: Движение Ночь
 projectTitle: Лунная Ночь
-projectCover: night-movement-cover.jpg
-canonicalName: night-movement-night-surprise
 coverColor: "255,0,0"
 tags: "у у у у у у у у у у у у у у у у у ууу, социальная хореография, вчерашний неотчужденный праздник, рассеянная коллективность, спортивный интерес, эксплуатация скрытой мотивации, контингентность"
 ---

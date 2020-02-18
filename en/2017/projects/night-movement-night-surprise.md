@@ -1,8 +1,6 @@
 ---
 author: NIGHT MOVEMENT
 projectTitle: Moon Night
-projectCover: night-movement-cover.jpg
-canonicalName: night-movement-night-surprise
 coverColor: "255,0,0"
 tags: "h o o o o o o w w w w w l, social choreography, yesterday's unalienated celebration, dispersed collectivity, sports interest, exploitation of hidden motivation, contingency"
 ---

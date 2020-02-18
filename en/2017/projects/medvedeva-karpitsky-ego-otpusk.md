@@ -1,8 +1,6 @@
 ---
 author: Lina Miadzvedzeva and Maksim Karpitski
 projectTitle:  "\"His vacation\": to adjust work / pleasure"
-projectCover: medvedeva-karpitsky-ego-otpusk-01.jpg
-canonicalName: medvedeva-karpitsky-ego-otpusk
 coverColor: "255,0,0"
 tags: "care virus, spontaneous grassroots alternative, desire, object, production drama, outsourcing, sanatorium, htp"
 ---

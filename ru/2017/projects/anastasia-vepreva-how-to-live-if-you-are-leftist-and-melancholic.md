@@ -1,8 +1,6 @@
 ---
 author: Анастасия Вепрева
 projectTitle: "Лекция-проекция: Как жить если ты левый меланхолик?"
-projectCover: anastasia-vepreva-how-to-live-if-you-are-leftist-and-melancholic-cover.jpg
-canonicalName: anastasia-vepreva-how-to-live-if-you-are-leftist-and-melancholic
 coverColor: "255,0,0"
 youtubeVideoId: "idWGM_s_HzI"
 tags: "левая меланхолия, практики самих себя, аффективный труд, цифровой пролетариат, фармахореография, саморазрушающиеся структуры, недомогание, отравление"

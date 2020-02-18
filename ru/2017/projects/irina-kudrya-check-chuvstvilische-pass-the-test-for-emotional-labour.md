@@ -1,8 +1,6 @@
 ---
 author: Ира Кудря
 projectTitle: "Проверь чувствилище! Сдай экзамен* по эмоциональному труду! Тест-обсуждение эмоционального труда, его присвоения корпоративной этикой, эмпатии и близости"
-projectCover: irina-kudrya-check-chuvstvilische-pass-the-test-for-emotional-labour-01.jpg
-canonicalName: irina-kudrya-check-chuvstvilische-pass-the-test-for-emotional-labour
 coverColor: "255,0,0"
 tags: "практики самих себя, вчерашний неотчужденный праздник, аффективный труд, производственная драма, психодата, extensions, санаторий, террор родства, вирус заботы, недомогание"
 ---
