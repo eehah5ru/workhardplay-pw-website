@@ -103,11 +103,11 @@ fieldProjectTitle =
       where
         meta = getMetadata (itemIdentifier item)
 
-        authorFromMeta = meta >>= return . lookupString "projectTitle"
+        authorFromMeta = meta >>= return . lookupString "author"
 
         authorFromParticipant = SC.maybeParticipantName item
 
-        projectNameFromMeta = meta >>= return . lookupString "author"
+        projectNameFromMeta = meta >>= return . lookupString "projectTitle"
         
         formattedAuthor = do
           a' <- authorFromParticipant

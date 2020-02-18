@@ -4,6 +4,7 @@ module Site.Schedule.Context where
 
 import           Control.Monad                   (foldM, forM, forM_, mplus, guard, when, (>=>))
 import Control.Applicative ((<|>))
+import Control.Monad.Error.Class (throwError)
 import Data.Maybe (fromMaybe)
 import Data.Monoid ((<>), mempty)
 import Data.Tuple.Utils
@@ -29,20 +30,23 @@ placeItemDay :: Item a -> String
 placeItemDay = head . tail . reverse . itemPathParts
 
 
-participantPattern :: Item a -> Compiler (Pattern)
+participantPattern :: Item a -> Compiler (Maybe Pattern)
 participantPattern i = do
-  pId <- getParticipantId i
-  return $ fromGlob . localizePath (itemLocale i) $ ((year' i) ++ "/participants/" ++ pId ++ ".md")
+  pId <- maybeParticipantId i
+  return $ pId >>= formatPattern
   where
+    formatPattern pId = return $ fromGlob . localizePath (itemLocale i) $ ((year' i) ++ "/participants/" ++ pId ++ ".md")
     -- FIXME: replace with non-errror logic creating for example non-existing participant. undisclosed or so
-    e' i = error $ "unresolved participantID fo event " ++ (itemCanonicalName i)
+    -- e' i = error $ "unresolved participantID for " ++ (itemCanonicalName i)
     year' = maybe "3000" id . itemYear
 
-    getParticipantId i = do
-      return . maybe (e' i) id =<< getMetadataField (itemIdentifier i) "participantId"
+    maybeParticipantId i = do
+      getMetadataField (itemIdentifier i) "participantId"
 
 participantIdentifier i = do
-  return . flip fromCapture "" =<< participantPattern i
+  pP <- participantPattern i
+
+  return (return . flip fromCapture "" =<< pP)
 
 hasParticipant i = do
   return . ((/=) 0) . length =<< loadParticipants hasNoVersion i
@@ -50,7 +54,9 @@ hasParticipant i = do
 
 maybeParticipantName i = do
   pId <- participantIdentifier i
-  getMetadataField pId "title"
+  case pId of
+    Just anId -> getMetadataField  anId "title"
+    Nothing -> return Nothing
 
 
 participantName i = do
@@ -63,11 +69,19 @@ participantName i = do
 
 
 loadParticipant :: Item a -> Compiler (Item String)
-loadParticipant i = load =<< participantIdentifier i
+loadParticipant i = do
+  mPI <- participantIdentifier i
+  case mPI of
+    Just pI -> load pI
+    Nothing -> throwError $ ["error loading participant for " ++ (itemCanonicalName i)]
 
 
 loadParticipants :: Pattern -> Item a -> Compiler ([Item String])
-loadParticipants v i = loadAll =<< return . ((.&&.) v) =<< participantPattern i
+loadParticipants v i = do
+  mPP <- participantPattern i
+  case mPP of
+    Just pP -> loadAll =<< return . ((.&&.) v) =<< return pP
+    Nothing -> return []
 
 loadEvents :: Pattern -> Item a -> Compiler ([Item String])
 loadEvents v i = do
