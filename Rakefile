@@ -105,6 +105,10 @@ namespace :vagrant do
 
   desc "vagrant / master REMOTE TASKS"
   namespace :master do
+
+    #
+    # vagrant tasks
+    #
     desc "up vagrant machine"
     task :up do
       sh "vagrant up master"
@@ -124,6 +128,15 @@ namespace :vagrant do
     task :provision do
       sh "vagrant provision master"
     end
+
+    desc "rsync-auto"
+    task :rsync_auto do
+      sh "vagrant rsync-auto master"
+    end
+
+    #
+    # hakyll tasks
+    #
     
     desc "start hakyll server watch"
     task :watch => [:up] do
@@ -164,6 +177,11 @@ namespace :vagrant do
     desc "provision"
     task :provision do
       sh "vagrant provision slave"
+    end
+
+    desc "rsync-auto"
+    task :rsync_auto do
+      sh "vagrant rsync-auto slave"
     end
 
     #
