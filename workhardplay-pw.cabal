@@ -7,11 +7,11 @@ executable site
   main-is:          site.hs
   HS-Source-Dirs:   src
   build-depends:    base == 4.*
-                  , hakyll == 4.12.*
+                  , hakyll == 4.13.*
                   , hakyll-sass == 0.2.*
                   , hlibsass == 0.1.8.0
                   , data-default
-                  , hsass == 0.7.0
+                  , hsass == 0.8.0
                   , aeson
                   , bytestring
                   , string-conversions
@@ -38,11 +38,11 @@ executable check-project-file
   main-is:          Tools/CheckProjectFile.hs
   HS-Source-Dirs:   src
   build-depends:    base == 4.*
-                  , hakyll == 4.12.*
+                  , hakyll == 4.13.*
                   , hakyll-sass == 0.2.*
                   , hlibsass == 0.1.8.0
                   , data-default
-                  , hsass == 0.7.0
+                  , hsass == 0.8.0
                   , aeson
                   , bytestring
                   , string-conversions
@@ -68,11 +68,11 @@ executable generate-participant-id
   main-is:          Tools/GenerateParticipantId.hs
   HS-Source-Dirs:   src
   build-depends:    base == 4.*
-                  , hakyll == 4.12.*
+                  , hakyll == 4.13.*
                   , hakyll-sass == 0.2.*
                   , hlibsass == 0.1.8.0
                   , data-default
-                  , hsass == 0.7.0
+                  , hsass == 0.8.0
                   , aeson
                   , bytestring
                   , string-conversions
@@ -98,11 +98,11 @@ executable generate-project-id
   main-is:          Tools/GenerateProjectId.hs
   HS-Source-Dirs:   src
   build-depends:    base == 4.*
-                  , hakyll == 4.12.*
+                  , hakyll == 4.13.*
                   , hakyll-sass == 0.2.*
                   , hlibsass == 0.1.8.0
                   , data-default
-                  , hsass == 0.7.0
+                  , hsass == 0.8.0
                   , aeson
                   , bytestring
                   , string-conversions
@@ -128,11 +128,11 @@ executable generate-participant-file
   main-is:          Tools/GenerateParticipantFile.hs
   HS-Source-Dirs:   src
   build-depends:    base == 4.*
-                  , hakyll == 4.12.*
+                  , hakyll == 4.13.*
                   , hakyll-sass == 0.2.*
                   , hlibsass == 0.1.8.0
                   , data-default
-                  , hsass == 0.7.0
+                  , hsass == 0.8.0
                   , aeson
                   , bytestring
                   , string-conversions
@@ -158,11 +158,11 @@ executable generate-event-file
   main-is:          Tools/GenerateEventFile.hs
   HS-Source-Dirs:   src
   build-depends:    base == 4.*
-                  , hakyll == 4.12.*
+                  , hakyll == 4.13.*
                   , hakyll-sass == 0.2.*
                   , hlibsass == 0.1.8.0
                   , data-default
-                  , hsass == 0.7.0
+                  , hsass == 0.8.0
                   , aeson
                   , bytestring
                   , string-conversions
@@ -188,11 +188,11 @@ executable get-author
   main-is:          Tools/GetAuthor.hs
   HS-Source-Dirs:   src
   build-depends:    base == 4.*
-                  , hakyll == 4.12.*
+                  , hakyll == 4.13.*
                   , hakyll-sass == 0.2.*
                   , hlibsass == 0.1.8.0
                   , data-default
-                  , hsass == 0.7.0
+                  , hsass == 0.8.0
                   , aeson
                   , bytestring
                   , string-conversions
