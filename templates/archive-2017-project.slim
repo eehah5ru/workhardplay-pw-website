@@ -1,12 +1,3 @@
-= _if "hasVideo"
-  | video
-  = _if "youtubeVideoId"
-    | $youtubeVideoId$
-  = _endif
-= _else
-  | no-video
-= _endif
-
 = _if "projectCover"
   css:
     .header-cover {

@@ -118,22 +118,22 @@ fieldProjectTitle =
 
 
 fieldHasVideo = do
-  boolFieldM "hasVideo" f
-  where
-    f i = do
-      x <- hasVideo i
-      unsafeCompiler $ do
-        putStrLn $ (show $ itemIdentifier i) ++ " - hasVideo: " ++ (show x) 
-      return x
+  boolFieldM "hasVideo" hasVideo
+  -- where
+  --   f i = do
+  --     x <- hasVideo i
+  --     unsafeCompiler $ do
+  --       putStrLn $ (show $ itemIdentifier i) ++ " - hasVideo: " ++ (show x) 
+  --     return x
 
-fieldHasVideoText = do
-  field "hasVideoText" f
-  where
-    f i = do
-      x <- hasVideo i
-      unsafeCompiler $ do
-        putStrLn $ (show $ itemIdentifier i) ++ " - hasVideoText: " ++ (show x)
-      return (show x)
+-- fieldHasVideoText = do
+--   field "hasVideoText" 
+--   where
+--     f i = do
+--       x <- hasVideo i
+--       unsafeCompiler $ do
+--         putStrLn $ (show $ itemIdentifier i) ++ " - hasVideoText: " ++ (show x)
+--       return (show x)
     
 
 fieldHasAudio = do
@@ -241,7 +241,7 @@ mkArchiveProjectCtx caches terms =
        <> fieldProjectCover
        <> fieldHasMedia
        <> fieldHasVideo
-       <> fieldHasVideoText       
+       -- <> fieldHasVideoText       
        <> fieldHasAudio
        <> (fieldProjectColor caches)
        <> (fieldHasPictures picturesPattern)
