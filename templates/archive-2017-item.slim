@@ -2,14 +2,22 @@ li.project-card-box id="$canonicalName$"
   .project-card data-project-id="$canonicalName$"
     .media-icons-container
       .media-icons
+        | $hasVideoText$
         = _if "hasVideo"
-          .has-video-icon style="background-color: rgba($coverColor$, 0.7)"
+          .has-video-icon style="background-color: rgba($projectColor$, 0.7)"
             | &nbsp;
+        = _else
+          | novideo
+          = _if "youtubeVideoId"
+            | $youtubeVideoId$
+          = _endif
         = _endif
 
         = _if "hasAudio"
-          .has-audio-icon style="background-color: rgba($coverColor$, 0.7)"
+          .has-audio-icon style="background-color: rgba($projectColor$, 0.7)"
             | &nbsp;
+        = _else
+          | noaudio
         = _endif
     = _if "projectCover"
       .thumbnail
