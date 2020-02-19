@@ -3,12 +3,11 @@ li.project-card-box id="$canonicalName$"
     .media-icons-container
       .media-icons
         = _if "hasVideo"
-          .has-video-icon style="background-color: rgba($coverColor$, 0.7)"
+          .has-video-icon style="background-color: rgba($projectColor$, 0.7)"
             | &nbsp;
         = _endif
-
         = _if "hasAudio"
-          .has-audio-icon style="background-color: rgba($coverColor$, 0.7)"
+          .has-audio-icon style="background-color: rgba($projectColor$, 0.7)"
             | &nbsp;
         = _endif
     = _if "projectCover"

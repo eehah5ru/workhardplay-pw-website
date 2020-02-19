@@ -1,10 +1,10 @@
 ---
 author: "Maria Sarycheva and Elena Ischenko in collaboration with Blue 321"
 projectTitle: "Secret Car"
-mixcloudTrackId01: work_hard_play_hard/мария-сарычева-елена-ищенко-и-синяя-321-секретная-машина-настя-вепрева/
-mixcloudTrackId02: work_hard_play_hard/мария-сарычева-елена-ищенко-и-синяя-321-секретная-машина-ульяна-быченкова-и-жанна-долгова/
-mixcloudTrackId03: work_hard_play_hard/мария-сарычева-елена-ищенко-и-синяя-321-секретная-машина-саша-зубрицкая-1/
-mixcloudTrackId04: work_hard_play_hard/мария-сарычева-елена-ищенко-и-синяя-321-секретная-машина-саша-зубрицкая-2/
+mixcloudTrackId01: "/work_hard_play_hard/мария-сарычева-елена-ищенко-и-синяя-321-секретная-машина-настя-вепрева/"
+mixcloudTrackId02: "/work_hard_play_hard/мария-сарычева-елена-ищенко-и-синяя-321-секретная-машина-ульяна-быченкова-и-жанна-долгова/"
+mixcloudTrackId03: "/work_hard_play_hard/мария-сарычева-елена-ищенко-и-синяя-321-секретная-машина-саша-зубрицкая-1/"
+mixcloudTrackId04: "/work_hard_play_hard/мария-сарычева-елена-ищенко-и-синяя-321-секретная-машина-саша-зубрицкая-2/"
 soundcloudTrackId: "755525485"
 tags: "all to all, care virus, corridor anomalies, dispersed collectivity, joy acceleration, practices of ourselves, spontaneous grassroots alternative"
 ---
