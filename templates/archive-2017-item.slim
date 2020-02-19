@@ -5,9 +5,11 @@ li.project-card-box id="$canonicalName$"
         = _if "hasVideo"
           .has-video-icon style="background-color: rgba($projectColor$, 0.7)"
             | &nbsp;
+        = _endif
         = _if "hasAudio"
           .has-audio-icon style="background-color: rgba($projectColor$, 0.7)"
             | &nbsp;
+        = _endif
     = _if "projectCover"
       .thumbnail
         img src="$projectCover$"
