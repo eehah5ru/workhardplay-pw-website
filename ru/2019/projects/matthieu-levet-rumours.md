@@ -2,6 +2,8 @@
 projectTitle: "Слухи"
 shortDescription: "Полевые записи, звуковые архивы"
 participantId: matthieu-levet
+mixcloudTrackId01: "/work_hard_play_hard/matthieu-levet-rumours-whph_final_tape_side_a/"
+mixcloudTrackId02: "/work_hard_play_hard/matthieu-levet-rumours-whph_final_tape_side_b/"
 tags: "8-битное желание, аффективный труд, все всем, вирус заботы, аномалии коридоров, рассеянная коллективность, у у у у у у у у у у у у у у у у у ууу, ритм, вчерашний неотчужденный праздник"
 ---
 

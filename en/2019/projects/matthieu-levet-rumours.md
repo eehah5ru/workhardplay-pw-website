@@ -2,6 +2,8 @@
 projectTitle: "Rumours"
 shortDescription: "Field recordings, sound archives"
 participantId: matthieu-levet
+mixcloudTrackId01: "/work_hard_play_hard/matthieu-levet-rumours-whph_final_tape_side_a/"
+mixcloudTrackId02: "/work_hard_play_hard/matthieu-levet-rumours-whph_final_tape_side_b/"
 tags: "8-BIT DESIRE, affective labour, all to all, care virus, corridor anomalies, dispersed collectivity, h o o o o o o w w w w w l, rhythm, yesterday's unalienated celebration"
 ---
 
