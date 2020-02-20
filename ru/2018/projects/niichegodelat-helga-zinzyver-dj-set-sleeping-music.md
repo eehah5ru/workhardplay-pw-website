@@ -1,8 +1,8 @@
 ---
 author: "Helga Zinzyver"
 projectTitle: "Dj-set \"Музыка для сна\""
-mixcloudTrackId01: work_hard_play_hard/helga-zinzyver-dj-set-музыка-для-сна-часть-1/
-mixcloudTrackId02: work_hard_play_hard/helga-zinzyver-dj-set-музыка-для-сна-часть-2/
+mixcloudTrackId01: "/work_hard_play_hard/helga-zinzyver-dj-set-музыка-для-сна-часть-1/"
+mixcloudTrackId02: "/work_hard_play_hard/helga-zinzyver-dj-set-музыка-для-сна-часть-2/"
 tags: рассеянная коллективность, интимные интерфейсы, политический танцпол, практика маленьких движений, вчерашний неотчужденный праздник
 ---
 Текучие волны звука заполняют пространство сна. Воздух соткан из обрывков разговоров, популярных композиций, неизвестных импровизаций.
