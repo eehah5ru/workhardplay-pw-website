@@ -22,7 +22,11 @@ def src_picture path
 end
 
 def dst_picture path
-  File.join(DST_DIR, path)
+  # make picture jpg
+  ext = File.extname(path)
+  jpg_path = path.sub(/#{ext}$/, ".jpg")
+  
+  File.join(DST_DIR, jpg_path)
 end
 
 def src_pictures
@@ -77,7 +81,7 @@ end
 
 #
 #
-# PICS TASKS
+# RESIZE PICS TASKS
 #
 #
 desc "resize pictures"
@@ -87,29 +91,37 @@ namespace :resize do
   task :all => dst_pictures do
     puts "Resizing pictues: done"
   end
-  
-  pictures.each do |picture_path|
-    dst_picture_path = File.join(DST_DIR, picture_path)
-    src_picture_path = File.join(SRC_DIR, picture_path)
 
-    file dst_picture_path => [src_picture_path] do |f|
+  src_pictures.zip(dst_pictures).each do |src_pic, dst_pic|
+    file dst_pic => [src_pic] do |f|
       mkdir_p File.dirname(f.name)
 
-      image = Magick::Image::read(src_picture_path).first
+      image = Magick::Image::read(src_pic).first
       
       image.resize_to_fit!(1280)
-      image.write(dst_picture_path)
+      image.write(f.name) do
+        self.quality = 10
+        self.format = "JPEG"
+      end
 
-      puts "Resized: #{src_picture_path}"
+      puts "Resized: #{src_pic}"      
     end
   end
 
+  #
+  # PURGE
+  #
   desc "purge resized pictures"
   task :purge do
     rm_rf "#{DST_DIR}"
   end
 end
 
+#
+#
+# REMOTE VAGRANT TASKS
+#
+#
 
 desc "REMOTE TASKS on vagrant machines"
 namespace :vagrant do
