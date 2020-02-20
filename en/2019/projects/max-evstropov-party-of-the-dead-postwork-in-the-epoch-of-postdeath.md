@@ -2,6 +2,7 @@
 projectTitle: "(post)work in the epoch of (post)death"
 shortDescription: "Lecture-performance"
 participantId: max-evstropov-party-of-the-dead
+youtubeVideoId: "CnNjiiusVsU" 
 tags: "alienation, all to all, extractive capitalism, great stone, left melancholy, production drama, speculative synthesis, intoxication"
 ---
 

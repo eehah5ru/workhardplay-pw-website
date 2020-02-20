@@ -2,6 +2,7 @@
 projectTitle: "I Ching talk. Predictions and prescriptions"
 shortDescription: "Skype fortune telling"
 participantId: krelex-zentre
+youtubeVideoId: "tbZrJCTrPU0"
 tags: "great stone, coincidance, repetition, from the future at the present, h o o o o o o w w w w w l, mother-machine, national academy of sciences as witch, outsourcing, speculative synthesis"
 ---
 

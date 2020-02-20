@@ -2,6 +2,7 @@
 projectTitle: "(пост)труд в эпоху (пост)смерти"
 shortDescription: "Лекция-перформанс"
 participantId: max-evstropov-party-of-the-dead
+youtubeVideoId: "CnNjiiusVsU"
 tags: "отчуждение, все всем, добывающий капитализм, великий камень, левая меланхолия, производственная драма, спекулятивный синтез, отравление"
 ---
 
