@@ -353,10 +353,10 @@
       function() {
         toggleLongDescrVisibility(window.location.hash.replace(/#/, ''));
         var projectName = window.location.hash.replace(/#/, '');
-        window.location.hash = projectName;
         if (_.isEmpty(projectName)) {
           return;
         }
+        window.location.hash = projectName;        
         $("#" + projectName + "-link")[0].click();
         // $("#" + window.location.hash.replace(/#/, '') + "-link").click();
 
