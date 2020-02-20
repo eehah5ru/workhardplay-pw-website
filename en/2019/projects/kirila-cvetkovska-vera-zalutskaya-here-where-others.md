@@ -7,5 +7,3 @@ tags: "rhythm, weak disease, care virus, 8-BIT DESIRE, corridor anomalies, dacha
 ---
 
 We proposed a rebellious act, still in an intimate environment (in the room of sanatorium), away from the hyper-productive world and its social media strategies. We wanted to stop and actually think about what we read, rather than quantifying our reading lists. We offered a time off - a time for a conversation, whether meaningful or meaningless, and an afternoon for a nap. Away from the dominant. In tune with the relaxed.
-
-Image: Mladen Stilinovic, Artist at work, 1978.
