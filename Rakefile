@@ -41,6 +41,11 @@ end
 # end
 
 
+#
+#
+# DEV ENV TASKS
+#
+#
 namespace :stack do
   desc "build executables"
   task :build do
@@ -49,7 +54,6 @@ namespace :stack do
 end
 
 namespace :server do
-
   desc "build website once"
   task :build => ["stack:build", "resize:all"] do
     sh "stack exec site build"
@@ -71,6 +75,11 @@ namespace :server do
   end
 end
 
+#
+#
+# PICS TASKS
+#
+#
 desc "resize pictures"
 namespace :resize do
 
@@ -86,12 +95,18 @@ namespace :resize do
     file dst_picture_path => [src_picture_path] do |f|
       mkdir_p File.dirname(f.name)
 
-      orig_image = Magick::Image::read(src_picture_path).first
-      resized_image = orig_image.resize_to_fill(1280, 1280)
-      resized_image.write(dst_picture_path)
+      image = Magick::Image::read(src_picture_path).first
+      
+      image.resize_to_fit!(1280)
+      image.write(dst_picture_path)
 
       puts "Resized: #{src_picture_path}"
     end
+  end
+
+  desc "purge resized pictures"
+  task :purge do
+    rm_rf "#{DST_DIR}"
   end
 end
 
