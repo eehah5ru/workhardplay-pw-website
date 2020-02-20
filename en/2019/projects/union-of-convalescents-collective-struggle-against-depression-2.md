@@ -3,6 +3,7 @@ projectTitle: "Collective Struggle Against Depression"
 shortDescription: "Moving practice (performance)"
 participantId: union-of-convalescents
 soundcloudTrackId: "758855470"
+youtubeVideoId: "CJAgX5dHsy4"
 tags: "all to all, care virus, intoxication, pharmachoreography, practice of small movements, sanatorium, weak disease"
 ---
 

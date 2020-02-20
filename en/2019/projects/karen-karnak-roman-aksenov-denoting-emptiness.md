@@ -13,5 +13,5 @@ Karen Karnak
 __...
 I don't see divisions and structures in the visible by me, although I know about the existence of these. It seems to me that this is done for convenience and control. I myself would like to control something, I achieve it in every possible way and partly by inertia, in particular in my work - I work with the image and try to earn it to ensure the life of my family.__
 
-__Responsibility and the presence of will harden and dulls in a certain sense, but capitalism is about regaining one's place, and without these qualities can't do__  
+__Responsibility and the presence of will harden and dulls in a certain sense, but capitalism is about regaining one's place, and without these qualities can't do.__  
 Roman Aksenov
