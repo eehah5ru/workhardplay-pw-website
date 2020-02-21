@@ -97,11 +97,20 @@ namespace :resize do
       mkdir_p File.dirname(f.name)
 
       image = Magick::Image::read(src_pic).first
+      image.orientation = Magick::TopLeftOrientation
+      image["EXIF:Orientation"] == "1"
       
+      image.auto_orient!
+
       image.resize_to_fit!(1280)
+      
       image.write(f.name) do
         self.quality = 89
         self.format = "JPEG"
+
+        self.orientation = Magick::TopLeftOrientation
+        self["EXIF:Orientation"] == "1"      
+        
       end
 
       puts "Resized: #{src_pic}"      
