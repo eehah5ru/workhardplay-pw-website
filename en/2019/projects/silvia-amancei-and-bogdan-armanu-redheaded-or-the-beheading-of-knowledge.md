@@ -2,6 +2,7 @@
 projectTitle: "REDHEADED (or The beheading of knowledge)"
 shortDescription: "Video Screening "
 participantId: silvia-amancei-and-bogdan-armanu
+youtubeVideoId: "TkjsQCm6ns4" 
 tags: "alienation, all to all, from the future at the present, left melancholy"
 ---
 "REDHEADED" is a short film depicting a conversation between a narrator and a decapitated head of a communist young woman. The two exchange ideas and quotes, connecting the concepts of (French) revolution, (revolutionary) methods of killing, culture and advertising/capitalism.
