@@ -100,7 +100,7 @@ namespace :resize do
       
       image.resize_to_fit!(1280)
       image.write(f.name) do
-        self.quality = 10
+        self.quality = 89
         self.format = "JPEG"
       end
 
