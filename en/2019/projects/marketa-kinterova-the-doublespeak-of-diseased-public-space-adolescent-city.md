@@ -2,6 +2,7 @@
 projectTitle: "The Doublespeak of Diseased Public Space / Adolescent City"
 shortDescription: "Skype lecture"
 participantId: marketa-kinterova
+youtubeVideoId: "Gm-r6G1VcNw"
 tags: "dispersed collectivity, exclusion of non-perspective pedestrians, object, outsourcing, places of transparency, self-destructing structures"
 ---
 
