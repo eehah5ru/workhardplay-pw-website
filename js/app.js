@@ -315,6 +315,21 @@
 
   //
   //
+  // mixcloud footer widget
+  //
+  //
+  var initMixcloudFooterWidget = function(self) {
+    console.log("initMixcloudFooterWidget: start");
+    var promise = Mixcloud.FooterWidget("/work_hard_play_hard/matthieu-levet-rumours-whph_tape_8_side_b/");
+    promise.then(function(widget) {
+      console.log("initMixcloudFooterWidget: done");
+      // Put code that interacts with the widget here e.g.
+      widget.events.pause.on(pauseListener);
+    });    
+  };
+
+  //
+  //
   // init
   //
   //
@@ -353,10 +368,10 @@
       function() {
         toggleLongDescrVisibility(window.location.hash.replace(/#/, ''));
         var projectName = window.location.hash.replace(/#/, '');
-        window.location.hash = projectName;
         if (_.isEmpty(projectName)) {
           return;
         }
+        window.location.hash = projectName;        
         $("#" + projectName + "-link")[0].click();
         // $("#" + window.location.hash.replace(/#/, '') + "-link").click();
 
@@ -364,6 +379,8 @@
       500
     );
 
+    // initMixcloudFooterWidget();
+    
     // $("li.project-card-box").map(function() {
     //   var r = Math.random() * (15 - (-15)) + (-15);
     //   var rblur = Math.random() * 2;

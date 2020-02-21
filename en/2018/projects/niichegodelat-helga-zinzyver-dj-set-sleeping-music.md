@@ -1,7 +1,7 @@
 ---
 author: "Helga Zinzyver"
 projectTitle: "DJ set \"Sleeping music\""
-mixcloudTrackId01: "/work_hard_play_hard/helga-zinzyver-dj-set-музыка-для-сна-часть-1/"
+mixcloudTrackId01: "/work_hard_play_hard/helga-zinzyver-dj-set-музыка-для-сна/"
 mixcloudTrackId02: "/work_hard_play_hard/helga-zinzyver-dj-set-музыка-для-сна-часть-2/"
 tags: "dispersed collectivity, intimate interfaces, political dancefloor, practice of small movements, yesterday's unalienated celebration"
 ---
