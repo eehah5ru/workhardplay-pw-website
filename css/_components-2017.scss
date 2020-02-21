@@ -99,9 +99,12 @@ $primary-color-2017: darken(blue, 10%);
 
   .email {
     position: absolute;
-    right: rem-calc(20px);
-    bottom: rem-calc(20px);
 
+    width: 100%;
+    right: 0;
+    bottom: 0.5rem;
+    text-align: right;
+    font-size: 0.9rem;
 
     a {
       color: lighten(grey, 20%);
@@ -117,54 +120,25 @@ $primary-color-2017: darken(blue, 10%);
     @include vertical-center;
     width: 100%;
 
-    perspective: 2000px;
-
     h1 {
-      color: lighten(grey, 5%);
+      color: darken(red, 15%);
       width: 100%;
-      text-align: center;
+      text-align: right;
 
-      // transform: rotateY(56deg) rotateZ(-10deg) translateX(-20%);
-
-      transform: rotateZ(-34deg) rotateY(45deg);
-      transform-origin: 50% 50%;
-      font-size: 8vw;
+      font-size: 7vw;
 
       @include breakpoint(medium) {
         font-size: 7vw;
       }
 
       @include breakpoint(large) {
-        font-size: 5vw;
+        font-size: 6vw;
       }
 
-      // @include breakpoint(medium) {
-      //   transform: rotateY(56deg) rotateZ(-10deg);
-      //   font-size: 12vw;
-      // }
-
-      // @include breakpoint(730) {
-      //   font-size: 11vw;
-      // }
-
-      // @include breakpoint(970) {
-      //   font-size: 10vw;
-      // }
-
-      // @include breakpoint(1084) {
-      //   font-size: 9vw;
-      // }
-
-      // @include breakpoint(1184) {
-      //   font-size: 8vw;
-      // }
-
-      // @include breakpoint(1284) {
-      //   font-size: 7vw;
-      // }
+    
 
       a {
-        color: lighten(grey, 5%);
+        color: lighten(blue, 5%);
         text-decoration: underline;
         display: inline;
         padding: 0;
