@@ -22,7 +22,15 @@ staticPagesRules :: Cache.Caches -> Rules ()
 staticPagesRules caches = do
   rulesIndex "index.md"
   rulesAbout "about.md"
-  with2018deps (rulesSlim "2018/index.slim")
+  
+
+  --
+  -- 2020
+  --
+  rulesMd "2020/invitation.md"
+  rulesMd "2020/working-group.md"
+
+  SR.withDeps hasNoVersion [(SR.participantsDeps "2020"), (SR.eventsDeps "2020"), (SR.placesDeps "2020"), (SR.daysDeps "2020")] $ rulesMd2019 "2020/index.md"
 
   --
   -- 2019
@@ -31,6 +39,8 @@ staticPagesRules caches = do
   rulesMd "2019/working-group.md"
 
   SR.withDeps hasNoVersion [(SR.participantsDeps "2019"), (SR.eventsDeps "2019"), (SR.placesDeps "2019"), (SR.daysDeps "2019")] $ rulesMd2019 "2019/index.md"
+
+  with2018deps (rulesSlim "2018/index.slim")
 
   rulesSlim "2017/index.slim"
   rulesSlim "2017/404.slim"
