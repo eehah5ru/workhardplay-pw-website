@@ -21,6 +21,11 @@ header.archive-project.whp-2017
     | $if(projectTitle)$$projectTitle$$else$$title$$endif$
 
 article.archive-project.whp-2017
+  = _if "shortDescription"
+    p.short-description
+      | $shortDescription$
+  = _endif
+
   = _if "hasTerms"
     p.collective-glossary-terms
       | $termsLabel$:&nbsp;

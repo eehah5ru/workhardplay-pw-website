@@ -350,6 +350,12 @@ article.archive-project.whp-2017 {
       }
     }
 
+    &.short-description {
+      text-transform: uppercase;
+      font-style: italic;
+      text-align: right;
+    }
+
     &.collective-glossary-terms a {
       color: grey;
       // font-style: italic;

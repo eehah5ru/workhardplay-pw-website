@@ -16,7 +16,7 @@ li.project-card-box id="$canonicalName$"
     = _endif
     .project-title
      a href="$url$"
-       | $if(projectTitle)$$projectTitle$$else$$title$$endif$
+       | $if(projectTitle)$$projectTitle$$else$$title$$endif$$if(shortDescription)$&nbsp;/&nbsp;$shortDescription$$endif$
     .project-author
       | $if(author)$$author$$else$$participantName$$endif$
     .terms
