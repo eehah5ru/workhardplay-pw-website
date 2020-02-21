@@ -56,8 +56,15 @@ hasVimeoVideoNumId n i = hasItemField ("vimeoVideoId0" ++ (show n)) i
 hasSoundcloudTrackId :: MonadMetadata m => Item a -> m Bool
 hasSoundcloudTrackId = hasItemField "soundcloudTrackId"
 
+hasSoundcloudTrackNumId :: MonadMetadata m => Int -> Item a -> m Bool
+hasSoundcloudTrackNumId n = hasItemField ("soundcloudTrackId0" ++ (show n))
+
 hasMixcloudTrackId :: MonadMetadata m => Item a -> m Bool
 hasMixcloudTrackId = hasItemField "mixcloudTrackId"
+
+hasMixcloudTrackNumId :: MonadMetadata m => Int -> Item a -> m Bool
+hasMixcloudTrackNumId n = hasItemField ("mixcloudTrackId0" ++ (show n))
+
 
 -- hasImages :: MonadMetadata m => Item a -> m Bool
 -- hasImages i = sequence (map (\x -> hasItemField x i) imageFieldNames) >>= return . any id
@@ -79,8 +86,12 @@ hasVideo i =  sequence videoPredicates >>= return . any id
                       (map (\n -> hasVimeoVideoNumId n i)) [1..9]
 
 hasAudio :: MonadMetadata m => Item a -> m Bool
-hasAudio i = sequence [ hasSoundcloudTrackId i
-                      , hasMixcloudTrackId i ] >>= return . any id
+hasAudio i = sequence audioPredicates >>= return . any id
+  where
+    audioPredicates = [ hasSoundcloudTrackId i
+                      , hasMixcloudTrackId i ] ++
+                      (map (\n -> hasMixcloudTrackNumId n i) [1..9]) ++
+                      (map (\n -> hasSoundcloudTrackNumId n i) [1..9])
 
 --
 --
