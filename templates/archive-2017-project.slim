@@ -17,7 +17,7 @@ header.archive-project.whp-2017
       | $archiveName$
     br
     | $if(author)$$author$$else$$participantName$$endif$
-    | &nbsp;
+    | &nbsp;->&nbsp;
     | $if(projectTitle)$$projectTitle$$else$$title$$endif$
 
 article.archive-project.whp-2017
@@ -187,3 +187,6 @@ article.archive-project.whp-2017
         = _endif
     = _endfor
   = _endif
+
+  script src="//widget.mixcloud.com/media/js/footerWidgetApi.js" async="true"
+    | {"feed": "/work_hard_play_hard/matthieu-levet-rumours-whph_tape_8_side_b/"}
