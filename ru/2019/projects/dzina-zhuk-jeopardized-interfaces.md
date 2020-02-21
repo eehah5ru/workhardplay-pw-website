@@ -2,6 +2,7 @@
 projectTitle: "Опасные интерфейсы"
 shortDescription: "Перформанс"
 participantId: dzina-zhuk
+youtubeVideoId: "pHnwCLs4y8g"
 tags: "ритм, отчуждение, отравление, extensions, (взгляд) из будущего на настоящее, у у у у у у у у у у у у у у у у у ууу, интимные интерфейсы, мать-машина, практики самих себя"
 ---
 
