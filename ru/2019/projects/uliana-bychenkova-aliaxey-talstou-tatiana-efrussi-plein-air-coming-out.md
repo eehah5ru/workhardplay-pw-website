@@ -1,6 +1,6 @@
 ---
 projectTitle: "Пленэр-каминг-аут"
-shortDescription: "Пленэр. Берите с собой материалы и стульчики!"
+shortDescription: "Пленэр"
 participantId: uliana-bychenkova-aliaxey-talstou-tatiana-efrussi
 tags: "все всем, вирус заботы, дача, джой ускорение, протоколы самоорганизации, санаторий, спонтанная низовая альтернатива, вчерашний неотчужденный праздник"
 ---

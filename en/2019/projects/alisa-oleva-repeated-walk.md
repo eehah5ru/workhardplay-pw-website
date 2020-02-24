@@ -1,6 +1,6 @@
 ---
 projectTitle: "repeated walk"
-shortDescription: "a walk. meeting point: <a href='https://yandex.com/maps/157/minsk/?ll=27.557962%2C53.916684&mode=search&sll=27.557203%2C53.917272&sspn=0.002135%2C0.000888&text=53.9169558%2C%2027.556858&z=18' target='_blank'>(53.9169558, 27.5568558)</a>"
+shortDescription: "a walk"
 participantId: alisa-oleva
 youtubeVideoId: "QhQOdfksNWE"
 tags: "rhythm, alienation, repetition, exclusion of non-perspective pedestrians, coincidance, contingency, dispersed collectivity, exploitation of hidden motivation, h o o o o o o w w w w w l, joy acceleration, protocols of self-organisation, quick knowledge, social choreography, sports interest"

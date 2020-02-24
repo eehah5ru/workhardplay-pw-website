@@ -1,6 +1,6 @@
 ---
 projectTitle: "Collective Reading"
-shortDescription: "No"
+shortDescription: "Reading session"
 participantId: aleksei-borisionok
 tags: "great stone, rhythm, alienation, weak disease, care virus, affective labour, contingency, dispersed collectivity, h o o o o o o w w w w w l, intimate interfaces, practice of small movements, practices of ourselves"
 ---
