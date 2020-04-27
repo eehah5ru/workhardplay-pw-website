@@ -1,5 +1,6 @@
 require 'fileutils'
 require "rmagick"
+require 'net/http'
 
 #
 #
@@ -35,6 +36,18 @@ end
 
 def dst_pictures
   pictures.map{|p| dst_picture p}
+end
+
+#
+#
+# OG 
+#
+#
+def fb_og_scrape (an_url)
+  token = File.read("fb-access-token.txt")
+  uri = URI("https://graph.facebook.com/v6.0/?scrape=true&id=#{URI.escape(an_url)}&access_token=#{token}")
+  res = Net::HTTP.post(uri, "")
+  STDERR.puts res.body
 end
 
 # module Vagrant
@@ -259,13 +272,28 @@ namespace :slave do
   end
 end
   
-# task :resize do
-#   # base_dir = File.dirname(__FILE__)
-  
 
-#   images = Dir.glob("**/*.*", base: SRC_DIR)
+#
+#
+# OG IMAGES SCRAPERS
+#
+#
+namespace :og_scraper do
+  task :fb_update do
+    html_pages = FileList.new("_site/**/*.html")
+    dirs = FileList.new("_site/**/*")
+    dirs.include("_site/")
+    dirs.exclude do |f|
+      not File.directory?(f)
+    end
 
-#   puts images.map{|i| File.dirname(i)}
+    urls = html_pages.to_a + dirs.to_a
+    urls.collect!{|u| u.sub(/_site/, "http://workhardplay.pw")}
 
-  
-# end
+    urls.each do |u|
+      fb_og_scrape u
+    end
+
+    STDOUT.puts "done"
+  end
+end
