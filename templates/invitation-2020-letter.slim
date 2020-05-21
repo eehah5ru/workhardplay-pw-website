@@ -1,0 +1,13 @@
+.project-col
+  .project data-project="$canonicalName$"
+    == schedule_prj_cover_style_2019  "$canonicalName$", "/pictures/$year$/$canonicalName$/$canonicalName$-cover.jpg", project_id_suffix: "", deg: '$random("-50", "-10")$'
+    p.time
+      | &nbsp;
+    / FIXME: add class 'no-long' if there is no body! (hasBody - siteCtx)
+    p.descr class="$if(hideDetails)$no-long$endif$" style="$if(blur)$filter: blur($blur$px);$endif$"
+      span
+        |$title$$if(hideShortDescription)$$else$&ensp;/&ensp;$shortDescription$$endif$
+    = _unless("hideDetails")
+      .long-descr
+        | $body$
+    = _endif

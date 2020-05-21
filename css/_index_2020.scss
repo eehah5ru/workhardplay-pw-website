@@ -1,5 +1,5 @@
-$primary-color-2020: white;
-$secondary-color-2020: #1f681f;
+$primary-color-2020: #FCFAF2;
+$secondary-color-2020: #1C1C1C;
 
 nav#menu-sign.whp-2020 {
   @include menu-sign($primary-color-2020, $secondary-color-2020);
@@ -15,24 +15,24 @@ header.index-page.whph-2020 {
 
   // background: linear-gradient(180deg,#7fed98,#00b3f9, #c2c2c2);
   // background: linear-gradient(180deg,#7fed98,#00b3f9, white);
-  background: linear-gradient(180deg,#ffc20c,#f95d00,white); 
+  background: linear-gradient(180deg,#33A6B8,#D75455,#D7C4BB); 
   overflow: hidden;
 
   span {
     font-size: unset;
     text-transform: uppercase;
     line-height: 0.8;
-    color: #93fed8;
+    color: $primary-color-2020;
   }
 
   h1 {
-    color: #93fed8;
+    color: $primary-color-2020;
   }
 }
 
 
 section.index-page.teaser.whp-2020 {
-  background: linear-gradient(180deg,#ffc20c,#f95d00,white); 
+  background: linear-gradient(0deg,#33A6B8,#D75455,#D7C4BB); 
 
   min-height: 100%;
   height: 100%;
@@ -43,4 +43,103 @@ section.index-page.teaser.whp-2020 {
     text-align: center;
   }
 }
+
+section.index-page.description.whph-2020 {
+  padding-bottom: 4rem;
+  background: linear-gradient(#D7C4BB, #D75455, #33A6B8);
+
+  @include breakpoint(medium) {
+    background: linear-gradient(#D7C4BB, #D75455, #33A6B8);
+  }
+
+  @include breakpoint(large) {
+    background: linear-gradient(#D7C4BB, #D75455, #33A6B8);
+  }
+}
+
+section.index-page.description.whph-2020,
+section.index-page.teaser.whph-2020 {
+
+  color: $primary-color-2020;
+
+  p {
+    color: $primary-color-2020;
+    font-size: 120%;
+  } 
+
+  a {
+    color: $secondary-color-2020;
+
+    border-bottom: 1.6px dashed $primary-color-2020;
+
+    text-decoration: none;    
+
+    &:hover {
+      color: $primary-color-2020;
+    }
+  }
+
+  @include with-parameters($primary-color-2020, $secondary-color-2020);
+
+  .project-col.general-info.first {
+    margin-top: 6rem;
+  }
+
+
+  //
+  //
+  // schedule
+  //
+  //
+  p.day {
+    color: $secondary-color-2020;
+
+    span {
+      background-color: $primary-color-2020;
+    }
+  }
+
+  .project p.descr span,
+  .project p.descr.no-long span {
+    color: $secondary-color-2020;
+  }
+
+  .project-col .hline {
+    color: $primary-color-2020;
+  }
+
+  .participant-name .name {
+    background-color: $primary-color-2020;
+    color: $secondary-color-2020;
+  }
+
+  .participant-name .hor-line {
+    color: $primary-color-2020;
+  }
+
+  .project-col p.descr {
+    text-align: center;
+  }
+  
+  .project-col p.descr span {
+    border-bottom: 1.6px dashed $primary-color-2020;    
+    &:before {
+      content: "💌 "
+    }
+  }
+
+  .project-col .project[data-project="infrastructure"] p.descr span:before {
+    display: none;
+  }
+
+  // .project {
+  //   .long-descr,
+  //   .participant-bio {
+  //     text-shadow: 2px 2px $secondary-color-2019;
+  //   }
+  // }
+}
+
+
+
 
