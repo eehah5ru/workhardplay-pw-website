@@ -210,19 +210,3 @@ mkScheduleContext caches v = do
   fDays <- (mkFieldDays caches v)
   return $ fDays
     <> ctx
-
-
-sortByOrder :: MonadMetadata m => [Item a] -> m [Item a]
-sortByOrder =
-  sortByM $ order'
-
-  where
-    order' = withItemMetadata $ getOrder
-
-    getOrder :: Metadata -> String
-    getOrder m =
-      maybe "9999" id (lookupString "order" m)
-
-    sortByM :: (Monad m, Ord k) => (a -> m k) -> [a] -> m [a]
-    sortByM f xs = liftM (map fst . sortBy (comparing snd)) $
-                   mapM (\x -> liftM (x,) (f x)) xs

@@ -38,6 +38,8 @@ import Site.Participants.Rules
 
 import Site.Schedule.Rules
 
+import Site.Invitation2020.Rules
+
 --------------------------------------------------------------------------------
 
 main :: IO ()
@@ -67,6 +69,9 @@ main = do
        -- collective glossary defenitions for deps
        participantsRules
        scheduleRules caches "2019"
+
+       invitation2020LetterRules caches
+       invitation2020Rules caches
 
        staticPagesRules caches
 

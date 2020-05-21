@@ -27,7 +27,7 @@ staticPagesRules caches = do
   --
   -- 2020
   --
-  rulesMd "2020/invitation.md"
+  -- rulesMd "2020/invitation.md"
   rulesMd "2020/working-group.md"
 
   SR.withDeps hasNoVersion [(SR.participantsDeps "2020"), (SR.eventsDeps "2020"), (SR.placesDeps "2020"), (SR.daysDeps "2020")] $ rulesMd2019 "2020/index.md"
