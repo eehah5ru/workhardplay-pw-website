@@ -183,6 +183,17 @@
 
   //
   //
+  // jquery extensions 
+  //
+  //
+  
+  jQuery.fn.random = function() {
+    var randomIndex = Math.floor(Math.random() * this.length);  
+    return jQuery(this[randomIndex]);
+  };  
+
+  //
+  //
   // 2018's parameters
   //
   //
@@ -330,6 +341,84 @@
 
   //
   //
+  // 2020's flickering terms
+  //
+  //
+  var initFlickeringTerms = function(self) {
+    setInterval(function() {
+      $("span.flickering-term").each(function(i, el) {
+        $(el).find("span.variant.active").removeClass("active");
+        $(el).find("span.variant").random().addClass("active");
+      });
+    }, 250);
+  };
+
+  //
+  //
+  // 2020's closing slot countdown
+  //
+  //
+
+  var hasCountdown = function(el) {
+    if (_.isEmpty($(el).data("closingTime"))) {
+      return false;
+    }
+    return true;
+  };
+
+  var getCountdownDistance = function(self) {
+    var now = new Date().getTime();
+    var closingTime = new Date($(self).data("closingTime")).getTime();
+
+    return closingTime - now;
+  };
+
+  var isCountdownExpired = function(self) {
+    return (getCountdownDistance(self) < 0.0);
+  };
+  
+  var tickCountdown = function(self) {
+    if (isCountdownExpired(self)) {
+      $(self).html("💥");
+      return;
+    }
+    
+    var distance = getCountdownDistance(self);
+
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    var formatted = days + ":" + hours + ":" + minutes + ":" + seconds;
+
+    $(self).html(formatted);
+  };
+  
+  var initSlotCountdown = function() {
+    $(".invitation span.countdown").each(function(i, el) {
+      if (!hasCountdown(el)) {
+        return;
+      }
+
+      if (isCountdownExpired(el)) {
+        $(el).html("💥");        
+        return;
+      }
+
+      console.log(getCountdownDistance(el));
+      
+      setInterval(function() {
+        tickCountdown(el);
+      }, 1000);
+      
+    });
+  };
+  
+  //
+  //
   // init
   //
   //
@@ -341,13 +430,23 @@
     });
 
     //
-    // 2018-2019 paramaters
+    // 2018-2020 paramaters
     //
     $("span.parameter-descr").addClass("hidden");
     $("a.parameter-name").click(function(e) {
       return onClickParameterName(e.target);
     });
 
+    //
+    // flickering terms
+    //
+    initFlickeringTerms();
+
+    //
+    // slot countdown
+    //
+    initSlotCountdown();
+    
     //
     // schedule projects descriptions
     //
