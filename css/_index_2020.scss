@@ -142,6 +142,10 @@ section.index-page.teaser.whph-2020 {
   // }
 
   &.invitation {
+    p.time {
+      @extend .hide-for-small-only;
+    }
+    
     p strong {
       text-shadow: 2px 2px 10px aqua;      
       font-family: serif;
@@ -158,6 +162,9 @@ section.index-page.teaser.whph-2020 {
       }
     }
 
+    p span.huge-text {
+      font-size: 180%;
+    }
 
     p span.flickering-term {
       .variant {
