@@ -3,7 +3,7 @@ title: "слот мерцающего со/присутствия"
 hideShortDescription: true
 shortDescription: "aaaa"
 closingTime: "June 1, 2020 21:00:00 GMT+0300"
-order: 1
+order: 4
 ---
 
 дорогие читающие это приглашение в слот мерцающего со/присутствия,

@@ -3,7 +3,7 @@ title: "slot of flickering co/presence"
 hideShortDescription: true
 shortDescription: "aaaa"
 closingTime: "June 1, 2020 21:00:00 GMT+0300"
-order: 1
+order: 4
 ---
 dear readers of the invitation to the slot of flickering co/presence,
 
