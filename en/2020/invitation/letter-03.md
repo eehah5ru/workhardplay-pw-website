@@ -14,7 +14,7 @@ Susan Buck-Morss admits that the prefix post in post-Soviet marks the ontology o
 
 But what if this uncertainty, this moving backwards and the lack of utopic horizon is the very [queerrrr time of postsocialism?]{.huge-text}
 
-Following feminist [scholars](https://feminist.krytyka.com/en/articles/rethinking-postsocialism-interview-neda-atanasoski-and-kalindi-vora) one can see socialism through queer temporality, where different types of relations with historical past and unexpected connections that resists normative --- linear and teleological --- concepts of time could be found. This temporality can confront "straight time", by amassing various forms of life and non-synchronised subjectivities. To think the notion of queer time broadly, is to think it as a rupture of regular rhythms, as the time against reproduction, (non)shared utopia, manifestations of forgotten sci-fies, as the night.
+Following feminist [scholars](https://feminist.krytyka.com/en/articles/rethinking-postsocialism-interview-neda-atanasoski-and-kalindi-vora) one can see postsocialism through queer temporality, where different types of relations with historical past and unexpected connections that resists normative --- linear and teleological --- concepts of time could be found. This temporality can confront "straight time", by amassing various forms of life and non-synchronised subjectivities. To think the notion of queer time broadly, is to think it as a rupture of regular rhythms, as the time against reproduction, (non)shared utopia, manifestations of forgotten sci-fies, as the night.
 
 **BY THIS LETTER, WE INVITE YOU TO PROPOSE ACTIVITY, THAT IMPLIES [[FAILURE]{.variant}[ERROR]{.variant}[RUPTURE]{.variant}[CONDENSATION]{.variant}]{.flickering-term} OF POSTSOCIALIST TIME:**
 
