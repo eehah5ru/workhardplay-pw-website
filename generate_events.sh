@@ -2,12 +2,23 @@
 
 IFS=$'\n'
 
+if [ -z "$WHPH_YEAR" ]
+then
+    echo "ERROR: please set WHPH_YEAR"
+    exit 1
+fi
 
-mkdir -p "ru/2019/participants/"
-mkdir -p "en/2019/participants/"
+if [ ! -f "projects.in" ]
+then
+    echo "ERROR: projects.in does not exist"
+    exit 1
+fi
 
-mkdir -p "ru/2019/schedule/all-days/rbob-sorting/"
-mkdir -p "en/2019/schedule/all-days/rbob-sorting/"
+mkdir -p "ru/$WHPH_YEAR/participants/"
+mkdir -p "en/$WHPH_YEAR/participants/"
+
+mkdir -p "ru/$WHPH_YEAR/schedule/all-days/rbob-sorting/"
+mkdir -p "en/$WHPH_YEAR/schedule/all-days/rbob-sorting/"
 
 for p in `cat projects.in`
 do
@@ -38,18 +49,18 @@ do
     #
 
     # RU
-    drive cat --ftype txt "$url"| stack exec generate-participant-file ru > "ru/2019/participants/$participantId.md"
+    drive cat --ftype txt "$url"| stack exec generate-participant-file ru > "ru/$WHPH_YEAR/participants/$participantId.md"
 
     # EN
-    drive cat --ftype txt "$url"| stack exec generate-participant-file en > "en/2019/participants/$participantId.md"
+    drive cat --ftype txt "$url"| stack exec generate-participant-file en > "en/$WHPH_YEAR/participants/$participantId.md"
 
     #
     # EVENTS
     #
 
     # RU
-    drive cat --ftype txt "$url"| stack exec generate-event-file ru > "ru/2019/schedule/all-days/rbob-sorting/$projectId.md"
+    drive cat --ftype txt "$url"| stack exec generate-event-file ru > "ru/$WHPH_YEAR/schedule/all-days/rbob-sorting/$projectId.md"
 
     # EN
-    drive cat --ftype txt "$url"| stack exec generate-event-file en > "en/2019/schedule/all-days/rbob-sorting/$projectId.md"
+    drive cat --ftype txt "$url"| stack exec generate-event-file en > "en/$WHPH_YEAR/schedule/all-days/rbob-sorting/$projectId.md"
 done
