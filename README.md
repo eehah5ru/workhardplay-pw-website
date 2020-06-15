@@ -6,6 +6,12 @@
 
 install drive cli: `pip install drive-cli` 
 
+### environment
+
+set `WHPH_YEAR` env var
+
+`export WHPH_YEAR="2020"`
+
 ### commands
 
 collect all links to unprocessed applications:  
