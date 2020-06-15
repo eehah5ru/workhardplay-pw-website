@@ -10,3 +10,5 @@ log
 /bundler_stubs
 .vagrant
 /stack.yaml
+/instructions.in
+/projects.in
