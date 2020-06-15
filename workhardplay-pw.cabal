@@ -21,6 +21,7 @@ executable site
                   , text
                   , attoparsec
                   , mtl
+                  , transformers
                   , errors
                   , directory
                   , MissingH

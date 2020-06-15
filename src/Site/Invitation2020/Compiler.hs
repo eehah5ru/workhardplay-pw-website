@@ -6,6 +6,9 @@ import Hakyll
 import Site.Template
 import Site.Context
 
+import W7W.ManyPages
+import qualified W7W.ManyPages.Config as MPC
+
 renderInvitationPage ctx x = do
   applyAsTemplate ctx x
   >>= loadAndApplyTemplate "templates/invitation-2020.slim" ctx
