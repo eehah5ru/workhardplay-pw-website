@@ -6,8 +6,15 @@ import qualified Data.Text as T
 import qualified W7W.MultiLang as ML
 
 import qualified Site.Schedule.ProjectFile as PF
-import Site.Schedule.Utils
 
+import Site.Schedule.Utils hiding (participantId)
+
+import qualified Site.Schedule.Utils as SU
+
+import Site.Schedule.Types
+
+import qualified Site.Schedule.Types as ST
+import Site.Schedule.ToYaml
 
 data EventFile =
   EventFile { time :: Maybe T.Text
@@ -19,14 +26,12 @@ data EventFile =
 fromProjectFile :: ML.Locale -> PF.ProjectFile -> Maybe EventFile
 fromProjectFile l pf = do
   aTime <- return $ Nothing
-  aTitle <- return $ PF.textOrMissing (PF.title pf) (translate l)
-  shortDescr <- return $ PF.textOrMissing (PF.format pf) (translate l)
-  partId <- PF.participantId pf
-  descr <- return $ PF.textOrMissing (PF.description pf) (translate l)
+  aTitle <- return . translateOrMissing l . PF.title $ pf
+  shortDescr <- return . translateOrMissing l . PF.format $ pf
+  partId <- SU.participantId pf
+  descr <- return . translateOrMissing l . PF.description $ pf
   return $ EventFile aTime aTitle shortDescr partId descr
   where
-    translate :: (PF.Multilang a) => ML.Locale -> a -> PF.TextField
-    translate l x = ML.chooseByLocale (PF.ru x) (PF.en x) l
 
 
 toText :: EventFile -> T.Text
@@ -42,13 +47,10 @@ toText e = T.intercalate "\n"
                          , ""
                          , description e]
   where
-    quote t = "\"" `T.append` t `T.append` "\""
-    timeField e = "time: " `T.append` (quote . escapeForYaml $ (time' e))
-      where
-        time' = maybe "!!!!" id . time
+    timeField = yamlField "time" . maybe "!!!!" id . time
 
-    titleField e = "title: " `T.append` (quote . escapeForYaml $ (title e))
+    titleField = yamlField "title" . title
 
-    shortdescrField e = "shortDescription: " `T.append` (quote . escapeForYaml $ (shortDescription e))
+    shortdescrField = yamlField "shortDescription" . shortDescription
 
-    partIdField e = "participantId: " `T.append` (participantId  e)
+    partIdField = yamlField "participantId" . participantId

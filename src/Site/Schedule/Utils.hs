@@ -4,12 +4,13 @@ module Site.Schedule.Utils where
 
 import Data.Text hiding (takeWhile, count, map, foldl)
 
-import qualified Data.Text as Text
+import qualified Data.Text as T
 
+import Site.Schedule.Types
 
 
 kebabCase :: Text -> Text
-kebabCase = intercalate "-" . Text.words
+kebabCase = intercalate "-" . T.words
 
 ruEnReplacements :: [(Text,  Text)]
 ruEnReplacements =
@@ -117,7 +118,18 @@ stripCustom = replace "_" "-"
 stripForId :: Text -> Text
 stripForId = stripRuEn . stripCustom
 
-escapeForYaml :: Text -> Text
-escapeForYaml = replace "\"" "\\\""
-                  . replace "\n" " "
-                  . replace "\r\n" " "
+--
+-- generate participant id
+--
+participantId :: (HasAuthor a) => a -> Maybe T.Text
+participantId pf =
+  (en . getAuthor $ pf) >>= return . kebabCase . stripForId . T.toLower
+
+--
+-- generate project id
+--
+projectId :: (HasAuthor a, HasTitle a) => a -> Maybe T.Text
+projectId pf = do
+  partId <- (en . getAuthor $ pf) >>= return . kebabCase . stripForId . T.toLower
+  projId <- (en . getTitle $ pf) >>= return . kebabCase . stripForId . T.toLower
+  return $ T.intercalate "-" [partId, projId]

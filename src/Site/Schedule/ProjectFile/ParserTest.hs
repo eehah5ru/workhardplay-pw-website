@@ -170,6 +170,114 @@ Tech rider (Which equipment / materials / tools would you need?)
 nothing
 |]
 
+
+testData2020 = T.pack [r|
+Имя:
+Санна Самуэльсон 
+
+
+
+
+Name:
+Sanna Samuelsson
+
+
+
+
+Название: 
+Нет времени 
+
+
+
+
+Title:
+No Time 
+
+
+
+
+Формат:
+видео
+
+
+
+
+Format:
+video
+
+
+
+
+Описание для программы (макс. 200 слов):
+
+
+XXX
+
+
+
+
+Description for program (max. 200 words):
+Xxx
+
+
+
+
+Место и время проведения (если это релевантно):
+No
+
+
+
+
+Place and time (if it is relevant):
+No
+
+
+
+
+Продолжительность:
+‘20
+
+
+
+
+Duration:
+'20
+
+
+
+
+Краткая информация о себе:
+XXX
+
+
+
+
+Short Bio:
+Sanna Samuelsson is a recently examined master student at Literary Composition at Valand, Gothenburg. She is a writer who works with different mediums, mainly text and sound. She is also one of the organizers of the LGBTQ-focused reading night Lavendelläsningar in Gothenburg. 
+
+
+
+
+Подпись к картинке:
+XXX
+
+
+
+
+Caption to this image:
+XXX
+
+
+
+
+Есть ли еще что-то, что вы бы хотели сообщить рабочей группе РБОБ?
+No
+
+
+Is there anything else you would like to tell the WHPH working group?
+No
+|]
+  
 testParseAuthor :: IO ()
 testParseAuthor = do
   print $ parseOnly parseAuthor testAuthorData

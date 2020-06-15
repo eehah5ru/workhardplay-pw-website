@@ -8,6 +8,11 @@ import qualified W7W.MultiLang as ML
 import qualified Site.Schedule.ProjectFile as PF
 import Site.Schedule.Utils
 
+import Site.Schedule.Types hiding (toText)
+
+import qualified Site.Schedule.Types as ST
+import Site.Schedule.ToYaml
+
 
 data ParticipantFile =
   ParticipantFile { title :: T.Text
@@ -15,16 +20,12 @@ data ParticipantFile =
                   , bio :: T.Text } deriving (Show, Eq)
 
 
-fromProjectFile :: ML.Locale -> PF.ProjectFile -> Maybe ParticipantFile
-fromProjectFile l pf = do
-  t <- return $ PF.textOrMissing (PF.author $ pf) (translate l)
+mkParticipantFile :: (HasAuthor a, HasBio a) => ML.Locale -> a -> Maybe ParticipantFile
+mkParticipantFile l pf = do
+  t <- return $ translateOrMissing l . getAuthor $ pf
   c <- return $ Nothing
-  b <- return $ PF.textOrMissing  (PF.bio $ pf) (translate l)
+  b <- return $ translateOrMissing l . getBio $ pf
   return $ ParticipantFile t c b
-
-   where
-    translate :: (PF.Multilang a) => ML.Locale -> a -> PF.TextField
-    translate l x = ML.chooseByLocale (PF.ru x) (PF.en x) l
 
 toText :: ParticipantFile -> T.Text
 toText p = T.intercalate "\n"
@@ -35,8 +36,5 @@ toText p = T.intercalate "\n"
                          , ""
                          , bio p]
   where
-    quote t = "\"" `T.append` t `T.append` "\""
-    titleField p = "title: " `T.append` (quote . escapeForYaml $ (title p))
-
-    cityField (ParticipantFile _ Nothing _) = "city: " `T.append` quote "!!!!"
-    cityField (ParticipantFile _ (Just c) _) = "city: " `T.append` (quote . escapeForYaml $ c)
+    titleField = yamlField "title" . title
+    cityField = yamlField "city" . maybe "!!!!" id . city
