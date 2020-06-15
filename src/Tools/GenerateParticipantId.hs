@@ -6,8 +6,11 @@ import Control.Monad (when, unless)
 
 import qualified Data.Text as T
 import qualified Data.Text.IO as TIO
+import Site.Schedule.ProjectFile.Parser
 import Site.Schedule.ProjectFile
 import qualified Site.Schedule.ProjectFile as PF
+
+import Site.Schedule.Utils
 
 import Tools.Utils
 
@@ -24,4 +27,4 @@ printParticipantId pf =
 
 main :: IO ()
 main = do
-  withProjectFileInput printParticipantId
+  withParsedFileInput parseProjectFile printParticipantId

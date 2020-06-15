@@ -7,9 +7,12 @@ import Control.Monad (when, unless)
 import qualified Data.Text as T
 import qualified Data.Text.IO as TIO
 import Site.Schedule.ProjectFile
+import Site.Schedule.ProjectFile.Parser
 import qualified Site.Schedule.ProjectFile as PF
 
 import Rainbow
+
+import Site.Schedule.Utils
 
 import Tools.Utils
 
@@ -20,10 +23,10 @@ printProjectId pf =
     Nothing -> e'
   where
     e' = do
-      logError "error generating project "
+      logError "error generating project id"
       (exitWith $ ExitFailure 1)
 
 
 main :: IO ()
 main = do
-  withProjectFileInput printProjectId
+  withParsedFileInput parseProjectFile printProjectId
