@@ -16,6 +16,8 @@ import Data.Typeable
 
 import Hakyll
 
+import Site.Util
+
 import W7W.Utils
 import W7W.Context
 import W7W.Pictures.Context
@@ -247,7 +249,7 @@ fieldHasTerms terms =
 mkArchiveProjectCtx caches terms =
   do 
      siteCtx <- (mkSiteCtx caches)
-     participantField <- (SC.mkFieldParticipant caches hasNoVersion)
+     participantField <- (SC.mkFieldParticipant caches DefaultVersion)
      return $ fieldProjectTitle
        <> fieldProjectCover
        <> fieldHasMedia
@@ -261,7 +263,7 @@ mkArchiveProjectCtx caches terms =
        <> (fieldHasTerms terms)
        <> (fieldTermsLabel)
        <> SC.fieldParticipantName
-       <> SC.fieldHasParticipant hasNoVersion -- without versions!!!
+       <> SC.fieldHasParticipant DefaultVersion -- without versions!!!
        <> participantField
        -- <> functionPictureAltTitleAttr
        <> siteCtx

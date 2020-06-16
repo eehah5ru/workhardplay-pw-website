@@ -34,11 +34,15 @@ import Site.Archive.Rules
 import Site.CollectiveGlossary
 import Site.CollectiveGlossary.Rules
 
-import Site.Participants.Rules
+import qualified Site.Participants.Rules as OldParticipants
+
+import qualified Site.ParticipantsNg.Rules as Participants
 
 import Site.Schedule.Rules
 
 import Site.Invitation2020.Rules
+import Site.Instructions2020.Rules
+import Site.Screenings2020.Rules
 
 --------------------------------------------------------------------------------
 
@@ -67,12 +71,23 @@ main = do
        match ("ru/**/_*.slim" .||. "en/**/_*.slim") $ compile getResourceBody
 
        -- collective glossary defenitions for deps
-       participantsRules
+       OldParticipants.participantsRules
+
+       --
+       -- 2019's schedule and participants
+       --
        scheduleRules caches "2019"
+       Participants.participantsRules caches "2019"
 
        invitation2020LetterRules caches
        invitation2020Rules caches
 
+       instructions2020Rules caches
+       instruction2020PageRules caches
+
+       -- screenings2020Rules caches
+       -- screening2020PageRules caches
+       
        staticPagesRules caches
 
        terms <- buildTerms

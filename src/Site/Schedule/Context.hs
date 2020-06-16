@@ -22,6 +22,7 @@ import Site.Context
 import W7W.Context
 import W7W.MultiLang
 import W7W.Utils
+import Site.Util
 
 placeItemPlace :: Item a -> String
 placeItemPlace = itemCanonicalName
@@ -49,7 +50,7 @@ participantIdentifier i = do
   return (return . flip fromCapture "" =<< pP)
 
 hasParticipant i = do
-  return . ((/=) 0) . length =<< loadParticipants hasNoVersion i
+  return . ((/=) 0) . length =<< loadParticipants DefaultVersion i
 
 
 maybeParticipantName i = do
@@ -76,16 +77,16 @@ loadParticipant i = do
     Nothing -> throwError $ ["error loading participant for " ++ (itemCanonicalName i)]
 
 
-loadParticipants :: Pattern -> Item a -> Compiler ([Item String])
+loadParticipants :: Version -> Item a -> Compiler ([Item String])
 loadParticipants v i = do
   mPP <- participantPattern i
   case mPP of
-    Just pP -> loadAll =<< return . ((.&&.) v) =<< return pP
+    Just pP -> loadAll =<< return . ((.&&.) (toVersionPattern v)) =<< return pP
     Nothing -> return []
 
-loadEvents :: Pattern -> Item a -> Compiler ([Item String])
+loadEvents :: Version -> Item a -> Compiler ([Item String])
 loadEvents v i = do
-  eP <- return . ((.&&.) v) =<< eventsPattern
+  eP <- return . ((.&&.) (toVersionPattern v)) =<< eventsPattern
   loadAllSnapshots eP "content"
 
   where
@@ -95,9 +96,9 @@ loadEvents v i = do
 
     year' = maybe (error "no year in schedule context!") id . itemYear
 
-loadDays :: Pattern -> Item a -> Compiler ([Item String])
+loadDays :: Version -> Item a -> Compiler ([Item String])
 loadDays v i = do
-  dP <- return . ((.&&.) v) =<< daysPattern
+  dP <- return . ((.&&.) (toVersionPattern v)) =<< daysPattern
   loadAllSnapshots dP "content"
 
   where
@@ -107,9 +108,9 @@ loadDays v i = do
     year' = maybe (error "no year in schedule context!") id . itemYear
 
 
-loadPlaces :: Pattern -> Item a -> Compiler ([Item String])
+loadPlaces :: Version -> Item a -> Compiler ([Item String])
 loadPlaces v i = do
-  pP <- return . ((.&&.) v) =<< placesPattern
+  pP <- return . ((.&&.) (toVersionPattern v)) =<< placesPattern
   loadAllSnapshots pP "content"
   where
     placesPattern :: Compiler Pattern
@@ -117,9 +118,9 @@ loadPlaces v i = do
       return $ fromGlob $ itemLang i </> (year' i) </> "schedule" </> itemCanonicalName i </> "*.md"
     year' = maybe (error "no year in schedule context!") id . itemYear
 
-loadSchedules :: Pattern -> Item a -> Compiler ([Item String])
+loadSchedules :: Version -> Item a -> Compiler ([Item String])
 loadSchedules v i = do
-  sP <- return . ((.&&.) v) =<< schedulePattern
+  sP <- return . ((.&&.) (toVersionPattern v)) =<< schedulePattern
   loadAllSnapshots sP "content"
 
   where
@@ -130,27 +131,27 @@ loadSchedules v i = do
       return $ fromGlob $ itemLang i </> (year' i) </> "schedule.md"
 
 
-mkFieldDays :: Cache.Caches -> Pattern -> Compiler (Context String)
+mkFieldDays :: Cache.Caches -> Version -> Compiler (Context String)
 mkFieldDays caches v = do
   ctx <- (mkDayContext caches v)
   return $ listFieldWith "days" ctx (loadDays v >=> sortByOrder)
 
-mkFieldPlaces :: Cache.Caches -> Pattern -> Compiler (Context String)
+mkFieldPlaces :: Cache.Caches -> Version -> Compiler (Context String)
 mkFieldPlaces caches v = do
   ctx <- mkPlaceContext caches v
   return $ listFieldWith "places" ctx (loadPlaces v >=> sortByOrder)
 
-mkFieldEvents :: Cache.Caches -> Pattern -> Compiler (Context String)
+mkFieldEvents :: Cache.Caches -> Version -> Compiler (Context String)
 mkFieldEvents caches v = do
   ctx <- mkEventContext caches v
   return $ listFieldWith "events" ctx (loadEvents v >=> sortByOrder)
 
-mkFieldParticipant :: Cache.Caches -> Pattern -> Compiler (Context String)
+mkFieldParticipant :: Cache.Caches -> Version -> Compiler (Context String)
 mkFieldParticipant caches v = do
   ctx <- mkParticipantContext caches
   return $ listFieldWith "participant" ctx (loadParticipants v)
 
-mkFieldSchedule :: Cache.Caches -> Pattern -> Compiler (Context String)
+mkFieldSchedule :: Cache.Caches -> Version -> Compiler (Context String)
 mkFieldSchedule caches v = do
   ctx <- mkScheduleContext caches v
   return $ listFieldWith "schedule" ctx (loadSchedules v)
@@ -161,21 +162,21 @@ fieldContent = field "content" content'
     content' i = loadSnapshotBody (itemIdentifier i) "content"
 
 
-fieldHasPlaces :: Pattern -> Context String
+fieldHasPlaces :: Version -> Context String
 fieldHasPlaces v = boolFieldM "hasPlaces" hasPlaces'
   where
     hasPlaces' i = do
       places <- loadPlaces v i
       return $ (length places) /= 0
 
-fieldHasEvents :: Pattern -> Context String
+fieldHasEvents :: Version -> Context String
 fieldHasEvents v = boolFieldM "hasEvents" hasEvents'
   where
     hasEvents' i = do
       events <- loadEvents v i
       return $ (length events) /= 0
 
-fieldHasParticipant :: Pattern -> Context String
+fieldHasParticipant :: Version -> Context String
 fieldHasParticipant v = boolFieldM "hasParticipant" hasParticipant
 
 fieldParticipantName :: Context String
@@ -186,25 +187,25 @@ mkParticipantContext c = do
   siteCtx <- mkSiteCtx c
   return $ fieldContent <> siteCtx
 
-mkEventContext :: Cache.Caches -> Pattern -> Compiler (Context String)
+mkEventContext :: Cache.Caches -> Version -> Compiler (Context String)
 mkEventContext c v = do
   siteCtx <- mkSiteCtx c
   pF <- mkFieldParticipant c v
   return $ fieldParticipantName <> fieldHasParticipant v <> pF <> fieldContent <> siteCtx
 
-mkPlaceContext :: Cache.Caches -> Pattern -> Compiler (Context String)
+mkPlaceContext :: Cache.Caches -> Version -> Compiler (Context String)
 mkPlaceContext c v = do
   siteCtx <- mkSiteCtx c
   fEvents <- mkFieldEvents c v
   return $ fEvents <> fieldHasEvents v <> fieldContent <> siteCtx
 
-mkDayContext :: Cache.Caches -> Pattern -> Compiler (Context String)
+mkDayContext :: Cache.Caches -> Version -> Compiler (Context String)
 mkDayContext caches v = do
   siteCtx <- mkSiteCtx caches
   fPlaces <- mkFieldPlaces caches v
   return $ fPlaces <> fieldHasPlaces v <> fieldContent <> siteCtx
 
-mkScheduleContext :: Cache.Caches -> Pattern -> Compiler (Context String)
+mkScheduleContext :: Cache.Caches -> Version -> Compiler (Context String)
 mkScheduleContext caches v = do
   ctx <- (mkSiteCtx caches)
   fDays <- (mkFieldDays caches v)

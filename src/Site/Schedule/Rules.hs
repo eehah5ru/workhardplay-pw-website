@@ -17,21 +17,26 @@ import qualified W7W.Cache as Cache
 import Site.Template
 import Site.Context
 import Site.Schedule.Context
-
+import Site.Util
+import Site.ParticipantsNg
 
 scheduleRules :: Cache.Caches -> String -> Rules ()
 scheduleRules caches year = do
 
+  --
+  -- event html rules
+  --
+  withVersionedDeps DefaultVersion [participantsDeps year] $ matchMultiLang (eventRules'' caches ) (eventRules'' caches) (eventsPattern year)
 
-  matchMultiLang participantRules'' participantRules'' (participantsPattern year)
+  --
+  -- event txt rules
+  --
+  withVersionedDeps TxtVersion [participantsDeps year] $ matchMultiLang (eventTxtRules'' caches) (eventTxtRules'' caches) (eventsPattern year)
 
-  matchMultiLang participantTxtRules'' participantTxtRules'' (participantsPattern year)
-
-  withDeps hasNoVersion [participantsDeps year] $ matchMultiLang (eventRules'' caches ) (eventRules'' caches) (eventsPattern year)
-
-  withDeps hasNoVersion [participantsDeps year] $ matchMultiLang (eventTxtRules'' caches) (eventTxtRules'' caches) (eventsPattern year)
-
-  withDeps hasNoVersion [participantsDeps year, eventsDeps year] $ do
+  --
+  -- places html rules
+  --
+  withVersionedDeps DefaultVersion [participantsDeps year, eventsDeps year] $ do
     matchMultiLang (placeRules'' caches) (placeRules'' caches) (placesPattern year "all-days")
     matchMultiLang (placeRules'' caches) (placeRules'' caches) (placesPattern year "monday")
     matchMultiLang (placeRules'' caches) (placeRules'' caches) (placesPattern year "tuesday")
@@ -41,7 +46,10 @@ scheduleRules caches year = do
     matchMultiLang (placeRules'' caches) (placeRules'' caches) (placesPattern year "saturday")
     matchMultiLang (placeRules'' caches) (placeRules'' caches) (placesPattern year "sunday")
 
-  withDeps hasTxtVersion [participantsDeps year, eventsDeps year] $ do
+  --
+  -- places txt rules
+  --
+  withVersionedDeps TxtVersion [participantsDeps year, eventsDeps year] $ do
     matchMultiLang (placeTxtRules'' caches) (placeTxtRules'' caches) (placesPattern year "all-days")
     matchMultiLang (placeTxtRules'' caches) (placeTxtRules'' caches) (placesPattern year "monday")
     matchMultiLang (placeTxtRules'' caches) (placeTxtRules'' caches) (placesPattern year "tuesday")
@@ -51,13 +59,20 @@ scheduleRules caches year = do
     matchMultiLang (placeTxtRules'' caches) (placeTxtRules'' caches) (placesPattern year "saturday")
     matchMultiLang (placeTxtRules'' caches) (placeTxtRules'' caches) (placesPattern year "sunday")
 
-  withDeps hasNoVersion [participantsDeps year, eventsDeps year, placesDeps year] $ matchMultiLang (daysRules'' caches) (daysRules'' caches) (daysPattern year)
+  --
+  -- days html rules
+  --
+  withVersionedDeps DefaultVersion [participantsDeps year, eventsDeps year, placesDeps year] $ matchMultiLang (daysRules'' caches) (daysRules'' caches) (daysPattern year)
 
-  withDeps hasTxtVersion [(participantsDeps year), (eventsDeps year), (placesDeps year)] $ matchMultiLang (dayTxtRules'' caches) (dayTxtRules'' caches) (daysPattern year)
+  --
+  -- days txt rules
+  --
+  withVersionedDeps TxtVersion [(participantsDeps year), (eventsDeps year), (placesDeps year)] $ matchMultiLang (dayTxtRules'' caches) (dayTxtRules'' caches) (daysPattern year)
 
-  withDeps hasNoVersion [(participantsDeps year), (eventsDeps year), (placesDeps year), (daysDeps year)] $ matchMultiLang (scheduleRules' caches) (scheduleRules' caches) (schedulePattern year)
-
-hasTxtVersion = hasVersion "txt"
+  --
+  -- schedule html rules
+  --
+  withVersionedDeps DefaultVersion [(participantsDeps year), (eventsDeps year), (placesDeps year), (daysDeps year)] $ matchMultiLang (scheduleRules' caches) (scheduleRules' caches) (schedulePattern year)
 
 days = [ "all-days"
        , "monday"
@@ -76,31 +91,20 @@ placesPattern year d = year </> "schedule" </> d </> "*.md"
 
 eventsPattern year = year </> "schedule/*/*/*.md"
 
-participantsPattern year = year </> "participants/*.md"
-
 -- rawContentCompiler l =
 --    getResourceBody >>= saveSnapshot "raw_content"
 
-depsPattern' p = f' RU .||. f' EN
-  where
-    f' l = fromGlob . localizePath l $ p
 
-participantsDeps year = depsPattern' (participantsPattern year)
+eventsDeps year = multilangDepsPattern (eventsPattern year)
 
-eventsDeps year = depsPattern' (eventsPattern year)
+placesDeps year = (foldr (.||.) mempty $ map (multilangDepsPattern . placesPattern year) days)
 
-placesDeps year = (foldr (.||.) mempty $ map (depsPattern' . placesPattern year) days)
-
-daysDeps year = depsPattern' (daysPattern year)
-
-withDeps verPattern dPatterns rules  = do
-  deps <- mapM makePatternDependency $ map ((.&&.) verPattern) dPatterns
-  rulesExtraDependencies deps rules
+daysDeps year = multilangDepsPattern (daysPattern year)
 
 -- if separate page is not needed
 contentRules caches l cTpl ctxF = do
   compile $ do
-    ctx <- ctxF caches hasNoVersion
+    ctx <- ctxF caches DefaultVersion
     pandocCompiler
      >>= beautifyTypography
      >>= applyAsTemplate ctx
@@ -110,7 +114,7 @@ contentRules caches l cTpl ctxF = do
 
 pageRules caches l cTpl pTpl ctxF =
   markdownPageRules $ \x -> do
-    ctx <- ctxF caches hasNoVersion
+    ctx <- ctxF caches DefaultVersion
     beautifyTypography x
       >>= applyAsTemplate ctx
       >>= loadAndApplyTemplate cTpl ctx
@@ -122,20 +126,11 @@ pageRules caches l cTpl pTpl ctxF =
 pageTxtRules caches l cTpl ctxF = do
   route $ setExtension "txt"
   compile $ do
-    ctx <- ctxF caches (hasTxtVersion)
+    ctx <- ctxF caches (TxtVersion)
     getResourceBody
       >>= applyAsTemplate ctx
       >>= loadAndApplyTemplate cTpl ctx
       >>= saveSnapshot "content"
-
-participantRules'' locale = do
-  compile $ do
-    pandocCompiler
-      >>= beautifyTypography
-      >>= saveSnapshot "content"
-
-
-participantTxtRules'' locale = version "txt" $ participantRules'' locale
 
 
 eventRules'' caches locale = do
