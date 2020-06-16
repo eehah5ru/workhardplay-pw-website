@@ -49,10 +49,10 @@ do
     #
 
     # RU
-    drive cat --ftype txt "$url"| stack exec generate-participant-file ru > "ru/$WHPH_YEAR/participants/$participantId.md"
+    drive cat --ftype txt "$url"| stack exec generate-participant-file ru fromProject > "ru/$WHPH_YEAR/participants/$participantId.md"
 
     # EN
-    drive cat --ftype txt "$url"| stack exec generate-participant-file en > "en/$WHPH_YEAR/participants/$participantId.md"
+    drive cat --ftype txt "$url"| stack exec generate-participant-file en fromProject > "en/$WHPH_YEAR/participants/$participantId.md"
 
     #
     # EVENTS

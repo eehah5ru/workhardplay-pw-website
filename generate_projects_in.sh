@@ -19,6 +19,9 @@ lines=`echo "$lines" | grep -v "_заявки/+"`
 # remove instructions
 lines=`echo "$lines" | grep -v "_заявки/\~"`
 
+# remove screenings
+lines=`echo "$lines" | grep -v "_заявки/="`
+
 # remove cancelled
 lines=`echo "$lines" | grep -v "_заявки/0 cancelled"`
 
