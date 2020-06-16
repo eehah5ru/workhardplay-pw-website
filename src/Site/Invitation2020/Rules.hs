@@ -31,7 +31,7 @@ import Site.Invitation2020.Context
 
 invitationsConfig :: Cache.Caches -> MPC.Config
 invitationsConfig c =
-  MPC.Config { MPC.indexPagePath = MPC.IndexPagePath "2020/invitation/*.md"
+  MPC.Config { MPC.indexPagePath = MPC.IndexPagePath "2020/invitation.md"
              , MPC.pagesPattern = MPC.PagesPattern "2020/invitation/*.md"
              , MPC.ctxPagesFieldName = MPC.CtxPagesFieldName "invitationLetters"
              , MPC.rendererIndexPage = renderInvitationPage
