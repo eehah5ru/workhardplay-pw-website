@@ -62,6 +62,14 @@ fieldRootUrl =
     getRootUrl i = return $ "/" ++ (itemLang i) ++ "/" ++ (yearPart i)
     yearPart = maybe "" (\x -> x ++ "/") . itemYear
 
+--
+-- snapshot "conten" of the item
+--
+fieldContent :: Context String
+fieldContent = field "content" content'
+  where
+    content' i = loadSnapshotBody (itemIdentifier i) "content"
+
 
 fieldDummyFunction =
   functionField "dummy" f

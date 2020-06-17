@@ -1,8 +1,12 @@
 {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE GeneralizedNewtypeDeriving #-}
+{-# LANGUAGE FlexibleContexts #-}
 module Site.Schedule.Rules where
-
+import Data.String
 import           Data.Monoid (mappend, (<>))
 import System.FilePath.Posix ((</>))
+import Control.Monad.Trans.Class
+import Control.Monad.Reader
 
 import qualified W7W.Cache as Cache
 
@@ -17,105 +21,139 @@ import qualified W7W.Cache as Cache
 import Site.Template
 import Site.Context
 import Site.Schedule.Context
+import Site.Schedule.Config hiding (version)
+import qualified Site.Schedule.Config as Cfg
 import Site.Util
 import Site.ParticipantsNg
 
-scheduleRules :: Cache.Caches -> String -> Rules ()
-scheduleRules caches year = do
+
+scheduleRules :: Config -> Rules ()
+scheduleRules cfg = do
+  execScheduleEnv (cfg{Cfg.version = DefaultVersion}) wholeScheduleRules
+  execScheduleEnv (cfg{Cfg.version = TxtVersion}) wholeScheduleRules
+
+wholeScheduleRules :: ScheduleEnv Rules ()
+wholeScheduleRules = do
+  cfg <- ask
+  year <- asks year
+  v <- asks Cfg.version
+  days <- asks Cfg.days
+
+  placesDeps' <- placesDeps
 
   --
   -- event html rules
   --
-  withVersionedDeps DefaultVersion [participantsDeps year] $ matchMultiLang (eventRules'' caches ) (eventRules'' caches) (eventsPattern year)
-
-  --
-  -- event txt rules
-  --
-  withVersionedDeps TxtVersion [participantsDeps year] $ matchMultiLang (eventTxtRules'' caches) (eventTxtRules'' caches) (eventsPattern year)
+  lift $ withVersionedDeps v [participantsDeps year] $ matchMultiLang (eventRules' cfg) (eventRules' cfg) (eventsPattern year)
 
   --
   -- places html rules
   --
-  withVersionedDeps DefaultVersion [participantsDeps year, eventsDeps year] $ do
-    matchMultiLang (placeRules'' caches) (placeRules'' caches) (placesPattern year "all-days")
-    matchMultiLang (placeRules'' caches) (placeRules'' caches) (placesPattern year "monday")
-    matchMultiLang (placeRules'' caches) (placeRules'' caches) (placesPattern year "tuesday")
-    matchMultiLang (placeRules'' caches) (placeRules'' caches) (placesPattern year "wednesday")
-    matchMultiLang (placeRules'' caches) (placeRules'' caches) (placesPattern year "thursday")
-    matchMultiLang (placeRules'' caches) (placeRules'' caches) (placesPattern year "friday")
-    matchMultiLang (placeRules'' caches) (placeRules'' caches) (placesPattern year "saturday")
-    matchMultiLang (placeRules'' caches) (placeRules'' caches) (placesPattern year "sunday")
-
-  --
-  -- places txt rules
-  --
-  withVersionedDeps TxtVersion [participantsDeps year, eventsDeps year] $ do
-    matchMultiLang (placeTxtRules'' caches) (placeTxtRules'' caches) (placesPattern year "all-days")
-    matchMultiLang (placeTxtRules'' caches) (placeTxtRules'' caches) (placesPattern year "monday")
-    matchMultiLang (placeTxtRules'' caches) (placeTxtRules'' caches) (placesPattern year "tuesday")
-    matchMultiLang (placeTxtRules'' caches) (placeTxtRules'' caches) (placesPattern year "wednesday")
-    matchMultiLang (placeTxtRules'' caches) (placeTxtRules'' caches) (placesPattern year "thursday")
-    matchMultiLang (placeTxtRules'' caches) (placeTxtRules'' caches) (placesPattern year "friday")
-    matchMultiLang (placeTxtRules'' caches) (placeTxtRules'' caches) (placesPattern year "saturday")
-    matchMultiLang (placeTxtRules'' caches) (placeTxtRules'' caches) (placesPattern year "sunday")
+  lift $ flip mapM_ days $ \d -> withVersionedDeps v [participantsDeps year, eventsDeps year] $ matchMultiLang (placeRules' cfg) (placeRules' cfg) (placesPattern year d)
 
   --
   -- days html rules
   --
-  withVersionedDeps DefaultVersion [participantsDeps year, eventsDeps year, placesDeps year] $ matchMultiLang (daysRules'' caches) (daysRules'' caches) (daysPattern year)
-
-  --
-  -- days txt rules
-  --
-  withVersionedDeps TxtVersion [(participantsDeps year), (eventsDeps year), (placesDeps year)] $ matchMultiLang (dayTxtRules'' caches) (dayTxtRules'' caches) (daysPattern year)
+  lift $ withVersionedDeps v [participantsDeps year, eventsDeps year, placesDeps'] $ matchMultiLang (dayRules' cfg) (dayRules' cfg) (daysPattern year)
 
   --
   -- schedule html rules
   --
-  withVersionedDeps DefaultVersion [(participantsDeps year), (eventsDeps year), (placesDeps year), (daysDeps year)] $ matchMultiLang (scheduleRules' caches) (scheduleRules' caches) (schedulePattern year)
+  when (v == DefaultVersion) $
+    lift $ withVersionedDeps v [(participantsDeps year), (eventsDeps year), (placesDeps'), (daysDeps year)] $ matchMultiLang (scheduleRules' cfg) (scheduleRules' cfg) (schedulePattern year)
 
-days = [ "all-days"
-       , "monday"
-       , "tuesday"
-       , "wednesday"
-       , "thursday"
-       , "friday"
-       , "saturday"
-       , "sunday" ]
+  where
+    execRules :: (Locale -> ScheduleEnv Rules ()) -> (Locale -> ScheduleEnv Rules ()) -> Config -> (Locale -> Rules ())
+    execRules htmlRules _ c@(Config{Cfg.version=DefaultVersion}) = execScheduleEnv c . htmlRules
+    execRules _ txtRules c  = execScheduleEnv c . txtRules
 
-schedulePattern year = year </> "schedule.md"
+    eventRules' :: Config -> (Locale -> Rules ())
+    eventRules' = execRules eventHtmlRules eventTxtRules
 
-daysPattern year = year </> "schedule/*.md"
+    placeRules' = execRules placeHtmlRules placeTxtRules
 
-placesPattern year d = year </> "schedule" </> d </> "*.md"
+    dayRules' = execRules dayHtmlRules dayTxtRules
 
-eventsPattern year = year </> "schedule/*/*/*.md"
+    scheduleRules' = execRules scheduleHtmlRules (error "there is no txt rules for shcedule")
+
+
+-- txtWholeScheduleRules :: ScheduleEnv Rules ()
+-- txtWholeScheduleRules = do
+--   cfg <- ask
+--   year <- asks year
+--   days <- asks Cfg.days
+--   v <- asks Cfg.version
+
+--   --
+--   -- event txt rules
+--   --
+--   lift $ withVersionedDeps v [participantsDeps year] $ matchMultiLang (execScheduleEnv cfg . eventTxtRules'') (execScheduleEnv cfg . eventTxtRules'') (eventsPattern year)
+
+--   --
+--   -- places txt rules
+--   --
+--   lift $ flip mapM_ days $ \(Day d) -> withVersionedDeps v [participantsDeps year, eventsDeps year] $ matchMultiLang (execScheduleEnv cfg . placeTxtRules'') (execScheduleEnv cfg . placeTxtRules'') (placesPattern year d)
+
+--   --
+--   -- days txt rules
+--   --
+--   lift $ withVersionedDeps v [(participantsDeps year), (eventsDeps year), (placesDeps year)] $ matchMultiLang (execScheduleEnv cfg . dayTxtRules) (execScheduleEnv cfg . dayTxtRules) (daysPattern year)
+
+-- wholeScheduleRules :: ScheduleEnv Rules ()
+-- wholeScheduleRules = do
+--   cfg <- ask
+--   year <- asks year
+
+-- days = [ "all-days"
+--        , "monday"
+--        , "tuesday"
+--        , "wednesday"
+--        , "thursday"
+--        , "friday"
+--        , "saturday"
+--        , "sunday" ]
+
+schedulePattern year = (unYear year) </> "schedule.md"
+
+daysPattern year = (unYear year) </> "schedule/*.md"
+
+placesPattern year d = (unYear year) </> "schedule" </> (unDay d) </> "*.md"
+
+eventsPattern year = (unYear year) </> "schedule/*/*/*.md"
 
 -- rawContentCompiler l =
 --    getResourceBody >>= saveSnapshot "raw_content"
 
 
+
 eventsDeps year = multilangDepsPattern (eventsPattern year)
 
-placesDeps year = (foldr (.||.) mempty $ map (multilangDepsPattern . placesPattern year) days)
+placesDeps :: (MonadReader Config m) => m Pattern
+placesDeps = do
+  year <- asks year
+  days <- asks days
+  return $ (foldr (.||.) mempty $ map (multilangDepsPattern . placesPattern year) days)
 
 daysDeps year = multilangDepsPattern (daysPattern year)
 
 -- if separate page is not needed
-contentRules caches l cTpl ctxF = do
-  compile $ do
-    ctx <- ctxF caches DefaultVersion
-    pandocCompiler
+contentRules:: Locale -> Identifier -> ScheduleEnv Compiler (Context String) -> ScheduleEnv Rules ()
+contentRules l cTpl ctxF = do
+  cfg <- ask
+  lift $ compile $ execScheduleEnv cfg $ do
+    ctx <- ctxF
+    lift $ pandocCompiler
      >>= beautifyTypography
      >>= applyAsTemplate ctx
      >>= loadAndApplyTemplate cTpl ctx
      >>= saveSnapshot "content"
 
-
-pageRules caches l cTpl pTpl ctxF =
-  markdownPageRules $ \x -> do
-    ctx <- ctxF caches DefaultVersion
-    beautifyTypography x
+pageHtmlRules :: Locale -> Identifier -> Identifier -> ScheduleEnv Compiler (Context String) -> ScheduleEnv Rules ()
+pageHtmlRules l cTpl pTpl ctxF = do
+  cfg <- ask
+  lift $ markdownPageRules $ \x -> execScheduleEnv cfg $ do
+    ctx <- ctxF
+    lift $ beautifyTypography x
       >>= applyAsTemplate ctx
       >>= loadAndApplyTemplate cTpl ctx
       >>= saveSnapshot "content"
@@ -123,50 +161,84 @@ pageRules caches l cTpl pTpl ctxF =
       >>= loadAndApplyTemplate rootPageTpl ctx
       >>= loadAndApplyTemplate rootTpl ctx
 
-pageTxtRules caches l cTpl ctxF = do
-  route $ setExtension "txt"
-  compile $ do
-    ctx <- ctxF caches (TxtVersion)
-    getResourceBody
+pageTxtRules :: Locale -> Identifier -> ScheduleEnv Compiler (Context String) -> ScheduleEnv Rules ()
+pageTxtRules l cTpl ctxF = do
+  cfg <- ask
+
+  lift . route . setExtension $ "txt"
+  lift $ compile . execScheduleEnv cfg $ do
+    ctx <- ctxF
+    lift $ getResourceBody
       >>= applyAsTemplate ctx
       >>= loadAndApplyTemplate cTpl ctx
       >>= saveSnapshot "content"
 
 
-eventRules'' caches locale = do
-  pageRules caches locale contentTemplate pageTemplate (mkEventContext)
+eventHtmlRules :: Locale -> ScheduleEnv Rules ()
+eventHtmlRules locale = do
+  year <- asks year
+  cfg <- ask
+  pageHtmlRules locale (contentTemplate year) (pageTemplate year) (mkEventContext)
 
   where
-    contentTemplate = "templates/schedule-event-item-2019.slim"
-    pageTemplate = "templates/schedule-event-page-2019.slim"
+    contentTemplate (Year y) = fromFilePath $ "templates/schedule-event-item-" ++ y ++ ".slim"
+    pageTemplate (Year y) = fromFilePath $ "templates/schedule-event-page-" ++ y ++ ".slim"
 
 
-eventTxtRules'' caches locale = version "txt" $ do
-  pageTxtRules caches locale "templates/schedule-event-item-2019-txt.html" mkEventContext
+eventTxtRules :: Locale -> ScheduleEnv Rules ()
+eventTxtRules locale = do
+  v <- asks Cfg.version
+  cfg <- ask
+  year <- asks year
+  lift . rulesWithVersion v . execScheduleEnv cfg $ do
+    pageTxtRules locale (contentTemplate year) mkEventContext
 
+  where
+    contentTemplate (Year y) = fromFilePath $ "templates/schedule-event-item-" ++ y ++ "-txt.html"
 
-placeRules'' caches locale = do
+placeHtmlRules :: Locale -> ScheduleEnv Rules ()
+placeHtmlRules locale = do
+  year <- asks year
   -- without separate page
-  contentRules caches locale contentTemplate mkPlaceContext
+  contentRules locale (contentTemplate year) mkPlaceContext
   --pageRules locale contentTemplate pageTemplate
   where
-    contentTemplate = "templates/schedule-place-item-2019.slim"
+    contentTemplate (Year y) = fromFilePath $ "templates/schedule-place-item-" ++ y ++ ".slim"
 
-placeTxtRules'' caches locale = version "txt" $ do
-  pageTxtRules caches locale "templates/schedule-place-item-2019-txt.html" mkPlaceContext
+placeTxtRules :: Locale -> ScheduleEnv Rules ()
+placeTxtRules locale = do
+  v <- asks Cfg.version
+  cfg <- ask
+  lift . rulesWithVersion v . execScheduleEnv cfg $ do
+    year <- asks year
+    pageTxtRules locale (contectTemplate year) mkPlaceContext
+  where
+    contectTemplate (Year y) = fromFilePath $ "templates/schedule-place-item-" ++ y ++ "-txt.html"
 
-daysRules'' caches locale = do
-  pageRules caches locale contentTemplate pageTemplate mkDayContext
+dayHtmlRules :: Locale -> ScheduleEnv Rules ()
+dayHtmlRules locale = do
+  year <- asks year
+  pageHtmlRules locale (contentTemplate year) (pageTemplate year) mkDayContext
 
   where
-    contentTemplate = "templates/schedule-day-item-2019.slim"
-    pageTemplate = "templates/schedule-day-page-2019.slim"
+    contentTemplate (Year y) = fromFilePath $ "templates/schedule-day-item-" ++ y ++ ".slim"
+    pageTemplate (Year y) = fromFilePath $ "templates/schedule-day-page-" ++ y ++".slim"
 
-dayTxtRules'' caches locale = version "txt" $ do
-  pageTxtRules caches locale "templates/schedule-day-item-2019-txt.html" mkDayContext
+dayTxtRules :: Locale -> ScheduleEnv Rules ()
+dayTxtRules locale = do
+  v <- asks Cfg.version
+  cfg <- ask
+  lift . rulesWithVersion v . execScheduleEnv cfg $ do
+    year <- asks year
+    pageTxtRules locale (contentTemplate year) mkDayContext
 
-scheduleRules' caches locale =
-   pageRules caches locale contentTemplate pageTemplate mkScheduleContext
-   where
-     contentTemplate = "templates/schedule-item-2019.slim"
-     pageTemplate = "templates/schedule-2019.slim"
+  where
+    contentTemplate (Year y) = fromFilePath $ "templates/schedule-day-item-" ++ y ++ "-txt.html"
+
+scheduleHtmlRules :: Locale -> ScheduleEnv Rules ()
+scheduleHtmlRules locale = do
+  year <- asks year
+  pageHtmlRules locale (contentTemplate year) (pageTemplate year) mkScheduleContext
+  where
+    contentTemplate (Year y) = fromFilePath $ "templates/schedule-item-" ++ y ++ ".slim"
+    pageTemplate (Year y) = fromFilePath $ "templates/schedule-" ++ y ++ ".slim"

@@ -13,6 +13,9 @@ import Site.Template
 import Site.Context
 import qualified Site.Schedule.Context as SC
 import qualified Site.Schedule.Rules as SR
+import Site.Schedule.Config
+import qualified Site.Schedule2020.Rules as S2020R
+import qualified Site.Schedule2019.Rules as S2019R
 
 import Site.ParticipantsNg
 
@@ -22,19 +25,22 @@ import W7W.Utils
 
 import Site.Util
 
+
 staticPagesRules :: Cache.Caches -> Rules ()
-staticPagesRules caches = do
+staticPagesRules caches = do  
   rulesIndex "index.md"
   rulesAbout "about.md"
   
-
+  
   --
   -- 2020
   --
   -- rulesMd "2020/invitation.md"
   rulesMd "2020/working-group.md"
 
-  withVersionedDeps DefaultVersion [(participantsDeps "2020"), (SR.eventsDeps "2020"), (SR.placesDeps "2020"), (SR.daysDeps "2020")] $ rulesMd2019 "2020/index.md"
+  placesDeps2020 <- execScheduleEnv (S2020R.config caches) SR.placesDeps
+
+  withVersionedDeps DefaultVersion [(participantsDeps "2020"), (SR.eventsDeps "2020"), (placesDeps2020), (SR.daysDeps "2020")] $ rulesMd' (S2020R.config caches) "2020/index.md"
 
   --
   -- 2019
@@ -42,7 +48,9 @@ staticPagesRules caches = do
   rulesMd "2019/invitation.md"
   rulesMd "2019/working-group.md"
 
-  withVersionedDeps DefaultVersion [(participantsDeps "2019"), (SR.eventsDeps "2019"), (SR.placesDeps "2019"), (SR.daysDeps "2019")] $ rulesMd2019 "2019/index.md"
+  placesDeps2019 <- execScheduleEnv (S2019R.config caches) SR.placesDeps
+
+  withVersionedDeps DefaultVersion [(participantsDeps "2019"), (SR.eventsDeps "2019"), (placesDeps2019), (SR.daysDeps "2019")] $ rulesMd' (S2019R.config caches) "2019/index.md"
 
   with2018deps (rulesSlim "2018/index.slim")
 
@@ -52,7 +60,8 @@ staticPagesRules caches = do
 
   where
     rulesMd = staticPandocPageRulesM rootTpl (Just rootPageTpl) Nothing (mkSiteCtx caches)
-    rulesMd2019 p = do
+    -- 2019-now markdown rules
+    rulesMd' cfg p = do
       staticPandocPageRulesM rootTpl (Just rootPageTpl) Nothing mkCtx p
       where
         year' = maybe (error "no year in schedule context!") id . itemYear
@@ -72,7 +81,7 @@ staticPagesRules caches = do
 
         mkCtx = do
           ctx <- mkSiteCtx caches
-          fS <- SC.mkFieldSchedule caches DefaultVersion
+          fS <- execScheduleEnv cfg $ SC.mkFieldSchedule
           fWG <- mkFieldWorkingGroup caches
           return $ fS <> fWG <> ctx
 

@@ -17,7 +17,10 @@ import qualified W7W.Cache as Cache
 
 import Site.Util
 
-
-participantsPattern year = year </> "participants/*.md"
+--
+-- participants pattern for the year
+--
+participantsPattern :: Year -> FilePath
+participantsPattern year = (unYear year) </> "participants/*.md"
 
 participantsDeps year = multilangDepsPattern (participantsPattern year)

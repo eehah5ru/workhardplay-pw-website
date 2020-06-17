@@ -38,6 +38,9 @@ import Site.Archive.Utils
 
 import Site.CollectiveGlossary.Context (fieldTermsList)
 import qualified Site.Schedule.Context as SC
+import qualified Site.ParticipantsNg.Context as PC
+import qualified Site.ParticipantsNg.Types as PT
+
 --
 --
 -- metadata predicates
@@ -118,7 +121,7 @@ fieldProjectTitle =
 
         authorFromMeta = meta >>= return . lookupString "author"
 
-        authorFromParticipant = SC.maybeParticipantName item
+        authorFromParticipant = PC.maybeParticipantName item
 
         projectNameFromMeta = meta >>= return . lookupString "projectTitle"
         
@@ -247,23 +250,25 @@ fieldHasTerms terms =
 --
 
 mkArchiveProjectCtx caches terms =
-  do 
-     siteCtx <- (mkSiteCtx caches)
-     participantField <- (SC.mkFieldParticipant caches DefaultVersion)
-     return $ fieldProjectTitle
-       <> fieldProjectCover
-       <> fieldHasMedia
-       <> fieldHasVideo
-       -- <> fieldHasVideoText       
-       <> fieldHasAudio
-       <> (fieldProjectColor caches)
-       <> (fieldHasPictures picturesPattern)
-       <> (fieldPictures caches picturesPattern)
-       <> (fieldTermsList terms)
-       <> (fieldHasTerms terms)
-       <> (fieldTermsLabel)
-       <> SC.fieldParticipantName
-       <> SC.fieldHasParticipant DefaultVersion -- without versions!!!
-       <> participantField
-       -- <> functionPictureAltTitleAttr
-       <> siteCtx
+  do
+    pCfg <- return $ PT.Config{PT.cache = caches, PT.version=DefaultVersion}
+    
+    siteCtx <- (mkSiteCtx caches)
+    participantField <- PT.execParticipantsEnv pCfg PC.mkFieldParticipant
+    return $ fieldProjectTitle
+      <> fieldProjectCover
+      <> fieldHasMedia
+      <> fieldHasVideo
+      -- <> fieldHasVideoText       
+      <> fieldHasAudio
+      <> (fieldProjectColor caches)
+      <> (fieldHasPictures picturesPattern)
+      <> (fieldPictures caches picturesPattern)
+      <> (fieldTermsList terms)
+      <> (fieldHasTerms terms)
+      <> (fieldTermsLabel)
+      <> SC.fieldParticipantName
+      <> SC.fieldHasParticipant DefaultVersion -- without versions!!!
+      <> participantField
+      -- <> functionPictureAltTitleAttr
+      <> siteCtx

@@ -12,11 +12,18 @@ import           Control.Monad               (liftM)
 import           Data.List                   (intersperse, sortBy)
 import           Data.Ord                    (comparing)
 
+import Control.Monad.Trans.Class
+import Control.Monad.Reader
+
+
 import System.FilePath.Posix ((</>))
 
 import Hakyll
 
+import W7W.MonadCompiler
+
 import qualified W7W.Cache as Cache
+
 
 import Site.Context
 import W7W.Context
@@ -24,65 +31,17 @@ import W7W.MultiLang
 import W7W.Utils
 import Site.Util
 
+import Site.Schedule.Config hiding (version)
+import qualified Site.Schedule.Config as Cfg
+
+import Site.ParticipantsNg.Context
+
 placeItemPlace :: Item a -> String
 placeItemPlace = itemCanonicalName
 
 placeItemDay :: Item a -> String
 placeItemDay = head . tail . reverse . itemPathParts
 
-
-participantPattern :: Item a -> Compiler (Maybe Pattern)
-participantPattern i = do
-  pId <- maybeParticipantId i
-  return $ pId >>= formatPattern
-  where
-    formatPattern pId = return $ fromGlob . localizePath (itemLocale i) $ ((year' i) ++ "/participants/" ++ pId ++ ".md")
-    -- FIXME: replace with non-errror logic creating for example non-existing participant. undisclosed or so
-    -- e' i = error $ "unresolved participantID for " ++ (itemCanonicalName i)
-    year' = maybe "3000" id . itemYear
-
-    maybeParticipantId i = do
-      getMetadataField (itemIdentifier i) "participantId"
-
-participantIdentifier i = do
-  pP <- participantPattern i
-
-  return (return . flip fromCapture "" =<< pP)
-
-hasParticipant i = do
-  return . ((/=) 0) . length =<< loadParticipants DefaultVersion i
-
-
-maybeParticipantName i = do
-  pId <- participantIdentifier i
-  case pId of
-    Just anId -> getMetadataField  anId "title"
-    Nothing -> return Nothing
-
-
-participantName i = do
-  pId <- participantIdentifier i
-  return . maybe (e' i) id =<< maybeParticipantName i
-
-  where
-    e' i = error $ "error getting participant name for " ++ (itemCanonicalName i)
-
-
-
-loadParticipant :: Item a -> Compiler (Item String)
-loadParticipant i = do
-  mPI <- participantIdentifier i
-  case mPI of
-    Just pI -> load pI
-    Nothing -> throwError $ ["error loading participant for " ++ (itemCanonicalName i)]
-
-
-loadParticipants :: Version -> Item a -> Compiler ([Item String])
-loadParticipants v i = do
-  mPP <- participantPattern i
-  case mPP of
-    Just pP -> loadAll =<< return . ((.&&.) (toVersionPattern v)) =<< return pP
-    Nothing -> return []
 
 loadEvents :: Version -> Item a -> Compiler ([Item String])
 loadEvents v i = do
@@ -131,36 +90,30 @@ loadSchedules v i = do
       return $ fromGlob $ itemLang i </> (year' i) </> "schedule.md"
 
 
-mkFieldDays :: Cache.Caches -> Version -> Compiler (Context String)
-mkFieldDays caches v = do
-  ctx <- (mkDayContext caches v)
+mkFieldDays :: ScheduleEnv Compiler (Context String)
+mkFieldDays = do
+  ctx <- mkDayContext
+  v <- asks Cfg.version
   return $ listFieldWith "days" ctx (loadDays v >=> sortByOrder)
 
-mkFieldPlaces :: Cache.Caches -> Version -> Compiler (Context String)
-mkFieldPlaces caches v = do
-  ctx <- mkPlaceContext caches v
+mkFieldPlaces :: ScheduleEnv Compiler (Context String)
+mkFieldPlaces  = do
+  ctx <- mkPlaceContext
+  v <- asks Cfg.version
+
   return $ listFieldWith "places" ctx (loadPlaces v >=> sortByOrder)
 
-mkFieldEvents :: Cache.Caches -> Version -> Compiler (Context String)
-mkFieldEvents caches v = do
-  ctx <- mkEventContext caches v
+mkFieldEvents :: ScheduleEnv Compiler (Context String)
+mkFieldEvents = do
+  ctx <- mkEventContext
+  v <- asks Cfg.version
   return $ listFieldWith "events" ctx (loadEvents v >=> sortByOrder)
 
-mkFieldParticipant :: Cache.Caches -> Version -> Compiler (Context String)
-mkFieldParticipant caches v = do
-  ctx <- mkParticipantContext caches
-  return $ listFieldWith "participant" ctx (loadParticipants v)
-
-mkFieldSchedule :: Cache.Caches -> Version -> Compiler (Context String)
-mkFieldSchedule caches v = do
-  ctx <- mkScheduleContext caches v
+mkFieldSchedule :: ScheduleEnv Compiler (Context String)
+mkFieldSchedule = do
+  ctx <- mkScheduleContext
+  v <- asks Cfg.version
   return $ listFieldWith "schedule" ctx (loadSchedules v)
-
-fieldContent :: Context String
-fieldContent = field "content" content'
-  where
-    content' i = loadSnapshotBody (itemIdentifier i) "content"
-
 
 fieldHasPlaces :: Version -> Context String
 fieldHasPlaces v = boolFieldM "hasPlaces" hasPlaces'
@@ -182,32 +135,41 @@ fieldHasParticipant v = boolFieldM "hasParticipant" hasParticipant
 fieldParticipantName :: Context String
 fieldParticipantName = field "participantName" participantName
 
-mkParticipantContext :: Cache.Caches -> Compiler (Context String)
-mkParticipantContext c = do
-  siteCtx <- mkSiteCtx c
-  return $ fieldContent <> siteCtx
+--
+--
+-- contexts
+--
+--
 
-mkEventContext :: Cache.Caches -> Version -> Compiler (Context String)
-mkEventContext c v = do
-  siteCtx <- mkSiteCtx c
-  pF <- mkFieldParticipant c v
-  return $ fieldParticipantName <> fieldHasParticipant v <> pF <> fieldContent <> siteCtx
+siteCtx :: (MonadReader r m, MonadCompiler m, Cache.HasCache r) => m (Context String)
+siteCtx = do
+  cs <- asks Cache.getCache
+  liftCompiler $ mkSiteCtx cs
 
-mkPlaceContext :: Cache.Caches -> Version -> Compiler (Context String)
-mkPlaceContext c v = do
-  siteCtx <- mkSiteCtx c
-  fEvents <- mkFieldEvents c v
-  return $ fEvents <> fieldHasEvents v <> fieldContent <> siteCtx
+mkEventContext :: ScheduleEnv Compiler (Context String)
+mkEventContext = do
+  sCtx <- siteCtx
+  v <- asks Cfg.version
+  pF <- mkFieldParticipant
+  return $ fieldParticipantName <> fieldHasParticipant v <> pF <> fieldContent <> sCtx
 
-mkDayContext :: Cache.Caches -> Version -> Compiler (Context String)
-mkDayContext caches v = do
-  siteCtx <- mkSiteCtx caches
-  fPlaces <- mkFieldPlaces caches v
-  return $ fPlaces <> fieldHasPlaces v <> fieldContent <> siteCtx
+mkPlaceContext :: ScheduleEnv Compiler (Context String)
+mkPlaceContext = do
+  ctx <- siteCtx
+  v <- asks Cfg.version
+  fEvents <- mkFieldEvents
+  return $ fEvents <> fieldHasEvents v <> fieldContent <> ctx
 
-mkScheduleContext :: Cache.Caches -> Version -> Compiler (Context String)
-mkScheduleContext caches v = do
-  ctx <- (mkSiteCtx caches)
-  fDays <- (mkFieldDays caches v)
+mkDayContext :: ScheduleEnv Compiler (Context String)
+mkDayContext = do
+  ctx <- siteCtx
+  v <- asks Cfg.version
+  fPlaces <- mkFieldPlaces
+  return $ fPlaces <> fieldHasPlaces v <> fieldContent <> ctx
+
+mkScheduleContext :: ScheduleEnv Compiler (Context String)
+mkScheduleContext = do
+  ctx <- siteCtx
+  fDays <- mkFieldDays
   return $ fDays
     <> ctx

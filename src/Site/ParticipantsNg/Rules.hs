@@ -15,9 +15,11 @@ import W7W.Typography
 
 import qualified W7W.Cache as Cache
 
+import Site.Util
+
 import Site.ParticipantsNg
 
-participantsRules :: Cache.Caches -> String -> Rules ()
+participantsRules :: Cache.Caches -> Year -> Rules ()
 participantsRules caches year = do
   matchMultiLang participantRules'' participantRules'' (participantsPattern year)
 

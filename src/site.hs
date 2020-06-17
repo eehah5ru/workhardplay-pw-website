@@ -38,7 +38,8 @@ import qualified Site.Participants.Rules as OldParticipants
 
 import qualified Site.ParticipantsNg.Rules as Participants
 
-import Site.Schedule.Rules
+-- import Site.Schedule.Rules
+import Site.Schedule2019.Rules hiding (config)
 
 import Site.Invitation2020.Rules
 import Site.Instructions2020.Rules
@@ -76,7 +77,8 @@ main = do
        --
        -- 2019's schedule and participants
        --
-       scheduleRules caches "2019"
+       schedule2019Rules caches
+       
        Participants.participantsRules caches "2019"
 
        invitation2020LetterRules caches
