@@ -15,6 +15,7 @@ import Hakyll
 import W7W.Compilers.Markdown
 import W7W.MultiLang
 import W7W.Typography
+import W7W.HasVersion
 
 import qualified W7W.Cache as Cache
 

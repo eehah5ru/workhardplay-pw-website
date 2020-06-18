@@ -9,6 +9,7 @@ import Site.Schedule.Types
 
 class ToYamlField a where
   yamlField :: T.Text -> a -> T.Text
+  yamlFieldMaybe :: T.Text -> (a -> Bool) -> a -> Maybe T.Text
 
 escapeForYaml :: T.Text -> T.Text
 escapeForYaml = T.replace "\"" "\\\""
@@ -23,3 +24,5 @@ quote t = "\"" `T.append` t `T.append` "\""
 
 instance (ToText a) => ToYamlField a where
   yamlField t x = t <> ": " <> (quote . escapeForYaml . toText $ x)
+  yamlFieldMaybe t f x | f x = Just . yamlField t $ x
+                       | otherwise = Nothing

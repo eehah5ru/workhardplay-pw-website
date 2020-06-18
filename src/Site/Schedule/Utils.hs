@@ -7,6 +7,7 @@ import Data.Text hiding (takeWhile, count, map, foldl)
 import qualified Data.Text as T
 
 import Site.Schedule.Types
+import W7W.MultiLang
 
 
 kebabCase :: Text -> Text

@@ -1,6 +1,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Site.Schedule.InstructionFile where
 
+import Data.Maybe
 import qualified Data.Text as T
 
 import qualified W7W.MultiLang as ML
@@ -30,6 +31,14 @@ instance HasTitle InstructionFile where
 
 instance HasBio InstructionFile where
   getBio = bio
+
+
+isNo :: T.Text -> Bool
+isNo t = and . map (\f -> f (T.strip t)) $ preds
+  where
+    noString = "No"
+    preds = [T.isPrefixOf noString, T.isSuffixOf noString]
+
 --
 --
 -- format instruction to hakyll file
@@ -37,23 +46,23 @@ instance HasBio InstructionFile where
 --
 formatInstruction :: ML.Locale -> InstructionFile -> T.Text
 formatInstruction l x =
-  T.intercalate "\n"
-                [ "---"
-                , "order: 1"
+  T.intercalate "\n" $ map (maybe "" id) . filter isJust $
+                [ Just "---"
+                , Just "order: 1"
                 , titleField x
                 , partIdField x
                 , performerNeedsField x
                 , placeTimeField x
                 , durationField x
                 , coverCaptionField x
-                , "---"
-                , ""
-                , translateOrMissing l (instruction x)
+                , Just "---"
+                , Just ""
+                , Just . fixMarkdown . translateOrMissing l . instruction $ x
                 ]
   where
-    titleField = yamlField "title" . translateOrMissing l . title
-    performerNeedsField = yamlField "performerNeeds" . translateOrMissing l . participantNeeds
-    placeTimeField = yamlField "placeAndTime" . translateOrMissing l . placeTime
-    durationField = yamlField "duration" . translateOrMissing l . duration
-    coverCaptionField = yamlField "coverCaption" . translateOrMissing l . imageCaption
-    partIdField = yamlField "participantId" . maybe "UNKNOWN_PARTICIPANT_ID" id . participantId
+    titleField = Just . yamlField "title" . translateOrMissing l . title
+    performerNeedsField = yamlFieldMaybe "performerNeeds" (not . isNo)  . translateOrMissing l . participantNeeds
+    placeTimeField = yamlFieldMaybe "placeAndTime" (not . isNo) . translateOrMissing l . placeTime
+    durationField = yamlFieldMaybe "duration" (not . isNo) . translateOrMissing l . duration
+    coverCaptionField = yamlFieldMaybe "coverCaption" (not . isNo) . translateOrMissing l . imageCaption
+    partIdField = Just . yamlField "participantId" . maybe "UNKNOWN_PARTICIPANT_ID" id . participantId

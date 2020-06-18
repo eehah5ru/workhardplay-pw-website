@@ -25,6 +25,10 @@ import W7W.Rules.Assets
 import W7W.Pictures.Rules
 -- import W7W.Rules.StaticPages
 
+import W7W.Labels.Parser
+
+import Site.Config
+
 import Site.Context
 import Site.Template
 
@@ -58,7 +62,9 @@ import Site.Screenings2020.Rules
 main :: IO ()
 main = do
   caches <- Cache.newCaches
-
+  labels <- parseLabelsYaml
+  cfg <- return $ mkSiteConfig caches labels
+  
   hakyllWith config $
     do
 
@@ -85,33 +91,33 @@ main = do
        --
        -- 2019's schedule and participants
        --
-       schedule2019Rules caches
+       schedule2019Rules cfg
        
-       Participants.participantsRules caches "2019"
+       Participants.participantsRules cfg "2019"
 
        --
        -- 2020's rules
        --
 
-       schedule2020Rules caches
+       schedule2020Rules cfg
        
-       Participants.participantsRules caches "2020"
+       Participants.participantsRules cfg "2020"
 
-       invitation2020LetterRules caches
-       invitation2020Rules caches
+       invitation2020LetterRules cfg
+       invitation2020Rules cfg
 
-       instructions2020Rules caches
-       instruction2020PageRules caches
+       instructions2020Rules cfg
+       instruction2020PageRules cfg
 
        -- screenings2020Rules caches
        -- screening2020PageRules caches
        
-       staticPagesRules caches
+       staticPagesRules cfg
 
        terms <- buildTerms
 
-       collectiveGlossaryRules caches terms
-       archiveIndexPagesRules caches terms
-       archiveProjectPagesRules caches terms
+       collectiveGlossaryRules cfg terms
+       archiveIndexPagesRules cfg terms
+       archiveProjectPagesRules cfg terms
 
 --------------------------------------------------------------------------------

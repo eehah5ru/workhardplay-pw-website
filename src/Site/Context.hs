@@ -1,6 +1,9 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Site.Context where
 
+import Control.Monad.Trans.Class
+import Control.Monad.Reader
+
 import Control.Applicative (Alternative (..))
 
 import System.Random
@@ -10,14 +13,19 @@ import Hakyll.Core.Compiler.Internal (compilerUnsafeIO)
 
 import Data.Monoid ((<>), mempty)
 
+import W7W.MonadCompiler
 import W7W.MultiLang
 import W7W.Utils
 import W7W.Context
+
+import W7W.Labels.Types
+import W7W.Labels.Context
 
 import Site.CollectiveGlossary.Utils (glossaryName)
 import Site.Participants (fieldParticipantBio, fieldParticipantRawBio, fieldParticipantName, fieldParticipantCity)
 
 import qualified W7W.Cache as Cache
+
 --
 --
 -- site specific context fields
@@ -129,12 +137,20 @@ minimalSiteCtx =
 --
 -- site default
 --
-mkSiteCtx :: Cache.Caches -> Compiler (Context String)
-mkSiteCtx caches  = do
+mkSiteCtx :: Cache.Caches -> Labels -> Compiler (Context String)
+mkSiteCtx caches labels = do
   r <- mkFieldRevision caches
+  ls <- runReaderT mkLabelsField labels
   return $ minimalSiteCtx
            <> fieldParticipantBio
            <> fieldParticipantRawBio
            <> fieldParticipantCity
            <> fieldParticipantName
            <> r
+           <> ls
+
+siteCtx :: (MonadReader r m, MonadCompiler m, Cache.HasCache r, HasLabels r) => m (Context String)
+siteCtx = do
+  c <- asks Cache.getCache
+  ls <- asks getLabels
+  liftCompiler $ mkSiteCtx c ls

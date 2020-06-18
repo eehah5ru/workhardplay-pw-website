@@ -13,12 +13,16 @@ import Hakyll hiding (version)
 import qualified W7W.Cache as Cache
 import W7W.MonadCompiler
 
+import W7W.HasVersion
+import W7W.Labels.Types
+
 import Site.Util
 
 
 data Config =
   Config { cache :: Cache.Caches
          , version :: Version
+         , labels :: Labels
          }
 
 
@@ -35,3 +39,6 @@ instance Cache.HasCache Config where
 
 instance HasVersion Config where
   getVersion = version
+
+instance HasLabels Config where
+  getLabels = labels

@@ -6,6 +6,8 @@ module Site.Schedule2020.Rules
   , config
   ) where
 
+import W7W.HasVersion
+
 import Site.Schedule.Rules
 import Site.Schedule.Config hiding (days)
 import qualified Site.Schedule.Config as Cfg
@@ -25,11 +27,12 @@ days =
        , "tuesday-06-30"
        , "wednesday-07-01"]
 
-config caches =
-  Config { cache = caches
+config cfg =
+  Config { cache = fst cfg
          , year = "2020"
          , version = DefaultVersion
-         , Cfg.days = days}
+         , Cfg.days = days
+         , labels = snd cfg}
 
-schedule2020Rules caches =
-  scheduleRules $ config caches
+schedule2020Rules cfg =
+  scheduleRules $ config cfg

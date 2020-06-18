@@ -1,6 +1,8 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Site.Archive.IndexContext where
 
+import Control.Monad.Reader
+
 import Data.Maybe (fromMaybe)
 import Data.Monoid ((<>), mempty)
 
@@ -16,6 +18,7 @@ import Site.Archive.Compilers
 import Site.Archive.ProjectContext
 
 import Site.Archive.Utils
+import W7W.Labels.Types
 
 
 mkProjectsField ctx projectsPattern =
@@ -34,12 +37,12 @@ mkProjectsListField ctx projectsPattern = do
 --
 -- index page ctx
 --
-mkArchiveIndexPageCtx :: Cache.Caches -> Tags -> Pattern -> Compiler (Context String)
-mkArchiveIndexPageCtx caches terms pxPattern = do
-  pCtx <- mkArchiveProjectCtx caches terms
+mkArchiveIndexPageCtx :: (Cache.HasCache c, HasLabels c) => c -> Tags -> Pattern -> Compiler (Context String)
+mkArchiveIndexPageCtx c terms pxPattern = do
+  pCtx <- mkArchiveProjectCtx c terms
   projects <- mkProjectsField pCtx pxPattern
   projectsList <- mkProjectsListField pCtx pxPattern
-  siteCtx <- (mkSiteCtx caches)
+  siteCtx <- runReaderT siteCtx c
   return $
     projects
     <> projectsList

@@ -1,6 +1,8 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Site.Archive.Rules where
 
+import Control.Monad.Reader
+
 import Data.Maybe (fromMaybe)
 import Data.Monoid ((<>), mempty)
 import Control.Monad ((>=>))
@@ -26,6 +28,9 @@ import Site.CollectiveGlossary
 import Site.CollectiveGlossary.Context
 
 import Site.Archive.Utils
+
+import W7W.Labels.Types
+
 --
 --
 -- rules
@@ -35,8 +40,8 @@ import Site.Archive.Utils
 --
 -- index page
 --
-archiveIndexPagesRules :: Cache.Caches -> Terms -> Rules ()
-archiveIndexPagesRules caches ts = do
+archiveIndexPagesRules :: (Cache.HasCache c, HasLabels c) => c -> Terms -> Rules ()
+archiveIndexPagesRules cfg ts = do
   let rules2016 = rules' "2016/archive/"
       rules2017 = rules' "2017/projects/"
       rules2018 = rules' "2018/projects/"
@@ -56,7 +61,7 @@ archiveIndexPagesRules caches ts = do
   where
     rules' projectsPattern locale =
           slimPageRules $ \x -> do
-            ctx <- mkArchiveIndexPageCtx caches (terms locale ts) (archiveProjectsPattern (localizePath locale projectsPattern))
+            ctx <- mkArchiveIndexPageCtx cfg (terms locale ts) (archiveProjectsPattern (localizePath locale projectsPattern))
             renderArchiveIndexPage rootPageTpl ctx x
 
 
@@ -64,8 +69,8 @@ archiveIndexPagesRules caches ts = do
 --
 -- project page
 --
-archiveProjectPagesRules :: Cache.Caches -> Terms -> Rules ()
-archiveProjectPagesRules caches ts = do
+archiveProjectPagesRules :: (Cache.HasCache c, HasLabels c) => c -> Terms -> Rules ()
+archiveProjectPagesRules cfg ts = do
   matchSlim "2016/archive/"
   matchMd "2016/archive/"
 
@@ -90,7 +95,7 @@ archiveProjectPagesRules caches ts = do
     mdRules locale  =
       markdownPageRules $ beautifyTypography >=> render' locale
     render' locale item = do
-      ctx <- mkArchiveProjectCtx caches (terms locale ts)
+      ctx <- mkArchiveProjectCtx cfg (terms locale ts)
       renderArchiveProjectPage
        "templates/archive-2017-project.slim"
        rootPageTpl

@@ -21,6 +21,7 @@ import System.FilePath.Posix ((</>))
 import Hakyll
 
 import W7W.MonadCompiler
+import W7W.HasVersion
 
 import qualified W7W.Cache as Cache
 
@@ -129,29 +130,18 @@ fieldHasEvents v = boolFieldM "hasEvents" hasEvents'
       events <- loadEvents v i
       return $ (length events) /= 0
 
-fieldHasParticipant :: Version -> Context String
-fieldHasParticipant v = boolFieldM "hasParticipant" hasParticipant
-
-fieldParticipantName :: Context String
-fieldParticipantName = field "participantName" participantName
-
 --
 --
 -- contexts
 --
 --
 
-siteCtx :: (MonadReader r m, MonadCompiler m, Cache.HasCache r) => m (Context String)
-siteCtx = do
-  cs <- asks Cache.getCache
-  liftCompiler $ mkSiteCtx cs
 
 mkEventContext :: ScheduleEnv Compiler (Context String)
 mkEventContext = do
   sCtx <- siteCtx
-  v <- asks Cfg.version
   pF <- mkFieldParticipant
-  return $ fieldParticipantName <> fieldHasParticipant v <> pF <> fieldContent <> sCtx
+  return $ fieldParticipantName <> fieldHasParticipant <> pF <> fieldContent <> sCtx
 
 mkPlaceContext :: ScheduleEnv Compiler (Context String)
 mkPlaceContext = do

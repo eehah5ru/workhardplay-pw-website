@@ -29,7 +29,7 @@ import Site.Context
 import Site.Invitation2020.Compiler
 import Site.Invitation2020.Context
 
-invitationsConfig :: Cache.Caches -> MPC.Config
+-- invitationsConfig :: Cache.Caches -> MPC.Config
 invitationsConfig c =
   MPC.Config { MPC.indexPagePath = MPC.IndexPagePath "2020/invitation.md"
              , MPC.pagesPattern = MPC.PagesPattern "2020/invitation/*.md"
@@ -37,15 +37,17 @@ invitationsConfig c =
              , MPC.rendererIndexPage = renderInvitationPage
              , MPC.rendererPagesList = renderLetters
              , MPC.rendererOnePage = renderLetterPage
-             , MPC.cache = c
+             , MPC.pageCtxFields = return mempty
+             , MPC.cache = fst c
+             , MPC.labels = snd c
              }
 
 
-invitation2020Rules :: Cache.Caches -> Rules ()
+-- invitation2020Rules :: Cache.Caches -> Rules ()
 invitation2020Rules c =
   MPR.indexPageRules (invitationsConfig c)
 
-invitation2020LetterRules :: Cache.Caches -> Rules ()
+-- invitation2020LetterRules :: Cache.Caches -> Rules ()
 invitation2020LetterRules c =
   MPR.pageRules (invitationsConfig c)
   -- caches <- asks MPC.cache

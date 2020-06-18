@@ -19,8 +19,10 @@ import Site.Util
 
 import Site.ParticipantsNg
 
-participantsRules :: Cache.Caches -> Year -> Rules ()
-participantsRules caches year = do
+import Site.Config
+
+participantsRules :: Config -> Year -> Rules ()
+participantsRules cfg year = do
   matchMultiLang participantRules'' participantRules'' (participantsPattern year)
 
   matchMultiLang participantTxtRules'' participantTxtRules'' (participantsPattern year)

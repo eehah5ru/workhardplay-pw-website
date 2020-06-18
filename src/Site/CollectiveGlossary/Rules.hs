@@ -1,6 +1,8 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Site.CollectiveGlossary.Rules where
 
+import Control.Monad.Reader
+
 import           Data.Monoid (mappend, (<>))
 import qualified W7W.Cache as Cache
 
@@ -18,13 +20,15 @@ import Site.Archive.IndexContext (mkArchiveIndexPageCtx)
 -- import Site.Archive.IndexContext (mkProjectsField)
 import Site.CollectiveGlossary
 import Site.CollectiveGlossary.Context
+import W7W.Labels.Types
+
 
 --
 --
 -- rules
 --
-collectiveGlossaryRules :: Cache.Caches -> Terms -> Rules ()
-collectiveGlossaryRules caches ts = do
+collectiveGlossaryRules :: (Cache.HasCache c, HasLabels c) => c -> Terms -> Rules ()
+collectiveGlossaryRules cfg ts = do
   --
   -- terms deps rules
   --
@@ -49,7 +53,7 @@ collectiveGlossaryRules caches ts = do
       slimPageRules $ \x -> do
         termsField <- mkFieldTerms (terms locale ts)
         manyTermsField <- mkFieldManyTerms 200 (terms locale ts)
-        siteCtx <- (mkSiteCtx caches)
+        siteCtx <- runReaderT siteCtx cfg
         let ctx = termsField <> manyTermsField <> siteCtx
         applyAsTemplate ctx x
           >>= loadAndApplyTemplate "templates/collective-glossary-index.slim" ctx
@@ -61,7 +65,7 @@ collectiveGlossaryRules caches ts = do
       tagsRules terms $ \term p -> do
         route $ setExtension "html"
         compile $ do
-          ctx <- mkCollectiveGlossaryTermPageCtx caches terms term p
+          ctx <- mkCollectiveGlossaryTermPageCtx cfg terms term p
           getResourceBody >>= saveSnapshot "raw_content"
 
           pandocCompiler
@@ -89,9 +93,9 @@ withCollectiveGlossaryDeps ts rules = do
 --
 --
 
-mkCollectiveGlossaryTermPageCtx :: Cache.Caches -> Tags -> String -> Pattern -> Compiler (Context String)
-mkCollectiveGlossaryTermPageCtx caches terms term p = do
-  ctx <- mkArchiveIndexPageCtx caches terms p
+mkCollectiveGlossaryTermPageCtx :: (Cache.HasCache c, HasLabels c) => c -> Tags -> String -> Pattern -> Compiler (Context String)
+mkCollectiveGlossaryTermPageCtx cfg terms term p = do
+  ctx <- mkArchiveIndexPageCtx cfg terms p
   return $
     (fieldTermName term)
     <> fieldAuthorLabel

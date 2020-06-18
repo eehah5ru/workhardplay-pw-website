@@ -1,45 +1,59 @@
+{-# LANGUAGE RankNTypes #-}
+{-# LANGUAGE FlexibleContexts #-}
 {-# LANGUAGE FlexibleInstances #-}
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE TypeSynonymInstances #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE TypeFamilies #-}
 
 module Site.Schedule.Types where
 
 import qualified Data.Text as T
 import qualified W7W.MultiLang as ML
+import W7W.MultiLang (en, ru, Multilang)
+
 
 type TextField = Maybe T.Text
+
+class ToTextField a where
+  toTextField :: a -> TextField
+
+instance ToTextField TextField where
+  toTextField = id
 
 --
 --
 -- multilang
 --
 --
-class Multilang a where
-  ru :: a -> TextField
-  en :: a -> TextField
 
 textOrMissing :: (Labeled a) => a -> (a -> TextField) -> T.Text
 textOrMissing x f = maybe (missing x) id (f x)
   where
     missing x = T.pack $ "No" ++ (label x)
 
-hasRu :: (Multilang a) => a -> Bool
-hasRu x = case ru x of
+hasRu3 :: (Multilang a, ToTextField (ML.MultilangValue a)) => a -> Bool
+hasRu3 x = case toTextField (ru x) of
             Nothing -> False
             Just _ -> True
 
-hasEn :: (Multilang a) => a -> Bool
-hasEn x = case en x of
+hasRu :: (Multilang a, ToTextField (ML.MultilangValue a)) => a -> Bool
+hasRu x = case (toTextField $ ru x) of
+            Nothing -> False
+            Just _ -> True
+
+hasEn :: (Multilang a, ToTextField (ML.MultilangValue a)) => a -> Bool
+hasEn x = case (toTextField $ en x) of
             Nothing-> False
             Just _ -> True
 
-hasBoth :: (Multilang a) => a -> Bool
+hasBoth :: (Multilang a, ToTextField (ML.MultilangValue a)) => a -> Bool
 hasBoth x = (hasRu x) && (hasEn x)
 
-translate :: (Multilang a) => ML.Locale -> a -> TextField
-translate l x = ML.chooseByLocale (ru x) (en x) l
+translate :: (Multilang a, ToTextField (ML.MultilangValue a)) => ML.Locale -> a -> TextField
+translate l x = ML.chooseByLocale (toTextField $ ru x) (toTextField $ en x) l
 
-translateOrMissing :: (Multilang a, Labeled a) => ML.Locale -> a -> T.Text
+translateOrMissing :: (Multilang a, Labeled a, ToTextField (ML.MultilangValue a)) => ML.Locale -> a -> T.Text
 translateOrMissing l x = textOrMissing x (translate l)
 
 --
@@ -145,7 +159,10 @@ data ParticipantNeeds = ParticipantNeeds TextField TextField
 --
 --
 
+
 instance Multilang Author where
+  type MultilangValue Author = TextField
+
   ru (NoAuthor) = Nothing
   ru (Author x _) = x
 
@@ -154,6 +171,8 @@ instance Multilang Author where
 
 
 instance Multilang Title where
+  type MultilangValue Title = TextField
+
   ru (NoTitle) = Nothing
   ru (Title x _) = x
 
@@ -162,6 +181,8 @@ instance Multilang Title where
 
 
 instance Multilang Format where
+  type MultilangValue Format = TextField
+
   ru (NoFormat) = Nothing
   ru (Format x _) = x
 
@@ -169,6 +190,8 @@ instance Multilang Format where
   en (Format _ x) = x
 
 instance Multilang Description where
+  type MultilangValue Description = TextField
+
   ru NoDescription = Nothing
   ru (Description x _) = x
 
@@ -176,6 +199,8 @@ instance Multilang Description where
   en (Description _ x) = x
 
 instance Multilang PlaceTime where
+  type MultilangValue PlaceTime = TextField
+
   ru NoPlaceTime = Nothing
   ru (PlaceTime x _) = x
 
@@ -183,6 +208,8 @@ instance Multilang PlaceTime where
   en (PlaceTime _ x) = x
 
 instance Multilang Duration where
+  type MultilangValue Duration = TextField
+
   ru (NoDuration) = Nothing
   ru (Duration x _) = x
 
@@ -190,6 +217,8 @@ instance Multilang Duration where
   en (Duration _ x) = x
 
 instance Multilang Bio where
+  type MultilangValue Bio = TextField
+
   ru NoBio = Nothing
   ru (Bio x _) = x
 
@@ -197,6 +226,8 @@ instance Multilang Bio where
   en (Bio _ x) = x
 
 instance Multilang ImageCaption where
+  type MultilangValue ImageCaption = TextField
+
   ru NoImageCaption = Nothing
   ru (ImageCaption x _) = x
 
@@ -204,6 +235,9 @@ instance Multilang ImageCaption where
   en (ImageCaption _ x) = x
 
 instance Multilang Techrider where
+  type MultilangValue Techrider = TextField
+
+
   ru NoTechrider = Nothing
   ru (Techrider x _) = x
 
@@ -211,6 +245,9 @@ instance Multilang Techrider where
   en (Techrider _ x) =x
 
 instance Multilang Instruction where
+  type MultilangValue Instruction = TextField
+
+
   ru NoInstruction = Nothing
   ru (Instruction x _) = x
 
@@ -218,6 +255,8 @@ instance Multilang Instruction where
   en (Instruction _ x) =x
 
 instance Multilang ParticipantNeeds where
+  type MultilangValue ParticipantNeeds = TextField
+
   ru NoParticipantNeeds = Nothing
   ru (ParticipantNeeds x _) = x
 

@@ -11,7 +11,9 @@ import Control.Monad.Reader
 import Hakyll hiding (version)
 
 import W7W.MonadCompiler
+import W7W.HasVersion
 import qualified W7W.Cache as Cache
+import W7W.Labels.Types
 
 import Site.Util
 
@@ -22,6 +24,7 @@ data Config =
          , cache :: Cache.Caches
          , version :: Version
          , days :: [Day]
+         , labels :: Labels
          }
 
 instance Cache.HasCache Config where
@@ -29,6 +32,9 @@ instance Cache.HasCache Config where
 
 instance HasVersion Config where
   getVersion = version
+
+instance HasLabels Config where
+  getLabels = labels
 
 newtype ScheduleEnv m a = ScheduleEnv {unwrapScheduleEnv :: ReaderT Config m a} deriving (Functor, Applicative, Monad, MonadReader Config, MonadTrans)
 

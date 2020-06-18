@@ -15,7 +15,8 @@ import qualified W7W.Cache as Cache
 import W7W.Context
 import W7W.MultiLang
 import W7W.Utils
-
+import W7W.HasVersion
+import W7W.Labels.Types
 
 import Site.ParticipantsNg.Types
 import Site.Context
@@ -71,14 +72,37 @@ loadParticipants v i = do
     Just pP -> liftCompiler $ loadAll =<< return . ((.&&.) (toVersionPattern v)) =<< return pP
     Nothing -> return []
 
-mkFieldParticipant :: (MonadReader r m, MonadCompiler m, Cache.HasCache r, HasVersion r) => m (Context String)
+--
+--
+-- fields
+--
+--
+
+--
+-- field hasParticipant predicate
+--
+fieldHasParticipant ::  Context String
+fieldHasParticipant = boolFieldM "hasParticipant" hasParticipant
+
+--
+-- field participant's name
+--
+fieldParticipantName :: Context String
+fieldParticipantName = field "participantName" participantName
+
+--
+-- participant field
+--
+mkFieldParticipant :: (MonadReader r m, MonadCompiler m, Cache.HasCache r, HasVersion r, HasLabels r) => m (Context String)
 mkFieldParticipant  = do
   ctx <- mkParticipantContext
   v <- asks getVersion
   return $ listFieldWith "participant" ctx (loadParticipants v)
 
-mkParticipantContext :: (MonadReader r m, MonadCompiler m, Cache.HasCache r) => m (Context String)
+--
+-- context
+--
+mkParticipantContext :: (MonadReader r m, MonadCompiler m, Cache.HasCache r, HasLabels r) => m (Context String)
 mkParticipantContext = do
-  caches <- asks Cache.getCache
-  sCtx <- liftCompiler $ mkSiteCtx caches
+  sCtx <- siteCtx
   return $ fieldContent <> sCtx
