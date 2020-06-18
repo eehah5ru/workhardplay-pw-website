@@ -1,0 +1,14 @@
+2020:
+  instructions:
+    noTime:
+      ru: "без времени"
+      en: "no time"
+    duration:
+      ru: "Длительность исполнения:"
+      en: "Duration of implementation:"
+    performerNeeds:
+      ru: "Что необходимо исполнитель_ницам для воплощения:"
+      en: "What is necessary to performers for its realization:"
+    placeAndTime:
+      ru: "Место и время проведения:"
+      en: "Place and time:"
