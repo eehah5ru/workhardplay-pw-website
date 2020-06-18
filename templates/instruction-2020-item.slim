@@ -6,7 +6,7 @@
     / FIXME: add class 'no-long' if there is no body! (hasBody - siteCtx)
     p.descr class="$if(hideDetails)$no-long$endif$" style="$if(blur)$filter: blur($blur$px);$endif$"
       span
-        |$title$&ensp;/&ensp;$duration$
+        |$title$&ensp;/&ensp;$duration$ / $getLabel("2020.instructions.noTime")$
       = _if("closingTime")
         span
           | &nbsp;⏰&nbsp;

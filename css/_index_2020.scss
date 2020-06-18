@@ -192,6 +192,26 @@ section.index-page.teaser.whph-2020 {
       
     }
   }
+
+  &.instructions {
+    // .descr span,
+    // .descr {
+    //   color: black;
+    // }
+    .descr span.author {
+      color: $primary-color-2020;      
+    }
+
+    .long-descr {
+      p.duration,
+      p.performerNeeds,
+      p.placeAndTime {
+        em {
+          text-shadow: 5px 5px 10px aqua;
+        }
+      }
+    }
+  }
 }
 
 

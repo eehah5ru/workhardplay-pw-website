@@ -6,15 +6,56 @@
     / FIXME: add class 'no-long' if there is no body! (hasBody - siteCtx)
     p.descr class="$if(hideDetails)$no-long$endif$" style="$if(blur)$filter: blur($blur$px);$endif$"
       span
-        |$title$&ensp;/&ensp;$duration$
-      = _if("closingTime")
-        span
-          | &nbsp;⏰&nbsp;
-        span.countdown data-closing-time="$closingTime$"
-          | &nbsp;
+        |$title$
+      = _if("hasParticipant")
+        = _for("participant")
+          span.author
+            |&nbsp;/&nbsp;$title$
+        = _endfor
       = _endif
 
     = _unless("hideDetails")
       .long-descr
+        figure.cover
+          img src="$instructionCover$"
         | $body$
+        = _if("duration")
+          p.duration
+            em
+              | $getLabel("2020.instructions.duration")$
+            |&nbsp;
+            | $duration$
+        = _endif
+        = _if("performerNeeds")
+          p.performerNeeds
+            em
+              | $getLabel("2020.instructions.performerNeeds")$
+            |&nbsp;
+            | $performerNeeds$
+        = _endif
+        = _if("placeAndTime")
+          p.placeAndTime
+            em
+              | $getLabel("2020.instructions.placeAndTime")$
+            |&nbsp;
+            | $placeAndTime$
+        = _endif
+      = _if("hasParticipant")
+        = _for("participant")
+          .participant-name
+            .hor-line
+              | ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+            .name
+              | $title$
+          .participant-bio
+            ' $content$
+        = _endfor
+      = _else
+        | no bio
+      = _endif
+      .participant-name
+        .hor-line
+          | ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+        .name
+          |
     = _endif
