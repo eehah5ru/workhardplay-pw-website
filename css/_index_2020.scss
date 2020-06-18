@@ -116,22 +116,21 @@ section.index-page.teaser.whph-2020 {
   .participant-name .hor-line {
     color: $primary-color-2020;
   }
-
-  .project-col p.descr {
-    text-align: center;
-  }
   
   .project-col p.descr span {
     border-bottom: 1.6px dashed $primary-color-2020;
-    &:first-of-type {
-      &:before {
-        content: "💌 "
-      }      
-    }
   }
 
   .project-col .project[data-project="infrastructure"] p.descr span:before {
     display: none;
+  }
+
+  .descr.day-comment {
+    opacity: 1;
+  }
+
+  .descr.place-comment.important-description {
+    opacity: 1;
   }
 
   // .project {
@@ -142,6 +141,20 @@ section.index-page.teaser.whph-2020 {
   // }
 
   &.invitation {
+
+    .project-col p.descr span {
+      &:first-of-type {
+        &:before {
+          content: "💌 "
+        }      
+      }
+    }
+    
+    .project-col p.descr {
+      text-align: center;
+    }
+    
+    
     p.time {
       @extend .hide-for-small-only;
     }

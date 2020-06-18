@@ -150,7 +150,9 @@ section.whp-2017.index-page.description {
     }
 
     p.place-comment,
-    .place-comment {
+    .place-comment,
+    p.day-comment,
+    .day-comment {
       @extend .small-12;
       @extend .large-6;
       @extend .columns;
