@@ -2,10 +2,10 @@
 order: 1
 time: ""
 projectIdSuffix: "-one"
-title: "“[collective virtual plein air_ (not) / own room]”"
-shortDescription: "alone in a room, pretending that we are together "
+title: "“[коллективный виртуальный пленэр_(не)/своя комната]”"
+shortDescription: "в комнате наедине, представляя, что мы вместе"
 participantId: "nice-company"
 ---
 
-listen to the voice from the other room: https://soundcloud.com/fyzqoehxd6mi/sets/room4us/s-qJY7lCNjUec
-add playlist: https://cloud.mail.ru/public/3GTb/3Ba1fuiYb
+cлушай голос из другой комнаты: https://soundcloud.com/fyzqoehxd6mi/sets/room4us/s-qJY7lCNjUec
+дополни плейлист своей: https://cloud.mail.ru/public/3GTb/3Ba1fuiYb

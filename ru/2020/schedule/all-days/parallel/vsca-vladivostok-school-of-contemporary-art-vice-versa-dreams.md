@@ -2,11 +2,9 @@
 order: 1
 time: ""
 projectIdSuffix: "-one"
-title: "Vice versa dreams"
-shortDescription: "collective dream diary"
+title: "Сны наоборот "
+shortDescription: "коллективный дневник снов"
 participantId: "vsca-vladivostok-school-of-contemporary-art"
 ---
 
-During the week, record all your dreams and add them to the group’s general dream diary. Trying to live a dream in the opposite way. Your dream or a dream of your mate.
-To observe how an attempt to live non-being from the past distorts the time in the present.
-Try collective dreams. Dream notebook link: https://pad.riseup.net/p/Vice_versa_dreams
+В течение недели записывать все свои сны и вносить их в общий дневник снов группы. Пробовать прожить сон наоборот. Свой или товарища. Наблюдать как попытка прожить небытие из прошлого искажает время в настоящем. Пробовать коллективные сны. Ссылка на блокнот снов: https://pad.riseup.net/p/Vice_versa_dreams

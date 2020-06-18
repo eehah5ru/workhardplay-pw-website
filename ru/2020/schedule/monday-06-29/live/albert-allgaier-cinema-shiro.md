@@ -2,10 +2,9 @@
 order: 1
 time: "20:00 - 22:00"
 projectIdSuffix: "-one"
-title: "Cinema Shiro "
-shortDescription: "Online screening "
+title: "Кино Широ "
+shortDescription: "Онлайн показ "
 participantId: "albert-allgaier"
 ---
 
-Cinema Shiró is an international film festival dedicated to a single movie.
-By using an obscure recording of a late night television broadcast on VHS tape it explores the social, sculptural and situationist dimensions of collective movie experiences. For WHPH we will re-examine and re-configure the possibilities and limits of online screenings – expanded cinema, literally.
+Cinema Shiró – международный кинофестиваль, посвященный одному фильму. Показывая нечеткую запись ночной телевизионной трансляции, записанной на кассету, фестиваль исследует социальные, скульптурные и ситуционистские аспекты коллективного кинематографического опыта. Для РБОБ мы будем пересматривать и реконфигурировать возможности и ограничения онлайн-просмотров – буквально очень “расширенное” кино.

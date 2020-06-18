@@ -2,21 +2,21 @@
 order: 2
 time: "12:30 - 13:30"
 projectIdSuffix: "-one"
-title: "Circulating hope seminar"
-shortDescription: "Collective writing/reading game / video conference"
+title: "Семинар циркулирующей надежды"
+shortDescription: "Коллективное письмо/чтение, игра / видео-связь"
 participantId: "vita-zelenska"
 ---
 
-Sounds or words  
+Звуки или слова  
 
 
-How do slow hopes operate us these days, how does waiting creates our online tracks and routes? Slow down is often presented as the hope of new ecological and more attentive to inequalities futures, but how the slowdown is performed as hope for nothing? New pointless rounds are rounds of hope betrayed are plays of hope for nothing, the hope of hope’s nonexistent.  
+Как медленная надежда запускает наши внутренние механизмы в эти дни, как ожидание создает пути и маршруты? Замедление часто презентуется как надежда нового экологического порядка и будущего, более внимательного к неравенствам, но как надежда в то же время перформативно исполняется как безнадежность? Новые бессмысленные раунды — это преданные надежды, игры надежды впустую, надежды на надежду не существует.
 
 
-Writing together a poetry letter that goes round and round, round a clock we could say, the clock that works for nothing.  
+Сочиняя поэтическое письмо, которое идет по кругу — круглые сутки, можно сказать — часы, которые ни на что не работают.
 
 
-Expressing our pointless erotical love for plants that can’t touch us, plants-for-nothing, hopelessness - a matter of future, up and down, greens and to the Earth.  
+Выражая нашу бессмысленную эротическую любовь к растениям, которые не могут коснуться нас, растениям-впустую, безнадежность — дело будущего, взлетов и падений, зелени и Земли.
 
 
-Circulation of hope which entails hopelessness is overwhelming and can be put in a far-away sound of losing that is sound of loosening and tightening again as if gathering yourself for wholesome hope, that would make us sick and back again to the promising hope for nothing.
+Циркуляция надежды, которая влечет за собой безнадежность, является всепоглощающей и может звучать издалека как звук потери, который есть звук ослабления и снова сжатия, как будто собирая себя для полезной надежды, которая заставила бы нас заболеть и снова вернуться к многообещающей надежде на ничто.

@@ -2,9 +2,9 @@
 order: 1
 time: ""
 projectIdSuffix: "-one"
-title: "Avatar"
-shortDescription: "Writer/garage philosopher"
+title: "Аватар"
+shortDescription: "Писатель / гаражный философ"
 participantId: "eastyn-agrippa"
 ---
 
-Eastyn Agrippa is writing a book, an avatar ontology.
+Истин Агриппа пишет книгу, онтологию аватара.

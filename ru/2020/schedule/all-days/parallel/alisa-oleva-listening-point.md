@@ -2,9 +2,9 @@
 order: 1
 time: ""
 projectIdSuffix: "-one"
-title: "listening point"
-shortDescription: "one-to-one walk / audio call"
+title: "место для слушания"
+shortDescription: "прогулка один на один / аудио-звонок"
 participantId: "alisa-oleva"
 ---
 
-come to the listening point which i provide for you. call me. share that listening moment with me. describe what you hear as you are listening and i will describe sounds around me. we will create a mixed soundtrack between our two places.
+приди на место для слушания, которое я тебе пришлю. позвони мне. поделись этим моментом. опиши мне что ты слышишь, а я опишу тебе звуки вокруг меня. мы создадим совместный саундтрек где-то между нашими двумя местами для слушания. 

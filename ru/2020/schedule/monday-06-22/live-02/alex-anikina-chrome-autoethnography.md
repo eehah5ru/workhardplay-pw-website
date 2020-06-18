@@ -2,9 +2,9 @@
 order: 4
 time: "20:45 - 21:45"
 projectIdSuffix: "-one"
-title: "Chrome Autoethnography"
-shortDescription: "Screensharing / video conference"
+title: "Автоэтнография в Хроме"
+shortDescription: "Скрин-шэр / видео-связь"
 participantId: "alex-anikina"
 ---
 
-I feel burned out from the self-imposed (and fake) necessity to come up with wholesome, conceptual, academically valid projects. So I would like to try some amateur autoethnography instead - autoethnography of Google Chrome, saved pages in Facebook and other tools of digital forgetfulness. In the last 4 years while I was writing my PhD project I kept saving - and never opening again - various urls. I think now is a good time to open them. What will we see? I don’t know, but I’m curious. At the moment of writing this proposal, I still haven’t opened them, so I’m not even sure what exactly I’m proposing. I’m curious what I will consider worthy of public discussion or not. How secretive will I feel about sharing my ideas and interests? What was I interested in, in the first place? What consoled me? What upset me? What did I want to remember (and couldn’t)? What would Aby Warburg say about this? Or Marianne Hirsch? What gave me joy? What rooms did I enter and got scared? I would like to be scared again. 
+Выгорев от собственной мнимой уверенности в необходимости производить цельные, четкие, концептуальные, академически обоснованные проекты, я решила провести любительские авто-этнографические раскопки закладок в браузере Google Chrome, в сохраненных постах фейсбука и в других инструментах цифровой забывчивости. Последние четыре года, пока я занималась диссертацией, я продолжала сохранять (и никогда не открывать) url-адреса. Мне кажется, наконец, можно вскрыть этот массив данных. Что из этого выйдет? Не знаю, но мне интересно. На тот момент, как я пишу этот текст, я все еще не открывала эти закладки, и поэтому даже не могу описать, что я предлагаю. Мне интересно, что мне покажется заслуживающим публичного обсуждения, а что нет. Насколько мне захочется скрыть свои интересы? Чем я вообще интересовалась? Что меня утешало? Что меня расстраивало? Что я хотела запомнить (и не смогла)? Что бы сказал по этому поводу Аби Варбург? А Марианна Хирш? Что меня радовало? Куда я зашла и испугалась? Хочу испугаться еще раз.

@@ -2,12 +2,12 @@
 order: 1
 time: "21.30 - 22.20"
 projectIdSuffix: "-one"
-title: "t.b.a."
-shortDescription: "Reenactment of late GDR lesbian-feminist utopian gathering / video conference"
+title: "т.б.а."
+shortDescription: "Реконструкция лесбийско-феминистской утопической встречи поздней ГДР / видео-связь"
 participantId: "judith-and-franca"
 ---
 
-Late Socialism in Germany was the time of awakening of lesbian-feminist potentialities. During the few and long months when everything seemed uncertain and possible, groups of (lesbian) women gathered in all GDR-towns to redefine their place in society. Few months later, their new-found voice was drowned in the noise of neoliberal chit-chatting. But when we listen closely, their agitated, angry, loving voices still resonate in us. 
+Поздний социализм в Германии был временем пробуждения лесбийско-феминистских потенциальностей. В течение нескольких долгих месяцев, когда все казалось неопределенным и возможным, группы женщин (лесбиянок) собирались во всех городах ГДР, чтобы пересмотреть свое место в обществе. Несколько месяцев спустя их вновь обретенный голос утонул в шуме неолиберальной болтовни. Но когда мы внимательно слушаем, их взволнованные, сердитые, любящие голоса все еще звучат в нас.
 
 
-We want to examine the queerfeminist potentialities of late socialism, letting its dreams and ideas slip through broken time into our realities, connect to past present and examine our present past. What has been there all the time? What was lost on the way? Time to re-connect.
+Мы хотим исследовать квирфеминистские возможности позднего социализма, позволяя его мечтам и идеям проскользнуть сквозь сломанное время в наши реальности, соединиться с прошлым настоящим и исследовать наше настоящее прошлое. Что там было все время? Что было потеряно в пути? Время восстановить связи.

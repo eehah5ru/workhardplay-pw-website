@@ -2,48 +2,49 @@
 order: 1
 time: "13:00-13:30"
 projectIdSuffix: "-one"
-title: "Randevu / SIC (Short Introduction to Communication)"
-shortDescription: "Performance of the score  / stream"
+title: "Рандеву / КВК (Краткое Введение в Коммуникацию) "
+shortDescription: "Исполнение партитуры / стрим"
 participantId: "great-circus-of-failure-and-masha"
 ---
 
-“Score for 3 participants and several spectators / guests 
+“Партитура для 3-х участников и нескольких зрителей/гостей 
 
 
 Skype 
 
 
-Participant         intervals (min.) 
+участник        интервалы (min.) 
 1:                 56312737 
-2:                 4672365 
-3:                 667727 
+2:                4672365 
+3:                667727 
 
 
 +N                 ------------- 
 
 
-GRR (General Rules of Randevu): 
+ОПР (Общие Правила Рандеву):
 
 
-Participants agree on the time of ‘Randevu’ 
-Participants get acquainted with the score and invite guests 
-Guests are not acquainted with the score 
-One of the participants creates a group call in Skype 
-‘Randevu’ starts when all participants are present in a group call 
-It is advised to turn off the microphone and camera at the beginning of Randevu and to turn them on in the moment when you want to join the event 
-Guests can leave and return to ‘Randevu’ during the process 
-Guests can react to events and join them, but it is not required 
-‘Randevu’ ends at the expiration of the score
+Участники Рандеву договариваются о времени его проведения 
+Участники знакомятся с партитурой и зовут гостей 
+Гости не знакомятся с партитурой 
+Один из участников создает группу всех присутствующих в Skype 
+Рандеву начинается тогда, когда все участники присутствуют в групповом звонке Skype 
+Рекомендуется в начале Рандеву выключить микрофон и камеру и включать их при желании присоединиться к происходящему 
+Гости могут покидать и возвращаться в Рандеву в его процессе 
+Гости могут реагировать на происходящее и присоединяться к действию, но не обязаны 
+Рандеву заканчивается по истечению партитуры 
 
 
-RRP (‘Randevu’ Rules for the Participants): 
+ПРУ (Правила Рандеву для Участников): 
 
 
-For the each participant, active intervals alternate with the passive ones 
-The participant chooses by him-/herself which one to start with 
-The duration of the time intervals can be measured by internal sense 
-For each interval, the participant selects a random object (*) from the environment and interacts with it by use of the available Skype tools: sound, video, photos, text messages, screen translation Interaction tools should differ in the adjacent intervals of activity 
-* By an object is understood either a thing (i.e. the teapot) or a large entity (i.e. the street) or an abstraction (i.e. internal sense) 
-In such a way the participant broadcasts the selected object to all the others, who are present at ‘Randevu’ 
-Non-verbal broadcasting is recommended 
-It is advised to pay attention to the activity of other ‘Randevu’ participants and use the reaction in your own activity”
+У каждого участника интервалы чередуются с активными и пассивными 
+Участник сам выбирает с какого из них начать 
+Длительность интервалов может отсчитываться по внутреннему ощущению времени 
+Для каждого интервала участник выбирает из окружения случайный объект(*) и взаимодействует с ним одним из доступных Skype инструментов: звук, видео, фотографии, текстовые сообщения, трансляция экрана 
+У двух соседних интервалов активностей, инструменты взаимодействия должны различаться 
+* Под объектом подразумевается, как предмет (напр. чайник), так и большая сущность (напр. улица) или же абстракция (напр. внутреннее ощущение) 
+Таким образом участник транслирует выбранный объект всем присутствующим на Рандеву
+Рекомендуется невербальная трансляция 
+Рекомендуется обращать внимание на активность других участников Рандеву и использовать реакцию в собственной активности”

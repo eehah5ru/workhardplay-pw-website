@@ -2,9 +2,9 @@
 order: 1
 time: "12:00 - 12:20"
 projectIdSuffix: "-one"
-title: "NO TIME "
-shortDescription: "video"
+title: "НЕТ ВРЕМЕНИ "
+shortDescription: "видео"
 participantId: "sanna-samuelsson"
 ---
 
-In English. NO TIME is a sound and text performance by Sanna Samuelsson, based on found text in her own laptop, both written by her and from random pdf’s. Fluttering between fragments of manure and decomposing bodies, to the image of Marie Antoinette’s mock farm The Hameau de la Reine burning during the revolution, the performance explores connections between the supposed standstill of the pastoral landscape, with the capitalist notion of certain places as irrevocably irrelevant.
+Перформанс пройдет на английском языке. НЕТ ВРЕМЕНИ – это звуковой и текстовый перформанс Санны Самуэльсон, основанный на найденном материале из ее ноутбука, ее собственных и случайно попавшихся текстов. В своем перформансе Самуэльсон перепрыгивает с упоминаний навоза и разлагающимихся тел к образу фиктивной фермы Марии-Антуанетты, горящей во время революции в Хамо-де-ла-Рейн. Она исследует связи между предполагаемым бездействием пасторального ландшафта и капиталистическим представлением о некоторых местах как бесповоротно неуместных. 

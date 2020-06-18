@@ -2,9 +2,10 @@
 order: 2
 time: "14:00"
 projectIdSuffix: "-one"
-title: "zoom walk"
-shortDescription: "collective walk / a shared WhatsApp group"
+title: "зум прогулка"
+shortDescription: "коллективная прогулка / группа в WhatsApp"
 participantId: "alisa-oleva"
 ---
 
-everything seems so far away these days. we are so far away from each other. let me invite you on this zoom walk which might bring all things closer. as close as possible. on the agreed day at agreed time we all start walking wherever we are. once you want to take a photo of something to share, do that on your phone camera with the maximum zoom only and send to the group. let’s bring it close.
+все кажется таким далеким в эти дни. мы очень далеко друг от друга. я приглашаю вас на зум прогулку, которая возможно приблизит все вокруг - так близко насколько это возможно. 
+в назначенный день и время я предлагаю нам выйти на прогулку где бы мы не находились. когда вы увидите что-то, что бы вы хотели сфотографировать и отправить в группу, сделайте это обязательно на максимальном зуме на камере вашего телефона. давайте приблизим все вместе.
