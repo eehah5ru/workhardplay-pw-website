@@ -4,9 +4,15 @@ IFS=$'\n'
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
-en_rbob_sorting="en/2019/schedule/all-days/rbob-sorting"
+if [ -z "$WHPH_YEAR" ]
+then
+    echo "ERROR: please set WHPH_YEAR"
+    exit 1
+fi
 
-ru_schedule="ru/2019/schedule"
+en_rbob_sorting="en/$WHPH_YEAR/schedule/all-days/rbob-sorting"
+
+ru_schedule="ru/$WHPH_YEAR/schedule"
 
 for ru_project in `find ${ru_schedule} -name "*.md"`
 do

@@ -4,12 +4,19 @@ IFS=$'\n'
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
-dest_dir="pictures/2019"
 
-projects=`find /Volumes/qz1_after/google_drives/work.hard.play.0/РБОБ/РБОБ\ 2019/_заявки -name "*.gdoc" -exec sh -c 'echo {}' \; | grep -v "_заявки/-" | grep -v "_заявки/0 cancelled"`
+# projects=`find /Volumes/qz1_after/google_drives/work.hard.play.0/РБОБ/РБОБ\ 2019/_заявки -name "*.gdoc" -exec sh -c 'echo {}' \; | grep -v "_заявки/-" | grep -v "_заявки/0 cancelled"`
+
+if [ -z "$WHPH_YEAR" ]
+then
+    echo "ERROR: please set WHPH_YEAR"
+    exit 1
+fi
+
+dest_dir="pictures-high/$WHPH_YEAR"
 
 
-for p in $projects
+for p in `cat projects.in`
 do
     url=`cat "$p" | jq -r .url`
 

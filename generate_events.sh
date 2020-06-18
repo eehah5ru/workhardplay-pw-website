@@ -20,6 +20,10 @@ mkdir -p "en/$WHPH_YEAR/participants/"
 mkdir -p "ru/$WHPH_YEAR/schedule/all-days/rbob-sorting/"
 mkdir -p "en/$WHPH_YEAR/schedule/all-days/rbob-sorting/"
 
+# clean old unsorted events
+rm ru/$WHPH_YEAR/schedule/all-days/rbob-sorting/*.md
+rm en/$WHPH_YEAR/schedule/all-days/rbob-sorting/*.md
+
 for p in `cat projects.in`
 do
     url=`cat "$p" | jq -r .url`
