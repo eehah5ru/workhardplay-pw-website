@@ -1,3 +1,4 @@
+{-# LANGUAGE FlexibleContexts #-}
 {-# LANGUAGE OverloadedStrings #-}
 module Tools.Report where
 
@@ -19,6 +20,7 @@ import qualified Site.Schedule.Types as Multilang
 
 import Tools.Utils
 
+import qualified W7W.MultiLang as ML
 --
 --
 -- FIXME: deprecated?
@@ -31,13 +33,13 @@ class Report a where
 
 printHeader :: (HasAuthor a, HasTitle a) => a -> IO ()
 printHeader x = do
-  putChunk $ chunk (textOrMissing (getAuthor x) en) & fore cyan
+  putChunk $ chunk (textOrMissing (getAuthor x) (ML.en)) & fore cyan
   putStr " - "
-  putChunk $ chunk (textOrMissing (getTitle x) en) & fore yellow
+  putChunk $ chunk (textOrMissing (getTitle x) (ML.en)) & fore yellow
   putStr "\n"
 
 
-report :: (Multilang a, Labeled a) => a -> IO ()
+report :: (ML.Multilang a, Labeled a, ToTextField (ML.MultilangValue a)) => a -> IO ()
 report x = do
   putStr $ Labeled.label x ++ ": "
 

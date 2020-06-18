@@ -1,3 +1,5 @@
+{-# LANGUAGE FlexibleContexts #-}
+{-# LANGUAGE FlexibleContexts #-}
 {-# LANGUAGE OverloadedStrings #-}
 
 import System.Environment
@@ -6,6 +8,8 @@ import System.IO
 import Control.Monad (when, unless)
 
 import qualified W7W.MultiLang as ML
+import W7W.MultiLang
+
 import qualified Data.Text as T
 import qualified Data.Text.IO as TIO
 import Site.Schedule.ProjectFile.Parser
@@ -22,8 +26,8 @@ import Tools.Utils
 printAuthor :: ML.Locale -> PF.ProjectFile -> IO ()
 printAuthor l pf = TIO.putStrLn $ textOrMissing (PF.author $ pf) (translate l)
    where
-    translate :: (Multilang a) => ML.Locale -> a -> TextField
-    translate l x = ML.chooseByLocale (ru x) (en x) l
+    translate :: (ML.Multilang a, ToTextField (ML.MultilangValue a)) => ML.Locale -> a -> TextField
+    translate l x = ML.chooseByLocale (toTextField $ ru x) (toTextField $ en x) l
 
 
 
