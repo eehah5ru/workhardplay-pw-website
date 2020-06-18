@@ -34,12 +34,20 @@ import Site.Archive.Rules
 import Site.CollectiveGlossary
 import Site.CollectiveGlossary.Rules
 
+--
+-- 2018's participants
+--
 import qualified Site.Participants.Rules as OldParticipants
 
+--
+-- new participants logic
+--
 import qualified Site.ParticipantsNg.Rules as Participants
 
 -- import Site.Schedule.Rules
 import Site.Schedule2019.Rules hiding (config)
+
+import Site.Schedule2020.Rules hiding (config)
 
 import Site.Invitation2020.Rules
 import Site.Instructions2020.Rules
@@ -80,6 +88,14 @@ main = do
        schedule2019Rules caches
        
        Participants.participantsRules caches "2019"
+
+       --
+       -- 2020's rules
+       --
+
+       schedule2020Rules caches
+       
+       Participants.participantsRules caches "2020"
 
        invitation2020LetterRules caches
        invitation2020Rules caches

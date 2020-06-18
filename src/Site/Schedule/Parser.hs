@@ -40,6 +40,7 @@ sectionDelimiter = do
       endOfLine'
       endOfLine'
       endOfLine'
+      endOfLine'
       skipMany endOfLine'
     atTheEnd = do
       skipMany endOfLine'

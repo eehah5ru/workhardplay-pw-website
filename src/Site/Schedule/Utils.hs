@@ -119,6 +119,8 @@ stripCustom = replace "_" "-"
 stripForId :: Text -> Text
 stripForId = stripRuEn . stripCustom
 
+fixMarkdown :: Text -> Text
+fixMarkdown = replace "\n\n\n" "\n\n"
 --
 -- generate participant id
 --

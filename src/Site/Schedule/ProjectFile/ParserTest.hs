@@ -277,10 +277,197 @@ No
 Is there anything else you would like to tell the WHPH working group?
 No
 |]
+
+testData2020WithPars = T.pack [r|Имя:
+н и и ч е г о д е л а т ь
+
+
+
+
+Name:
+n i i c h e g o d e l a t (eng. “Research Institute for Doing Nothing”)
+
+
+
+
+Название: 
+АлиСтопкран
+
+
+
+
+Title:
+AliStopkran
+
+
+
+
+Формат:
+игрушечный интернет-магазин / видео-связь
+
+
+
+
+Format:
+unreal imaginary fictional internet shop / video conference
+
+
+
+
+Описание для программы (макс. 200 слов):
+“н и и ч е г о д е л а т ь для слота «хоровод неопределенности»:   
+
+
+Интернет-магазин АлиСтопкран, с ускользающими объектами желания, дикими описаниями и захлопывающимся навсегда возможностями.  
+Во время сессии/работы магазина будет предложены (с)лоты, один из которых будет выбран контингентным способом (бросок костей) и представлен зрителю/потребителю контента:  
+Интернет-магазин AliStopkran полон неуловимых желаний, сумасшедших описаний и вечных возможностей ударов кулаком. 
+Во время сессии / работы магазина будут предоставлены рекламные места, одно из которых будет выбрано временным методом (игральные кости) и представлено зрителю / потребителю контента:  
+
+
+Интернет-магазин AliStopkran полон интенсивных страстей, сумасшедших описаний и, возможно, ребер verwelkomd. 
+Во время операции сеанса / магазина будет предоставлено место для рекламы, одно из которых будет выбрано в предварительном формате (игральные кости) и представлено на конкурс:  
+
+
+Репозиторий AliStopkran полон похоти, сумасшедших идей и, возможно, ребер verwelkomd. 
+Во время курса / магазина будет предоставлено место для рекламы, одно из которых будет выбрано за короткий промежуток времени (игра в кости) и показано на joo:   
+
+
+Хранилище данных AliStopkran полно страстей, шуток и, возможно, нервных шуток. 
+Во время чтения / демонстрационного зала будет создано пространство, в котором оно будет выбрано в течение короткого времени (игра в кости) и отображено в зоопарке:  Слоты:  
+
+
+(С)лот темпоральной синхронизации (дедлайны, аппараты регуляции коллективности). Темпоральное насилие н (работа “на дядю”) и темпоральная эмансипация (общее дело). Квир-темпоральность.  
+(С)лот режимы внимания, о рассеивании и концентрации (сканер, достижение успеха, с побочным эффектом выгорания/сгорания машин мышления),  о пост внимании (телесном внимании, внимании в потоке, сёрфинг).  
+(С)лот неопределенности («я просто смотрю»; неопределенность сразу после сдачи экзамена/работы и до получения результата) о среде возможностей и фрустрации, формирующей субъективность.  
+(С)лот ворота бинарности. 
+(С)лот упущенных желаний и ожиданий/слот упущенных возможностей. 
+(С)лот суперпозиции (дало ли действие результат и является ли он результатом действия, которое могло произойти или нет, я/мы кот/кошка Шредингера/Гейзенберга). 
+(C) лот "Терминатор - ни рыба, ни мясо". Слот свободы от выбора. 
+(с) лот навязчивых состояний  
+
+
+Дополнительные возможности среды магазина:  
+Пустой/битый (с)лот 
+Фейковые (с)лоты >  
+(С)лот не соответствующий ожиданиям  
+
+
+Во время подготовки слоты могут измениться или исчезнуть.”
+
+
+
+
+Description for program (max. 200 words):
+“n i i c h e g o d e l a t for slot “round dance of uncertainty”:  
+
+
+AliStopcran online shop, with elusive objects of desire, wild descriptions and forever slamming opportunities. 
+During the session / operation of the store, (c) lots will be offered, one of which will be selected in a contingent way (roll of dice) and presented to the viewer / consumer of the content:  
+
+
+The AliStopkran online store is full of elusive desires, crazy descriptions and eternal possibilities of punching. 
+During the store’s session / work, advertising spots will be provided, one of which will be selected by a temporary method (dice) and presented to the viewer / consumer of the content:  
+
+
+The AliStopkran online store is full of intense passions, crazy descriptions and, possibly, verwelkomd ribs. 
+During the session / store operation, a place for advertising will be provided, one of which will be selected in a preliminary format (dice) and submitted to the competition:  
+
+
+AliStopkran's repository is full of lust, crazy ideas, and possibly verwelkomd ribs. 
+During the course / store, a place for advertising will be provided, one of which will be selected in a short period of time (dice) and shown on joo:  
+
+
+AliStopkran's data warehouse is full of passions, jokes, and possibly nervous jokes. 
+During the reading / showroom, a space will be created in which it will be selected for a short time (dice) and displayed in the zoo:  
+
+
+Slots: 
+(s) lot of temporal synchronization (deadlines, apparatus for regulating collectivity). Temporal violence n (work “for uncle”) and temporal emancipation (common cause). Queer temporality. 
+(s) lot of attention modes, about dispersion and concentration (scanner, achieving success, with the side effect of burnout / combustion of thinking machines), about post attention (bodily attention, attention in the stream, surfing). 
+(s) lot of uncertainty (“I just look”; the uncertainty immediately after passing the exam / work and until the result is obtained) about the environment of opportunities and frustration that forms subjectivity. 
+(s) lot  gate of binarity. 
+(s) lot of missed desires and expectations / slot of missed opportunities. 
+(s) lot of superposition (whether the action gave a result and whether it is the result of an action that could have occurred or not, I/we are the Schrödinger/Heisenberg cat). 
+(s) lot "Terminator - neither fish nor meat". Slot of freedom from choice. 
+(s) lot of obsessive conditions   
+
+
+Additional features of the store environment: 
+Empty / beaten (s) lot 
+Fake (s) lots> 
+(s) lot does not meet expectations  
+
+
+During preparation, the slots may change or disappear.”
+
+
+
+
+Место и время проведения (если это релевантно):
+Онлайн
+Две сессии по 40 минут в один день.
+
+
+
+
+Place and time (if it is relevant):
+Online
+Two sessions of 40 minutes in one day.
+
+
+
+
+Продолжительность:
+20 минут
+
+
+
+
+Duration:
+20 minutes
+
+
+
+
+Краткая информация о себе:
+Мы честно признаемся себе, что наше настоящее желание - ничего не делать. Мы честно признаемся себе, что сомневаемся. И мы видим, что нас много.  
+н и и ч е г о д е л а т ь - это сеть мерцающих лабораторий, исследующих возможности преодоления существующих стандартов трудового поведения. В то время как он поднимает вопросы об освобождении рабочих от отчужденного труда, а безработных - от социальной стигматизации, он занимается проблемой неоплачиваемого невидимого труда и возрождает утопическую традицию стремления к будущему миру без работы. Основная цель Научно-исследовательского института - рассматривать «бездействие» и другие его разновидности (прокрастинация, пассивность, апатия, безделье и т. Д.) Как публичное явление, требующее всестороннего изучения, как теоретического, так и практического.
+
+
+
+
+Short Bio:
+We honestly admit to ourselves that our present desire is to do nothing. We honestly admit to ourselves that we doubt. And we see that we are many. 
+n i i c h e g o d e l a t (eng. “Research Institute for Doing Nothing”) is a network of flickering laboratories, researching opportunities for overcoming present standards of labour behaviour. n i i c h e g o d e l a t raises questions of emancipation of workers from alienated labour, and the unemployed from social stigmatization, it deals with the problem of unpaid invisible labour, and resurrects the utopian tradition of striving for the future world without work. The main goal of the Research Institute is to consider "doing nothing" and its other varieties (procrastination, passivity, apathy, idleness, etc.) as a public phenomenon requiring comprehensive study, both theoretical and practical.
+
+
+
+
+Подпись к картинке:
+Будь умным, живи счастливо
+
+
+
+
+Caption to this image:
+Be smart, live happily
+
+
+
+
+Есть ли еще что-то, что вы бы хотели сообщить рабочей группе РБОБ?
+No
+
+
+
+
+Is there anything else you would like to tell the WHPH working group?
+No
+|]
   
-testParseAuthor :: IO ()
-testParseAuthor = do
-  print $ parseOnly parseAuthor testAuthorData
+-- testParseAuthor :: IO ()
+-- testParseAuthor = do
+--   print $ parseOnly parseAuthor testAuthorData
 
 testParseProjectFile :: IO ()
 testParseProjectFile = do

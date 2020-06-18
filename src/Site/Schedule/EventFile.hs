@@ -45,7 +45,7 @@ toText e = T.intercalate "\n"
                          , "projectIdSuffix: \"-one\""
                          , "---"
                          , ""
-                         , description e]
+                         , fixMarkdown . description $ e]
   where
     timeField = yamlField "time" . maybe "!!!!" id . time
 
