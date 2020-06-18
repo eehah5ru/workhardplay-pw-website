@@ -271,7 +271,55 @@ namespace :slave do
     sh "bin/site watch --port 8001"
   end
 end
+
+#
+#
+# archive toggle
+#
+#
+ARCHIVES = {
+  "2016" => "archive",
+  "2017" => "projects",
+  "2018" =>  "projects",
+  "2019" =>  "projects",
+  "2020" =>  "projects",
+}
+
+LANGS = ["ru", "en"]
+
+
+namespace :archives do
+  def move_archive(src, dst)
+    if File.directory?(src) and (not File.exist?(dst))
+      move(src, dst)
+    else
+      STDERR.puts "skipping #{src} -> #{dst}"
+    end
+  end
   
+  task :on do
+    LANGS.each do |lang|
+      ARCHIVES.each do |year, dir_name|
+        src = File.join(lang, year, "_#{dir_name}")
+        dst = File.join(lang, year, dir_name)
+
+        move_archive(src, dst)
+
+      end
+    end
+  end
+
+  task :off do
+    LANGS.each do |lang|
+      ARCHIVES.each do |year, dir_name|
+        src = File.join(lang, year, dir_name)
+        dst = File.join(lang, year, "_#{dir_name}")
+
+        move_archive(src, dst)
+      end
+    end    
+  end
+end
 
 #
 #
