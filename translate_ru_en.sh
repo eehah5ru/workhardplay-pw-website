@@ -10,77 +10,81 @@ then
     exit 1
 fi
 
-en_rbob_sorting="en/$WHPH_YEAR/schedule/all-days/rbob-sorting"
+FROM="ru"
 
-ru_schedule="ru/$WHPH_YEAR/schedule"
+TO="en"
 
-for ru_project in `find ${ru_schedule} -name "*.md"`
+to_rbob_sorting="$TO/$WHPH_YEAR/schedule/all-days/rbob-sorting"
+
+from_schedule="$FROM/$WHPH_YEAR/schedule"
+
+for from_project in `find ${from_schedule} -name "*.md"`
 do
 
 
-    is_project=`cat ${ru_project} | grep '^time:'`
+    is_project=`cat ${from_project} | grep '^time:'`
     if [ -z "${is_project}" ]
     then
-        echo -e "${RED}skipping ${ru_project}${NC}"
+        echo -e "${RED}skipping ${from_project}${NC}"
         continue
     fi
 
-    project_file_name=$(basename -- "$ru_project")
+    project_file_name=$(basename -- "$from_project")
 
-    en_unsorted=`find "${en_rbob_sorting}" -name "${project_file_name}" | head -1`
+    to_unsorted=`find "${to_rbob_sorting}" -name "${project_file_name}" | head -1`
 
-    if [ -z "${en_unsorted}" ]
+    if [ -z "${to_unsorted}" ]
     then
-        echo -e "${RED} NO EN FILE FOR ${project_file_name}"
+        echo -e "${RED} NO $TO FILE FOR ${project_file_name}"
         continue
     fi
 
-    ru_project_dir=$(dirname "${ru_project}")
+    from_project_dir=$(dirname "${from_project}")
 
-    en_project_dir=`echo "${ru_project_dir}" | sed -e "s/ru\/2019/en\/2019/g"`
+    to_project_dir=`echo "${from_project_dir}" | sed -e "s/$FROM\/$WHPH_YEAR/$TO\/$WHPH_YEAR/g"`
 
-    en_dest_project="${en_project_dir}/${project_file_name}"
+    to_dest_project="${to_project_dir}/${project_file_name}"
 
-    mkdir -p "${en_project_dir}"
+    mkdir -p "${to_project_dir}"
 
-    en_header=`cat ${ru_project} | head -3`
+    to_header=`cat ${from_project} | head -3`
 
-    en_tail=`cat ${en_unsorted} | tail -n +4 | grep -v  '^projectIdSuffix:'`
+    to_tail=`cat ${to_unsorted} | tail -n +4 | grep -v  '^projectIdSuffix:'`
 
-    en_extra_headers=`cat ${ru_project} | grep -e 'projectIdSuffix:' -e 'hideShortDescription:'`
+    to_extra_headers=`cat ${from_project} | grep -e 'projectIdSuffix:' -e 'hideShortDescription:'`
 
-    # echo "${en_header}" > "${en_project_dir}/${project_file_name}"
-    # echo "${en_tail}" >> "${en_project_dir}/${project_file_name}"
+    # echo "${to_header}" > "${to_project_dir}/${project_file_name}"
+    # echo "${to_tail}" >> "${to_project_dir}/${project_file_name}"
 
-    echo "${en_header}" > "${en_dest_project}"
-    echo "${en_extra_headers}" >> "${en_dest_project}"
-    echo "${en_tail}" >> "${en_dest_project}"
+    echo "${to_header}" > "${to_dest_project}"
+    echo "${to_extra_headers}" >> "${to_dest_project}"
+    echo "${to_tail}" >> "${to_dest_project}"
 
 
     # project_file_name=$(basename -- "$p")
 
-    # ru_twin=`find "${ru_schedule}" -name "${project_file_name}" | head -1`
+    # from_twin=`find "${from_schedule}" -name "${project_file_name}" | head -1`
 
-    # if [ -z "$ru_twin" ]
+    # if [ -z "$from_twin" ]
     # then
     #     echo -e "${RED}no ru twin for en ${project_file_name}${NC}"
     #     continue
     # fi
 
-    # en_header=`cat ${ru_twin} | head -3`
+    # to_header=`cat ${from_twin} | head -3`
 
-    # en_tail=`cat ${p} | tail -n +4`
+    # to_tail=`cat ${p} | tail -n +4`
 
-    # ru_twin_dir=$(dirname "${ru_twin}")
+    # from_twin_dir=$(dirname "${from_twin}")
 
-    # en_project_dir=`echo "${ru_twin_dir}" | sed -e "s/ru\/2019/en\/2019/g"`
+    # to_project_dir=`echo "${from_twin_dir}" | sed -e "s/ru\/$WHPH_YEAR/en\/$WHPH_YEAR/g"`
 
-    # echo "${project_file_name} - ${ru_twin} - ${en_project_dir}"
+    # echo "${project_file_name} - ${from_twin} - ${to_project_dir}"
 
-    # mkdir -p "${en_project_dir}"
+    # mkdir -p "${to_project_dir}"
 
-    # echo "${en_header}" > "${en_project_dir}/${project_file_name}"
-    # echo "${en_tail}" >> "${en_project_dir}/${project_file_name}"
+    # echo "${to_header}" > "${to_project_dir}/${project_file_name}"
+    # echo "${to_tail}" >> "${to_project_dir}/${project_file_name}"
 
-    #cp "${p}" "${en_project_dir}"
+    #cp "${p}" "${to_project_dir}"
 done
