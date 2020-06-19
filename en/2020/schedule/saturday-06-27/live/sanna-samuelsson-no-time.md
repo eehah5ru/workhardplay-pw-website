@@ -2,7 +2,7 @@
 order: 1
 time: "12:00 - 12:20"
 projectIdSuffix: "-one"
-title: "NO TIME "
+title: "NO TIME"
 shortDescription: "video"
 participantId: "sanna-samuelsson"
 ---

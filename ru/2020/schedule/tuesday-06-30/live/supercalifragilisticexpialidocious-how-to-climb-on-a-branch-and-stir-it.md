@@ -2,7 +2,7 @@
 order: 2
 time: "23:00"
 projectIdSuffix: "-one"
-title: "“«Как вскарабкаться на ветку и раскачать её»”"
+title: "«Как вскарабкаться на ветку и раскачать её»"
 shortDescription: "Коллективный просмотр диафильмов"
 participantId: "supercalifragilisticexpialidocious"
 ---

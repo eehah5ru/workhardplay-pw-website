@@ -8,3 +8,5 @@ participantId: "eastyn-agrippa"
 ---
 
 Eastyn Agrippa is writing a book, an avatar ontology.
+
+You can contact the avatar through the instagram eastynagrippa.

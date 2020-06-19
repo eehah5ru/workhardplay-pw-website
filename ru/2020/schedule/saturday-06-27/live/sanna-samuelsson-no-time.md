@@ -2,7 +2,7 @@
 order: 1
 time: "12:00 - 12:20"
 projectIdSuffix: "-one"
-title: "НЕТ ВРЕМЕНИ "
+title: "НЕТ ВРЕМЕНИ"
 shortDescription: "видео"
 participantId: "sanna-samuelsson"
 ---

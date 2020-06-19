@@ -2,7 +2,7 @@
 order: 1
 time: ""
 projectIdSuffix: "-one"
-title: "“[коллективный виртуальный пленэр_(не)/своя комната]”"
+title: "[коллективный виртуальный пленэр_(не)/своя комната]"
 shortDescription: "в комнате наедине, представляя, что мы вместе"
 participantId: "nice-company"
 ---
