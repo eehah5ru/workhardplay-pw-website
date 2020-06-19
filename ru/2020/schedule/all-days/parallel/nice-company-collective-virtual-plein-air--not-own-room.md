@@ -7,5 +7,6 @@ shortDescription: "в комнате наедине, представляя, ч�
 participantId: "nice-company"
 ---
 
-cлушай голос из другой комнаты: https://soundcloud.com/fyzqoehxd6mi/sets/room4us/s-qJY7lCNjUec
-дополни плейлист своей: https://cloud.mail.ru/public/3GTb/3Ba1fuiYb
+[Слушай голос из другой комнаты](https://soundcloud.com/fyzqoehxd6mi/sets/room4us/s-qJY7lCNjUec)
+
+[Дополни плейлист своей](https://cloud.mail.ru/public/3GTb/3Ba1fuiYb)

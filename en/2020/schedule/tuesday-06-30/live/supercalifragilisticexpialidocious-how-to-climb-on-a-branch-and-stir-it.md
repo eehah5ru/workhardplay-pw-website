@@ -12,3 +12,5 @@ participantId: "supercalifragilisticexpialidocious"
 [https://arch.rgdb.ru/xmlui/handle/123456789/43183#page/28/mode/1up](https://arch.rgdb.ru/xmlui/handle/123456789/43183#page/28/mode/1up)
 
 10
+
+The screening will be translated into English if necessary. [Instructions in Russian can be found here](https://drive.google.com/file/d/1ywY0nPqrSgdK7PTgjs1iAUHWu8WDCH7N/view?usp=sharing)
