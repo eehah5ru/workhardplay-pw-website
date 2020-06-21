@@ -10,7 +10,7 @@ fi
 
 lines=`find /Volumes/qz1_after/google_drives/work.hard.play.0/РБОБ/РБОБ\ $WHPH_YEAR/_заявки \( -name "*.gdoc" ! -name "-*.gdoc" \) -exec sh -c 'echo {}' \;`
 
-# remove instructions
+# only instructions
 lines=`echo "${lines}" | grep "_заявки/\~"`
 
 # # remove not completed
