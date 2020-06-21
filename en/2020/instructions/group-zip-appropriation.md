@@ -2,7 +2,6 @@
 order: 1
 title: "Appropriation"
 participantId: "group-zip"
-placeAndTime: ": No"
 coverCaption: "June is always accompanied by a bright harvest of mulberry, grown in different locations of wild nature in the city. Mulberry trees are not always immediately tangible, but when a black spot appears on the car or “under the nose” on the asphalt, this is a clear sign of ripe berries."
 ---
 

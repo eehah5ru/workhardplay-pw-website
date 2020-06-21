@@ -20,3 +20,5 @@ Expressing our pointless erotical love for plants that can’t touch us, plants-
 
 
 Circulation of hope which entails hopelessness is overwhelming and can be put in a far-away sound of losing that is sound of loosening and tightening again as if gathering yourself for wholesome hope, that would make us sick and back again to the promising hope for nothing.
+
+**In Russian and English**

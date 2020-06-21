@@ -1,0 +1,6 @@
+---
+title: "Tony Trubitsyna"
+city: "!!!!"
+---
+
+Tony Trubitsyna is researcher, curator, artist. She obtained her first degree in graphic design (2009), before going on to take a specialist degree in contemporary Russian art in the Art History Department of the Russian State University for the Humanities (2014). She has worked in the Research Department of Garage Museum of Contemporary Art in Moscow since 2015. At the moment she is in charge of a publication on self-organized initiatives in Russia based on the project Open Systems. Self-Organized Art Initiatives in Russia since 2000. She also co-curated, then curated, the Open Systems exhibitions (2016-2018), which took place in 8 cities in Russia. In 2017, Trubitsyna and Elena Ischenko created a research exhibition, Between Fatigue: Towards the New Forms of Life for the parallel programme of the 4th Urals Industrial Biennale of Contemporary Art, in Yekaterinburg, for which they were nominated for the Russian State Innovation Award for Curator of the Year, in 2018. Alena Tereshko’s solo exhibition titled «This Apple», curated by Antonina, was presented in the Moscow Museum of Modern Art, in 2019. Her curatorial interests focus on gender and feminism problematic in relation to body practices and language structure.

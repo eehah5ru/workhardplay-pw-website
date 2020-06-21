@@ -2,7 +2,6 @@
 order: 1
 title: "The other way around"
 participantId: "alyona-isakhanyan"
-placeAndTime: ": No"
 duration: "1 hour"
 coverCaption: "Portal in space and time"
 ---

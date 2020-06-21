@@ -2,6 +2,7 @@
 order: 3
 title: "Virtual Library"
 hideEvents: true
+importantDescription: true
 ---
 
-Video works, visual projects and podcasts are published here.  / will be published on June 22 /
+$if(isHtmlVersion)$$getPandocLabel("2020.schedule.screeningsDescriptionHtml")$$else$$getLabel("2020.schedule.screeningsDescriptionTxt")$$endif$

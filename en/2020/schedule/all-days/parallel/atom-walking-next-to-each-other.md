@@ -14,3 +14,5 @@ To take part please fill in the google form before 23:59 June 28 and we will fin
 [Link to registration](https://docs.google.com/forms/d/e/1FAIpQLScdCdL1qXLbpeN54v_GW9vBZWtEqz6_QbHCi4YC7GiB_OW__A/viewform?usp=sf_link).
 
 to take part you would need a smartphone with the WhatsApp application installed, internet access and headphones. you can be anywhere, but it should allow you to listen to the soundtrack.
+
+**In Russian and English**

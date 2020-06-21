@@ -45,3 +45,5 @@ Fake (s) lots>
 (s) lot does not meet expectations
 
 During preparation, the slots may change or disappear.
+
+ **In Russian language**

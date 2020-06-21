@@ -3,4 +3,4 @@ title: "Tatiana Efrussi"
 city: "!!!!"
 ---
 
-NoBio
+Artist and architecture historian. Currently based in Paris

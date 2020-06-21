@@ -43,3 +43,5 @@ participantId: "n-i-i-c-h-e-g-o-d-e-l-a-t-eng-research-institute-for-doing-nothi
 (С)лот не соответствующий ожиданиям  
 
 Во время подготовки слоты могут измениться или исчезнуть.
+
+**На русском языке**

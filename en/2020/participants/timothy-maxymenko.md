@@ -1,5 +1,5 @@
 ---
-title: "Timothy Maxymenko "
+title: "Timothy Maxymenko"
 city: "!!!!"
 ---
 

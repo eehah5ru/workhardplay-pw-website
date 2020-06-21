@@ -1,10 +1,9 @@
 ---
 order: 1
-title: "letter/score for getting to know each other"
+title: "Letter/score for getting to know each other"
 participantId: "daria-iuriichuk"
 performerNeeds: "e-mail"
-placeAndTime: ": No"
-duration: "once a week  "
+duration: "once a week"
 coverCaption: "wish you were here"
 ---
 

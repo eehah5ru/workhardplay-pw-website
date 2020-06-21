@@ -1,5 +1,5 @@
 ---
-title: "Patrick Riechert and Elena Vogman "
+title: "Patrick Riechert and Elena Vogman"
 city: "!!!!"
 ---
 

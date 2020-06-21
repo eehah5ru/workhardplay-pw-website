@@ -55,3 +55,5 @@ In such a way the participant broadcasts the selected object to all the others, 
 Non-verbal broadcasting is recommended
 
 It is advised to pay attention to the activity of other ‘Randevu’ participants and use the reaction in your own activity”
+
+**In Russian and English**

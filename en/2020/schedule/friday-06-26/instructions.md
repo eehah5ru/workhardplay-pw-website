@@ -2,6 +2,7 @@
 order: 2
 title: "Instructions"
 hideEvents: true
+importantDescription: true
 ---
 
-A list of instructions and scores for collective and individual performance can be found here. / will be published on June 22 /
+$if(isHtmlVersion)$$getPandocLabel("2020.schedule.instructionsDescriptionHtml")$$else$$getLabel("2020.schedule.instructionsDescriptionTxt")$$endif$

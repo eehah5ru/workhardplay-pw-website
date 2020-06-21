@@ -1,6 +1,6 @@
 ---
 order: 1
-title: "“Life Feature Hacks <> Lucid Hardware Producer”"
+title: "Life Feature Hacks <> Lucid Hardware Producer" 
 participantId: "omsk-social-club"
 performerNeeds: "Должна присутствовать темнота."
 coverCaption: "Bootcamp for losing the self in a critical spirit drive"

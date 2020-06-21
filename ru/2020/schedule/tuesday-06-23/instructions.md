@@ -2,6 +2,7 @@
 order: 2
 title: "Инструкции"
 hideEvents: true
+importantDescription: true
 ---
 
-Список инструкций и партитур для коллективного и индивидуального исполнения вы найдете здесь. /будут опубликованы 22.06/
+$if(isHtmlVersion)$$getPandocLabel("2020.schedule.instructionsDescriptionHtml")$$else$$getLabel("2020.schedule.instructionsDescriptionTxt")$$endif$

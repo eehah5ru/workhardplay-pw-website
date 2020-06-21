@@ -3,7 +3,7 @@ order: 1
 title: "Tops and roots or I don't care where to get bored"
 participantId: "rodion-kitaev-gerondot"
 performerNeeds: "a computer and a smartphone(s) or two smartphones"
-placeAndTime: ": In the room"
+placeAndTime: "In the room"
 coverCaption: "See you soon"
 ---
 

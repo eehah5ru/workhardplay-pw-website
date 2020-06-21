@@ -2,6 +2,7 @@
 order: 3
 title: "Виртуальная библиотека"
 hideEvents: true
+importantDescription: true
 ---
 
-Видео-работы, визуальные проекты и подкасты опубликованы здесь. /будут опубликованы 22.06/
+$if(isHtmlVersion)$$getPandocLabel("2020.schedule.screeningsDescriptionHtml")$$else$$getLabel("2020.schedule.screeningsDescriptionTxt")$$endif$

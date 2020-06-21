@@ -2,7 +2,7 @@
 order: 1
 title: "Flash-back"
 participantId: "gleb-napreenko"
-placeAndTime: ": In the room"
+placeAndTime: "In the room"
 coverCaption: "Max Ernst. At the first clear word"
 ---
 
