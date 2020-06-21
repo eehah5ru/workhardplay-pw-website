@@ -1,0 +1,21 @@
+li.project-card-box id="$canonicalName$"
+  .project-card data-project-id="$canonicalName$"
+    .media-icons-container
+      .media-icons
+        = _if "hasVideo"
+          .has-video-icon style="background-color: rgba($projectColor$, 0.7)"
+            | &nbsp;
+        = _endif
+        = _if "hasAudio"
+          .has-audio-icon style="background-color: rgba($projectColor$, 0.7)"
+            | &nbsp;
+        = _endif
+    = _if "projectCover"
+      .thumbnail
+        img src="$projectCover$"
+    = _endif
+    .project-title
+     a href="$url$"
+       | $if(projectTitle)$$projectTitle$$else$$title$$endif$$if(shortDescription)$ /&nbsp;$shortDescription$$endif$
+    .project-author
+      | $for(participant)$$title$$endfor$

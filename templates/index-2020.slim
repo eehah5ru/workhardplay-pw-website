@@ -16,6 +16,17 @@ section.whp-2017.whp-2018.whp-2019.whph-2020.index-page.description
     | $body$
 
   = _for("schedule")
+    | $invitationLetters$
+  = _endfor
+
+  .project-col.general-info
+    p.shiny
+      | $getLabel("2020.schedule.participantsLabel")$
+    p
+      | $getLabel("2020.schedule.participants")$
+
+
+  = _for("schedule")
     | $body$
   = _endfor
 

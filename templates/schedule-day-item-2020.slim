@@ -14,6 +14,13 @@
         | $body$
 = _endif
 
+.project-col
+  .project
+    p.time.hide-for-small-only
+      | &nbsp;
+    .descr.day-comment
+      | $getPandocLabel("2020.schedule.discordServerInviteHtml")$
+
 = _unless("hidePlaces")
   = _if("hasPlaces")
     = _for("places")

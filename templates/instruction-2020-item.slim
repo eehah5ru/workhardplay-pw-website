@@ -1,20 +1,74 @@
 .project-col
-  .project data-project="$canonicalName$"
+  .project.instruction data-project="$canonicalName$"
     == schedule_prj_cover_style_2019  "$canonicalName$", "/pictures/$year$/$canonicalName$/$canonicalName$-cover.jpg", project_id_suffix: "", deg: '$random("-50", "-10")$'
     p.time
       | &nbsp;
     / FIXME: add class 'no-long' if there is no body! (hasBody - siteCtx)
     p.descr class="$if(hideDetails)$no-long$endif$" style="$if(blur)$filter: blur($blur$px);$endif$"
       span
-        |$title$&ensp;/&ensp;$duration$ / $getLabel("2020.instructions.noTime")$
-      = _if("closingTime")
-        span
-          | &nbsp;⏰&nbsp;
-        span.countdown data-closing-time="$closingTime$"
-          | &nbsp;
+        |$title$
+      = _if("hasParticipant")
+        = _for("participant")
+          span.author
+            |&nbsp;/&nbsp;$title$
+        = _endfor
       = _endif
 
     = _unless("hideDetails")
       .long-descr
+        / figure.cover
+        /   img src="$instructionCover$"
+        = _if "hidePictures"
+         div style="display:hidden"
+        = _else
+          = _for "pictures"
+            figure
+              img src="$pictureUrl$" alt="$if(hasExifInfo)$$pictureTitle$ - $pictureCreator$ $if(hasPictureDescription)$ - $pictureDescription$$endif$$endif$" title="$if(hasExifInfo)$$pictureTitle$ - $pictureCreator$ $if(hasPictureDescription)$ - $pictureDescription$$endif$$endif$"
+              = _if "hasPictureCreator"
+               .picture-creator
+                 | $pictureCreator$
+              = _endif
+          = _endfor
+        = _endif
+
         | $body$
+        = _if("duration")
+          p.duration
+            em
+              | $getLabel("2020.instructions.duration")$
+            |&nbsp;
+            | $duration$
+        = _endif
+        = _if("performerNeeds")
+          p.performerNeeds
+            em
+              | $getLabel("2020.instructions.performerNeeds")$
+            |&nbsp;
+            | $performerNeeds$
+        = _endif
+        = _if("placeAndTime")
+          p.placeAndTime
+            em
+              | $getLabel("2020.instructions.placeAndTime")$
+            |&nbsp;
+            | $placeAndTime$
+        = _endif
+      = _if("hasParticipant")
+        = _for("participant")
+          .participant-name
+            .hor-line
+              | ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+            .name
+              | $title$
+          .participant-bio
+            ' $content$
+        = _endfor
+      = _else
+        | no bio
+      = _endif
+      .participant-name
+        .hor-line
+          | ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+        .name
+          |
     = _endif
