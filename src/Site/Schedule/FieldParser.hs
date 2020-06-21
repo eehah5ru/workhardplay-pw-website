@@ -46,7 +46,7 @@ parseDescription = do
 parsePlaceTime :: Parser PlaceTime
 parsePlaceTime = do
   ruP <- section "Место и время проведения (если это релевантно):"
-  enP <- section "Place and time (if it is relevant)"
+  enP <- section "Place and time (if it is relevant):"
   return $ PlaceTime ruP enP
 
 parseDuration :: Parser Duration

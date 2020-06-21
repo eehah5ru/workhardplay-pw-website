@@ -109,8 +109,8 @@ main = do
        instructions2020Rules cfg
        instruction2020PageRules cfg
 
-       -- screenings2020Rules caches
-       -- screening2020PageRules caches
+       screenings2020Rules cfg
+       screening2020PageRules cfg
        
        staticPagesRules cfg
 

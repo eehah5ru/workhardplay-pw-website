@@ -19,12 +19,15 @@ import Site.Util
 
 newtype Day = Day {unDay :: String} deriving (IsString)
 
+type CtxFields = ScheduleEnv Compiler (Context String)
+
 data Config =
   Config { year :: Year
          , cache :: Cache.Caches
          , version :: Version
          , days :: [Day]
          , labels :: Labels
+         , scheduleCtxFields :: CtxFields
          }
 
 instance Cache.HasCache Config where

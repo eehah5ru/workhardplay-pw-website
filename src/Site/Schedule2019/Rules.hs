@@ -29,7 +29,8 @@ config cfg =
          , year = "2019"
          , version = DefaultVersion
          , Cfg.days = days
-         , labels = snd cfg}
+         , labels = snd cfg
+         , scheduleCtxFields = return mempty}
 
 schedule2019Rules cfg =
   scheduleRules $ config cfg

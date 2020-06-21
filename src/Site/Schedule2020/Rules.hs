@@ -6,11 +6,18 @@ module Site.Schedule2020.Rules
   , config
   ) where
 
+import Control.Monad.Reader
+
 import W7W.HasVersion
+import W7W.MonadCompiler
 
 import Site.Schedule.Rules
 import Site.Schedule.Config hiding (days)
 import qualified Site.Schedule.Config as Cfg
+
+import Site.Invitation2020.Rules (invitationsConfig)
+import W7W.ManyPages.Context (mkPagesField)
+import W7W.ManyPages.Config (execManyPages)
 
 import Site.Util
 
@@ -27,12 +34,18 @@ days =
        , "tuesday-06-30"
        , "wednesday-07-01"]
 
+mkScheduleCtxFields :: CtxFields
+mkScheduleCtxFields = do
+  iCfg <- return . invitationsConfig =<< ask
+  liftCompiler . execManyPages iCfg $ mkPagesField
+
 config cfg =
   Config { cache = fst cfg
          , year = "2020"
          , version = DefaultVersion
          , Cfg.days = days
-         , labels = snd cfg}
+         , labels = snd cfg
+         , scheduleCtxFields = mkScheduleCtxFields}
 
 schedule2020Rules cfg =
   scheduleRules $ config cfg

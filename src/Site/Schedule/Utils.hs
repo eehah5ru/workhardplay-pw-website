@@ -122,6 +122,16 @@ stripForId = stripRuEn . stripCustom
 
 fixMarkdown :: Text -> Text
 fixMarkdown = replace "\n\n\n" "\n\n"
+
+--
+-- checks if Text is "No" - technical no
+--
+isNo :: T.Text -> Bool
+isNo t = and . map (\f -> f (T.strip t)) $ preds
+  where
+    noString = "No"
+    preds = [T.isPrefixOf noString, T.isSuffixOf noString]
+
 --
 -- generate participant id
 --

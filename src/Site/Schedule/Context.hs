@@ -25,7 +25,7 @@ import W7W.HasVersion
 
 import qualified W7W.Cache as Cache
 
-
+import W7W.HasVersion.Context
 import Site.Context
 import W7W.Context
 import W7W.MultiLang
@@ -141,25 +141,53 @@ mkEventContext :: ScheduleEnv Compiler (Context String)
 mkEventContext = do
   sCtx <- siteCtx
   pF <- mkFieldParticipant
-  return $ fieldParticipantName <> fieldHasParticipant <> pF <> fieldContent <> sCtx
+  v <- asks getVersion
+  return $
+    fieldParticipantName
+    <> fieldHasParticipant
+    <> pF
+    <> fieldContent
+    <> fieldIsHtmlVersion v
+    <> fieldIsTxtVersion v
+    <> sCtx
 
 mkPlaceContext :: ScheduleEnv Compiler (Context String)
 mkPlaceContext = do
   ctx <- siteCtx
   v <- asks Cfg.version
   fEvents <- mkFieldEvents
-  return $ fEvents <> fieldHasEvents v <> fieldContent <> ctx
+  return $
+    fEvents
+    <> fieldHasEvents v
+    <> fieldContent
+    <> fieldIsHtmlVersion v
+    <> fieldIsTxtVersion v
+    <> ctx
 
 mkDayContext :: ScheduleEnv Compiler (Context String)
 mkDayContext = do
   ctx <- siteCtx
   v <- asks Cfg.version
   fPlaces <- mkFieldPlaces
-  return $ fPlaces <> fieldHasPlaces v <> fieldContent <> ctx
+  return $
+    fPlaces
+    <> fieldHasPlaces v
+    <> fieldContent
+    <> fieldIsHtmlVersion v
+    <> fieldIsTxtVersion v
+    <> ctx
 
 mkScheduleContext :: ScheduleEnv Compiler (Context String)
 mkScheduleContext = do
   ctx <- siteCtx
   fDays <- mkFieldDays
-  return $ fDays
+  v <- asks getVersion
+  scheduleFields' <- asks scheduleCtxFields
+  scheduleFields <- scheduleFields'
+
+  return $
+    fDays
+    <> scheduleFields
+    <> fieldIsHtmlVersion v
+    <> fieldIsTxtVersion v
     <> ctx

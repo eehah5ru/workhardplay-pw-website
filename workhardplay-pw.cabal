@@ -218,6 +218,66 @@ executable get-author
   ghc-options:      -threaded
   default-language: Haskell2010
 
+executable check-screening-file
+  main-is:          Tools/CheckScreeningFile.hs
+  HS-Source-Dirs:   src
+  build-depends:    base == 4.*
+                  , hakyll == 4.13.*
+                  , hakyll-sass == 0.2.*
+                  , hlibsass == 0.1.8.0
+                  , data-default
+                  , hsass == 0.8.0
+                  , aeson
+                  , bytestring
+                  , string-conversions
+                  , filepath
+                  , MissingH
+                  , binary
+                  , text
+                  , attoparsec
+                  , mtl
+                  , errors
+                  , directory
+                  , MissingH
+                  , colour
+                  , pandoc
+                  , cache
+                  , hashable
+                  , raw-strings-qq
+                  , rainbow == 0.30.0.2
+  ghc-options:      -threaded
+  default-language: Haskell2010
+
+executable generate-screening
+  main-is:          Tools/GenerateScreening.hs
+  HS-Source-Dirs:   src
+  build-depends:    base == 4.*
+                  , hakyll == 4.13.*
+                  , hakyll-sass == 0.2.*
+                  , hlibsass == 0.1.8.0
+                  , data-default
+                  , hsass == 0.8.0
+                  , aeson
+                  , bytestring
+                  , string-conversions
+                  , filepath
+                  , MissingH
+                  , binary
+                  , text
+                  , attoparsec
+                  , mtl
+                  , errors
+                  , directory
+                  , MissingH
+                  , colour
+                  , pandoc
+                  , cache
+                  , hashable
+                  , raw-strings-qq
+                  , rainbow == 0.30.0.2
+  ghc-options:      -threaded
+  default-language: Haskell2010
+
 executable check-instruction-file
   main-is:          Tools/CheckInstructionFile.hs
   HS-Source-Dirs:   src

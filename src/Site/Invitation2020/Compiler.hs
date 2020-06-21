@@ -22,6 +22,6 @@ renderLetters ctx letters = do
 
 renderLetterPage ctx x = do
   applyAsTemplate ctx x
-    >>= loadAndApplyTemplate "templates/invitation-2020-letter.slim" ctx
     >>= saveSnapshot "content"
+    >>= loadAndApplyTemplate "templates/invitation-2020-letter.slim" ctx
     >>= loadAndApplyTemplate rootTpl ctx

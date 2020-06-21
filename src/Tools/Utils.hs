@@ -60,7 +60,10 @@ hPutChunk h ck = do
 -- arg parsers
 --
 
-data ParticipantSource = FromProject | FromInstruction
+data ParticipantSource =
+  FromProject
+  | FromInstruction
+  | FromScreening
 
 class FromArg a where
   parseArg :: String -> Either String a
@@ -75,6 +78,7 @@ instance FromArg Locale where
 instance FromArg ParticipantSource where
   parseArg "fromProject" = return FromProject
   parseArg "fromInstruction" = return FromInstruction
+  parseArg "fromScreening" = return FromScreening
   parseArg x = Left $ "unknown participant source: " ++ x
 
 

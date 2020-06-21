@@ -143,9 +143,10 @@ contentRules l cTpl ctxF = do
   cfg <- ask
   lift $ compile $ execScheduleEnv cfg $ do
     ctx <- ctxF
-    lift $ pandocCompiler
-     >>= beautifyTypography
+    lift $ getResourceBody
      >>= applyAsTemplate ctx
+     >>= customRenderPandoc
+     >>= beautifyTypography
      >>= loadAndApplyTemplate cTpl ctx
      >>= saveSnapshot "content"
 

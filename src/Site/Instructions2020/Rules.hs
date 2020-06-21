@@ -58,8 +58,8 @@ renderInstructionsItems ctx letters = do
 
 renderInstructionPage ctx x = do
   applyAsTemplate ctx x
-    >>= loadAndApplyTemplate "templates/instruction-2020-page.slim" ctx
     >>= saveSnapshot "content"
+    >>= loadAndApplyTemplate "templates/instruction-2020-page.slim" ctx
     >>= loadAndApplyTemplate rootTpl ctx
 
 

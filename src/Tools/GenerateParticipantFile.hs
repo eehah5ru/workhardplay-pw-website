@@ -15,6 +15,7 @@ import qualified Data.Text.IO as TIO
 import qualified Site.Schedule.ProjectFile as PF
 import Site.Schedule.ProjectFile.Parser
 import Site.Schedule.InstructionFile.Parser
+import Site.Schedule.ScreeningFile.Parser
 
 import Site.Schedule.ParticipantFile
 
@@ -47,3 +48,4 @@ main = do
   where
     f l FromProject = withParsedFileInput parseProjectFile (printParticipantFile l)
     f l FromInstruction = withParsedFileInput parseInstructionFile (printParticipantFile l)
+    f l FromScreening = withParsedFileInput parseScreeningFile (printParticipantFile l)

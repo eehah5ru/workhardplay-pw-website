@@ -33,12 +33,6 @@ instance HasBio InstructionFile where
   getBio = bio
 
 
-isNo :: T.Text -> Bool
-isNo t = and . map (\f -> f (T.strip t)) $ preds
-  where
-    noString = "No"
-    preds = [T.isPrefixOf noString, T.isSuffixOf noString]
-
 --
 --
 -- format instruction to hakyll file
@@ -57,7 +51,7 @@ formatInstruction l x =
                 , coverCaptionField x
                 , Just "---"
                 , Just ""
-                , Just . fixMarkdown . translateOrMissing l . instruction $ x
+                , instructionField x
                 ]
   where
     titleField = Just . yamlField "title" . translateOrMissing l . title
@@ -66,3 +60,7 @@ formatInstruction l x =
     durationField = yamlFieldMaybe "duration" (not . isNo) . translateOrMissing l . duration
     coverCaptionField = yamlFieldMaybe "coverCaption" (not . isNo) . translateOrMissing l . imageCaption
     partIdField = Just . yamlField "participantId" . maybe "UNKNOWN_PARTICIPANT_ID" id . participantId
+    instructionField x =
+      case not . isNo . translateOrMissing l . instruction $ x of
+        True -> Just . fixMarkdown . translateOrMissing l . instruction $ x
+        False -> Nothing

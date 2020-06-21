@@ -1,3 +1,5 @@
+{-# LANGUAGE MonoLocalBinds #-}
+{-# LANGUAGE MonoLocalBinds #-}
 {-# LANGUAGE UndecidableInstances #-}
 {-# LANGUAGE FlexibleInstances #-}
 {-# LANGUAGE OverloadedStrings #-}
@@ -26,3 +28,6 @@ instance (ToText a) => ToYamlField a where
   yamlField t x = t <> ": " <> (quote . escapeForYaml . toText $ x)
   yamlFieldMaybe t f x | f x = Just . yamlField t $ x
                        | otherwise = Nothing
+
+yamlJustField :: (ToYamlField a) => T.Text -> a -> Maybe T.Text
+yamlJustField t = Just . yamlField t

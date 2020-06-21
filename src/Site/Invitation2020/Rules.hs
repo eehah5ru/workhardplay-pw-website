@@ -16,6 +16,7 @@ import Hakyll
 import W7W.Compilers.Markdown
 import W7W.MultiLang
 import W7W.Typography
+import W7W.Labels.Types
 
 import W7W.ManyPages
 import qualified W7W.ManyPages.Config as MPC
@@ -29,7 +30,7 @@ import Site.Context
 import Site.Invitation2020.Compiler
 import Site.Invitation2020.Context
 
--- invitationsConfig :: Cache.Caches -> MPC.Config
+invitationsConfig :: (Cache.HasCache c, HasLabels c) => c -> MPC.Config
 invitationsConfig c =
   MPC.Config { MPC.indexPagePath = MPC.IndexPagePath "2020/invitation.md"
              , MPC.pagesPattern = MPC.PagesPattern "2020/invitation/*.md"
@@ -38,16 +39,16 @@ invitationsConfig c =
              , MPC.rendererPagesList = renderLetters
              , MPC.rendererOnePage = renderLetterPage
              , MPC.pageCtxFields = return mempty
-             , MPC.cache = fst c
-             , MPC.labels = snd c
+             , MPC.cache = Cache.getCache c
+             , MPC.labels = getLabels c
              }
 
 
--- invitation2020Rules :: Cache.Caches -> Rules ()
+invitation2020Rules :: (Cache.HasCache c, HasLabels c) => c -> Rules ()
 invitation2020Rules c =
   MPR.indexPageRules (invitationsConfig c)
 
--- invitation2020LetterRules :: Cache.Caches -> Rules ()
+invitation2020LetterRules :: (Cache.HasCache c, HasLabels c) => c -> Rules ()
 invitation2020LetterRules c =
   MPR.pageRules (invitationsConfig c)
   -- caches <- asks MPC.cache
