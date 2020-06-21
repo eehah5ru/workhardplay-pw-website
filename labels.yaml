@@ -1,4 +1,59 @@
 2020:
+  menu:
+    instructionsLabel:
+      ru: "инструкции"
+      en: "scores"
+    screeningsLabel:
+      ru: "вирт/библиотека"
+      en: "v/library"
+  schedule:
+    discordServerInviteHtml:
+      ru: >
+          [Коллективный чат](https://discord.gg/n5JBf8x){target="_blank" class="shiny"} / [Инструкция, как пользоваться чатом](https://docs.google.com/document/d/1JWWFkfLWx5aC7nvyqv7I769TmERFfzAkZr5Iezslt_c/edit?usp=sharing){target="_blank"}
+      en: >
+          [Collective chat](https://discord.gg/n5JBf8x){target="_blank" class="shiny"} / [Instruction how to use chat](https://docs.google.com/document/d/1mY2nBkpYQM9JLpISi-L6JJW02TYJaexmDyBCxR21w7U/edit?usp=sharing){target="_blank"}
+    discordServerInviteTxt:
+      ru: >
+          Коллективный чат -> https://discord.gg/n5JBf8x
+
+          Инструкция, как пользоваться чатом -> https://docs.google.com/document/d/1JWWFkfLWx5aC7nvyqv7I769TmERFfzAkZr5Iezslt_c/edit?usp=sharing
+      en: >
+          Collective chat -> https://discord.gg/n5JBf8x
+
+          Instruction how to use chat -> https://docs.google.com/document/d/1mY2nBkpYQM9JLpISi-L6JJW02TYJaexmDyBCxR21w7U/edit?usp=sharing
+
+    # instructionsDescriptionHtml:
+    #   ru: "Список инструкций и партитур для коллективного и индивидуального исполнения вы найдете здесь. / будут опубликованы 22.06 /"
+    #   en: "A list of instructions and scores for collective and individual performance can be found here. / will be published on June 22 /"
+    # instructionsDescriptionTxt:
+    #   ru: "Список инструкций и партитур для коллективного и индивидуального исполнения вы найдете здесь. / будут опубликованы 22.06 /"
+    #   en: "A list of instructions and scores for collective and individual performance can be found here. / will be published on June 22 /"
+    # screeningsDescriptionHtml:
+    #   ru: "Видео-работы, визуальные проекты и подкасты опубликованы здесь. / будут опубликованы 22.06 /"
+    #   en: "Video works, visual projects and podcasts are published here.  / will be published on June 22 /"
+    # screeningsDescriptionTxt:
+    #   ru: "Видео-работы, визуальные проекты и подкасты опубликованы здесь. / будут опубликованы 22.06 /"
+    #   en: "Video works, visual projects and podcasts are published here.  / will be published on June 22 /"
+
+    instructionsDescriptionHtml:
+      ru: "[Список инструкций и партитур для коллективного и индивидуального исполнения вы найдете здесь](/ru/2020/instructions.html){target=\"_blank\"}"
+      en: "[A list of instructions and scores for collective and individual performance can be found here](/en/2020/instructions.html){target=\"_blank\"}"
+    instructionsDescriptionTxt:
+      ru: "Список инструкций и партитур для коллективного и индивидуального исполнения вы найдете здесь -> http://workhardplay.pw/ru/2020/instructions.html"
+      en: "A list of instructions and scores for collective and individual performance can be found here -> http://workhardplay.pw/en/2020/instructions.html"
+    screeningsDescriptionHtml:
+      ru: "[Видео-работы, визуальные проекты и подкасты опубликованы здесь](/ru/2020/screenings.html){target=\"_blank\"}"
+      en: "[Video works, visual projects and podcasts are published here](/en/2020/screenings.html){target=\"_blank\"}"
+    screeningsDescriptionTxt:
+      ru: "Видео-работы, визуальные проекты и подкасты опубликованы здесь -> http://workhardplay.pw/ru/2020/screenings.html"
+      en: "Video works, visual projects and podcasts are published here -> http://workhardplay.pw/en/2020/screenings.html"
+
+    participantsLabel:
+      ru: "Участницы и участники:"
+      en: "Participants:"
+    participants:
+      ru: "Just_smthg_seen (Aнна Приходько), Omsk Social Club, XYANA, Apl315 & Роман Михайлов & Матвей Крылов, Алексей Минько, Алексей Радинский, Алена Исаханян, Алиса Олева, Альба Баэза, Альберт Алгайер, Анна Щинбум, Аня Марченкова, атом, Великий Цирк Неудачи и Маша, ВИА «Красный Борщевик», Виктор Артига Родригез и Элшан Азади, Виктория Сарангова, Вита Зеленская, Владивостокская школа современного искусства, Варвара Геворгизова и Ваня Шатравин-Достов, Глеб Напреенко, Группировка ЗИП, Даша Юрийчук, Ингебор Хенриксен и Йоханне Бокманн, Ира Конюхова и Дарья Придыбайло (TransitoryWhite), Истин Агриппа, Котерина Фреер, Крёльски центр. Мария Вильковиская и Руфия Дженрбекова, Лена Клабукова, Лика Карева, н и и ч е г о д е л а т ь, Наталья Никуленкова, Никита Нечаев и Арина Нестерова, Оля Сосновская, Патрик Риехерт и Елена Вогман, постанатомический театр MAAILMANLOPPU, Приятная компания, Проблемный коллектив, Родион Китаев. Gerondot, Роман Аксенов, Санна Самуэльсон, Саша Аникина, Саша Пучкова, Саша Смирнова и Сена Партал, Сергей Бабкин, Суперкалифраджилистикэкспиалидошес, Татьяна Эфрусси, Тимофей Максименко, Тоня Трубицына, Что Делать, Юдит и Франка"
+      en: "Alba Baeza, Albert Allgaier, Alex Anikina, Alisa Oleva, Alyona Isakhanyan, Anna Kinbom, Anya Marchenkova, atom, Apl315, Roman Mikhailov and Matvej Krylov, Choterina Freer, Chto Delat, Daria Iuriichuk, Eastyn Agrippa, Varvara Gevorgizova and Vanya Shatravin-Dostov, Gleb Napreenko, Great Circus of Failure and Masha, Group ZIP, Ingeborg Henriksen and Johanne Bøckmann, Ira Konyukhova and Daria Prydybailo (TransitoryWhite), Judith & Franca, just_smthg_seen (Ann Prikhodko), krёlex zentre. Maria Vilkovisky & Ruthia Jenrbekova, Lena Klab, Lika Kareva, MAAILMANLOPPU postanatomy theater, n i i c h e g o d e l a t (eng. “Research Institute for Doing Nothing”), Natalia Nikulenkova, nice company, Nikita Nechaev and Arina Nesterova, Oleksiy Radynski, Olexey Minko, Olia Sosnovskaya, Omsk Social Club, Patrick Riechert and Elena Vogman, Problem collective, Raman Aksionov, Rodion Kitaev. Gerondot, Sanna Samuelsson, Sasha Puchkova, Sasha Smirnova and Sena Partal, Sergey Babkin, Supercalifragilisticexpialidocious, Tatiana Efrussi, The vocal-instrumental ensemble \"Krasny Borschevik\", Timothy Maxymenko, Tony Trubitsyna, Victor Artiga Rodriguez and Elshan Azadi, Victoria Sarangova, Vita Zelenska, Vladivostok school of contemporary art, XYANA"
   instructions:
     noTime:
       ru: "без времени"
