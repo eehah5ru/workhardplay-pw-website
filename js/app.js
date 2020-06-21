@@ -398,7 +398,7 @@
   };
   
   var initSlotCountdown = function() {
-    $(".invitation span.countdown").each(function(i, el) {
+    $(".invitation-letter span.countdown").each(function(i, el) {
       if (!hasCountdown(el)) {
         return;
       }
