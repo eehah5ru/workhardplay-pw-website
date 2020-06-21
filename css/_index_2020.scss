@@ -1,6 +1,49 @@
 $primary-color-2020: #FCFAF2;
 $secondary-color-2020: #1C1C1C;
 
+
+@mixin invitation-styles {
+  
+  
+  p.time {
+    @extend .hide-for-small-only;
+  }
+  
+  p strong {
+    text-shadow: 2px 2px 10px aqua;      
+    font-family: serif;
+    font-weight: bold;
+    font-style: italic;
+
+    span.arrow {
+      font-family: monospace;
+      font-style: normal;
+    }
+
+    em {
+      text-decoration: underline;
+    }
+  }
+
+  p span.huge-text {
+    font-size: 180%;
+  }
+
+  p span.flickering-term {
+    .variant {
+      display: none;
+
+      text-decoration: underline;
+
+      &.active {
+        display: inline;
+      }
+    }
+    
+  }  
+}
+
+
 nav#menu-sign.whp-2020 {
   @include menu-sign($primary-color-2020, $secondary-color-2020);
 }
@@ -56,6 +99,39 @@ section.index-page.description.whph-2020 {
     background: linear-gradient(#D7C4BB, #D75455, #33A6B8);
   }
 }
+
+article.archive-page.whph-2020.screenings {
+  background: linear-gradient(180deg,#33A6B8,#D75455,#D7C4BB); 
+}
+
+header.archive-project.whph-2020.screening {
+  background-color: #D7C4BB;
+  
+  h1 {
+    // -webkit-mask-image: -webkit-gradient(linear,left bottom,left top,from(#000),to(rgba(0,0,0,0.4)));
+    color: #D75455;
+
+    a {
+      color: #D75455;      
+    }    
+  }
+}
+
+article.archive-project.whph-2020.screening {
+  background: linear-gradient(#D7C4BB, #D75455, #33A6B8);
+
+  p {
+    color: $primary-color-2020;
+  }
+}
+
+.whph-2020 {
+  .shiny {
+    text-shadow: 5px 5px 10px aqua;      
+  }
+
+}
+
 
 section.index-page.description.whph-2020,
 section.index-page.teaser.whph-2020 {
@@ -140,6 +216,22 @@ section.index-page.teaser.whph-2020 {
   //   }
   // }
 
+  .project.invitation-letter {
+    .descr {
+      text-align: center;
+    }
+
+    p.descr span {
+      &:first-of-type {
+        &:before {
+          content: "💌 "
+        }      
+      }
+    }    
+
+    @include invitation-styles;
+  }
+
   &.invitation {
 
     .project-col p.descr span {
@@ -153,51 +245,11 @@ section.index-page.teaser.whph-2020 {
     .project-col p.descr {
       text-align: center;
     }
-    
-    
-    p.time {
-      @extend .hide-for-small-only;
-    }
-    
-    p strong {
-      text-shadow: 2px 2px 10px aqua;      
-      font-family: serif;
-      font-weight: bold;
-      font-style: italic;
 
-      span.arrow {
-        font-family: monospace;
-        font-style: normal;
-      }
-
-      em {
-        text-decoration: underline;
-      }
-    }
-
-    p span.huge-text {
-      font-size: 180%;
-    }
-
-    p span.flickering-term {
-      .variant {
-        display: none;
-
-        text-decoration: underline;
-
-        &.active {
-          display: inline;
-        }
-      }
-      
-    }
+    @include invitation-styles;
   }
 
-  &.instructions {
-    // .descr span,
-    // .descr {
-    //   color: black;
-    // }
+  &.instructions {    
     .descr span.author {
       color: $primary-color-2020;      
     }
@@ -207,9 +259,13 @@ section.index-page.teaser.whph-2020 {
       p.performerNeeds,
       p.placeAndTime {
         em {
-          text-shadow: 5px 5px 10px aqua;
+          @extend .shiny
         }
       }
+    }
+
+    figure {
+      margin-bottom: 1rem;      
     }
   }
 }
