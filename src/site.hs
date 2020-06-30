@@ -57,6 +57,7 @@ import Site.Invitation2020.Rules
 import Site.Instructions2020.Rules
 import Site.Screenings2020.Rules
 
+import Site.Underwater2020.Rules
 --------------------------------------------------------------------------------
 
 main :: IO ()
@@ -111,6 +112,9 @@ main = do
 
        screenings2020Rules cfg
        screening2020PageRules cfg
+
+       underwater2020Rules cfg
+       underwater2020PageRules cfg
        
        staticPagesRules cfg
 
