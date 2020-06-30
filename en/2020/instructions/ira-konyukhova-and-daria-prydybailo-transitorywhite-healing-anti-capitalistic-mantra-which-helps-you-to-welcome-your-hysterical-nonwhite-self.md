@@ -8,4 +8,4 @@ duration: "Recommended time 40 min, before lunch and after dinner."
 coverCaption: "Anti-Capitalistic Mantra with Ira Konyukhova and Daria Prydybailo"
 ---
 
-Mantra/Exercise will be streamed Wednesday for first time, and later it will be available at the website. 
+Mantra/Exercise is available for listening and practice [here](https://soundcloud.com/user-815979380/healing-anti-capitalist-mantra-which-helps-you-to-welcome-your-hysterical-nonwhite-self){.shiny}. 

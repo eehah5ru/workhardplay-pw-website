@@ -3,9 +3,11 @@ order: 1
 time: "13:00 - 13:30"
 projectIdSuffix: "-one"
 title: "Рандеву / КВК (Краткое Введение в Коммуникацию)"
-shortDescription: "Исполнение партитуры / стрим"
+shortDescription: "Исполнение партитуры"
 participantId: "great-circus-of-failure-and-masha"
+discordEvent: true
 ---
+
 Партитура для 3-х участников и нескольких зрителей/гостей
 
 Skype

@@ -6,6 +6,7 @@ shortDescription: "Podcast"
 placeAndTime: "Where you find him, and he / she/ it finds you."
 duration: "The length of the podcast is regulated, but the hearing is not."
 coverCaption: "Who experiences this, and escapes, Sasha Puchkova, 2020."
+mixcloudTrackId: "/work_hard_play_hard/sasha-puchkova-who-experiences-this-and-escapes-who-tries-to-write/"
 ---
 
 The graphic score is assembled, and then iterated over and read in its own way. I want this
@@ -19,6 +20,3 @@ Actively imagine, feel the present, remember, but convey something else.
 
 
 Image: Who experiences this, and escapes, Sasha Puchkova, 2020.
-
-
-_Podcast will be published soon_

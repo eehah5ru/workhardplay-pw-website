@@ -3,8 +3,9 @@ order: 3
 time: "19:45 - 20:30"
 projectIdSuffix: "-two"
 title: "AliStopkran"
-shortDescription: "unreal imaginary fictional internet shop / video conference"
+shortDescription: "unreal imaginary fictional internet shop"
 participantId: "n-i-i-c-h-e-g-o-d-e-l-a-t-eng-research-institute-for-doing-nothing"
+discordEvent: true
 ---
 
 n i i c h e g o d e l a t for slot “round dance of uncertainty”:

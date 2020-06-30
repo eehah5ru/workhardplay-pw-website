@@ -3,8 +3,9 @@ order: 2
 time: "12:30 - 13:30"
 projectIdSuffix: "-one"
 title: "Circulating hope seminar"
-shortDescription: "Collective writing/reading game / video conference"
+shortDescription: "Collective writing/reading game"
 participantId: "vita-zelenska"
+discordEvent: true
 ---
 
 Sounds or words  

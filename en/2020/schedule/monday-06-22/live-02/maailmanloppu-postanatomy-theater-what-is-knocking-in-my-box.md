@@ -3,8 +3,9 @@ order: 2
 time: "19:00 - 19:30"
 projectIdSuffix: "-one"
 title: "“What is knocking  in my box?”"
-shortDescription: "play/art mediation / stream"
+shortDescription: "play/art mediation"
 participantId: "maailmanloppu-postanatomy-theater"
+discordEvent: true
 ---
 
 They are knocking  in a box. They want your attention and we will give it to them in the format of art mediation of  boxes.

@@ -5,6 +5,7 @@ projectIdSuffix: "-one"
 title: "To Tell Fortunes by Guy Debord"
 shortDescription: "A performative walk / video conference"
 participantId: "natalia-nikulenkova"
+discordEvent: true
 ---
 
 We are disoriented, confused and immersed in a situation of uncertain duration and an unknown end that may not come. The constant feeling of fatigue, the loss of a sense of time, the increasing anxiety become part of everyday life. We must observe the new rules related to social distance, which become a ritual, but are in fact an external order. We must make the choice between health and friendship, between freedom and security, but that choice has already been made for us.

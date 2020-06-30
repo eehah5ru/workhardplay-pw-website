@@ -3,8 +3,9 @@ order: 1
 time: "18:00 - 18:40"
 projectIdSuffix: "-one"
 title: "АлиСтопкран"
-shortDescription: "игрушечный интернет-магазин / видео-связь"
+shortDescription: "игрушечный интернет-магазин"
 participantId: "n-i-i-c-h-e-g-o-d-e-l-a-t-eng-research-institute-for-doing-nothing"
+discordEvent: true
 ---
 
 н и и ч е г о д е л а т ь для слота «хоровод неопределенности»:

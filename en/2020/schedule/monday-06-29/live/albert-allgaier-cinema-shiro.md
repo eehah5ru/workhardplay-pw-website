@@ -5,6 +5,7 @@ projectIdSuffix: "-one"
 title: "Cinema Shiro "
 shortDescription: "Online screening "
 participantId: "albert-allgaier"
+discordEvent: true
 ---
 
 Cinema Shiró is an international film festival dedicated to a single movie.

@@ -3,8 +3,9 @@ order: 2
 time: "12:30 - 13:30"
 projectIdSuffix: "-one"
 title: "Семинар циркулирующей надежды"
-shortDescription: "Коллективное письмо/чтение, игра / видео-связь"
+shortDescription: "Коллективное письмо/чтение, игра"
 participantId: "vita-zelenska"
+discordEvent: true
 ---
 
 Звуки или слова  

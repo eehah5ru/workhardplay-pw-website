@@ -3,8 +3,9 @@ order: 2
 time: "19:00 - 19:30"
 projectIdSuffix: "-one"
 title: "“Что стучит в моей коробке?\""
-shortDescription: "спектакль/арт медиация / стрим"
+shortDescription: "спектакль/арт медиация"
 participantId: "maailmanloppu-postanatomy-theater"
+discordEvent: true
 ---
 
 Они гремят в коробке. Они хотят вашего внимания, и мы дадим им его в форме арт-медиации по коробкам.

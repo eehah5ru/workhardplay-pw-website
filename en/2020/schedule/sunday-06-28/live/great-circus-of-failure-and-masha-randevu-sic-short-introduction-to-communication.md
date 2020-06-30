@@ -5,6 +5,7 @@ projectIdSuffix: "-one"
 title: "Randevu / SIC (Short Introduction to Communication)"
 shortDescription: "Performance of the score  / stream"
 participantId: "great-circus-of-failure-and-masha"
+discordEvent: true
 ---
 
 “Score for 3 participants and several spectators / guests

@@ -3,7 +3,8 @@ order: 2
 time: "18:45 - 19:10"
 projectIdSuffix: "-one"
 title: "DIY микологиня"
-shortDescription: "Видео перформанс / стрим"
+shortDescription: "Видео перформанс"
+discordEvent: true
 participantId: "choterina-freer"
 ---
 
