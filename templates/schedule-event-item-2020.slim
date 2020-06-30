@@ -8,6 +8,16 @@
       span
         |$if(hideParticipant)$$else$$participantName$.&ensp;$endif$
         |$title$$if(hideShortDescription)$$else$&ensp;/&ensp;$shortDescription$$endif$
+        = _if("discordEvent")
+          | /&nbsp;
+          a.shiny href='$getLabel("2020.schedule.discordInviteLink")$' target="_blank"
+            |$getLabel("2020.schedule.joinDiscordHtml")$
+        = _else
+          = _if("joinLink")
+            a.shiny.magenta href="$joinLink$" target="_blank"
+              |$joinLinkLabel$
+          = _endif
+        = _endif
     = _unless("hideDetails")
       .long-descr
         | $body$

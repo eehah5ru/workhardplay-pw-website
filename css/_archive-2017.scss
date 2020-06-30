@@ -66,7 +66,10 @@ article.archive-page.whp-2017 {
 
   > p,
   pre,
-  ol {
+  ol,
+  h1,
+  h2,
+  h3 {
     @extend .small-12;
     @extend .large-6;
     @extend .large-offset-3;
@@ -324,7 +327,10 @@ article.archive-project.whp-2017 {
 
   p,
   ul,
-  figure {
+  figure,
+  h1,
+  h2,
+  h3 {
     @extend .small-12;
     @extend .large-6;
     @extend .large-offset-3;
