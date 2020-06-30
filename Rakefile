@@ -345,3 +345,27 @@ namespace :og_scraper do
     STDOUT.puts "done"
   end
 end
+
+
+#
+#
+# underwater
+#
+#
+namespace :underwater do
+  task :mk_mail do
+    STDERR.print "subject: "
+    subject = STDIN.gets.chomp
+
+    STDERR.print "body: "
+    body = STDIN.gets("\t\n").chomp
+
+    r = ""
+    r << "mailto:$ownerEmail$?"
+    r << "subject="
+    r << URI.encode(subject)
+    r << "&body="
+    r << URI.encode(body)
+     STDOUT.puts r
+  end
+end
