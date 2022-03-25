@@ -17,4 +17,4 @@ gem 'guard-shell'
 gem "guard-process"
 gem "guard-rake"
 gem "rake"
-gem 'rmagick'
+gem 'rmagick', "~> 4.2.4"
